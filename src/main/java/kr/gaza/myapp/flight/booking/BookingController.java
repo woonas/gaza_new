@@ -56,8 +56,8 @@ public class BookingController {
         }
 
         BookingInterface bookingDAO = sqlSession.getMapper(BookingInterface.class);
-        System.out.println(bookingDAO.getProductVO(bookingVO));
-        System.out.println(1);
+//        System.out.println(bookingDAO.getProductVO(bookingVO));
+//        System.out.println(1);
 
         request.setAttribute("bookingVO", bookingVO);
 
