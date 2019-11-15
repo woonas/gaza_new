@@ -5,15 +5,14 @@
     <head>
         <meta charset="UTF-8">
         <title>항공권 예약 - 항공편 선택</title>
-        <link rel="stylesheet" href="../../../CSS/booking.css">
+        <link rel="stylesheet" href="<%=css%>/booking.css">
         <!-- Font Awesome CDN -->
         <script src="https://kit.fontawesome.com/9c923ac74a.js" crossorigin="anonymous"></script>
         <script>window.onbeforeunload=() => window.scrollTo(0, 0)</script>
     </head>
     <body>
-    <%@ include file="../../common/nav.jspf" %>
+        <%@ include file="/WEB-INF/views/JSP/common/nav.jspf" %>
         <div class="overlay"></div>
-        
         <div class="cur-route itinerary">
             <div class="row clearfix book-input-form">
                 <div class="col-fourth itinerary-select">
@@ -1176,13 +1175,13 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
 
         <!-- Lightpick CSS -->
-        <link rel="stylesheet" href="../../../../Vendor/javascript-datepicker-lightpick/css/lightpick.css">
+        <link rel="stylesheet" href="<%=vendor%>/javascript-datepicker-lightpick/css/lightpick.css">
 
         <!-- Lightpick JS -->
-        <script src="../../../../Vendor/javascript-datepicker-lightpick/js/lightpick.js"></script>
-        <script src="../../../../Vendor/waypoints/jquery.waypoints.min.js"></script>
-        <%@ include file="../../common/footer.jspf" %>
-        <script src="../../../JS/airportpicker.js"></script>
-        <script src="../../../JS/booking.js"></script>
+        <script src="<%=vendor%>/javascript-datepicker-lightpick/js/lightpick.js"></script>
+        <script src="<%=vendor%>/waypoints/jquery.waypoints.min.js"></script>
+        <%@ include file="/WEB-INF/views/JSP/common/footer.jspf" %>
+        <script src="<%=js%>/airportpicker.js"></script>
+        <script src="<%=js%>/booking.js"></script>
     </body>
 </html>

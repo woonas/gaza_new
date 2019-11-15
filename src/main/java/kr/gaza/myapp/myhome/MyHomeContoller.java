@@ -18,6 +18,7 @@ public class MyHomeContoller {
 	public ModelAndView myHome(HttpServletRequest req) {
 		MyHomeDAOInterface dao = sqlSession.getMapper(MyHomeDAOInterface.class);
 		HttpSession sess = req.getSession();
+
 		int memberNum = (int)sess.getAttribute("memberNum");
 		MyHomeVO vo =  dao.memberRecord(memberNum); 
 		MyHomeVO vo2 = dao.memberMiles(memberNum);
@@ -30,7 +31,7 @@ public class MyHomeContoller {
 		}else {
 			mav.setViewName("redirect:/");
 		}
-		
+
 		
 		return mav;
 	}
