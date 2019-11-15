@@ -40,7 +40,20 @@ const chatService = () => {
 
 
 (() => {
-
+	if (location.pathname.indexOf('cabin_health') !== -1) {
+	       const questions = document.querySelectorAll('.accordion-title');
+	        questions.forEach(question => {
+	            question.addEventListener('click', () =>{
+	                const expanded = document.querySelector('.is-expanded');
+	                if(question.parentElement.classList.contains('is-expanded')) question.parentElement.classList.remove('is-expanded');
+	                else {
+	                    if(expanded) expanded.classList.remove('is-expanded');
+	                    question.parentElement.classList.add('is-expanded');
+	                }
+	            });
+	        });
+	    }
+	
     if (location.pathname.indexOf('faq') !== -1) {
        const questions = document.querySelectorAll('.accordion-title');
         questions.forEach(question => {
