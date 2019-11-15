@@ -17,12 +17,12 @@
             <div class="maintop">
                 <div class="row clearfix">
                     <div id="nameDiv">
-                        <div id="name-ko"><a href="#" class="font-white">홍길동 님</a></div>
-                        <div id="name-eng" class="font-gray3">HONG GIL DONG</div>
+                        <div id="name-ko"><a href="#" class="font-white">${vo.memberNameKor}</a></div>
+                        <div id="name-eng" class="font-gray3">${vo.memberNameEng}</div>
                     </div>
                     <div>
                         <div><a href="" class="font-gray3">총 탑승횟수</a></div>
-                        <div id="tripNo">3</div>
+                        <div id="tripNo">${vo.memberFlightCnt }</div>
                     </div>
                 </div>
 

@@ -19,7 +19,7 @@
                             <a href="<%=jsp %>/account/login/loginView">로그인</a>
                         </c:if>
                         <c:if test="${memberName!=null }">
-                            <a href="<%=jsp %>/mypage/myhome.do">마이홈</a>
+                            <a href="<%=jsp %>/mypage/myhome">마이홈</a>
                         </c:if>
 					</div>
 					<div id="navBar"></div>
