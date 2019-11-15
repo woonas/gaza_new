@@ -4,7 +4,7 @@
     <div>
         <div class="menu-item"><a href="#">HOME</a></div>
         <div class="menu-item">
-            <a href="#">여행준비</a>
+            <a href="#">공항서비스</a>
             <div class="sub-menu">
                 <div class="menu-item">여행준비</div>
                 <div class="menu-item">여행</div>

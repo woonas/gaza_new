@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.gaza.myapp.flight.booking.BookingInterface">
+    <select id="getProductVO" parameterType="kr.gaza.myapp.flight.booking.BookingVO" resultType="kr.gaza.myapp.aviation.product.ProductVO">
+        select
+            productnum, depart, arrive, price, sale
+        from
+            product
+        where
+            <foreach collection="vo.journeyList" item="journeyVO" >
+                depart = #{journeyVO.airportFrom} and arrive = #{journeyVO.airportTo}
+            </foreach>
+    </select>
+</mapper>
