@@ -1,24 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<c:set var="p" value="<%=request.getContextPath()%>"/>
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
         <title>회원정보</title>
         <!--        bootstrap validator-->
-        <link rel="stylesheet" href="${p }/Vendor/bootstrap/css/bootstrap.css"/>
-        <link rel="stylesheet" href="${p }/Vendor/bootstrapValidator/bootstrapValidator.css"/>
+        <link rel="stylesheet" href="<%=vendor %>/bootstrap/css/bootstrap.css"/>
+        <link rel="stylesheet" href="<%=vendor %>/bootstrapValidator/bootstrapValidator.css"/>
 		
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="${p }/Vendor/bootstrapValidator/bootstrapValidator.js"></script>
+        <script type="text/javascript" src="<%=vendor %>/bootstrapValidator/bootstrapValidator.js"></script>
         <!--        countrypicker-->
-        <link rel="stylesheet" href="${p }/Vendor/Filterable-Country-Picker-niceCountryInput/niceCountryInput.css">
-        <script src="${p }/Vendor/Filterable-Country-Picker-niceCountryInput/niceCountryInput.js"></script>
+        <link rel="stylesheet" href="<%=vendor %>/Filterable-Country-Picker-niceCountryInput/niceCountryInput.css">
+        <script src="<%=vendor %>/Filterable-Country-Picker-niceCountryInput/niceCountryInput.js"></script>
         <!-- Font Awesome CDN -->
         <script src="https://kit.fontawesome.com/9c923ac74a.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="${p }/Resources/CSS/account.css">
+        <link rel="stylesheet" href="<%=css %>/account.css">
         <script>window.onbeforeunload = () => window.scrollTo(0, 0)</script>
         <!-- 다음/카카오 주소검색 -->
         <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
@@ -33,7 +32,7 @@
             <h3>회원정보</h3>
             
             <div class="form-wrapper edit-form-wrapper">
-                <form id="defaultForm" method="post" action="<%=path %>/Resources/JSP/mypage/account_info_edit.do" class="form-horizontal">
+                <form id="defaultForm" method="post" action="<%=jsp %>/mypage/account_info_edit" class="form-horizontal">
                     <fieldset>
                         <legend>기본 정보</legend>
 
@@ -41,7 +40,7 @@
                             <label class="col-fifth control-label not-required">회원번호</label>
                             <div class="col-xs-4">
                                 <input type="text" class="form-control" name="memberNo" id="memberNo" disabled
-                                       value="777 999 ${vo.memberNum }">
+                                       value="777 999 ${memberNum }">
                             </div>
                         </div>
                         
@@ -49,7 +48,7 @@
                             <label class="col-fifth control-label not-required">아이디</label>
                             <div class="col-xs-4">
                                 <input type="text" class="form-control" name="userId" id="userId" disabled
-                                       value="${vo.memberId }">
+                                       value="${memberId }">
                             </div>
                         </div>
                         
@@ -57,10 +56,10 @@
                             <label class="col-fifth control-label not-required">비밀번호</label>
                             <div class="col-xs-2">
                                 <input type="password" class="form-control" name="userPw" id="userPw" disabled
-                                       value="${vo.memberPwd }">
+                                       value="${memberPwd }">
                             </div>
                             <div>
-                                <a href="<%=path %>/Resources/JSP/mypage/password_change.do">
+                                <a href="<%=jsp %>/mypage/password_change">
                                     <input type="button" class="blueBtn" id="btn-pwChange" value="비밀번호변경">
                                 </a>
                             </div>
@@ -69,26 +68,26 @@
                         <div class="form-group">
                             <label class="col-fifth control-label not-required">이름 (한글명)</label>
                             <div class="col-xs-4">
-                                <input type="text" class="form-control" name="userNameKo" disabled value="${vo.memberNameKor }">
+                                <input type="text" class="form-control" name="userNameKo" disabled value="${memberNameKor }">
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label class="col-fifth control-label not-required">이름 (영문명)</label>
                             <div class="col-xs-4">
-                                <input type="text" class="form-control" name="userNameEn" disabled value="${vo.memberNameEng }">
+                                <input type="text" class="form-control" name="userNameEn" disabled value="${memberNameEng }">
                             </div>
                         </div>
-                        <c:if test="${vo.gender=='M' }">
+                        <c:if test="${gender=='M' }">
                         		<c:set var="gen" value="남성"/>
                         </c:if>
-                        <c:if test="${vo.gender=='F' }">
+                        <c:if test="${gender=='F' }">
                         		<c:set var="gen" value="여성"/>
                         </c:if>
                         <div class="form-group">
                             <label class="col-fifth control-label not-required">성별</label>
                             <div class="col-xs-4">
-                                <input type="text" class="form-control" name="userGender" disabled value="${gen }">
+                                <input type="text" class="form-control" name="userGender" disabled value="${gender }">
                             </div>
                         </div>
                        
@@ -96,7 +95,7 @@
                             <label class="col-fifth control-label not-required">생년월일</label>
                             <div class="col-xs-4">
                                 <input type="text" class="form-control" id='userBirthday' name="userBirthday"
-                                       disabled value="${vo.birthDay }">
+                                       disabled value="${birthDay }">
                             </div>
                         </div>
                        
@@ -112,7 +111,7 @@
                             </div>
                             <div class="col-xs-4 country-mark">
                                 <input type="text" class="form-control invisible" id="country" name="country"
-                                       value="${vo.nation }"
+                                       value="${nation }"
                                        readonly required>
                             </div>
                         </div>
@@ -121,7 +120,7 @@
                             <label class="col-fifth control-label">이메일</label>
                             <div class="col-xs-5">
                                 <input type="text" class="form-control" name="email" placeholder="이메일 입력" required
-                                       value="${vo.email }">
+                                       value="${email }">
                             </div>
                         </div>
                         
@@ -130,23 +129,23 @@
                             <div class="multi-input hidden">
                                <div class="col-xs-2">
                                    <input type="number" class="form-control" name="phone1" id="phone1" placeholder="010"
-                                          maxlength="3" oninput="maxLengthCheck(this)" required value="${vo.t1 }">
+                                          maxlength="3" oninput="maxLengthCheck(this)" required value="${t1 }">
                                 </div>
                                 <span>ㅡ</span>
                                 <div class="col-xs-2" style="padding: 0 15px;">
                                     <input type="number" class="form-control" name="phone2"
                                            id="phone2" placeholder="1234"
-                                           maxlength="4" oninput="maxLengthCheck(this)" required value="${vo.t2 }">
+                                           maxlength="4" oninput="maxLengthCheck(this)" required value="${t2 }">
                                 </div>
                                 <span>ㅡ</span>
                                 <div class="col-xs-2" style="padding: 0 15px;">
                                     <input type="number" class="form-control" name="phone3" id="phone3"
                                            placeholder="1234"
-                                           maxlength="4" oninput="maxLengthCheck(this)" required value="${vo.t3 }">
+                                           maxlength="4" oninput="maxLengthCheck(this)" required value="${t3 }">
                                 </div>
                             </div>
                             <div class="col-xs-4" id="phone-all">
-                                <input type="text" class="form-control" value="${vo.tel }">
+                                <input type="text" class="form-control" value="${tel }">
                             </div>
                         </div>
                         
@@ -169,7 +168,7 @@
                                 </div>
                             </div>
                             <div class="col-xs-4" id="number-all">
-                                <input type="text" class="form-control" value="${vo.altTel }">
+                                <input type="text" class="form-control" value="${altTel }">
                             </div>
                         </div>
                         
@@ -178,22 +177,22 @@
                             <label class="col-fifth control-label">주소</label>
                             <div class="col-xs-2" style="margin-top: 5px;">
                                 <input type="number" class="form-control" name="postalCode" id="postalCode"
-                                       placeholder="우편번호" readonly value="${vo.zipcode }">
+                                       placeholder="우편번호" readonly value="${zipcode }">
                             </div>
                             <div style="margin-top: 5px;">
                                 <input type="button" value="우편번호 검색" id="btn-postalSearch" class="blueBtn">
                             </div>
                             <div class="col-xs-9" id="addr-all">
-                                <input type="text" class="form-control" value="${vo.addr }, ${vo.detailAddr}">
+                                <input type="text" class="form-control" value="${addr }, ${detailAddr}">
                             </div>
                             <div class="hidden">
                                <div class="col-xs-5">
                                     <input type="text" class="form-control" name="addr1" id="addr1"
-                                           placeholder="기본주소" required readonly value="${vo.addr }">
+                                           placeholder="기본주소" required readonly value="${addr }">
                                 </div>
                                 <div class="col-xs-5">
                                     <input type="text" class="form-control" name="addr2" id="addr2"
-                                           placeholder="상세주소" value="${vo.detailAddr }">
+                                           placeholder="상세주소" value="${detailAddr }">
                                 </div>
                             </div>
                         </div>
@@ -204,7 +203,7 @@
                                 <input type="radio" name="info-provide" class="radio3" id="info-provide-agree" checked>
                                 <label for="info-provide-agree"> 동의</label>
                                 <input type="radio" name="info-provide" class="radio3" id="info-provide-disagree"
-                                <c:if test="${vo.ag1 =='off' }">
+                                <c:if test="${ag1 =='off' }">
                                 	checked
                                 </c:if>
                                 >
@@ -218,7 +217,7 @@
                                 <input type="radio" name="integrated-login" class="radio3" id="integrated-login-agree" checked>
                                 <label for="integrated-login-agree"> 동의</label>
                                 <input type="radio" name="integrated-login" class="radio3" id="integrated-login-disagree"
-                                <c:if test="${vo.ag2 =='off' }">
+                                <c:if test="${ag2 =='off' }">
                                 	checked
                                 </c:if>
                                 >
@@ -235,7 +234,7 @@
                                 <div class="clearfix">
                                     <div class="col-xs-3 checkbox">
 	                                        <input type="checkbox" class="checkbox3" name="receiveEmail" id="receiveEmail"
-                                	<c:if test="${vo.dr1=='on' }">
+                                	<c:if test="${dr1=='on' }">
 	                                     checked
                                     </c:if>
                                         >
@@ -243,7 +242,7 @@
                                     </div>
                                     <div class="col-xs-3 checkbox">
 	                                        <input type="checkbox" class="checkbox3" name="receiveSMS" id="receiveSMS"
-                                    <c:if test="${vo.dr2=='on' }">
+                                    <c:if test="${dr2=='on' }">
 	                                    checked
                                     </c:if>
                                         >
@@ -319,10 +318,10 @@
         <!-- Moment Js -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
         <!-- Lightpick CSS -->
-        <link rel="stylesheet" href="<%=path %>/Vendor/javascript-datepicker-lightpick/css/lightpick.css">
+        <link rel="stylesheet" href="<%=vendor %>/javascript-datepicker-lightpick/css/lightpick.css">
         <!-- Lightpick JS -->
-        <script src="<%=path %>/Vendor/javascript-datepicker-lightpick/js/lightpick.js"></script>
-        <script src="<%=path %>/Resources/JS/validator.js"></script>
-        <script src="<%=path %>/Resources/JS/account.js"></script>
+        <script src="<%=vendor %>/javascript-datepicker-lightpick/js/lightpick.js"></script>
+        <script src="<%=js %>/validator.js"></script>
+        <script src="<%=js %>/account.js"></script>
     </body>
 </html>

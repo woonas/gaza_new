@@ -8,7 +8,7 @@ public interface MemberInterface {
 
 	public MemberVO login(MemberVO vo);
 
-	public void getMember(MemberVO vo);
+	public MemberVO getMember(MemberVO vo);
 
 	public int updateRecord(MemberVO vo);
 

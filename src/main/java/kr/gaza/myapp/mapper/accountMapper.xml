@@ -15,4 +15,9 @@
 	<select id="idCheck" parameterType="String" resultType="boolean">
 		select count(memberId) from member where memberId=#{id}
 	</select>
+	<select id="getMember" parameterType="kr.gaza.myapp.account.member.MemberVO" resultType="kr.gaza.myapp.account.member.MemberVO">
+		select memberNum, memberId, memberPwd, memberNameKor, memberNameEng, nation, gender, tel, altTel, 
+		zipcode, addr, detailaddr, email, birthday, agree, directronic, flightCnt, regdate
+		 from member where memberId=#{memberId}
+	</select>
 </mapper>
