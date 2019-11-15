@@ -33,7 +33,7 @@
                 <div class="dotsWrap"><div class="playState"></div></div>
             </div>
             <!-- 심플예약폼 -->
-            <form method="post" action="<%=path%>/Resources/JSP/booking/booking1.do">
+            <form method="post" action="<%=jsp%>/booking/booking1">
                 <div class="reserve_wrap">
                     <div class="reserveBox">
                         <div>
@@ -71,7 +71,7 @@
                             </div>
                             <div class="col-third">
                                 <input type="radio" class="radio1" name="trip-type" value="multi-way" id="multi-way">
-                                <label for="multi-way"  class="radioLabel lastRadio">다구간</label>
+                                <label for="multi-way"  class="radioLabel lastRadio" onclick="location.href='<%=jsp%>/flight/booking/booking1?trip_type=multi-way'">다구간</label>
                             </div>
                         </div>
                         <div id="passengerWrap">
