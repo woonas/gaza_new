@@ -43,7 +43,7 @@
                 </div>
                 <div class="circle">
                     <div><a href="" class="font-white">나의 마일리지</a></div><br>
-                    <strong>0</strong>
+                    <strong>${vo.myMileage }</strong>
                 </div>
             </div>
 

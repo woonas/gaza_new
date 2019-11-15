@@ -83,7 +83,7 @@ function change(targetId){
 
 (() => {
 	 if(location.pathname.indexOf('myhome') !== -1) {
-         const my_mileage = 23433;
+         const my_mileage = 10000;
          const add_num = Math.round(my_mileage/70);
          //메인 상단부 마일리지 원형 그래프
          setTimeout(() => {

@@ -6,4 +6,7 @@
 	<select id="memberRecord" resultType="kr.gaza.myapp.myhome.MyHomeVO">
 		select membernamekor, membernameeng, flightcnt from member where membernum=#{membernum}
 	</select>
+	<select id="memberMiles" resultType="kr.gaza.myapp.myhome.MyHomeVO">
+		select sum(a.point) from miles a join mymiles b on a.milesnum = b.milesnum where b.membernum=#{membernum}
+	</select>
 </mapper>

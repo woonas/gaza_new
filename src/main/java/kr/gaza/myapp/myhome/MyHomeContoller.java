@@ -18,11 +18,14 @@ public class MyHomeContoller {
 	public ModelAndView myHome(HttpServletRequest req) {
 		MyHomeDAOInterface dao = sqlSession.getMapper(MyHomeDAOInterface.class);
 		HttpSession sess = req.getSession();
-		MyHomeVO vo=  dao.memberRecord((int)sess.getAttribute("memberNum")); 
+		int memberNum = (int)sess.getAttribute("memberNum");
+		MyHomeVO vo =  dao.memberRecord(memberNum); 
+		MyHomeVO vo2 = dao.memberMiles(memberNum);
 		
 		ModelAndView mav = new ModelAndView();
 		if(vo!=null) {
 			mav.addObject("vo",vo);
+			mav.addObject("vo2",vo2);
 			mav.setViewName("JSP/mypage/myhome");
 		}else {
 			mav.setViewName("redirect:/");
