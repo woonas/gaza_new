@@ -15,16 +15,16 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
 
         <!-- Lightpick CSS -->
-        <link rel="stylesheet" href="../../../../Vendor/javascript-datepicker-lightpick/css/lightpick.css">
+        <link rel="stylesheet" href="<%=vendor%>/javascript-datepicker-lightpick/css/lightpick.css">
 
         <!-- Lightpick JS -->
-        <script src="../../../../Vendor/javascript-datepicker-lightpick/js/lightpick.js"></script>
+        <script src="<%=vendor%>/javascript-datepicker-lightpick/js/lightpick.js"></script>
         
-        <link rel="stylesheet" href="../../../CSS/booking.css">
+        <link rel="stylesheet" href="<%=css%>/booking.css">
         <script>window.onbeforeunload = () => window.scrollTo(0, 0)</script>
     </head>
     <body>
-   <%@ include file="../../common/nav.jspf" %>
+        <%@ include file="/WEB-INF/views/JSP/common/nav.jspf" %>
         <div class="overlay"></div>
         <section class="content">
             <h3>항공권 예약</h3>
@@ -321,7 +321,7 @@
                     </span>
                 </a>
                 
-                <form action="<%=path%>/Resources/JSP/flight/booking/booking2.do" method="post" id="nextEventFrm">
+                <form action="<%=jsp%>/flight/booking/booking2" method="post" id="nextEventFrm">
                     <input type="hidden" name="flight-type">
                     <input type="hidden" name="airportFrom">
                     <input type="hidden" name="airportTo">
@@ -340,12 +340,15 @@
             </ul>
         </section>
         <script>
+            // booking1 페이지 로딩시 다른곳에서 값이 넘어 올경우 처리해주기
             let city = '<%=request.getParameter("city")%>';
             let iata = '<%=request.getParameter("iata")%>';
+            let trip_type =  '<%=request.getParameter("trip_type")%>';
             if (city !== 'null' && iata !== 'null' ) document.getElementById('airportTo-1').value = `${city}   (${iata})`;
+            if (trip_type === "multi-way") document.getElementById(trip_type).checked = "true";
         </script>
-        <%@ include file="../../common/footer.jspf" %>
-        <script src="../../../JS/airportpicker.js"></script>
-        <script src="../../../JS/booking.js"></script>
+        <%@ include file="/WEB-INF/views/JSP/common/footer.jspf" %>
+        <script src="<%=js%>/airportpicker.js"></script>
+        <script src="<%=js%>/booking.js"></script>
     </body>
 </html>
