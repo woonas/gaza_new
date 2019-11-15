@@ -1,7 +1,5 @@
-# Created by https://www.gitignore.io/api/eclipse
-# Edit at https://www.gitignore.io/?templates=eclipse
-############
 ### Eclipse ###
+.settings/
 .metadata
 bin/
 tmp/
@@ -11,7 +9,6 @@ tmp/
 *~.nib
 *.class
 local.properties
-.settings/
 .loadpath
 .recommenders
 
