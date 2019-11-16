@@ -2,7 +2,6 @@ package kr.gaza.myapp.flight.booking;
 
 import kr.gaza.myapp.aviation.flight.FlightVO;
 import kr.gaza.myapp.aviation.product.ProductVO;
-import kr.gaza.myapp.aviation.seatreserve.SeatReserveVO;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +12,7 @@ public class BookingVO {
 
     private List<FlightVO> flightList = new ArrayList<>();
     private List<ProductVO> productList = new ArrayList<>();
-    private List<List<SeatReserveVO>> seatReserveList = new ArrayList<>();
+    private List<Integer> seatLeftList = new ArrayList<>();
 
     public String getJourneyType() {
         return journeyType;
@@ -47,11 +46,11 @@ public class BookingVO {
         this.productList = productList;
     }
 
-    public List<List<SeatReserveVO>> getSeatReserveList() {
-        return seatReserveList;
+    public List<Integer> getSeatLeftList() {
+        return seatLeftList;
     }
 
-    public void setSeatReserveList(List<List<SeatReserveVO>> seatReserveList) {
-        this.seatReserveList = seatReserveList;
+    public void setSeatLeftList(List<Integer> seatLeftList) {
+        this.seatLeftList = seatLeftList;
     }
 }

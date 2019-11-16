@@ -116,6 +116,7 @@ const verification = () => {
 //국가선택
 function onChangeCallback(ctr){
     document.getElementById('country').value = document.querySelector('.niceCountryInputMenuDefaultText span').innerText;
+    document.getElementById('country').dispatchEvent(new Event('change'));
 }
 
 //signup3에서 필요정보가 모두 입력되었는지 확인
@@ -169,7 +170,6 @@ const agreement_check = () => {
         return false;
     }
 };
-
 
 (() => {
     /* signup1 */

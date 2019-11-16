@@ -11,6 +11,7 @@
         <script>window.onbeforeunload=() => window.scrollTo(0, 0)</script>
     </head>
     <body>
+        ${dd}
         <%@ include file="/WEB-INF/views/JSP/common/nav.jspf" %>
         <div class="overlay"></div>
         <div class="cur-route itinerary">

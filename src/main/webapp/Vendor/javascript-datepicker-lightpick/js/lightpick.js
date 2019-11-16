@@ -331,6 +331,8 @@
 
     renderCalendar = function(el, opts)
     {
+        if (document.getElementById('cal_status'))
+        var temp = document.getElementById('cal_status').innerText;
         var html = '',
             monthDate = moment(opts.calendar[0]);
 
@@ -346,6 +348,9 @@
 
             if (opts.numberOfMonths === 1) {
                 html += renderTopButtons(opts, 'days');
+                if (html.indexOf("가는 날") !== -1) {
+                    html = html.replace("가는 날", temp);
+                }
             }
 
             html += '</header>'; // lightpick__month-title-bar

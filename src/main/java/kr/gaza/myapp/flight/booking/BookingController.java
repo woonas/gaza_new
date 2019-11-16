@@ -1,5 +1,6 @@
 package kr.gaza.myapp.flight.booking;
 
+import kr.gaza.myapp.aviation.product.ProductVO;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,6 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.UnsupportedEncodingException;
+import java.util.List;
 
 @Controller
 public class BookingController {
@@ -31,6 +33,7 @@ public class BookingController {
         return modelAndView;
     }
 
+    //Todo mybatis foreach...
     @PostMapping (value = "/JSP/flight/booking/booking2")
     public ModelAndView bookingView2(HttpServletRequest request) throws UnsupportedEncodingException {
         request.setCharacterEncoding("UTF-8");
@@ -44,11 +47,11 @@ public class BookingController {
         String[] flightDate = request.getParameter("flightDate").split("&");
         String numOfPassengers = request.getParameter("numOfPassengers");
         String seatType = request.getParameter("seat-type");
-
         for (int i = 0; i < airportFrom.length; i++) {
             JourneyVO journeyVO = new JourneyVO();
             journeyVO.setAirportFrom(airportFrom[i]);
             journeyVO.setAirportTo(airportTo[i]);
+            flightDate[i] = flightDate[i].replace("/","-");
             journeyVO.setFlightDate(flightDate[i]);
             journeyVO.setNumOfPassengers(numOfPassengers);
             journeyVO.setFlightClass(seatType);
@@ -56,11 +59,43 @@ public class BookingController {
         }
 
         BookingInterface bookingDAO = sqlSession.getMapper(BookingInterface.class);
-//        System.out.println(bookingDAO.getProductVO(bookingVO));
-//        System.out.println(1);
+        List<JourneyVO> journeyList = bookingVO.getJourneyList();
+        for (int i = 0; i < journeyList.size(); i++) {
+            String from = journeyList.get(i).getAirportFrom();
+            String to = journeyList.get(i).getAirportTo();
+            bookingVO.getProductList().add(bookingDAO.getProductVO(
+                    from.substring(from.lastIndexOf('(')+1, from.lastIndexOf(')')),
+                    to.substring(to.lastIndexOf('(')+1, to.lastIndexOf(')'))));
+        }
+        
+        List<ProductVO> productList = bookingVO.getProductList();
+        for (int i = 0; i < productList.size(); i++)
+            bookingVO.getFlightList().add(bookingDAO.getFlightVO(productList.get(i).getProductNum(), journeyList.get(i).getFlightDate()));
+
+        for (int i = 0; i < bookingVO.getFlightList().size(); i++)
+            bookingVO.getSeatLeftList().add(bookingDAO.getSeatLeft(bookingVO.getFlightList().get(i).getFlightNum()));
 
         request.setAttribute("bookingVO", bookingVO);
+        request.setAttribute("dd", bookingVO.getSeatLeftList().get(0));
+        return modelAndView;
+    }
+
+    @PostMapping (value = "/JSP/flight/booking/booking3")
+    public ModelAndView bookingView3(HttpServletRequest request) throws UnsupportedEncodingException {
+        request.setCharacterEncoding("UTF-8");
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("JSP/flight/booking/booking3");
 
         return modelAndView;
     }
+
+    @PostMapping (value = "/JSP/flight/booking/booking4")
+    public ModelAndView bookingView4(HttpServletRequest request) throws UnsupportedEncodingException {
+        request.setCharacterEncoding("UTF-8");
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("JSP/flight/booking/booking4");
+
+        return modelAndView;
+    }
+
 }

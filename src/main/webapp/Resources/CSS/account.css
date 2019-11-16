@@ -759,8 +759,21 @@ hr { margin-top: 40px; }
 
 #personalInfo .lightpick__month-title { padding-top: 18px !important; }
 
-#personalInfo .lightpick__day.is-today { background-size: 15px !important; }
+#personalInfo .lightpick__day.is-today { background-size: 15px; }
+#personalInfo .lightpick__day.is-today:hover { background-size: 25% !important; }
 
+.lightpick__day.is-start-date,
+.lightpick__day.is-end-date,
+.lightpick__day.is-start-date:hover,
+.lightpick__day.is-end-date:hover {
+    background-size: 25% !important;
+}
+
+.lightpick__day.is-start-date.is-today {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle fill='%23268BD2' cx='16' cy='16' r='16'/%3E%3C/svg%3E") !important;
+    background-size: 25% !important;
+    background-position: center !important;
+}
 
 /* 아이디 중복체크 */
 

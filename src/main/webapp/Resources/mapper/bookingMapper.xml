@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.gaza.myapp.flight.booking.BookingInterface">
+    <select id="getProductVO" resultType="kr.gaza.myapp.aviation.product.ProductVO">
+        select
+            productnum, depart, arrive, price, sale
+        from
+            product
+        where
+            depart = #{from} and arrive = #{to}
+    </select>
+
+    <select id="getFlightVO" resultType="kr.gaza.myapp.aviation.flight.FlightVO">
+        select
+            FLIGHTNUM, AIRPLANENAME, DEPARTTIME, ARRIVETIME, SALE as flightSale
+        from
+            FLIGHT
+        where
+            PRODUCTNUM=${productNum} and DEPARTTIME like '${flightDate}%'
+    </select>
+
+    <select id="getSeatLeft" resultType="java.lang.Integer">
+        select
+            count(seatreservenum)
+        from
+            SEATRESERVE
+        where
+            FLIGHTNUM=${flightNum} and RESERVED = 0
+    </select>
+
+</mapper>

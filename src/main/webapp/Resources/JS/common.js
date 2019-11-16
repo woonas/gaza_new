@@ -139,6 +139,8 @@ let cal_generator = (strId, startDate, numOfMonths) => {
                 str_status.textContent = '오는 날';
             else if(str_status.textContent === '오는 날')
                 str_status.textContent = '가는 날';
+            if (str_status.textContent === '생년월일')
+                document.getElementById('birthdate').dispatchEvent(new Event('change'));
         }, onOpen: function() {
             calendar_openedBy = strId.charAt(strId.length-1);
             const str_status = document.getElementById('cal_status');

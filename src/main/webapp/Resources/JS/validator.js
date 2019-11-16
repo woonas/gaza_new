@@ -18,7 +18,7 @@ $(document).ready(function() {
         .bootstrapValidator({
         message: '올바른 양식이 아닙니다.',
         feedbackIcons: {
-            required: 'glyphicon glyphicon-asterisk',
+            required: 'glyphicon glyphicon-star',
             valid: 'glyphicon glyphicon-ok',
             invalid: 'glyphicon glyphicon-remove',
             validating: 'glyphicon glyphicon-refresh'
@@ -31,7 +31,7 @@ $(document).ready(function() {
                     }
                 }
             },
-            username: {
+            memberId: {
                 message: '올바른 아이디가 아닙니다.',
                 validators: {
                     notEmpty: {
@@ -48,7 +48,7 @@ $(document).ready(function() {
                     }
                 }
             },
-            password: {
+            memberPwd: {
                 validators: {
                     notEmpty: {
                         message: '비밀번호는 필수 항목입니다.'
@@ -71,7 +71,16 @@ $(document).ready(function() {
                     }
                 }
             },
-            country: {
+            birthDay : {
+                trigger: 'change',
+                validators: {
+                    notEmpty: {
+                        message: '생년월일은 필수 항목입니다.'
+                    }
+                }
+            },
+            nation: {
+                trigger: 'change',
                 validators: {
                     notEmpty: {
                         message: '거주지역은 필수 항목입니다.'
@@ -88,7 +97,7 @@ $(document).ready(function() {
                     }
                 }
             },
-            phone1: {
+            t1: {
                 validators: {
                     notEmpty: {
                         message: '필수 항목입니다.'
@@ -100,7 +109,7 @@ $(document).ready(function() {
                     }
                 }
             },
-            phone2: {
+            t2: {
                 validators: {
                     notEmpty: {
                         message: '필수 항목입니다.'
@@ -112,7 +121,7 @@ $(document).ready(function() {
                     }
                 }
             },
-            phone3: {
+            t3: {
                 validators: {
                     notEmpty: {
                         message: '필수 항목입니다.'
@@ -131,7 +140,8 @@ $(document).ready(function() {
                     }
                 }
             },
-            addr1: {
+            addr: {
+                trigger: "change keyup",
                 validators: {
                     notEmpty: {
                         message: "주소는 필수 항목입니다."
@@ -181,6 +191,7 @@ const addrSearch = () => {
             // 우편번호와 주소 정보를 해당 필드에 넣는다.
             document.getElementById('postalCode').value = data.zonecode;
             document.getElementById("addr1").value = addr;
+            document.getElementById('addr1').dispatchEvent(new Event('change'));
             // 커서를 상세주소 필드로 이동한다.
             document.getElementById("addr2").focus();
             document.getElementById("addr2").value = '';
