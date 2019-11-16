@@ -4,7 +4,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>가자에어test</title>
+        <title>가자에어</title>
         <!-- css -->
         <link rel="stylesheet" href="<%=path %>/Resources/CSS/index.css" type="text/css"/>
         <!-- Lightpick CSS -->
@@ -33,7 +33,7 @@
                 <div class="dotsWrap"><div class="playState"></div></div>
             </div>
             <!-- 심플예약폼 -->
-            <form method="post" action="<%=jsp%>/booking/booking1">
+            <form method="get" action="<%=jsp%>/flight/booking/booking1">
                 <div class="reserve_wrap">
                     <div class="reserveBox">
                         <div>
@@ -60,7 +60,26 @@
                         </div>
                     </div>
                     <div class="reserveBox">
-                        <div id="waySelect">
+                        <div id="classSelect">
+                            <div class="col-third">
+                                <input type="radio" class="radio1" name="class-type" value="economy" id="economy" checked>
+                                <label for="economy" class="firstRadio radioLabel">이코노미</label>
+                            </div>
+                            <div class="col-third">
+                                <input type="radio" class="radio1" name="class-type" value="business" id="business">
+                                <label for="business" class="radioLabel">비지니스</label>
+                            </div>
+                            <div class="col-third">
+                                <input type="radio" class="radio1" name="class-type" value="first" id="first">
+                                <label for="first"  class="radioLabel lastRadio">퍼스트</label>
+                            </div>
+                        </div>
+                        <div id="passengerWrap">
+                            <input type="text" id="num-of-passengers" name="num-of-passengers" readonly>
+                        </div>
+                    </div>
+                    <div class="reserveBox">
+                         <div id="waySelect">
                             <div class="col-third">
                                 <input type="radio" class="radio1" name="trip-type" value="round-way" id="round-way" checked>
                                 <label for="round-way" class="firstRadio radioLabel">왕복</label>
@@ -74,11 +93,6 @@
                                 <label for="multi-way"  class="radioLabel lastRadio" onclick="location.href='<%=jsp%>/flight/booking/booking1?trip_type=multi-way'">다구간</label>
                             </div>
                         </div>
-                        <div id="passengerWrap">
-                            <input type="text" id="num-of-passengers" name="num-of-passengers" readonly>
-                        </div>
-                    </div>
-                    <div class="reserveBox">
                         <img src="<%=path %>/Resources/IMG/icon/both_arrow2.png" title="출발지, 도착지 반대로 변경.">
                         <input type="submit" class="simple_reservation_submit" value="조회"/>
                     </div>

@@ -5,14 +5,14 @@
     <head>
         <meta charset="UTF-8">
         <title>회원정보</title>
-        <!--        bootstrap validator-->
+        <!-- bootstrap validator-->
         <link rel="stylesheet" href="<%=vendor %>/bootstrap/css/bootstrap.css"/>
         <link rel="stylesheet" href="<%=vendor %>/bootstrapValidator/bootstrapValidator.css"/>
 		
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="<%=vendor %>/bootstrapValidator/bootstrapValidator.js"></script>
-        <!--        countrypicker-->
+        <!-- countrypicker-->
         <link rel="stylesheet" href="<%=vendor %>/Filterable-Country-Picker-niceCountryInput/niceCountryInput.css">
         <script src="<%=vendor %>/Filterable-Country-Picker-niceCountryInput/niceCountryInput.js"></script>
         <!-- Font Awesome CDN -->
@@ -21,9 +21,12 @@
         <script>window.onbeforeunload = () => window.scrollTo(0, 0)</script>
         <!-- 다음/카카오 주소검색 -->
         <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-        <style>
-        
-        </style>
+		<script>
+			$(function(){
+				alert("pwd="+${vo.memberPwd});
+			});
+			
+		</script>
     </head>
     <body id="personalInfo">
     <%@ include file="../../common/nav.jspf" %>

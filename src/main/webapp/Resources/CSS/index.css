@@ -197,7 +197,7 @@ input:checked + label>.reserve_wrap {
 .lightpick__day.is-today { background-size: 15px !important; }
 
 /*구간 선택---------------------*/
-#waySelect{
+#classSelect{
 	width: 80%;
 	height: 50px !important;
 	line-height: 80px;
@@ -318,6 +318,19 @@ input:checked + label>.reserve_wrap {
 	position: absolute;
 	top: 35px;
 	right: 30px;
+}
+/*클래스 선택 */
+#waySelect {
+	position : absolute;
+	top: -51px;
+	left: -851px;
+	width: 190%;
+}
+#waySelect>div:first-child>label{
+	border-bottom-left-radius : 0px !important;
+}
+#waySelect>div:last-child>label{
+	border-bottom-right-radius : 0px !important;
 }
 /*배경이미지 컨트롤러*/
 .slideControler{
