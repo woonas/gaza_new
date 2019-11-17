@@ -18,12 +18,56 @@ $(document).ready(function() {
         .bootstrapValidator({
         message: '올바른 양식이 아닙니다.',
         feedbackIcons: {
-            required: 'glyphicon glyphicon-star',
+            required: 'glyphicon glyphicon-asterisk',
             valid: 'glyphicon glyphicon-ok',
             invalid: 'glyphicon glyphicon-remove',
             validating: 'glyphicon glyphicon-refresh'
         },
         fields: {
+            firstNameKor: {
+                validators: {
+                    notEmpty: {
+                        message: '성을 입력해주십시오!'
+                    },
+                    regexp: {
+                        regexp: /^[가-힣]+$/,
+                        message: '한글 성을 입력하여주십시오.'
+                    }
+                }
+            },
+            lastNameKor: {
+                validators: {
+                    notEmpty: {
+                        message: '이름을 입력해주십시오!'
+                    },
+                    regexp: {
+                        regexp: /^[가-힣]+$/,
+                        message: '한글 이름을 입력하여주십시오.'
+                    }
+                }
+            },
+            firstNameEng: {
+                validators: {
+                    notEmpty: {
+                        message: '성을 입력해주십시오!'
+                    },
+                    regexp: {
+                        regexp: /^[a-zA-Z]+$/,
+                        message: '영문성(Last name)을 입력하여주십시오.'
+                    }
+                }
+            },
+            lastNameEng: {
+                validators: {
+                    notEmpty: {
+                        message: '이름을 입력해주십시오!'
+                    },
+                    regexp: {
+                        regexp: /^[a-zA-Z]+$/,
+                        message: '영문이름(First name) 입력하여주십시오.'
+                    }
+                }
+            },
             gender: {
                 validators: {
                     notEmpty: {
@@ -66,8 +110,8 @@ $(document).ready(function() {
                         message: '비밀번호확인은 필수 항목입니다.'
                     },
                     identical: {
-                        field: 'password',
-                        message: '비밀번호가 같지않습니다.'
+                        field: 'memberPwd',
+                        message: '비밀번호란과 비밀번호확인란에 입력된 값이 같지않습니다.'
                     }
                 }
             },

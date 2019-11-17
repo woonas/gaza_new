@@ -1,5 +1,6 @@
 package kr.gaza.myapp.flight.booking;
 
+import kr.gaza.myapp.aviation.flight.FlightVO;
 import kr.gaza.myapp.aviation.product.ProductVO;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +34,6 @@ public class BookingController {
         return modelAndView;
     }
 
-    //Todo mybatis foreach...
     @PostMapping (value = "/JSP/flight/booking/booking2")
     public ModelAndView bookingView2(HttpServletRequest request) throws UnsupportedEncodingException {
         request.setCharacterEncoding("UTF-8");
@@ -49,34 +49,51 @@ public class BookingController {
         String seatType = request.getParameter("seat-type");
         for (int i = 0; i < airportFrom.length; i++) {
             JourneyVO journeyVO = new JourneyVO();
+            JourneyVO journeyVO2 = new JourneyVO();
             journeyVO.setAirportFrom(airportFrom[i]);
             journeyVO.setAirportTo(airportTo[i]);
-            flightDate[i] = flightDate[i].replace("/","-");
-            journeyVO.setFlightDate(flightDate[i]);
             journeyVO.setNumOfPassengers(numOfPassengers);
             journeyVO.setFlightClass(seatType);
-            bookingVO.getJourneyList().add(journeyVO);
+            flightDate[i] = flightDate[i].replace("/","-");
+            if (bookingVO.getJourneyType().equals("round-way")) {
+                journeyVO2.setAirportFrom(airportTo[i]);
+                journeyVO2.setAirportTo(airportFrom[i]);
+                journeyVO2.setNumOfPassengers(numOfPassengers);
+                journeyVO2.setFlightClass(seatType);
+                String[] dates = flightDate[i].split(" → ");
+                journeyVO.setFlightDate(dates[0]);
+                journeyVO2.setFlightDate(dates[1]);
+                bookingVO.getJourneyList().add(journeyVO);
+                bookingVO.getJourneyList().add(journeyVO2);
+            } else {
+                journeyVO.setFlightDate(flightDate[i]);
+                bookingVO.getJourneyList().add(journeyVO);
+            }
         }
 
         BookingInterface bookingDAO = sqlSession.getMapper(BookingInterface.class);
         List<JourneyVO> journeyList = bookingVO.getJourneyList();
         for (int i = 0; i < journeyList.size(); i++) {
-            String from = journeyList.get(i).getAirportFrom();
-            String to = journeyList.get(i).getAirportTo();
-            bookingVO.getProductList().add(bookingDAO.getProductVO(
-                    from.substring(from.lastIndexOf('(')+1, from.lastIndexOf(')')),
-                    to.substring(to.lastIndexOf('(')+1, to.lastIndexOf(')'))));
+            String from = journeyList.get(i).getAirportFromIATA();
+            String to = journeyList.get(i).getAirportToIATA();
+            bookingVO.getProductList().add(bookingDAO.getProductVO(from, to));
         }
         
         List<ProductVO> productList = bookingVO.getProductList();
         for (int i = 0; i < productList.size(); i++)
             bookingVO.getFlightList().add(bookingDAO.getFlightVO(productList.get(i).getProductNum(), journeyList.get(i).getFlightDate()));
 
-        for (int i = 0; i < bookingVO.getFlightList().size(); i++)
-            bookingVO.getSeatLeftList().add(bookingDAO.getSeatLeft(bookingVO.getFlightList().get(i).getFlightNum()));
+        for (int i = 0; i < bookingVO.getFlightList().size(); i++) {
+            List<FlightVO> flightList = bookingVO.getFlightList().get(i);
+            bookingVO.getSeatLeftList().add(bookingDAO.getSeatLeft(flightList));
+        }
 
         request.setAttribute("bookingVO", bookingVO);
-        request.setAttribute("dd", bookingVO.getSeatLeftList().get(0));
+        if (bookingVO.getJourneyType().equals("multi-way"))
+            request.setAttribute("journey", new String[]{"첫번째", "두번째", "세번째", "네번째", "다섯번째", "여섯번째"});
+        else request.setAttribute("journey", new String[]{"가는", "오는"});
+        request.setAttribute("cheapestPrice", getCheapestPrice(bookingVO));
+
         return modelAndView;
     }
 
@@ -98,4 +115,21 @@ public class BookingController {
         return modelAndView;
     }
 
+    private int getCheapestPrice(BookingVO vo) {
+        int price = -1;
+        double temp = 0;
+
+        List<ProductVO> productVOList = vo.getProductList();
+        List<List<FlightVO>> flightVOList = vo.getFlightList();
+
+        for (int i = 0; i < productVOList.size(); i++) {
+            temp = productVOList.get(i).getPrice() * productVOList.get(i).getProductSale();
+            for (int j = 0; j < flightVOList.get(i).size(); j++) {
+                temp *= flightVOList.get(i).get(j).getFlightSale();
+            }
+            if (price == -1 || temp < price) price = (int)(temp/100*100);
+        }
+
+        return price;
+    }
 }

@@ -3,7 +3,7 @@
 <mapper namespace="kr.gaza.myapp.flight.booking.BookingInterface">
     <select id="getProductVO" resultType="kr.gaza.myapp.aviation.product.ProductVO">
         select
-            productnum, depart, arrive, price, sale
+            productnum, depart, arrive, price, sale as productSale
         from
             product
         where
@@ -17,15 +17,22 @@
             FLIGHT
         where
             PRODUCTNUM=${productNum} and DEPARTTIME like '${flightDate}%'
+        order by
+            DEPARTTIME
     </select>
 
-    <select id="getSeatLeft" resultType="java.lang.Integer">
+    <select id="getSeatLeft" parameterType="kr.gaza.myapp.aviation.flight.FlightVO" resultType="java.lang.Integer">
         select
             count(seatreservenum)
         from
             SEATRESERVE
         where
-            FLIGHTNUM=${flightNum} and RESERVED = 0
+            FLIGHTNUM in
+            <foreach collection="flightList" item="flightVO" index="index" separator="," open="(" close=")">
+                ${flightVO.flightNum}
+            </foreach>
+            and RESERVED = 0
+        group by
+            FLIGHTNUM
     </select>
-
 </mapper>

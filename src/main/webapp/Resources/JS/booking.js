@@ -288,46 +288,38 @@ const input_check = () => {
                     selected.parentElement.parentElement.removeChild(selected.parentElement.nextElementSibling);
                 }
                 const parent = e.target.parentElement;
+                let price = e.target.nextElementSibling.lastElementChild.innerText;
+                while (price.indexOf(',') !== -1) {
+                    price = price.replace(',','');
+                }
+                const totalNum = passengerNum.value;
+
+                let adultNum = totalNum.charAt(totalNum.indexOf('성인')+3);
+                let childNum = totalNum.charAt(totalNum.indexOf('소아')+3);
+                let infantNum = totalNum.charAt(totalNum.indexOf('유아')+3);
                 //
                 var div = document.createElement("DIV");
                 div.style.height = "50px";
                 div.classList.add('row');
                 div.classList.add('clearfix');
                 div.className = "row clearfix price-div";
+                let tempText = "<div class=\"col-two-fifth\"><div class=\"col-two-fifth\">선택된 항공편 운임</div><div class=\"col-three-fifth\">";
                 if(parent.parentElement.children[1] === parent) {
-                    div.style.backgroundColor = parent.style.backgroundColor = parent.style.borderBottomColor = "#8af";
-                    div.innerHTML = `<div class="col-two-fifth"><div class="col-two-fifth">선택된 항공편 운임</div><div class="col-three-fifth">60% 할인</div></div>
-                        <div class="col-three-fifth">
-                        <span class="people-type">(성인 1)</span><span>53,400</span>
-                        <span>+</span>
-                        <span class="people-type">(소아 1)</span><span>26,700</span>
-                        <span>+</span>
-                        <span class="people-type">(유아 1)</span><span>0</span>
-                        <span>=</span> KRW 80,100</div>`;
-                    insertAfter(parent.parentElement, div);
+                    div.style.backgroundColor = parent.style.backgroundColor = parent.style.borderBottomColor = "#9bf";
+                    tempText += "60% 할인";
                 } else if(parent.parentElement.children[2] === parent) {
                     div.style.backgroundColor = parent.style.backgroundColor = parent.style.borderBottomColor = "#69f";
-                    div.innerHTML = `<div class="col-two-fifth"><div class="col-two-fifth">선택된 항공편 운임</div><div class="col-three-fifth">50% 할인</div></div>
-                        <div class="col-three-fifth">
-                        <span class="people-type">(성인 1)</span><span>53,400</span>
-                        <span>+</span>
-                        <span class="people-type">(소아 1)</span><span>26,700</span>
-                        <span>+</span>
-                        <span class="people-type">(유아 1)</span><span>0</span>
-                        <span>=</span> KRW 80,100</div>`;
-                    insertAfter(parent.parentElement, div);
+                    tempText += "50% 할인";
                 } else if(parent.parentElement.children[3] === parent) {
                     div.style.backgroundColor = parent.style.backgroundColor = parent.style.borderBottomColor = "#36f";
-                    div.innerHTML = `<div class="col-two-fifth"><div class="col-two-fifth">선택된 항공편 운임</div><div class="col-three-fifth">정상 가격</div></div>
-                        <div class="col-three-fifth">
-                        <span class="people-type">(성인 1)</span><span>53,400</span>
-                        <span>+</span>
-                        <span class="people-type">(소아 1)</span><span>26,700</span>
-                        <span>+</span>
-                        <span class="people-type">(유아 1)</span><span>0</span>
-                        <span>=</span> KRW 80,100</div>`;
-                    insertAfter(parent.parentElement, div);
+                    tempText += "정상 가격";
                 }
+                tempText += `</div></div><div class="col-three-fifth"><span class="people-type">(성인 ${adultNum})</span><span>${(price * adultNum).toLocaleString()}</span>`;
+                if (childNum !== " ") tempText += `<span>+</span><span class="people-type">(소아 ${childNum})</span><span>${(price/200*100 * childNum).toLocaleString()}</span>`;
+                if (infantNum !== " ") tempText += `<span>+</span><span class="people-type">(유아 ${infantNum})</span><span>0</span>`;
+                tempText += `<span>=</span> KRW ${((price * adultNum) + (price/200*100 * childNum)).toLocaleString()}</div>`;
+                div.innerHTML = tempText;
+                insertAfter(parent.parentElement, div);
                 e.target.parentElement.classList.add('selected-ticket');
             });
         });
@@ -345,26 +337,31 @@ const input_check = () => {
         });
 
         // 섹션별 여정 설명바
-        $('#journey-1').waypoint(direction => {
-            if (direction === "down") $('#journey-1 .journey-name-fixed').removeClass('hidden');
-            else $('.journey-name-fixed').addClass('hidden');
-        }, {
-            offset: '-1px;'
-        });
+        for (let i = 1; i <= 6; i++) {
+            $('#journey-'+i).waypoint(direction => {
+                if (direction === "down") $(`#journey-${i} .journey-name-fixed`).removeClass('hidden');
+                else $('.journey-name-fixed').addClass('hidden');
+            }, {
+                offset: '-1px;'
+            });
 
-        $('#journey-2').waypoint(direction => {
-            if (direction === "down") $('#journey-2 .journey-name-fixed').removeClass('hidden');
-            else $('.journey-name-fixed').addClass('hidden');
-        }, {
-            offset: '-1px;'
-        });
-
-        $('#journey-2').waypoint(direction => {
-            if (direction === "up") $('#journey-1 .journey-name-fixed').removeClass('hidden');
-            else $('.journey-name-fixed').addClass('hidden');
-        }, {
-            offset: '200px;'
-        });
+            if ($('#journey-' + (i + 1)).length) {
+                $('#journey-' + (i + 1)).waypoint(direction => {
+                    if (direction === "up") $(`#journey-${i} .journey-name-fixed`).removeClass('hidden');
+                    else $('.journey-name-fixed').addClass('hidden');
+                }, {
+                    offset: '200px;'
+                });
+            } else {
+                $('.flex').waypoint(direction => {
+                    if (direction === "down") $('.journey-name-fixed').addClass('hidden');
+                    else $(`#journey-${i} .journey-name-fixed`).removeClass('hidden');
+                }, {
+                    offset: '200px;'
+                });
+                break;
+            }
+        }
     }
 
     else if (location.pathname.indexOf('booking3') !== -1) {

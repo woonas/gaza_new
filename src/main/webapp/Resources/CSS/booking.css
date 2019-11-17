@@ -340,6 +340,7 @@ input[name="class-type"].radio2:checked + label { background-position: 35% 5px; 
     background-color: #fff;
     border: none;
     width: calc(100% - 2px);
+    font-size: 140%;
 }
 
 .cur-route>.book-input-form {
@@ -422,7 +423,7 @@ input[name="class-type"].radio2:checked + label { background-position: 35% 5px; 
 }
 
 .journey-name span:first-of-type { margin-right: 30px; }
-.journey-name span:last-of-type { margin-left: 30px; }
+.journey-name span:last-of-type { margin-left: 20px; }
 .journey-name span>span {
     font-size: 60%;
     color: #888;
@@ -454,7 +455,7 @@ input[name="class-type"].radio2:checked + label { background-position: 35% 5px; 
 
 .journey-name-fixed>div { width: 1200px; margin: 0 auto;}
 
-.journey-name-fixed>div>span:first-of-type { margin-right: 20px;}
+.journey-name-fixed>div>span:first-of-type { margin: 0 20px 0 10px;}
 .journey-name-fixed>div>span:nth-of-type(2) { margin-right: 25px; }
 .journey-name-fixed>div>span:last-of-type { margin-left: 20px;}
 .journey-name-fixed>div>span:nth-of-type(2):after {
@@ -633,8 +634,8 @@ input[name="class-type"].radio2:checked + label { background-position: 35% 5px; 
     background-size: 191px 100px;
     height: 100px;
 }
-
 .flight-table-schedule>.col-two-fifth>.col-two-fifth>div:first-child { margin: 19px 0 19px 30px; }
+.flight-table-schedule:first-of-type>.col-fifth { border-top: 1px solid #ddd; }
 
 .fa-clock {
     margin-left: -37px;

@@ -10,9 +10,9 @@ public class BookingVO {
     private String journeyType;
     private List<JourneyVO> journeyList = new ArrayList<>();
 
-    private List<FlightVO> flightList = new ArrayList<>();
     private List<ProductVO> productList = new ArrayList<>();
-    private List<Integer> seatLeftList = new ArrayList<>();
+    private List<List<FlightVO>> flightList = new ArrayList<>();
+    private List<List<Integer>> seatLeftList = new ArrayList<>();
 
     public String getJourneyType() {
         return journeyType;
@@ -30,14 +30,6 @@ public class BookingVO {
         this.journeyList = journeyList;
     }
 
-    public List<FlightVO> getFlightList() {
-        return flightList;
-    }
-
-    public void setFlightList(List<FlightVO> flightList) {
-        this.flightList = flightList;
-    }
-
     public List<ProductVO> getProductList() {
         return productList;
     }
@@ -46,11 +38,19 @@ public class BookingVO {
         this.productList = productList;
     }
 
-    public List<Integer> getSeatLeftList() {
+    public List<List<FlightVO>> getFlightList() {
+        return flightList;
+    }
+
+    public void setFlightList(List<List<FlightVO>> flightList) {
+        this.flightList = flightList;
+    }
+
+    public List<List<Integer>> getSeatLeftList() {
         return seatLeftList;
     }
 
-    public void setSeatLeftList(List<Integer> seatLeftList) {
+    public void setSeatLeftList(List<List<Integer>> seatLeftList) {
         this.seatLeftList = seatLeftList;
     }
 }

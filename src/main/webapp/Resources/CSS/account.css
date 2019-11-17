@@ -595,8 +595,12 @@ fieldset>.form-group:last-of-type>label:first-of-type:after {
 }
 fieldset>.form-group:last-of-type>label:first-of-type { padding-top: 25px; }
 
-input[name^=receive] { transform: scale(1.5); }
+#gender input[type=radio] {
+    display: block;
+    visibility: hidden;
+}
 
+input[name^=receive] { transform: scale(1.5); }
 input[name^=receive] + label:after {
     width: 0.75em;
     height: 0.45em;

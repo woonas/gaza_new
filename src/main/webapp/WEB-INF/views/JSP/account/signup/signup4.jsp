@@ -29,7 +29,7 @@
 <!-- Lightpick JS -->
         <script src="<%=path %>/Vendor/javascript-datepicker-lightpick/js/lightpick.js"></script>
     </head>
-     <body id="personalInfo">
+     <body id="personalInfo" onload="onChangeCallback()">
         <div class="overlay"></div>
          <%@ include file="../../common/nav.jspf" %>
         <section class="content">
@@ -51,33 +51,34 @@
                         <div class="form-group">
                             <label class="col-fifth control-label">이름 (한글명)</label>
                             <div class="col-xs-3">
-                                <input type="text" class="form-control" name="firstNameKor" placeholder="성" required data-bv-notempty-message="성을 입력해주십시오!">
+                                <input type="text" class="form-control" name="firstNameKor" placeholder="성" required>
                             </div>
                             <div class="col-xs-3">
-                                <input type="text" class="form-control" name="lastNameKor" placeholder="이름" required data-bv-notempty-message="이름을 입력해주십시오!">
+                                <input type="text" class="form-control" name="lastNameKor" placeholder="이름" required>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label class="col-fifth control-label">이름 (영문명)</label>
                             <div class="col-xs-3">
-                                <input type="text" class="form-control" name="firstNameEng" placeholder="성" required data-bv-notempty-message="성을 입력해주십시오!">
+                                <input type="text" class="form-control" name="firstNameEng" placeholder="성(Last name)" required>
                             </div>
                             <div class="col-xs-3">
-                                <input type="text" class="form-control" name="lastNameEng" placeholder="이름" required data-bv-notempty-message="이름을 입력해주십시오!">
+                                <input type="text" class="form-control" name="lastNameEng" placeholder="이름(First name)" required>
                             </div>
                         </div>
                         
+<%--                        Todo 유효성검사 통과못하면 나오는 오류구문...--%>
                         <div class="form-group">
                             <label class="col-fifth control-label">성별</label>
                             <div class="col-xs-3" id="gender">
                                 <div class="radio col-xs-5">
-                                    <input type="radio" name="gender" class="radio3" id="male" value="M" checked>
-                                	<label for="male">남성</label>
+                                    <input type="radio" name="gender" class="radio3" id="male" value="M" required>
+                                    <label for="male">남성</label>
                                 </div>
                                 <div class="radio col-xs-5">
-                                    <input type="radio" name="gender" class="radio3" id="female" value="F">
-                                	<label for="female">여성</label>
+                                    <input type="radio" name="gender" class="radio3" id="female" value="F" required>
+                                    <label for="female">여성</label>
                                 </div>
                             </div>
                         </div>
