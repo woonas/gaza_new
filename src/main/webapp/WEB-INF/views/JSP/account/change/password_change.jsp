@@ -25,7 +25,7 @@
             <ul class="list-type2 list-border">
                 <li>회원님의 개인 정보를 안전하게 보호하기 위해 아시아나항공은 비밀번호를 암호화하여 저장, 관리하고 있습니다.</li>
             </ul>
-            <form id="defaultForm" method="post" action="<%=path %>/Resources/JSP/mypage/password_changeOk.do" class="form-horizontal">
+            <form id="defaultForm" method="post" action="<%=jsp %>/account/change/password_changeOk" class="form-horizontal">
                 <fieldset>
                     <div class="table-form pw-change-table">
                         <div class="form-group row clearfix">

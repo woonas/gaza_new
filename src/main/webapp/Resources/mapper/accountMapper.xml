@@ -20,4 +20,13 @@
 		zipcode, addr, detailaddr, email, birthday, agree, directronic, flightCnt, regdate
 		 from member where memberId=#{memberId}
 	</select>
+	<delete id="delAccount" parameterType="kr.gaza.myapp.account.member.MemberVO">
+		delete from member where memberId=#{memberId} and memberPwd=#{memberPwd}
+	</delete>
+	<select id="pwdChk" parameterType="kr.gaza.myapp.account.member.MemberVO" resultType="int">
+		select count(memberId) from member where memberId=#{memberId} and memberPwd=#{memberPwd}
+	</select>
+	<update id="updatePassword" parameterType="String">
+		update member set memberPwd=#{param3} where memberId=#{param1} and memberPwd=#{param2}
+	</update>
 </mapper>

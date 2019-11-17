@@ -21,12 +21,6 @@
         <script>window.onbeforeunload = () => window.scrollTo(0, 0)</script>
         <!-- 다음/카카오 주소검색 -->
         <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-		<script>
-			$(function(){
-				alert("pwd="+${vo.memberPwd});
-			});
-			
-		</script>
     </head>
     <body id="personalInfo">
     <%@ include file="../../common/nav.jspf" %>
@@ -43,7 +37,7 @@
                             <label class="col-fifth control-label not-required">회원번호</label>
                             <div class="col-xs-4">
                                 <input type="text" class="form-control" name="memberNo" id="memberNo" disabled
-                                       value="777 999 ${memberNum }">
+                                       value="777 999 ${vo.memberNum }">
                             </div>
                         </div>
                         
@@ -51,7 +45,7 @@
                             <label class="col-fifth control-label not-required">아이디</label>
                             <div class="col-xs-4">
                                 <input type="text" class="form-control" name="userId" id="userId" disabled
-                                       value="${memberId }">
+                                       value="${vo.memberId }">
                             </div>
                         </div>
                         
@@ -59,10 +53,10 @@
                             <label class="col-fifth control-label not-required">비밀번호</label>
                             <div class="col-xs-2">
                                 <input type="password" class="form-control" name="userPw" id="userPw" disabled
-                                       value="${memberPwd }">
+                                       value="${vo.memberPwd }">
                             </div>
                             <div>
-                                <a href="<%=jsp %>/mypage/password_change">
+                                <a href="<%=jsp %>/account/change/password_recheck">
                                     <input type="button" class="blueBtn" id="btn-pwChange" value="비밀번호변경">
                                 </a>
                             </div>
@@ -71,26 +65,26 @@
                         <div class="form-group">
                             <label class="col-fifth control-label not-required">이름 (한글명)</label>
                             <div class="col-xs-4">
-                                <input type="text" class="form-control" name="userNameKo" disabled value="${memberNameKor }">
+                                <input type="text" class="form-control" name="userNameKo" disabled value="${vo.memberNameKor }">
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label class="col-fifth control-label not-required">이름 (영문명)</label>
                             <div class="col-xs-4">
-                                <input type="text" class="form-control" name="userNameEn" disabled value="${memberNameEng }">
+                                <input type="text" class="form-control" name="userNameEn" disabled value="${vo.memberNameEng }">
                             </div>
                         </div>
-                        <c:if test="${gender=='M' }">
+                        <c:if test="${vo.gender=='M' }">
                         		<c:set var="gen" value="남성"/>
                         </c:if>
-                        <c:if test="${gender=='F' }">
+                        <c:if test="${vo.gender=='F' }">
                         		<c:set var="gen" value="여성"/>
                         </c:if>
                         <div class="form-group">
                             <label class="col-fifth control-label not-required">성별</label>
                             <div class="col-xs-4">
-                                <input type="text" class="form-control" name="userGender" disabled value="${gender }">
+                                <input type="text" class="form-control" name="userGender" disabled value="${vo.gender }">
                             </div>
                         </div>
                        
@@ -98,7 +92,7 @@
                             <label class="col-fifth control-label not-required">생년월일</label>
                             <div class="col-xs-4">
                                 <input type="text" class="form-control" id='userBirthday' name="userBirthday"
-                                       disabled value="${birthDay }">
+                                       disabled value="${vo.birthDay }">
                             </div>
                         </div>
                        
@@ -114,7 +108,7 @@
                             </div>
                             <div class="col-xs-4 country-mark">
                                 <input type="text" class="form-control invisible" id="country" name="country"
-                                       value="${nation }"
+                                       value="${vo.nation }"
                                        readonly required>
                             </div>
                         </div>
@@ -123,7 +117,7 @@
                             <label class="col-fifth control-label">이메일</label>
                             <div class="col-xs-5">
                                 <input type="text" class="form-control" name="email" placeholder="이메일 입력" required
-                                       value="${email }">
+                                       value="${vo.email }">
                             </div>
                         </div>
                         
@@ -132,23 +126,23 @@
                             <div class="multi-input hidden">
                                <div class="col-xs-2">
                                    <input type="number" class="form-control" name="phone1" id="phone1" placeholder="010"
-                                          maxlength="3" oninput="maxLengthCheck(this)" required value="${t1 }">
+                                          maxlength="3" oninput="maxLengthCheck(this)" required value="${vo.t1 }">
                                 </div>
                                 <span>ㅡ</span>
                                 <div class="col-xs-2" style="padding: 0 15px;">
                                     <input type="number" class="form-control" name="phone2"
                                            id="phone2" placeholder="1234"
-                                           maxlength="4" oninput="maxLengthCheck(this)" required value="${t2 }">
+                                           maxlength="4" oninput="maxLengthCheck(this)" required value="${vo.t2 }">
                                 </div>
                                 <span>ㅡ</span>
                                 <div class="col-xs-2" style="padding: 0 15px;">
                                     <input type="number" class="form-control" name="phone3" id="phone3"
                                            placeholder="1234"
-                                           maxlength="4" oninput="maxLengthCheck(this)" required value="${t3 }">
+                                           maxlength="4" oninput="maxLengthCheck(this)" required value="${vo.t3 }">
                                 </div>
                             </div>
                             <div class="col-xs-4" id="phone-all">
-                                <input type="text" class="form-control" value="${tel }">
+                                <input type="text" class="form-control" value="${vo.tel }">
                             </div>
                         </div>
                         
@@ -171,7 +165,7 @@
                                 </div>
                             </div>
                             <div class="col-xs-4" id="number-all">
-                                <input type="text" class="form-control" value="${altTel }">
+                                <input type="text" class="form-control" value="${vo.altTel }">
                             </div>
                         </div>
                         
@@ -180,22 +174,22 @@
                             <label class="col-fifth control-label">주소</label>
                             <div class="col-xs-2" style="margin-top: 5px;">
                                 <input type="number" class="form-control" name="postalCode" id="postalCode"
-                                       placeholder="우편번호" readonly value="${zipcode }">
+                                       placeholder="우편번호" readonly value="${vo.zipcode }">
                             </div>
                             <div style="margin-top: 5px;">
                                 <input type="button" value="우편번호 검색" id="btn-postalSearch" class="blueBtn">
                             </div>
                             <div class="col-xs-9" id="addr-all">
-                                <input type="text" class="form-control" value="${addr }, ${detailAddr}">
+                                <input type="text" class="form-control" value="${vo.addr }, ${vo.detailAddr}">
                             </div>
                             <div class="hidden">
                                <div class="col-xs-5">
                                     <input type="text" class="form-control" name="addr1" id="addr1"
-                                           placeholder="기본주소" required readonly value="${addr }">
+                                           placeholder="기본주소" required readonly value="${vo.addr }">
                                 </div>
                                 <div class="col-xs-5">
                                     <input type="text" class="form-control" name="addr2" id="addr2"
-                                           placeholder="상세주소" value="${detailAddr }">
+                                           placeholder="상세주소" value="${vo.detailAddr }">
                                 </div>
                             </div>
                         </div>
@@ -206,7 +200,7 @@
                                 <input type="radio" name="info-provide" class="radio3" id="info-provide-agree" checked>
                                 <label for="info-provide-agree"> 동의</label>
                                 <input type="radio" name="info-provide" class="radio3" id="info-provide-disagree"
-                                <c:if test="${ag1 =='off' }">
+                                <c:if test="${vo.ag1 =='off' }">
                                 	checked
                                 </c:if>
                                 >
@@ -220,7 +214,7 @@
                                 <input type="radio" name="integrated-login" class="radio3" id="integrated-login-agree" checked>
                                 <label for="integrated-login-agree"> 동의</label>
                                 <input type="radio" name="integrated-login" class="radio3" id="integrated-login-disagree"
-                                <c:if test="${ag2 =='off' }">
+                                <c:if test="${vo.ag2 =='off' }">
                                 	checked
                                 </c:if>
                                 >
@@ -237,7 +231,7 @@
                                 <div class="clearfix">
                                     <div class="col-xs-3 checkbox">
 	                                        <input type="checkbox" class="checkbox3" name="receiveEmail" id="receiveEmail"
-                                	<c:if test="${dr1=='on' }">
+                                	<c:if test="${vo.dr1=='on' }">
 	                                     checked
                                     </c:if>
                                         >
@@ -245,7 +239,7 @@
                                     </div>
                                     <div class="col-xs-3 checkbox">
 	                                        <input type="checkbox" class="checkbox3" name="receiveSMS" id="receiveSMS"
-                                    <c:if test="${dr2=='on' }">
+                                    <c:if test="${vo.dr2=='on' }">
 	                                    checked
                                     </c:if>
                                         >

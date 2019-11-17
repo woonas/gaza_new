@@ -1,6 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<c:if test="${cnt<=0 }">
+	<script>
+		alert("비밀번호를 잘못 입력하셨습니다. 다시 확인해주세요.");
+	</script>
+</c:if>
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,19 +16,21 @@
         <script>window.onbeforeunload = () => window.scrollTo(0, 0)</script>
     </head>
     <body>
-    <%@ include file="../common/nav.jspf" %>
+    
+    <%@ include file="../../common/nav.jspf" %>
         <section class="content">
             <h3>비밀번호 확인</h3>
             <ul class="list-type2 list-border">
                 <li>회원님의 개인 정보를 안전하게 보호하기 위해 비밀번호를 다시 입력하여 주십시오.</li>
             </ul>
+          	<form method="post" action="<%=jsp %>/account/change/password_change">
             <div class="table-form">
                 <div class="row clearfix">
                     <div class="table-row-title">
                         회원 아이디
                     </div>
                     <div>
-                        <input type="text" placeholder="홍길동" style="width: 296px;" disabled>
+                        <input type="text" value="${memberId }" name="memberId" style="width: 296px;" readonly>
                     </div>
                 </div>
                 <div class="row clearfix">
@@ -31,7 +38,7 @@
                         비밀번호 확인
                     </div>
                     <div>
-                        <input type="password" placeholder="비밀번호를 입력하세요" style="width: 296px;">
+                        <input type="password" name="memberPwd" placeholder="비밀번호를 입력하세요" style="width: 296px;">
                     </div>
                 </div>
             </div>
@@ -40,10 +47,10 @@
                 <li>비밀번호는 대/소문자를 구별하여 입력해 주십시오.</li>
             </ul>
             <div class="button-wrapper">
-                <input type="button" class="blueBtn confirm" value="확인">
+                <input type="submit" class="blueBtn confirm" value="확인">
             </div>
+      		</form>
         </section>
-        <script src="../../JS/common.js"></script>
-        <%@ include file="../common/footer.jspf" %>
+        <%@ include file="../../common/footer.jspf" %>
     </body>
 </html>

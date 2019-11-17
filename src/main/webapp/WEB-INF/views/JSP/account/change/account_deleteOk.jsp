@@ -4,7 +4,7 @@
 <c:if test="${cnt>0 }">
 	<script>
 		alert("회원탈퇴 성공하였습니다.")
-		location.href="../../../..";
+		location.href="<%=path%>/";
 	</script>
 
 </c:if>

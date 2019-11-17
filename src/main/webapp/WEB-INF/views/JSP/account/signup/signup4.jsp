@@ -5,14 +5,14 @@
     <head>
         <meta charset="UTF-8">
         <title>회원가입 - 회원정보입력</title>
-<!--        bootstrap validator-->
+<!-- bootstrap validator-->
         <link rel="stylesheet" href="<%=path %>/Vendor/bootstrap/css/bootstrap.css"/>
         <link rel="stylesheet" href="<%=path %>/Vendor/bootstrapValidator/bootstrapValidator.css"/>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="<%=path %>/Vendor/bootstrapValidator/bootstrapValidator.js"></script>
-<!--        countrypicker-->
+<!-- countrypicker-->
         <link rel="stylesheet" href="<%=path %>/Vendor/Filterable-Country-Picker-niceCountryInput/niceCountryInput.css">
         <script src="<%=path %>/Vendor/Filterable-Country-Picker-niceCountryInput/niceCountryInput.js"></script>
 <!-- Font Awesome CDN -->
@@ -51,20 +51,20 @@
                         <div class="form-group">
                             <label class="col-fifth control-label">이름 (한글명)</label>
                             <div class="col-xs-3">
-                                <input type="text" class="form-control" name="firstNameKor" placeholder="성" required>
+                                <input type="text" class="form-control" name="lastNameKor" placeholder="성" required>
                             </div>
                             <div class="col-xs-3">
-                                <input type="text" class="form-control" name="lastNameKor" placeholder="이름" required>
+                                <input type="text" class="form-control" name="firstNameKor" placeholder="이름" required>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label class="col-fifth control-label">이름 (영문명)</label>
                             <div class="col-xs-3">
-                                <input type="text" class="form-control" name="firstNameEng" placeholder="성(Last name)" required>
+                                <input type="text" class="form-control" name="lastNameEng" placeholder="성(Last name)" required>
                             </div>
                             <div class="col-xs-3">
-                                <input type="text" class="form-control" name="lastNameEng" placeholder="이름(First name)" required>
+                                <input type="text" class="form-control" name="firstNameEng" placeholder="이름(First name)" required>
                             </div>
                         </div>
                         

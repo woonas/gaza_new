@@ -53,12 +53,12 @@ public class MemberVO {
 		this.memberPwd = memberPwd;
 	}
 	public String getMemberNameKor() {
-		return firstNameKor+" "+lastNameKor;
+		return lastNameKor+" "+firstNameKor;
 	}
 	public void setMemberNameKor(String memberNameKor) {
 		this.memberNameKor = memberNameKor;
-		setFirstNameKor(memberNameKor.split(" ")[0]);
-		setLastNameKor(memberNameKor.split(" ")[1]);
+		setLastNameKor(memberNameKor.split(" ")[0]);
+		setFirstNameKor(memberNameKor.split(" ")[1]);
 	}
 	public String getFirstNameKor() {
 		return firstNameKor;
@@ -73,12 +73,12 @@ public class MemberVO {
 		this.lastNameKor = lastNameKor;
 	}
 	public String getMemberNameEng() {
-		return lastNameEng+" "+firstNameEng;
+		return firstNameEng+" "+lastNameEng;
 	}
 	public void setMemberNameEng(String memberNameEng) {
 		this.memberNameEng = memberNameEng;
-		setLastNameEng(memberNameEng.split(" ")[0]);
-		setFirstNameEng(memberNameEng.split(" ")[1]);
+		setFirstNameEng(memberNameEng.split(" ")[0]);
+		setLastNameEng(memberNameEng.split(" ")[1]);
 	}
 	public String getFirstNameEng() {
 		return firstNameEng;

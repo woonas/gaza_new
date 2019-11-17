@@ -14,13 +14,15 @@ public interface MemberInterface {
 
 	public int updatePassword(String memberId, String oldPwd, String newPwd);
 
-	public int delAccount(String id, String pwd);
+	public int delAccount(MemberVO vo);
 
 	public String findId(MemberVO vo);
 
 	public String findPw(MemberVO vo);
 
 	public void verification(MemberVO vo);
+	
+	public int pwdChk(MemberVO vo);
 
 	public String ipinCheck(boolean lookingForId, String id, String pw);
 }

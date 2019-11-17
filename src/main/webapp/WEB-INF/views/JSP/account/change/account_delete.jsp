@@ -62,7 +62,7 @@
                 <li>인터넷 회원가입 정보 중 아이디(ID), 비밀번호가 삭제됩니다. 그 외의 정보는 그대로 유지되며, 이메일 수신에 동의하신 회원님께서는 기존대로 이메일이 발송됩니다.</li>
             </ul>
             <br>
-            <form method="post" action="<%=request.getContextPath()%>/Resources/JSP/mypage/account_deleteOk.do">
+            <form method="post" action="<%=jsp%>/account/change/account_deleteOk">
             <div class="table-form">
                 <div class="row clearfix">
                     <div class="table-row-title">
