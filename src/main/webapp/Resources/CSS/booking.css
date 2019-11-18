@@ -590,16 +590,13 @@ input[name="class-type"].radio2:checked + label { background-position: 35% 5px; 
 .sort-div input[type=radio] { display: none; }
 .sort-div input[type=radio]:checked + label { color: #36f; }
 
-.ticket-table-wrapper .col-four-fifth,
-.ticket-table-wrapper .col-two-fifth,
-.ticket-table-wrapper .col-fifth { text-align: center; }
-
 .flight-table-title {
     color: #fff;
     line-height: 50px;
     position: sticky;
     top:0;
     z-index: 80;
+    text-align: center;
 }
 .flight-table-title>div:first-child { background-color: #999;}
 .flight-table-title>div:not(:first-child) { border-left: 1px solid #ddd; }
@@ -608,51 +605,52 @@ input[name="class-type"].radio2:checked + label { background-position: 35% 5px; 
 .flight-table-title>div:nth-child(3) { background-color: #69f; }
 .flight-table-title>div:last-child { background-color: #36f; }
 
-.flight-table-schedule>div { height: 102px; }
-.flight-table-schedule>.col-two-fifth>.col-fifth { line-height: 102px }
 
-.flight-table-schedule>.col-two-fifth { border-bottom: 1px #ddd solid; }
-.flight-table-schedule>.col-fifth {
+.flight-ticket-table-wrapper {
+    max-height: 600px;
+    overflow-y: overlay;
+    position: relative;
+}
+
+.flight-ticket-table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+
+.flight-ticket-table tr { border-bottom: 1px solid #ddd; }
+
+.flight-ticket-table th {
+    height: 50px;
+    color: #fff;
+}
+
+.flight-ticket-table td { height: 100px; }
+.flight-ticket-table tr>td:nth-child(2)>div { font-size: 90%; }
+
+.flight-ticket-table .fa-clock { margin: 0 10px 15px 0; }
+
+.flight-ticket-table col.ticket-wrapper {
+    width: 20%;
     background-color: #f3f3f3;
-    border-left: 1px #ddd solid;
-    border-bottom: 1px #ddd solid;
-    line-height: 1em;
-    color: #555;
+    border: 1px solid #ddd;
 }
-.flight-table-schedule>.col-fifth.selected-ticket * { color: #fff !important; }
-
-.flight-table-schedule input[type=radio] + label {
-    margin-top: 22px;
-    margin-bottom: 32px;
-}
-.flight-table-schedule input[type=radio].radio3:checked + label:before { border-color: transparent; }
-.flight-table-schedule>.col-two-fifth>.col-two-fifth>div { font-size: 90%; }
-
-.flight-table-schedule>.col-two-fifth>.col-two-fifth {
-    background-image: url("../IMG/icon/flight-table.svg");
-    background-repeat: no-repeat;
-    background-size: 191px 100px;
-    height: 100px;
-}
-.flight-table-schedule>.col-two-fifth>.col-two-fifth>div:first-child { margin: 19px 0 19px 30px; }
-.flight-table-schedule:first-of-type>.col-fifth { border-top: 1px solid #ddd; }
-
-.fa-clock {
-    margin-left: -37px;
-    margin-right: 10px;
-}
+.flight-ticket-table .radio3 + label { margin-top: -10px; }
+.flight-ticket-table .radio3 + label + div { margin-top: 15px; }
 
 .currency { font-size: 70%; }
 .empty-seats {
     font-size: 70%;
     color: #36f;
 }
+.flight-ticket-table .selected-ticket * { color: #fff !important; }
 
 .price-div {
     font-size: 120%;
     color: #fff;
     font-weight: 500;
     line-height: 50px;
+    height: 50px !important;
 }
 
 .price-div>div:first-of-type>div:last-of-type { text-align: left; }
@@ -667,6 +665,23 @@ input[name="class-type"].radio2:checked + label { background-position: 35% 5px; 
     vertical-align: 2px;
 }
 
+.sort-div input.checked:checked + label:after {
+    content: "";
+    position: absolute;
+    border-right: 3px solid #ddd;
+    border-bottom: 3px solid #ddd;
+    height: 10px;
+    width: 10px;
+    margin-left: 4px;
+    margin-top: 3px;
+    box-sizing: border-box;
+    transform: rotate(45deg);
+}
+
+.sort-div input.checked.reverse-order:checked + label:after {
+    transform: rotate(225deg);
+    margin-top: 6px;
+}
 /* ----------------------------------------------- */
 /* 탑승자/예약자 정보입력 booking3.html */
 /* ----------------------------------------------- */

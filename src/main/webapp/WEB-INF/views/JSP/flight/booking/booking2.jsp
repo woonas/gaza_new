@@ -141,7 +141,7 @@
                     <div class="row sort-div clearfix">
                         <ul>
                             <li>
-                                <input type="radio" id="sort-by-departure-time-${i}" name="sort-by-${i}" checked>
+                                <input type="radio" id="sort-by-departure-time-${i}" class="checked" name="sort-by-${i}" checked>
                                 <label for="sort-by-departure-time-${i}">
                                     출발시간순
                                 </label>
@@ -160,7 +160,7 @@
                             <li>
                                 <input type="radio" id="sort-by-price-${i}" name="sort-by-${i}">
                                 <label for="sort-by-price-${i}">
-                                    요금낮은순
+                                    요금순
                                 </label>
                             </li>
                         </ul>
@@ -180,71 +180,83 @@
                             <div class="col-fifth">할인운임</div>
                             <div class="col-fifth">정상운임</div>
                         </div>
-                        
-                        <c:forEach var="j" begin="1" end="${fn:length(flightList[i-1])}" step="1">
-                            <c:set var="flight" value="${flightList[i-1]}"/>
-                            <c:set var="seatLeft" value="${seatLeftList[i-1]}"/>
-                            <c:set var="price" value="${productList[i-1].price * productList[i-1].productSale * flight[j-1].flightSale}"/>
-                            <div class="row flight-table-schedule clearfix">
-                                <div class="col-two-fifth">
-                                    <div class="col-fifth">
-                                        <c:set var="departTime" value="${flight[j-1].departTime}"/>
-                                        <c:set var="length" value="${fn:length(departTime)}"/>
-                                        ${fn:substring(departTime, length-5, length)}
-                                    </div>
-                                    <div class="col-two-fifth">
-                                        <div class="flight-detail"><i class="far fa-clock"></i>1시간 10분</div>
-                                        <div class="flight-detail">직항</div>
-                                    </div>
-                                    <div class="col-fifth">
-                                        <c:set var="arriveTime" value="${flight[j-1].arriveTime}"/>
-                                        <c:set var="length" value="${fn:length(arriveTime)}"/>
-                                        ${fn:substring(arriveTime, length-5, length)}
-                                    </div>
-                                    <div class="col-fifth">${flight[j-1].airplaneName}</div>
-                                </div>
-                                <div class="col-fifth">
-                                    <input type="radio" name="flight-ticket" class="radio3 special-price-ticket" id="journey-${i}-ticket-row-${j}-1">
-                                    <label for="journey-${i}-ticket-row-${j}-1"></label>
-                                    <div>
-                                        <span class="currency">KRW</span>
-                                        <span class="price">
-                                            <fmt:formatNumber value="${price / 250}" pattern="0" var="price40"/>
-                                            <fmt:formatNumber value="${price40 * 100}" type="number"/>
-                                        </span>
-                                    </div>
-                                    <div class="empty-seats">${seatLeft[j-1]}석</div>
-                                </div>
-                                <div class="col-fifth">
-                                    <input type="radio" name="flight-ticket" class="radio3 special-price-ticket" id="journey-${i}-ticket-row-${j}-2">
-                                    <label for="journey-${i}-ticket-row-${j}-2"></label>
-                                    <div>
-                                        <span class="currency">KRW</span>
-                                        <span class="price">
-                                            <fmt:formatNumber value="${price / 200}" pattern="0" var="price50"/>
-                                            <fmt:formatNumber value="${price50 * 100}" type="number"/>
-                                        </span>
-                                    </div>
-                                    <div class="empty-seats">${seatLeft[j-1]}석</div>
-                                </div>
-                                <div class="col-fifth">
-                                    <input type="radio" name="flight-ticket" class="radio3 special-price-ticket clearfix" id="journey-${i}-ticket-row-${j}-3">
-                                    <label for="journey-${i}-ticket-row-${j}-3"></label>
-                                    <div>
-                                        <span class="currency">KRW</span>
-                                        <span class="price">
-                                            <fmt:formatNumber value="${price / 100}" pattern="0" var="price100"/>
-                                            <fmt:formatNumber value="${price100 * 100}" type="number"/>
-                                        </span>
-                                    </div>
-                                    <div class="empty-seats">${seatLeft[j-1]}석</div>
-                                </div>
-                            </div>
-                        </c:forEach>
+                        <table class="flight-ticket-table" cellspacing="0" cellpadding="0">
+                            <col-group>
+                                <col style="width: 8%">
+                                <col style="width: 16%;">
+                                <col style="width: 8%;">
+                                <col style="width: 8%;">
+                                <col class="ticket-wrapper">
+                                <col class="ticket-wrapper">
+                                <col class="ticket-wrapper">
+                            </col-group>
+                            <tbody>
+                                <c:forEach var="j" begin="1" end="${fn:length(flightList[i-1])}" step="1">
+                                    <c:set var="flight" value="${flightList[i-1]}"/>
+                                    <c:set var="seatLeft" value="${seatLeftList[i-1]}"/>
+                                    <c:set var="price" value="${productList[i-1].price * productList[i-1].productSale * flight[j-1].flightSale}"/>
+                                    <tr>
+                                        <td>
+                                            <c:set var="departTime" value="${flight[j-1].departTime}"/>
+                                            <c:set var="length" value="${fn:length(departTime)}"/>
+                                            ${fn:substring(departTime, length-5, length)}
+                                        </td>
+                                        <td style="background: url(<%=img%>/icon/flight-table.svg);">
+                                            <div><i class="far fa-clock"></i>1시간 10분</div>
+                                            <div>직항</div>
+                                        </td>
+                                        <td>
+                                            <c:set var="arriveTime" value="${flight[j-1].arriveTime}"/>
+                                            <c:set var="length" value="${fn:length(arriveTime)}"/>
+                                            ${fn:substring(arriveTime, length-5, length)}
+                                        </td>
+                                        <td>${flight[j-1].airplaneName}</td>
+                                        <td>
+                                            <input type="radio" name="flight-ticket" class="radio3 special-price-ticket" id="journey-${i}-ticket-row-${j}-1">
+                                            <label for="journey-${i}-ticket-row-${j}-1"></label>
+                                            <div>
+                                                <span class="currency">KRW</span>
+                                                <span class="price">
+                                                    <fmt:formatNumber value="${price / 250}" pattern="0" var="price40"/>
+                                                    <fmt:formatNumber value="${price40 * 100}" type="number"/>
+                                                </span>
+                                            </div>
+                                            <div class="empty-seats">${seatLeft[j-1]}석</div>
+                                        </td>
+                                        <td>
+                                            <input type="radio" name="flight-ticket" class="radio3 special-price-ticket" id="journey-${i}-ticket-row-${j}-2">
+                                            <label for="journey-${i}-ticket-row-${j}-2"></label>
+                                            <div>
+                                                <span class="currency">KRW</span>
+                                                <span class="price">
+                                                    <fmt:formatNumber value="${price / 200}" pattern="0" var="price50"/>
+                                                    <fmt:formatNumber value="${price50 * 100}" type="number"/>
+                                                </span>
+                                            </div>
+                                            <div class="empty-seats">${seatLeft[j-1]}석</div>
+                                        </td>
+                                        <td>
+                                            <input type="radio" name="flight-ticket" class="radio3 special-price-ticket clearfix" id="journey-${i}-ticket-row-${j}-3">
+                                            <label for="journey-${i}-ticket-row-${j}-3"></label>
+                                            <div>
+                                                <span class="currency">KRW</span>
+                                                <span class="price">
+                                                    <fmt:formatNumber value="${price / 100}" pattern="0" var="price100"/>
+                                                    <fmt:formatNumber value="${price100 * 100}" type="number"/>
+                                                </span>
+                                            </div>
+                                            <div class="empty-seats">${seatLeft[j-1]}석</div>
+                                        </td>
+                                    </tr>
+                                </c:forEach>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </c:forEach>
             
+            
+
             <div class="flex">
                 <a href="booking1.html"><button class="whiteBtn left">&lt; 이전</button></a>
                 <a href="booking3.html"><button class="right blueBtn">다음 &gt;</button></a>

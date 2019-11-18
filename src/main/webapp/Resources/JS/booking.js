@@ -189,7 +189,12 @@ const input_check = () => {
                     calendar[num_of_forms] = cal_generator(str, document.getElementById('flightDate-'+num_of_forms).value);
             }
             openPicker('.open-airport-picker');
-            spotChange();
+
+            document.getElementById('spot-change-' + (num_of_forms+1)).addEventListener('click', () => {
+                const temp = document.getElementById('airportFrom-' + (num_of_forms+1)).value;
+                document.getElementById('airportFrom-' + (num_of_forms+1)).value = document.getElementById('airportTo-' + (num_of_forms+1)).value;
+                document.getElementById('airportTo-' + (num_of_forms+1)).value = temp;
+            });
         });
 
 
@@ -277,52 +282,117 @@ const input_check = () => {
         });
 
         /* 티켓 선택시 */
-        document.querySelectorAll('.flight-table-schedule>.col-fifth>label').forEach(elem => {
-            elem.addEventListener('click', e => {
-                const target_journey = e.target.parentElement.parentElement.parentElement.parentElement.id;
-                const selected = document.querySelector(`#${target_journey} .selected-ticket`);
-                if(selected) {
+        const ticket_select = () => {
+            document.querySelectorAll('.flight-ticket-table td>label').forEach(elem => {
+                elem.addEventListener('click', e => {
+                    const target_journey = e.target.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.id;
+                    const selected = document.querySelector(`#${target_journey} .selected-ticket`);
+                    if (selected) {
+                        selected.classList.remove('selected-ticket');
+                        selected.style.backgroundColor = '#eee';
+                        selected.style.borderBottomColor = selected.parentElement.style.borderBottomColor = '#ddd';
+                        selected.parentElement.parentElement.removeChild(selected.parentElement.nextElementSibling);
+                    }
+                    const parent = e.target.parentElement;
+                    let price = e.target.nextElementSibling.lastElementChild.innerText;
+                    while (price.indexOf(',') !== -1)
+                        price = price.replace(',', '');
+
+                    const totalNum = passengerNum.value;
+
+                    let adultNum = totalNum.charAt(totalNum.indexOf('성인') + 3);
+                    let childNum = totalNum.charAt(totalNum.indexOf('소아') + 3);
+                    let infantNum = totalNum.charAt(totalNum.indexOf('유아') + 3);
+                    //
+                    let tableRow = document.createElement("TR");
+                    tableRow.style.border = "1px solid";
+                    let tempText = "<td colspan='7' class='price-div'><div class='col-two-fifth'><div class='col-two-fifth'>선택된 항공편 운임</div><div class='col-three-fifth'>";
+                    const eventTarget = e.target.htmlFor.charAt(e.target.htmlFor.length - 1);
+                    if (eventTarget === "1") {
+                        tableRow.style.backgroundColor = tableRow.style.borderColor = parent.style.backgroundColor = parent.parentElement.style.borderBottomColor = "#9bf";
+                        tempText += "60% 할인";
+                    } else if (eventTarget === "2") {
+                        tableRow.style.backgroundColor = tableRow.style.borderColor = parent.style.backgroundColor = parent.parentElement.style.borderBottomColor = "#69f";
+                        tempText += "50% 할인";
+                    } else if (eventTarget === "3") {
+                        tableRow.style.backgroundColor = tableRow.style.borderColor = parent.style.backgroundColor = parent.parentElement.style.borderBottomColor = "#36f";
+                        tempText += "정상 가격";
+                    }
+                    tempText += `</div></div><div class="col-three-fifth"><span class="people-type">(성인 ${adultNum})</span><span>${(price * adultNum).toLocaleString()}</span>`;
+                    if (childNum !== " ") tempText += `<span>+</span><span class="people-type">(소아 ${childNum})</span><span>${(price / 200 * 100 * childNum).toLocaleString()}</span>`;
+                    if (infantNum !== " ") tempText += `<span>+</span><span class="people-type">(유아 ${infantNum})</span><span>0</span>`;
+                    tempText += `<span>=</span> KRW ${((price * adultNum) + (price / 200 * 100 * childNum)).toLocaleString()}</div></td>`;
+                    tableRow.innerHTML = tempText;
+                    insertAfter(parent.parentElement, tableRow);
+                    e.target.parentElement.classList.add('selected-ticket');
+                });
+            });
+        };
+        ticket_select();
+
+        /* 테이블정렬 */
+        const ticketRowsArray = [
+            Array.prototype.slice.call(document.querySelectorAll('#journey-1 tr')),
+            Array.prototype.slice.call(document.querySelectorAll('#journey-2 tr')),
+            Array.prototype.slice.call(document.querySelectorAll('#journey-3 tr')),
+            Array.prototype.slice.call(document.querySelectorAll('#journey-4 tr')),
+            Array.prototype.slice.call(document.querySelectorAll('#journey-5 tr')),
+            Array.prototype.slice.call(document.querySelectorAll('#journey-6 tr')),
+        ];
+        let orderMultiplier = 1;
+        document.querySelectorAll('input[id^=sort-by]').forEach(item => {
+            item.addEventListener('click', ()=> {
+                let sortedTicketRows;
+                if (item.classList.contains('checked')) orderMultiplier *= -1;
+                else orderMultiplier = 1;
+                if (orderMultiplier === -1) item.classList.add('reverse-order');
+                else item.classList.remove('reverse-order');
+                const index = item.id.charAt(item.id.length-1);
+                if (item.id.indexOf('departure') !== -1) {
+                    sortedTicketRows = ticketRowsArray[index-1].sort( (a, b) => {
+                            const tempA = a.children[0].innerText;
+                            const tempB = b.children[0].innerText;
+                            return tempA === tempB? 0 : tempA>tempB? orderMultiplier : -orderMultiplier;
+                        }
+                    );
+                } else if (item.id.indexOf('arrival') !== -1) {
+                    sortedTicketRows = ticketRowsArray[index-1].sort( (a, b) => {
+                            const tempA = a.children[2].innerText;
+                            const tempB = b.children[2].innerText;
+                            return tempA === tempB? 0 : tempA>tempB? orderMultiplier : -orderMultiplier;
+                        }
+                    );
+                } else if (item.id.indexOf('flight') !== -1) {
+                    sortedTicketRows = ticketRowsArray[index-1].sort( (a, b) => {
+                            const tempA = a.children[1].innerText;
+                            const tempB = b.children[1].innerText;
+                            return tempA === tempB? 0 : tempA>tempB? orderMultiplier : -orderMultiplier;
+                        }
+                    );
+                } else if (item.id.indexOf('price') !== -1) {
+                    sortedTicketRows = ticketRowsArray[index - 1].sort((a, b) => {
+                            const tempA = a.children[6].children[2].lastElementChild.innerText;
+                            const tempB = b.children[6].children[2].lastElementChild.innerText;
+                            return tempA === tempB ? 0 : tempA > tempB ? orderMultiplier : -orderMultiplier;
+                        }
+                    );
+                }
+                const targetBody = document.querySelector(`#journey-${index} tbody`);
+                targetBody.innerHTML = "";
+                sortedTicketRows.forEach(ticketRow => targetBody.innerHTML += ticketRow.outerHTML);
+
+                document.querySelector('input.checked').classList.remove('checked');
+                item.classList.add('checked');
+                const selected = document.querySelector(`#journey-${index} .selected-ticket`);
+                if (selected) {
                     selected.classList.remove('selected-ticket');
                     selected.style.backgroundColor = '#eee';
-                    selected.style.borderBottomColor = '#ddd';
-                    selected.parentElement.parentElement.removeChild(selected.parentElement.nextElementSibling);
+                    selected.style.borderBottomColor = selected.parentElement.style.borderBottomColor = '#ddd';
                 }
-                const parent = e.target.parentElement;
-                let price = e.target.nextElementSibling.lastElementChild.innerText;
-                while (price.indexOf(',') !== -1) {
-                    price = price.replace(',','');
-                }
-                const totalNum = passengerNum.value;
-
-                let adultNum = totalNum.charAt(totalNum.indexOf('성인')+3);
-                let childNum = totalNum.charAt(totalNum.indexOf('소아')+3);
-                let infantNum = totalNum.charAt(totalNum.indexOf('유아')+3);
-                //
-                var div = document.createElement("DIV");
-                div.style.height = "50px";
-                div.classList.add('row');
-                div.classList.add('clearfix');
-                div.className = "row clearfix price-div";
-                let tempText = "<div class=\"col-two-fifth\"><div class=\"col-two-fifth\">선택된 항공편 운임</div><div class=\"col-three-fifth\">";
-                if(parent.parentElement.children[1] === parent) {
-                    div.style.backgroundColor = parent.style.backgroundColor = parent.style.borderBottomColor = "#9bf";
-                    tempText += "60% 할인";
-                } else if(parent.parentElement.children[2] === parent) {
-                    div.style.backgroundColor = parent.style.backgroundColor = parent.style.borderBottomColor = "#69f";
-                    tempText += "50% 할인";
-                } else if(parent.parentElement.children[3] === parent) {
-                    div.style.backgroundColor = parent.style.backgroundColor = parent.style.borderBottomColor = "#36f";
-                    tempText += "정상 가격";
-                }
-                tempText += `</div></div><div class="col-three-fifth"><span class="people-type">(성인 ${adultNum})</span><span>${(price * adultNum).toLocaleString()}</span>`;
-                if (childNum !== " ") tempText += `<span>+</span><span class="people-type">(소아 ${childNum})</span><span>${(price/200*100 * childNum).toLocaleString()}</span>`;
-                if (infantNum !== " ") tempText += `<span>+</span><span class="people-type">(유아 ${infantNum})</span><span>0</span>`;
-                tempText += `<span>=</span> KRW ${((price * adultNum) + (price/200*100 * childNum)).toLocaleString()}</div>`;
-                div.innerHTML = tempText;
-                insertAfter(parent.parentElement, div);
-                e.target.parentElement.classList.add('selected-ticket');
+                ticket_select();
             });
         });
+
 
         /* waypoint */
         // 상단바 변경

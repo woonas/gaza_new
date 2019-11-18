@@ -830,7 +830,7 @@
                         </li>
                     </ul>
                 </div>
-
+                
                 <div class="ticket-table-wrapper scrollable">
                     <div class="row flight-table-title clearfix">
                         <div class="col-two-fifth">
@@ -884,360 +884,9 @@
                             <div class="empty-seats">9석</div>
                         </div>
                     </div>
-
-                    <div class="row flight-table-schedule clearfix">
-                        <div class="col-two-fifth">
-                            <div class="col-fifth">06:05</div>
-                            <div class="col-two-fifth">
-                                <div class="flight-detail"><i class="far fa-clock"></i>1시간 10분</div>
-                                <div class="flight-detail">직항</div>
-                            </div>
-                            <div class="col-fifth">07:15</div>
-                            <div class="col-fifth">OZ8901</div>
-                        </div>
-                        <div class="col-fifth">
-                            <input type="radio" name="flight-ticket" class="radio3 special-price-ticket" id="journey-2-ticket-row-2-1">
-                            <label for="journey-2-ticket-row-2-1"></label>
-                            <div>
-                                <span class="currency">KRW</span>
-                                <span class="price">36,500</span>
-                            </div>
-                            <div class="empty-seats">9석</div>
-                        </div>
-                        <div class="col-fifth">
-                            <input type="radio" name="flight-ticket" class="radio3 special-price-ticket" id="journey-2-ticket-row-2-2">
-                            <label for="journey-2-ticket-row-2-2"></label>
-                            <div>
-                                <span class="currency">KRW</span>
-                                <span class="price">54,500</span>
-                            </div>
-                            <div class="empty-seats">9석</div>
-                        </div>
-                        <div class="col-fifth">
-                            <input type="radio" name="flight-ticket" class="radio3 special-price-ticket" id="journey-2-ticket-row-2-3">
-                            <label for="journey-2-ticket-row-2-3"></label>
-                            <div>
-                                <span class="currency">KRW</span>
-                                <span class="price">98,500</span>
-                            </div>
-                            <div class="empty-seats">9석</div>
-                        </div>
-                    </div>
-
-                    <div class="row flight-table-schedule clearfix">
-                        <div class="col-two-fifth">
-                            <div class="col-fifth">06:05</div>
-                            <div class="col-two-fifth">
-                                <div class="flight-detail"><i class="far fa-clock"></i>1시간 10분</div>
-                                <div class="flight-detail">직항</div>
-                            </div>
-                            <div class="col-fifth">07:15</div>
-                            <div class="col-fifth">OZ8901</div>
-                        </div>
-                        <div class="col-fifth">
-                            <input type="radio" name="flight-ticket" class="radio3 special-price-ticket" id="journey-2-ticket-row-3-1">
-                            <label for="journey-2-ticket-row-3-1"></label>
-                            <div>
-                                <span class="currency">KRW</span>
-                                <span class="price">36,500</span>
-                            </div>
-                            <div class="empty-seats">9석</div>
-                        </div>
-                        <div class="col-fifth">
-                            <input type="radio" name="flight-ticket" class="radio3 special-price-ticket" id="journey-2-ticket-row-3-2">
-                            <label for="journey-2-ticket-row-3-2"></label>
-                            <div>
-                                <span class="currency">KRW</span>
-                                <span class="price">54,500</span>
-                            </div>
-                            <div class="empty-seats">9석</div>
-                        </div>
-                        <div class="col-fifth">
-                            <input type="radio" name="flight-ticket" class="radio3 special-price-ticket" id="journey-2-ticket-row-3-3">
-                            <label for="journey-2-ticket-row-3-3"></label>
-                            <div>
-                                <span class="currency">KRW</span>
-                                <span class="price">98,500</span>
-                            </div>
-                            <div class="empty-seats">9석</div>
-                        </div>
-                    </div>
-
-                    <div class="row flight-table-schedule clearfix">
-                        <div class="col-two-fifth">
-                            <div class="col-fifth">06:05</div>
-                            <div class="col-two-fifth">
-                                <div class="flight-detail"><i class="far fa-clock"></i>1시간 10분</div>
-                                <div class="flight-detail">직항</div>
-                            </div>
-                            <div class="col-fifth">07:15</div>
-                            <div class="col-fifth">OZ8901</div>
-                        </div>
-                        <div class="col-fifth">
-                            <input type="radio" name="flight-ticket" class="radio3 special-price-ticket" id="journey-2-ticket-row-4-1">
-                            <label for="journey-2-ticket-row-4-1"></label>
-                            <div>
-                                <span class="currency">KRW</span>
-                                <span class="price">36,500</span>
-                            </div>
-                            <div class="empty-seats">9석</div>
-                        </div>
-                        <div class="col-fifth">
-                            <input type="radio" name="flight-ticket" class="radio3 special-price-ticket" id="journey-2-ticket-row-4-2">
-                            <label for="journey-2-ticket-row-4-2"></label>
-                            <div>
-                                <span class="currency">KRW</span>
-                                <span class="price">54,500</span>
-                            </div>
-                            <div class="empty-seats">9석</div>
-                        </div>
-                        <div class="col-fifth">
-                            <input type="radio" name="flight-ticket" class="radio3 special-price-ticket" id="journey-2-ticket-row-4-3">
-                            <label for="journey-2-ticket-row-4-3"></label>
-                            <div>
-                                <span class="currency">KRW</span>
-                                <span class="price">98,500</span>
-                            </div>
-                            <div class="empty-seats">9석</div>
-                        </div>
-                    </div>
-
-                    <div class="row flight-table-schedule clearfix">
-                        <div class="col-two-fifth">
-                            <div class="col-fifth">06:05</div>
-                            <div class="col-two-fifth">
-                                <div class="flight-detail"><i class="far fa-clock"></i>1시간 10분</div>
-                                <div class="flight-detail">직항</div>
-                            </div>
-                            <div class="col-fifth">07:15</div>
-                            <div class="col-fifth">OZ8901</div>
-                        </div>
-                        <div class="col-fifth">
-                            <input type="radio" name="flight-ticket" class="radio3 special-price-ticket" id="journey-2-ticket-row-5-1">
-                            <label for="journey-2-ticket-row-5-1"></label>
-                            <div>
-                                <span class="currency">KRW</span>
-                                <span class="price">36,500</span>
-                            </div>
-                            <div class="empty-seats">9석</div>
-                        </div>
-                        <div class="col-fifth">
-                            <input type="radio" name="flight-ticket" class="radio3 special-price-ticket" id="journey-2-ticket-row-5-2">
-                            <label for="journey-2-ticket-row-5-2"></label>
-                            <div>
-                                <span class="currency">KRW</span>
-                                <span class="price">54,500</span>
-                            </div>
-                            <div class="empty-seats">9석</div>
-                        </div>
-                        <div class="col-fifth">
-                            <input type="radio" name="flight-ticket" class="radio3 special-price-ticket" id="journey-2-ticket-row-5-3">
-                            <label for="journey-2-ticket-row-5-3"></label>
-                            <div>
-                                <span class="currency">KRW</span>
-                                <span class="price">98,500</span>
-                            </div>
-                            <div class="empty-seats">9석</div>
-                        </div>
-                    </div>
-
-                    <div class="row flight-table-schedule clearfix">
-                        <div class="col-two-fifth">
-                            <div class="col-fifth">06:05</div>
-                            <div class="col-two-fifth">
-                                <div class="flight-detail"><i class="far fa-clock"></i>1시간 10분</div>
-                                <div class="flight-detail">직항</div>
-                            </div>
-                            <div class="col-fifth">07:15</div>
-                            <div class="col-fifth">OZ8901</div>
-                        </div>
-                        <div class="col-fifth">
-                            <input type="radio" name="flight-ticket" class="radio3 special-price-ticket" id="journey-2-ticket-row-6-1">
-                            <label for="journey-2-ticket-row-6-1"></label>
-                            <div>
-                                <span class="currency">KRW</span>
-                                <span class="price">36,500</span>
-                            </div>
-                            <div class="empty-seats">9석</div>
-                        </div>
-                        <div class="col-fifth">
-                            <input type="radio" name="flight-ticket" class="radio3 special-price-ticket" id="journey-2-ticket-row-6-2">
-                            <label for="journey-2-ticket-row-6-2"></label>
-                            <div>
-                                <span class="currency">KRW</span>
-                                <span class="price">54,500</span>
-                            </div>
-                            <div class="empty-seats">9석</div>
-                        </div>
-                        <div class="col-fifth">
-                            <input type="radio" name="flight-ticket" class="radio3 special-price-ticket" id="journey-2-ticket-row-6-3">
-                            <label for="journey-2-ticket-row-6-3"></label>
-                            <div>
-                                <span class="currency">KRW</span>
-                                <span class="price">98,500</span>
-                            </div>
-                            <div class="empty-seats">9석</div>
-                        </div>
-                    </div>
-
-                    <div class="row flight-table-schedule clearfix">
-                        <div class="col-two-fifth">
-                            <div class="col-fifth">06:05</div>
-                            <div class="col-two-fifth">
-                                <div class="flight-detail"><i class="far fa-clock"></i>1시간 10분</div>
-                                <div class="flight-detail">직항</div>
-                            </div>
-                            <div class="col-fifth">07:15</div>
-                            <div class="col-fifth">OZ8901</div>
-                        </div>
-                        <div class="col-fifth">
-                            <input type="radio" name="flight-ticket" class="radio3 special-price-ticket" id="journey-2-ticket-row-7-1">
-                            <label for="journey-2-ticket-row-7-1"></label>
-                            <div>
-                                <span class="currency">KRW</span>
-                                <span class="price">36,500</span><br>
-                                <span class="empty-seats">4석</span>
-                            </div>
-                        </div>
-                        <div class="col-fifth">
-                            <input type="radio" name="flight-ticket" class="radio3 special-price-ticket" id="journey-2-ticket-row-7-2">
-                            <label for="journey-2-ticket-row-7-2"></label>
-                            <div>
-                                <span class="currency">KRW</span>
-                                <span class="price">54,500</span>
-                            </div>
-                            <div class="empty-seats">9석</div>
-                        </div>
-                        <div class="col-fifth">
-                            <input type="radio" name="flight-ticket" class="radio3 special-price-ticket" id="journey-2-ticket-row-7-3">
-                            <label for="journey-2-ticket-row-7-3"></label>
-                            <div>
-                                <span class="currency">KRW</span>
-                                <span class="price">98,500</span>
-                            </div>
-                            <div class="empty-seats">9석</div>
-                        </div>
-                    </div>
-
-                    <div class="row flight-table-schedule clearfix">
-                        <div class="col-two-fifth">
-                            <div class="col-fifth">06:05</div>
-                            <div class="col-two-fifth">
-                                <div class="flight-detail"><i class="far fa-clock"></i>1시간 10분</div>
-                                <div class="flight-detail">직항</div>
-                            </div>
-                            <div class="col-fifth">07:15</div>
-                            <div class="col-fifth">OZ8901</div>
-                        </div>
-                        <div class="col-fifth">
-                            <input type="radio" name="flight-ticket" class="radio3 special-price-ticket" id="journey-2-ticket-row-8-1">
-                            <label for="journey-2-ticket-row-8-1"></label>
-                            <div>
-                                <span class="currency">KRW</span>
-                                <span class="price">36,500</span><br>
-                                <span class="empty-seats">4석</span>
-                            </div>
-                        </div>
-                        <div class="col-fifth">
-                            <input type="radio" name="flight-ticket" class="radio3 special-price-ticket" id="journey-2-ticket-row-8-2">
-                            <label for="journey-2-ticket-row-8-2"></label>
-                            <div>
-                                <span class="currency">KRW</span>
-                                <span class="price">54,500</span>
-                            </div>
-                            <div class="empty-seats">9석</div>
-                        </div>
-                        <div class="col-fifth">
-                            <input type="radio" name="flight-ticket" class="radio3 special-price-ticket" id="journey-2-ticket-row-8-3">
-                            <label for="journey-2-ticket-row-8-3"></label>
-                            <div>
-                                <span class="currency">KRW</span>
-                                <span class="price">98,500</span>
-                            </div>
-                            <div class="empty-seats">9석</div>
-                        </div>
-                    </div>
-
-                    <div class="row flight-table-schedule clearfix">
-                        <div class="col-two-fifth">
-                            <div class="col-fifth">06:05</div>
-                            <div class="col-two-fifth">
-                                <div class="flight-detail"><i class="far fa-clock"></i>1시간 10분</div>
-                                <div class="flight-detail">직항</div>
-                            </div>
-                            <div class="col-fifth">07:15</div>
-                            <div class="col-fifth">OZ8901</div>
-                        </div>
-                        <div class="col-fifth">
-                            <input type="radio" name="flight-ticket" class="radio3 special-price-ticket" id="journey-2-ticket-row-9-1">
-                            <label for="journey-2-ticket-row-9-1"></label>
-                            <div>
-                                <span class="currency">KRW</span>
-                                <span class="price">36,500</span>
-                            </div>
-                            <div class="empty-seats">9석</div>
-                        </div>
-                        <div class="col-fifth">
-                            <input type="radio" name="flight-ticket" class="radio3 special-price-ticket" id="journey-2-ticket-row-9-2">
-                            <label for="journey-2-ticket-row-9-2"></label>
-                            <div>
-                                <span class="currency">KRW</span>
-                                <span class="price">54,500</span>
-                            </div>
-                            <div class="empty-seats">9석</div>
-                        </div>
-                        <div class="col-fifth">
-                            <input type="radio" name="flight-ticket" class="radio3 special-price-ticket" id="journey-2-ticket-row-9-3">
-                            <label for="journey-2-ticket-row-9-3"></label>
-                            <div>
-                                <span class="currency">KRW</span>
-                                <span class="price">98,500</span>
-                            </div>
-                            <div class="empty-seats">9석</div>
-                        </div>
-                    </div>
-
-                    <div class="row flight-table-schedule clearfix">
-                        <div class="col-two-fifth">
-                            <div class="col-fifth">06:05</div>
-                            <div class="col-two-fifth">
-                                <div class="flight-detail"><i class="far fa-clock"></i>1시간 10분</div>
-                                <div class="flight-detail">직항</div>
-                            </div>
-                            <div class="col-fifth">07:15</div>
-                            <div class="col-fifth">OZ8901</div>
-                        </div>
-                        <div class="col-fifth">
-                            <input type="radio" name="flight-ticket" class="radio3 special-price-ticket" id="journey-2-ticket-row-10-1">
-                            <label for="journey-2-ticket-row-10-1"></label>
-                            <div>
-                                <span class="currency">KRW</span>
-                                <span class="price">36,500</span>
-                            </div>
-                            <div class="empty-seats">9석</div>
-                        </div>
-                        <div class="col-fifth">
-                            <input type="radio" name="flight-ticket" class="radio3 special-price-ticket" id="journey-2-ticket-row-10-2">
-                            <label for="journey-2-ticket-row-10-2"></label>
-                            <div>
-                                <span class="currency">KRW</span>
-                                <span class="price">54,500</span>
-                            </div>
-                            <div class="empty-seats">9석</div>
-                        </div>
-                        <div class="col-fifth">
-                            <input type="radio" name="flight-ticket" class="radio3 special-price-ticket" id="journey-2-ticket-row-10-3">
-                            <label for="journey-2-ticket-row-10-3"></label>
-                            <div>
-                                <span class="currency">KRW</span>
-                                <span class="price">98,500</span>
-                            </div>
-                            <div class="empty-seats">9석</div>
-                        </div>
-                    </div>
                 </div>
             </div>
-
+            
             <div class="flex">
                 <a href="booking1.html"><button class="whiteBtn left">&lt; 이전</button></a>
                 <a href="booking3.html"><button class="right blueBtn">다음 &gt;</button></a>
@@ -1253,7 +902,62 @@
                 <li>각 운임의 표기된 할인율은 고시 편의상 소수점 이하 반올림한 값임을 알려드립니다.</li>
             </ul>
     
-    
+            <table class="flight-ticket-table">
+                <col-group>
+                    <col style="width: 8%">
+                    <col style="width: 16%">
+                    <col style="width: 8%">
+                    <col style="width: 8%">
+                    <col style="width: 20%">
+                    <col style="width: 20%">
+                    <col>
+                </col-group>
+                <tbody>
+                    <tr>
+                        <th colspan="3">출도착시간 (비행시간)</th>
+                        <th>편명/기종</th>
+                        <th>특가운임</th>
+                        <th>할인운임</th>
+                        <th>정상운임</th>
+                    </tr>
+                    <tr>
+                        <td>06:05</td>
+                        <td>
+                            <div class="flight-detail"><i class="far fa-clock"></i>1시간 10분</div>
+                            <div class="flight-detail">직항</div>
+                        </td>
+                        <td>07:15</td>
+                        <td>OZ8901</td>
+                        <td>
+                            <input type="radio" name="flight-ticket" class="radio3 special-price-ticket" id="journey-2-ticket-row-1-1">
+                            <label for="journey-2-ticket-row-1-1"></label>
+                            <div>
+                                <span class="currency">KRW</span>
+                                <span class="price">36,500</span>
+                            </div>
+                            <div class="empty-seats">9석</div>
+                        </td>
+                        <td>
+                            <input type="radio" name="flight-ticket" class="radio3 special-price-ticket" id="journey-2-ticket-row-1-2">
+                            <label for="journey-2-ticket-row-1-2"></label>
+                            <div>
+                                <span class="currency">KRW</span>
+                                <span class="price">54,500</span>
+                            </div>
+                            <div class="empty-seats">9석</div>
+                        </td>
+                        <td>
+                            <input type="radio" name="flight-ticket" class="radio3 special-price-ticket clearfix" id="journey-2-ticket-row-1-3">
+                            <label for="journey-2-ticket-row-1-3"></label>
+                            <div>
+                                <span class="currency">KRW</span>
+                                <span class="price">98,500</span>
+                            </div>
+                            <div class="empty-seats">9석</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
     
             <!--탑승객 팝업-->
             <div class="pop-up-window-type1" id="num-of-passengers-window">
