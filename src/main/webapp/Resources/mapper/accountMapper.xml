@@ -29,4 +29,13 @@
 	<update id="updatePassword" parameterType="String">
 		update member set memberPwd=#{param3} where memberId=#{param1} and memberPwd=#{param2}
 	</update>
+	<update id="updateRecord" parameterType="kr.gaza.myapp.account.member.MemberVO">
+		update member set 
+		nation=#{nation}, tel=#{tel}, altTel=#{altTel}, zipcode=#{zipcode}, addr=#{addr}, detailAddr=#{detailAddr}, 
+		email=#{email}, agree=#{agree}, directronic=#{directronic}  
+		where memberid=#{memberId}
+	</update>
+	<select id="findId" parameterType="kr.gaza.myapp.account.member.MemberVO" resultType="String">
+		select memberId from member where memberNameKor=#{memberNameKor} and birthday=#{birthDay} and email=#{email}
+	</select>
 </mapper>

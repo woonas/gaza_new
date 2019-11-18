@@ -33,6 +33,35 @@ public class ChangeController {
 	    
 	    return mav;
 	}
+	//회원정보 수정
+	@RequestMapping(value="/JSP/account/change/account_info_edit", method=RequestMethod.POST)
+	public ModelAndView accountEdit(MemberVO vo, HttpServletRequest req) {
+		MemberInterface dao = sqlSession.getMapper(MemberInterface.class);
+		HttpSession sess = req.getSession();
+		vo.setMemberId((String)sess.getAttribute("memberId"));
+		
+		String ag1 = req.getParameter("ag1");
+		String ag2 = req.getParameter("ag2");
+		String dr1 = req.getParameter("dr1");
+	    String dr2 = req.getParameter("dr2");
+		if(ag1 == null) ag1 = "off";
+        if(ag2 == null) ag2 = "off";
+        if(dr1 == null) dr1 = "off";
+        if(dr2 == null) dr2 = "off";
+        
+        vo.setAgree(ag1+"/"+ag2);
+        vo.setDirectronic(dr1+"/"+dr2);
+		int cnt = dao.updateRecord(vo);
+		ModelAndView mav = new ModelAndView();
+		if(cnt>0) {
+			mav.setViewName("redirect:account_info");
+		}else {
+			mav.addObject("cnt", cnt);
+			mav.setViewName("/JSP/account/change/account_info");
+		}
+		
+		return mav;
+	}
 	//회원정보-비밀번호변경-비밀번호 확인
 	@RequestMapping("/JSP/account/change/password_recheck")
 	public String passwordRecheck(HttpServletRequest req) {

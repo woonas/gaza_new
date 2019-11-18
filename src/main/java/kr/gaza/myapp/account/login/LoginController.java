@@ -37,9 +37,7 @@ public class LoginController {
 	        ses.setAttribute("memberNum", vo.getMemberNum());
 	        ses.setAttribute("memberId", vo.getMemberId());
 	        ses.setAttribute("memberName", vo.getMemberNameKor());
-	        
 	    }
-	    req.setAttribute("status", status);
 		mav.setViewName("JSP/account/login/loginOk");
 	    
 	    return mav;

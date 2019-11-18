@@ -5,14 +5,15 @@
     <head>
         <meta charset="UTF-8">
         <title>아이디 찾기</title>
-        <link rel="stylesheet" href="../../../../Vendor/bootstrap/css/bootstrap.min.css" type="text/css">
-        <link rel="stylesheet" href="../../../CSS/account.css">
+        <link rel="stylesheet" href="<%=vendor %>/bootstrap/css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="<%=css %>/account.css">
         <script>window.onbeforeunload = () => window.scrollTo(0, 0)</script>
         <!-- Font Awesome CDN -->
         <script src="https://kit.fontawesome.com/9c923ac74a.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
          <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
-        <script src="../../../../Vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="<%=vendor %>/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+       
     </head>
     <body>
         <%@ include file="../../common/nav.jspf" %>
@@ -40,13 +41,13 @@
                                 성
                             </div>
                             <div class="two-in-row">
-                                <input type="text" name="firstName" placeholder="한글 성 입력 (예:홍)">
+                                <input type="text" name="lastName" placeholder="한글 성 입력 (예:홍)">
                             </div>
                             <div class="table-row-title">
                                 이름
                             </div>
                             <div class="two-in-row">
-                                <input type="text" name="lastName" placeholder="한글 이름 입력 (예:길동)">
+                                <input type="text" name="firstName" placeholder="한글 이름 입력 (예:길동)">
                             </div>
                         </div>
                         

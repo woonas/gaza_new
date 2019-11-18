@@ -69,8 +69,6 @@ public class SignupContorller {
 		mav.setViewName("JSP/account/signup/signup5");
 		return mav;
 	}
-	//Todo
-	//String id를 매개변수로 받아왔는데 null 값이 들어옴.
 	//중복 id체크
 	@RequestMapping(value="/JSP/account/signup/idChk", method=RequestMethod.POST, produces="application/text;charset=UTF-8")
 	@ResponseBody

@@ -22,14 +22,14 @@
         <!-- 다음/카카오 주소검색 -->
         <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     </head>
-    <body id="personalInfo">
+    <body id="personalInfo" onload="onChangeCallback()">
     <%@ include file="../../common/nav.jspf" %>
         <div class="overlay"></div>
         <section class="content">
             <h3>회원정보</h3>
             
             <div class="form-wrapper edit-form-wrapper">
-                <form id="defaultForm" method="post" action="<%=jsp %>/mypage/account_info_edit" class="form-horizontal">
+                <form id="defaultForm" method="post" action="<%=jsp%>/account/change/account_info_edit" class="form-horizontal">
                     <fieldset>
                         <legend>기본 정보</legend>
 
@@ -107,7 +107,7 @@
                                  data-onchangecallback="onChangeCallback">
                             </div>
                             <div class="col-xs-4 country-mark">
-                                <input type="text" class="form-control invisible" id="country" name="country"
+                                <input type="text" class="form-control invisible" id="country" name="nation"
                                        value="${vo.nation }"
                                        readonly required>
                             </div>
@@ -125,18 +125,18 @@
                             <label class="col-fifth control-label">휴대전화</label>
                             <div class="multi-input hidden">
                                <div class="col-xs-2">
-                                   <input type="number" class="form-control" name="phone1" id="phone1" placeholder="010"
+                                   <input type="number" class="form-control" name="t1" id="phone1" placeholder="010"
                                           maxlength="3" oninput="maxLengthCheck(this)" required value="${vo.t1 }">
                                 </div>
                                 <span>ㅡ</span>
                                 <div class="col-xs-2" style="padding: 0 15px;">
-                                    <input type="number" class="form-control" name="phone2"
+                                    <input type="number" class="form-control" name="t2"
                                            id="phone2" placeholder="1234"
                                            maxlength="4" oninput="maxLengthCheck(this)" required value="${vo.t2 }">
                                 </div>
                                 <span>ㅡ</span>
                                 <div class="col-xs-2" style="padding: 0 15px;">
-                                    <input type="number" class="form-control" name="phone3" id="phone3"
+                                    <input type="number" class="form-control" name="t3" id="phone3"
                                            placeholder="1234"
                                            maxlength="4" oninput="maxLengthCheck(this)" required value="${vo.t3 }">
                                 </div>
@@ -150,17 +150,17 @@
                             <label class="col-fifth control-label">유선전화(선택)</label>
                             <div class="multi-input hidden">
                                 <div class="col-xs-2">
-                                    <input type="number" class="form-control" name="number1" id="number1" maxlength="3"
+                                    <input type="number" class="form-control" name="a1" id="number1" maxlength="3"
                                            oninput="maxLengthCheck(this)" placeholder="02">
                                 </div>
                                 <span>ㅡ</span>
                                 <div class="col-xs-2">
-                                    <input type="number" class="form-control" name="number2" id="number2" maxlength="4"
+                                    <input type="number" class="form-control" name="a2" id="number2" maxlength="4"
                                            oninput="maxLengthCheck(this)" placeholder="1234">
                                 </div>
                                 <span>ㅡ</span>
                                 <div class="col-xs-2">
-                                    <input type="number" class="form-control" name="number3" id="number3" maxlength="4"
+                                    <input type="number" class="form-control" name="a3" id="number3" maxlength="4"
                                            oninput="maxLengthCheck(this)" placeholder="1234">
                                 </div>
                             </div>
@@ -173,7 +173,7 @@
                         <div class="form-group addr-wrapper">
                             <label class="col-fifth control-label">주소</label>
                             <div class="col-xs-2" style="margin-top: 5px;">
-                                <input type="number" class="form-control" name="postalCode" id="postalCode"
+                                <input type="number" class="form-control" name="zipcode" id="postalCode"
                                        placeholder="우편번호" readonly value="${vo.zipcode }">
                             </div>
                             <div style="margin-top: 5px;">
@@ -184,11 +184,11 @@
                             </div>
                             <div class="hidden">
                                <div class="col-xs-5">
-                                    <input type="text" class="form-control" name="addr1" id="addr1"
+                                    <input type="text" class="form-control" name="addr" id="addr1"
                                            placeholder="기본주소" required readonly value="${vo.addr }">
                                 </div>
                                 <div class="col-xs-5">
-                                    <input type="text" class="form-control" name="addr2" id="addr2"
+                                    <input type="text" class="form-control" name="detailAddr" id="addr2"
                                            placeholder="상세주소" value="${vo.detailAddr }">
                                 </div>
                             </div>
@@ -197,9 +197,9 @@
                         <div class="form-group">
                             <label class="col-fifth control-label not-required">개인정보 제공</label>
                             <div class="col-xs-8">
-                                <input type="radio" name="info-provide" class="radio3" id="info-provide-agree" checked>
+                                <input type="radio" name="ag1" class="radio3" value="on" id="info-provide-agree" checked>
                                 <label for="info-provide-agree"> 동의</label>
-                                <input type="radio" name="info-provide" class="radio3" id="info-provide-disagree"
+                                <input type="radio" name="ag1" class="radio3" value="off" id="info-provide-disagree"
                                 <c:if test="${vo.ag1 =='off' }">
                                 	checked
                                 </c:if>
@@ -211,9 +211,9 @@
                         <div class="form-group">
                             <label class="col-fifth control-label not-required">통합 로그인</label>
                             <div class="col-xs-8">
-                                <input type="radio" name="integrated-login" class="radio3" id="integrated-login-agree" checked>
+                                <input type="radio" name="ag2" class="radio3" value="on" id="integrated-login-agree" checked>
                                 <label for="integrated-login-agree"> 동의</label>
-                                <input type="radio" name="integrated-login" class="radio3" id="integrated-login-disagree"
+                                <input type="radio" name="ag2" class="radio3" value="off" id="integrated-login-disagree"
                                 <c:if test="${vo.ag2 =='off' }">
                                 	checked
                                 </c:if>
@@ -230,7 +230,7 @@
                             <div class="col-xs-7">
                                 <div class="clearfix">
                                     <div class="col-xs-3 checkbox">
-	                                        <input type="checkbox" class="checkbox3" name="receiveEmail" id="receiveEmail"
+	                                        <input type="checkbox" class="checkbox3" name="dr1" id="receiveEmail"
                                 	<c:if test="${vo.dr1=='on' }">
 	                                     checked
                                     </c:if>
@@ -238,7 +238,7 @@
                                         <label for="receiveEmail" class="checkbox3"> 이메일</label>
                                     </div>
                                     <div class="col-xs-3 checkbox">
-	                                        <input type="checkbox" class="checkbox3" name="receiveSMS" id="receiveSMS"
+	                                        <input type="checkbox" class="checkbox3" name="dr2" id="receiveSMS"
                                     <c:if test="${vo.dr2=='on' }">
 	                                    checked
                                     </c:if>
@@ -277,7 +277,7 @@
                         <div class="col-xs-12">
                             <input type="checkbox" class="hidden" id="edit">
                             <label for="edit" class="blueBtn btn">회원정보 변경</label>
-                            <a href="../../mypage"><button type="submit" class="btn blueBtn">수정</button></a>
+                            <button type="submit" class="btn blueBtn">수정</button>
                             <a href="../../mypage"><label for = "edit" class = "whiteBtn btn">취소</label></a>
                         </div>
                     </div>

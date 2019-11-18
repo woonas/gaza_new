@@ -283,7 +283,8 @@ const agreement_check = () => {
         function search() {
             var params = $("#searchForm").serialize();
             $.ajax({
-                url : "<%=request.getContextPath() %>/Resources/JSP/account/search/searchOk.do",
+                url : "idSearchOk",
+                type : "POST",
                 data : params,
                 success : function(result){
                     if(result)
