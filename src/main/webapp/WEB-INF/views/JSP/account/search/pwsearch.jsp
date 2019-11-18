@@ -5,13 +5,13 @@
     <head>
         <meta charset="UTF-8">
         <title>비밀번호 찾기</title>
-        <link rel="stylesheet" href="../../../../Vendor/bootstrap/css/bootstrap.min.css" type="text/css">
-        <link rel="stylesheet" href="../../../CSS/account.css">
+        <link rel="stylesheet" href="<%=vendor %>/bootstrap/css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="<%=css %>/account.css">
         <!-- Font Awesome CDN -->
         <script src="https://kit.fontawesome.com/9c923ac74a.js" crossorigin="anonymous"></script>
         <script>window.onbeforeunload = () => window.scrollTo(0, 0)</script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="../../../../Vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="<%=vendor %>/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
     </head>
     <body>
     <%@ include file="../../common/nav.jspf" %>
@@ -30,6 +30,7 @@
             </div>
 
             <div id="tab-1-container">
+            <br/>
             <form method="post" id="pwFindFrm">
             <p>* 회원가입 시 등록한 이메일 주소를 입력해주시기 바랍니다. 등록된 회원정보와 입력된 내용이 일치할 경우, 등록된 이메일 주소로 임시 비밀번호를 보내 드립니다.</p>
                 <div class="table-form">
@@ -38,7 +39,7 @@
                         <div class="table-row-title">
                             아이디
                         </div>
-                        <div class="two-in-row">
+                        <div>
                             <input type="text" name="memberId" placeholder="아이디 입력" title="아이디 입력">
                         </div>
                     </div>
@@ -439,6 +440,6 @@
         <%@ include file="../../common/footer.jspf" %>
         <!-- Recaptcha -->
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-        <script src="../../../JS/account.js"></script>
+        <script src="<%=js%>/account.js"></script>
     </body>
 </html>

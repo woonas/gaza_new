@@ -45,6 +45,4 @@
 	</beans:bean>
 	<context:component-scan base-package="kr.gaza.myapp" />
 	
-	
-	
 </beans:beans>
