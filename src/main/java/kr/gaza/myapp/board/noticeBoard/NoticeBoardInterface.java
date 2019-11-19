@@ -2,9 +2,11 @@ package kr.gaza.myapp.board.noticeBoard;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
+
 public interface NoticeBoardInterface {
 	// 목록
-	public List<NoticeBoardVO> getAllRecord(int pageNum, int onePageRecord, int totalRecord, int totalPage);
+	public List<NoticeBoardVO> getAllRecord(@Param("param1") int param1, @Param("param2") int param2);
 	// 글쓰기
 	public int noticeBoardInsert(NoticeBoardVO vo);
 	// 수정

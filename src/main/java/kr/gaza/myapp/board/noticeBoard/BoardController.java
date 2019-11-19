@@ -18,11 +18,13 @@ public class BoardController {
 	public ModelAndView noticeBoardList(@RequestParam("pageNum") String pageNumStr) {
 		NoticeBoardInterface dao = sqlSession.getMapper(NoticeBoardInterface.class);
 		NoticeBoardVO vo = new NoticeBoardVO();
+		
 		if(pageNumStr!=null && !pageNumStr.equals("")) {
 			vo.setPageNum(Integer.parseInt(pageNumStr));
 		}
 		//총 레코드 수
 		vo.setTotalRecord(dao.noticeBoardTotalRecord());
+		
 		//총 페이지 수
 		if(vo.getTotalRecord() % vo.getOnePageRecord() == 0) {
 			vo.setTotalPage(vo.getTotalRecord() / vo.getOnePageRecord());
@@ -30,9 +32,18 @@ public class BoardController {
 			vo.setTotalPage(vo.getTotalRecord()/vo.getOnePageRecord()+1);
 		}
 		// 페이지 번호의 시작페이지 계산
-		vo.setStartPage((vo.getPageNum() - 1)/ vo.getOnePageMax() * vo.getOnePageMax()+1 );
-		// 해당페이지 레코드 선택
-		List<NoticeBoardVO> lst = dao.getAllRecord(vo.getPageNum(), vo.getOnePageRecord(), vo.getTotalRecord(), vo.getTotalPage());
+		vo.setStartPage((vo.getPageNum() - 1)/ vo.getOnePageMax() * vo.getOnePageMax() + 1);
+		
+		// 해당페이지 레코드 선택.
+		int lastRecord = vo.getTotalRecord() % vo.getOnePageRecord();
+		
+		List<NoticeBoardVO> lst;
+		
+		if(vo.getPageNum()== vo.getTotalPage() && lastRecord!=0) {
+			lst = dao.getAllRecord(vo.getPageNum()*vo.getOnePageRecord(), lastRecord);
+		}else {
+			lst = dao.getAllRecord(vo.getPageNum()*vo.getOnePageRecord(), vo.getOnePageRecord());
+		}
 		
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("vo", vo);

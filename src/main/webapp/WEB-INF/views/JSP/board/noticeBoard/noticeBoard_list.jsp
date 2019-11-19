@@ -1,15 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>공지사항</title>
-<link rel="stylesheet" href="<%=css %>/main.css" type="text/css"/>
-<link rel="stylesheet" href="<%=css %>/layout.css" type="text/css"/>
+<link rel="stylesheet" href="<%=css %>/board.css" type="text/css"/>
 <link rel="stylesheet" href="<%=css %>/notice.css" type="text/css"/>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+	$(function(){
+		$(".boardTbl tr:nth-child(1) h4").prepend("<span class='noticeTag'>new</span>");
+		$(".boardTbl tr:nth-child(2) h4").prepend("<span class='noticeTag'>new</span>");
+	});
+</script>
 </head>
 <body onload="start()">
 	<%@ include file="../../common/nav.jspf" %>
@@ -44,17 +50,20 @@
 									<tr>
 										<td>
 											<h4><span class="noticeTag">
-												<c:if test="${v.type == 0}">
+												<c:if test="${v.noticeType == 0}">
 													공지
 												</c:if>
-												<c:if test="${v.type == 1}">
-													NEW
+												<c:if test="${v.noticeType == 1}">
+													제휴
+												</c:if>
+												<c:if test="${v.noticeType == 2}">
+													기타
 												</c:if>
 												</span>
-												<a href="<%=jsp %>/board/board_view.do?num=${v.num}&pageNum=${vo.pageNum}">${v.subject }</a>
+												<a href="<%=jsp %>/board/board_view?num=${v.num}&pageNum=${vo.pageNum}">${v.subject }</a>
 												<br>
 											</h4>
-											${v.content }
+											<div class="contentOver">${v.content }</div>
 										</td>
 										<td>조회수 ${v.hit}</td>
 										<td>${v.regdate}</td>
@@ -63,15 +72,15 @@
 							</tbody>
 							</table>
 						</div>
-					</div>
-				</div>
+					</div><!-- noticeAll end -->
+				</div><!-- tabPanel end -->
 				<div class="pagingDiv">
 					<div id="pagination">
 						<c:if test="${vo.pageNum<=1}">
 							<a href="#" onclick="return false;" class="pageNum" >prev</a>
 						</c:if>
 						<c:if test="${vo.pageNum>1}">
-							<a href="<%=jsp %>/board/notice.do?pageNum=${vo.pageNum-1}">prev</a>
+							<a href="<%=jsp %>/board/noticeBoard/noticeBoard_list?pageNum=${vo.pageNum-1}">prev</a>
 						</c:if>
 						
 						<c:if test="${vo.totalPage >= vo.startPage+vo.onePageMax-1 }">
@@ -85,10 +94,10 @@
 						<c:forEach var="i" begin="${vo.startPage}" end="${printPage }">
 							<c:if test="${i<=vo.totalPage}">
 								<c:if test="${i == vo.pageNum }">
-									<a href="<%=jsp %>/board/notice.do?pageNum=${i}" class="pageNum active">${i}</a>
+									<a href="<%=jsp %>/board/noticeBoard/noticeBoard_list?pageNum=${i}" class="pageNum active">${i}</a>
 								</c:if>
 								<c:if test="${i != vo.pageNum }">
-									<a href="<%=jsp %>/board/notice.do?pageNum=${i}" class="pageNum">${i}</a>
+									<a href="<%=jsp %>/board/noticeBoard/noticeBoard_list?pageNum=${i}" class="pageNum">${i}</a>
 								</c:if>
 							</c:if>
 						</c:forEach>
@@ -97,7 +106,7 @@
 							<a href="#" onclick="return false;" class="pageNum">next</a><br/>
 						</c:if>
 						<c:if test="${vo.pageNum<vo.totalPage}">
-							<a href="<%=jsp %>/board/notice.do?pageNum=${vo.pageNum+1}">next</a><br/>
+							<a href="<%=jsp %>/board/noticeBoard/noticeBoard_list?pageNum=${vo.pageNum+1}">next</a><br/>
 						</c:if>
 					</div>
 				</div>
@@ -109,7 +118,7 @@
 	
 		function start(){
 			//탭메뉴
-			 var btnIdList = ['btnAll', 'btnGAZA', 'btnPartner', 'btnOthers'];
+			var btnIdList = ['btnAll', 'btnGAZA', 'btnPartner', 'btnOthers'];
 			var paneIdList = ['noticeAll','noticeGAZA','noticePartner','noticeOthers'];
 			var btnList = ['전체','가자항공소식','제휴사소식','기타'];
 			var tabBtnHTML = "";
@@ -161,6 +170,5 @@
 		}
 	</script>
 	<%@ include file="../../common/footer.jspf" %>
-	<script src="<%=js %>/common.js"></script>
 </body>
 </html>

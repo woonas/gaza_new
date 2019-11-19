@@ -8,8 +8,9 @@
 	</select>
 	<select id="getAllRecord" resultType="kr.gaza.myapp.board.noticeBoard.NoticeBoardVO">
 		<![CDATA[
-			select * from (select * from (select noticeNum, noticeType, subject, content, hit, to_char(regdate, 'YYYY.MM.DD') 
-			from noticeBoard order by noticenum desc) where rownum<=? order by noticeNum asc) where rownum<=? order by noticeNum desc
+			select * from (select * from (select noticeNum, noticeType, subject, content, hit, to_char(regdate, 'YYYY.MM.DD') regdate
+			from noticeBoard order by noticenum desc) where rownum<=#{param1} order by noticeNum asc) 
+			where rownum<=#{param2} order by noticeNum desc
 		]]>
 	</select>
 </mapper>

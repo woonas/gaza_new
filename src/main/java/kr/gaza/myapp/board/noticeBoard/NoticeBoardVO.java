@@ -3,7 +3,7 @@ package kr.gaza.myapp.board.noticeBoard;
 public class NoticeBoardVO {
 	
 	private int num;
-	private int type;
+	private int noticeType;
 	private String subject;
 	private String content;
 	private int hit;
@@ -24,11 +24,11 @@ public class NoticeBoardVO {
 	public void setNum(int num) {
 		this.num = num;
 	}
-	public int getType() {
-		return type;
+	public int getNoticeType() {
+		return noticeType;
 	}
-	public void setType(int type) {
-		this.type = type;
+	public void setNoticeType(int noticeType) {
+		this.noticeType = noticeType;
 	}
 	public String getSubject() {
 		return subject;
