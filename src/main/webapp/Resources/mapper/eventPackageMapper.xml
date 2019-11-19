@@ -8,15 +8,4 @@
 <select id="AllianceVO" resultType="kr.gaza.myapp.eventPackage.alliance.AllianceVO">
 	select eventnum, eventname, startdate, enddate, eventimg from event where eventnum = #{eventnum}
 </select>
-
-<select id="TravelVO" resultType="kr.gaza.myapp.eventPackage.travel.TravelVO">
-	select c.cityimg from product a join recommandProduct b on a.productnum = b.productnum join airport c on a.arrive = #{c.iata}
-</select>
-
-<select id="TravelVO" resultType="kr.gaza.myapp.eventPackage.travel.TravelVO">
-	select * from (select a.productCnt,b.city,b.cityimg from product a join airport b on a.arrive = b.iata order by a.productcnt desc) where rownum<=#{rownum}
-</select>
-
-<select id="TravelVO" resultType="kr.gaza.myapp.eventPackage.travel.TravelVO">
-select * from (select a.sale,b.city,b.cityimg from product a join airport b on a.arrive = b.iata order by a.sale desc) where rownum<=#{rownum}
-</select>
+</mapper>
