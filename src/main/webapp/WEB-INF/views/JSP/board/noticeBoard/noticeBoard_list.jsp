@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>공지사항</title>
+<link rel="stylesheet" href="<%=css %>/main.css" type="text/css"/>
 <link rel="stylesheet" href="<%=css %>/layout.css" type="text/css"/>
 <link rel="stylesheet" href="<%=css %>/notice.css" type="text/css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -13,6 +14,7 @@
 <body onload="start()">
 	<%@ include file="../../common/nav.jspf" %>
 	<section class="content">
+	<div id="warp">
 		<div id="contents">
 			<section id="title">
 				<h3>공지사항</h3>
@@ -49,7 +51,7 @@
 													NEW
 												</c:if>
 												</span>
-												<a href="<%=jsp %>/board/noticeBoard/noticeBoard_view?num=${v.num}&pageNum=${vo.pageNum}">${v.subject }</a>
+												<a href="<%=jsp %>/board/board_view.do?num=${v.num}&pageNum=${vo.pageNum}">${v.subject }</a>
 												<br>
 											</h4>
 											${v.content }
@@ -69,7 +71,7 @@
 							<a href="#" onclick="return false;" class="pageNum" >prev</a>
 						</c:if>
 						<c:if test="${vo.pageNum>1}">
-							<a href="<%=request.getContextPath() %>/Resources/JSP/board/noticeBoard/noticeBoard_list.do?pageNum=${vo.pageNum-1}">prev</a>
+							<a href="<%=jsp %>/board/notice.do?pageNum=${vo.pageNum-1}">prev</a>
 						</c:if>
 						
 						<c:if test="${vo.totalPage >= vo.startPage+vo.onePageMax-1 }">
@@ -83,10 +85,10 @@
 						<c:forEach var="i" begin="${vo.startPage}" end="${printPage }">
 							<c:if test="${i<=vo.totalPage}">
 								<c:if test="${i == vo.pageNum }">
-									<a href="<%=jsp %>/board/noticeBoard/noticeBoard_list?pageNum=${i}" class="pageNum active">${i}</a>
+									<a href="<%=jsp %>/board/notice.do?pageNum=${i}" class="pageNum active">${i}</a>
 								</c:if>
 								<c:if test="${i != vo.pageNum }">
-									<a href="<%=jsp %>/board/noticeBoard/noticeBoard_list?pageNum=${i}" class="pageNum">${i}</a>
+									<a href="<%=jsp %>/board/notice.do?pageNum=${i}" class="pageNum">${i}</a>
 								</c:if>
 							</c:if>
 						</c:forEach>
@@ -95,14 +97,16 @@
 							<a href="#" onclick="return false;" class="pageNum">next</a><br/>
 						</c:if>
 						<c:if test="${vo.pageNum<vo.totalPage}">
-							<a href="<%=request.getContextPath() %>/Resources/JSP/board/noticeBoard/noticeBoard_list.do?pageNum=${vo.pageNum+1}">next</a><br/>
+							<a href="<%=jsp %>/board/notice.do?pageNum=${vo.pageNum+1}">next</a><br/>
 						</c:if>
 					</div>
 				</div>
 			</section>
 		</div>
+	</div>
 	</section>
 	<script>
+	
 		function start(){
 			//탭메뉴
 			 var btnIdList = ['btnAll', 'btnGAZA', 'btnPartner', 'btnOthers'];
@@ -113,7 +117,7 @@
 			for(i=0; i<paneIdList.length; i++){
 				tabBtnHTML += "<button class='tabBtn' id='"+btnIdList[i]+"' onclick='";
 				tabBtnHTML += "openPage(\""+paneIdList[i]+"\", this, \""+btnIdList[i]+"\")'>";
-				tabBtnHTML += "<img src='<%=img %>/icon/check.png'/>"+btnList[i]+"</button> ";
+				tabBtnHTML += "<img src='<%=img%>/icon/check.png'/>"+btnList[i]+"</button> ";
 			}
 			document.getElementById("tabBtn").innerHTML = tabBtnHTML;
 			
@@ -157,5 +161,6 @@
 		}
 	</script>
 	<%@ include file="../../common/footer.jspf" %>
+	<script src="<%=js %>/common.js"></script>
 </body>
 </html>
