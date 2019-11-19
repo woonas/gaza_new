@@ -11,5 +11,5 @@ public interface EPallianceInterface {
 	
 	public int eventDelete(int num);
 
-	public void eventSelect(AllianceVO vo);
+	public AllianceVO eventSelect(AllianceVO vo);
 }

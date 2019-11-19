@@ -15,18 +15,19 @@
         <select name="" id="event-select" onchange="if (this.value) location.href=this.value">
             <option value="">다른 이벤트 보기</option>
             <c:forEach var="v" items="${lst }">
-            	<option value="<%=request.getContextPath()%>/Resources/JSP/eventNpackage/event_detail.do?eventNum=${v.eventNum}">${v.eventName }</option>
+            	<option value="<%=jsp%>/eventNpackage/event_detail?eventNum=${v.eventNum}">${v.eventName }</option>
            </c:forEach>
         </select>
         <br><br>
+       
         <div class="event-title-wrapper">
-            <a href="<%=request.getContextPath()%>/Resources/JSP/eventNpackage/event_list.do"><input type="button" class="blueBtn" value="목록가기" id="Tolist"></a>
+            <a href="<%=jsp%>/eventNpackage/event_list"><input type="button" class="blueBtn" value="목록가기" id="Tolist"></a>
             <p class="event-title">
                ${vo.eventName }
             </p>
         </div>
         <br>
-        <img src="<%=request.getContextPath()%>${vo.eventImg }" alt="" style="width:100%">
+        <img src="<%=img%>${vo.eventImg }" alt="" style="width:100%">
     </section>
     <%@ include file="../common/footer.jspf" %>
 </body>
