@@ -34,6 +34,7 @@
 	background-color: #fff;
 	border-radius : 10px;
 	border: 1px solid #ccc;
+	cursor: pointer;
 }
 .localList>div:hover{
 	background-color: #ccc !important;
@@ -54,10 +55,10 @@ footer{
 		//LatLog : 지도의 중심위치
 		var myCenter = new google.maps.LatLng(latitude, logitude);//인천공항
 		var mapProperty = {
-			//변수  : 상수
-			center : myCenter,
-			zoom : 4, //0~21사이의 값을 사용. 값이 클수록 확대.
-			mapTypeId : google.maps.MapTypeId.ROADMAP //ROADMAP, HYBRID, STELLITE, TERRAIN				
+							//변수  : 상수
+							center : myCenter,
+							zoom : 4, //0~21사이의 값을 사용. 값이 클수록 확대.
+							mapTypeId : google.maps.MapTypeId.ROADMAP //ROADMAP, HYBRID, STELLITE, TERRAIN				
 		}
 		//맵 객체 생성
 		//							  						지도표시할 div, 옵션
@@ -65,10 +66,10 @@ footer{
 		
 		//마커 표시하기
 		var markerProperty = {
-				position : myCenter,
-				map : map,
-				icon : "../../../IMG/icon/marker_blue2.png", //마커로 표시할 이미지.
-				title : "인천(ICN)"
+								position : myCenter,
+								map : map,
+								icon : "<%=img%>/icon/marker_blue2.png", //마커로 표시할 이미지.
+								title : "인천(ICN)"
 		};
 		var marker = new google.maps.Marker(markerProperty);
 		marker.setMap(map);
@@ -150,7 +151,7 @@ footer{
 				marker2 = new google.maps.Marker({
 					position:new google.maps.LatLng(la[i], lo[i]),
 					title : titleList[i],
-					icon : "../../../IMG/icon/marker_blue2.png"
+					icon : "<%=img%>/icon/marker_blue2.png"
 				
 			});
 			marker2.setMap(map);	
@@ -164,12 +165,13 @@ footer{
 			var idx = $(this).index();
 			var move = new google.maps.LatLng(moveLat[idx], moveLng[idx]);
 			map.setCenter(move);
+			map.setZoom(4);
 		});
 	}//initMap
 	
 	$(function(){
 		var btnName = ["동북아시아", "동남/서남아시아", "미주", "유럽", "대양주/괌", "러시아/중앙아시아", "중동/아프리카"];
-
+	
 		for(i=0; i<7; i++){
 			$('.localList').append("<div>"+btnName[i]+"</div>");
 		};

@@ -13,7 +13,7 @@
 	#content{
 		max-width : 1200px;
 		margin: 0 auto;
-		padding: 100px 0 150px;
+		padding: 25vh 0;
 	}
 	#content>div{
 		width: 1000px;
@@ -49,7 +49,8 @@
 	}
 	button{
 		width: 120px;
-		height: 30px;
+		height: 50px;
+		margin: 50px 0;
 	}
 </style>
 
@@ -64,18 +65,6 @@
 				<h3>${errorCode } 에러</h3>		
 			</div>
 			<div class="col-three-fifth" >
-				<c:if test="${errorCode==404 }">
-				<b>죄송합니다.</b><br/><br/>
-				<b>요청하신 페이지를 찾을 수 없습니다.</b>
-				<p>
-					방문하시려는 페이지의 주소가 잘못 입력되었거나,<br/>
-					페이지의 주소가 변경 혹은 삭제되어 요청하신 페이지를 찾을 수 없습니다.<br/>
-					입력하신 주소가 정확한지 다시 한번 확인해 주시기 바랍니다.<br/>
-					관련 문의사항은 가자에어 고객센터에 알려주시면 친절하게 안내해 드리겠습니다.<br/>
-					감사합니다.
-				</p>
-				</c:if>
-				<c:if test="${errorCode!=400 }">
 				<b>죄송합니다.</b><br/><br/>
 				<b>기술적인 문제로 서비스에 접속이 되지 않았습니다.</b>
 				<p>
@@ -84,8 +73,7 @@
 					가자에어 고객센터로 연락 부탁 드립니다.<br/>
 					이용에 불편을 드려 다시 한 번 사과 드립니다.<br/>
 				</p>
-				</c:if>
-				<button class="blueBtn" id="btn">홈으로 이동</button>
+				<button class="blueBtn" id="btn">홈페이지 이동</button>
 			</div>
 		</div>
 	</div>

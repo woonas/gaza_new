@@ -111,6 +111,17 @@
                                        value="${vo.nation }"
                                        readonly required>
                             </div>
+                            <div class="col-xs-4 countryPicker2 hidden"
+                                 data-selectedcountry="KR"
+                                 data-showspecial="false"
+                                 data-showflags="true"
+                                 data-i18nall="All selected"
+                                 data-i18nnofilter="No selection"
+                                 data-onchangecallback="onChangeCallback">
+                            </div>
+                            <script>
+                            	const nationName = '${vo.nation}';
+                            </script>
                         </div>
                         
                         <div class="form-group">

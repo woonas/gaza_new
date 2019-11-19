@@ -112,7 +112,6 @@ const verification = () => {
         }
     });
 };
-
 //국가선택
 function onChangeCallback(ctr){
     document.getElementById('country').value = document.querySelector('.niceCountryInputMenuDefaultText span').innerText;
@@ -279,55 +278,62 @@ const agreement_check = () => {
         tabEvent('.tab-menu1');
         birth_option_generator();
 
-        /* 아디, 비번 검색*/
-        function search() {
-            var params = $("#searchForm").serialize();
-            $.ajax({
-                url : "idSearchOk",
-                type : "POST",
-                data : params,
-                success : function(result){
-                    if(result != ""){
-                    	alert("1"+result);
-                        $("#result").html("<h4>고객님의 아이디를 <b style='color:#36f'>이메일로 발송</b>하였습니다. 이메일을 확인해주세요.</h4>");
-                    }else{
-                    	alert("2"+result);
-                        $("#result").html("<h4><b style='color:#36f'>검색된 아이디가 없습니다.</b> 입력하신 정보를 다시 확인해주세요.</h4>");
-                    }
-                },
-                error : function(){
-                    alert("계정 찾기에 실패했습니다.");
-                }
-            });
+        /* 아이디 검색*/
+        const idSearch = document.getElementById('search');
+        if(idSearch) {
+	        function search() {
+	            var params = $("#searchForm").serialize();
+	            $.ajax({
+	                url : "idSearchOk",
+	                type : "POST",
+	                data : params,
+	                success : function(result){
+	                    if(result != ""){
+	                    	alert("1"+result);
+	                        $("#result").html("<h4>고객님의 아이디를 <b style='color:#36f'>이메일로 발송</b>하였습니다. 이메일을 확인해주세요.</h4>");
+	                    }else{
+	                    	alert("2"+result);
+	                        $("#result").html("<h4><b style='color:#36f'>검색된 아이디가 없습니다.</b> 입력하신 정보를 다시 확인해주세요.</h4>");
+	                    }
+	                },
+	                error : function(){
+	                    alert("계정 찾기에 실패했습니다.");
+	                }
+	            });
+	        }
+	        idSearch.addEventListener('click', search);
         }
-        document.getElementById('search').addEventListener('click', search);
-
-        function idFinder(targetForm) {
-            var params = $(targetForm).serialize();
-            $.ajax({
-                url : "<%=request.getContextPath() %>/Resources/JSP/account/search/verificationOk.do",
-                data : params,
-                success : function(result){
-                    if(result)
-                        $("#result").html("고객님의 아이디는 <span class='font-blue4'>"+result+"</span>입니다.");
-                    else
-                        $("#result").text("검색된 아이디가 없습니다. 입력하신 정보를 다시 확인해주세요.");
-                },
-                error : function(){
-                    alert("계정 찾기에 실패했습니다.");
-                }
-            });
+        
+        /*비밀번호 검색*/
+        const pwSearch = document.getElementById('pwFind');
+        if(pwSearch){
+	        function pwFinder() {
+	            var params = $("#pwFindFrm").serialize();
+	            $.ajax({
+	                url : "pwSearchOk",
+	                type : "POST",
+	                data : params,
+	                success : function(result){
+	                    if(result)
+	                        $("#result").html("<h4>고객님의 비밀번호를 <b style='color:#36f'>이메일로 발송</b>하였습니다. 이메일을 확인해주세요.</h4>");
+	                    else
+	                        $("#result").html("<h4><b style='color:#36f'>검색된 비밀번호가 없습니다.</b> 입력하신 정보를 다시 확인해주세요.</h4>");
+	                },
+	                error : function(){
+	                    alert("비밀번호 찾기에 실패했습니다.");
+	                }
+	            });
+	        }
+	        
+	        pwSearch.addEventListener('click', pwFinder);
         }
-
-
+        
         document.getElementById('authorizeBtn').addEventListener('click', () => {
             const type = document.querySelector('input[name="veri-type"]:checked');
             const name = document.getElementById('username');
             const phone = document.getElementById('userphone');
             name.value = document.getElementById(type.id + '-name').value;
             phone.value = document.getElementById(type.id + '-phone').value;
-
-
 
             setTimeout(() => {
                 verification('#verificationForm');
@@ -358,12 +364,17 @@ const agreement_check = () => {
         /*우편번호 검사*/
         document.getElementById('btn-postalSearch').addEventListener('click', addrSearch);
         /*국가 선택필드*/
-        new NiceCountryInput($(".countryPicker")).init();
+        new NiceCountryInput($(".countryPicker2")).init();
         const temp = document.querySelector('.warning');
         document.querySelector('.login-link').addEventListener('click', () => {
             if (isEditing.checked)  temp.classList.remove('hidden')
         });
-
+        
+        /*국가 DB에서 읽어와서 변경시키기.*/
+        let country_code=document.querySelector(`.countryPicker2 a[title='${nationName}']`).attributes[2].value;
+        document.querySelector("div.countryPicker").setAttribute("data-selectedcountry", country_code);
+        new NiceCountryInput($(".countryPicker")).init();
+        
         /* 페이지 로딩시 필요한 input disabled 넣기*/
         const addrBtn = document.getElementById('btn-postalSearch');
         const countrySelctor = document.querySelector('.countryPicker');
