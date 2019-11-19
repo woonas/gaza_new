@@ -73,50 +73,50 @@ purge;
 DROP TABLE Passenger 
 purge;
     
-drop SEQUENCE people_sq;
+drop SEQUENCE peoplenum_sq;
 
-drop SEQUENCE food_sq;
+drop SEQUENCE foodnum_sq;
 
-drop SEQUENCE account_sq;
+drop SEQUENCE accountnum_sq;
 
-drop SEQUENCE credit_sq;
+drop SEQUENCE creditnum_sq;
 
-drop SEQUENCE Passenger_sq;
+drop SEQUENCE Passengernum_sq;
 
-drop SEQUENCE orderedFlight_sq;
+drop SEQUENCE orderedFlightnum_sq;
 
-drop SEQUENCE order_sq;
+drop SEQUENCE ordernum_sq;
 
-drop SEQUENCE pay_sq;
+drop SEQUENCE paynum_sq;
 
-drop SEQUENCE admin_sq;
+drop SEQUENCE adminnum_sq;
 
-drop SEQUENCE flight_sq;
+drop SEQUENCE flightnum_sq;
 
-drop SEQUENCE seatReserve_sq;
+drop SEQUENCE seatReservenum_sq;
 
-drop SEQUENCE seatType_sq;
+drop SEQUENCE seatTypenum_sq;
 
-drop SEQUENCE member_sq;
+drop SEQUENCE membernum_sq;
 
-drop SEQUENCE product_sq;
+drop SEQUENCE productnum_sq;
 
-drop SEQUENCE favorite_sq;
+drop SEQUENCE favoritenum_sq;
 
-drop SEQUENCE myMiles_sq;
+drop SEQUENCE myMilesnum_sq;
 
-drop SEQUENCE miles_sq;
+drop SEQUENCE milesnum_sq;
 
-drop SEQUENCE gradeType_sq;
+drop SEQUENCE gradeTypenum_sq;
 
-drop SEQUENCE event_sq;
+drop SEQUENCE eventnum_sq;
 
-drop SEQUENCE recommand_sq;
+drop SEQUENCE recommandnum_sq;
 
-drop SEQUENCE airport_sq;
+drop SEQUENCE airportnum_sq;
 
-drop SEQUENCE notice_sq;
+drop SEQUENCE noticenum_sq;
 
-drop SEQUENCE review_sq;
+drop SEQUENCE reviewnum_sq;
 
-drop SEQUENCE reply_sq;
+drop SEQUENCE replynum_sq;
