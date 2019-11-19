@@ -38,4 +38,7 @@
 	<select id="findId" parameterType="kr.gaza.myapp.account.member.MemberVO" resultType="String">
 		select memberId from member where memberNameKor=#{memberNameKor} and birthday=#{birthDay} and email=#{email}
 	</select>
+	<select id="findPw" parameterType="kr.gaza.myapp.account.member.MemberVO" resultType="String">
+		select memberPwd from member where memberId=#{memberId} and memberNameKor=#{memberNameKor} and birthday=#{birthDay} and email=#{email}
+	</select>
 </mapper>

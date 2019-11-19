@@ -5,7 +5,7 @@
 <head>
     <meta charset = "UTF-8">
     <title>제휴이벤트</title>
-    <link rel = "stylesheet" href = "../../CSS/eventNpackage.css">
+    <link rel = "stylesheet" href = "<%=path %>/Resources/CSS/eventNpackage.css">
     <script>window.onbeforeunload = () => window.scrollTo(0, 0)</script>
 </head>
 <body>
@@ -19,11 +19,11 @@
 		</c:if>
         	<input type="hidden" value="${vo.eventNum }">
             <div class="col-half">
-                <a href="<%=request.getContextPath()%>/Resources/JSP/eventNpackage/event_detail.do?eventNum=${vo.eventNum}">
-                	<div class="col-two-fifth" style="background-image: url('<%=request.getContextPath()%>${vo.eventThumbnail}')"></div>
+                <a href="<%=jsp%>/eventNpackage/event_detail?eventNum=${vo.eventNum}">
+                	<div class="col-two-fifth" style="background-image: url('<%=img%>${vo.eventThumbnail}')"></div>
                 </a>
                 <div class="col-three-fifth product-detail">
-                    <a href="<%=request.getContextPath()%>/Resources/JSP/eventNpackage/event_detail.do?eventNum=${vo.eventNum}"><p>${vo.eventName }</p></a>
+                    <a href="<%=jsp%>/eventNpackage/event_detail?eventNum=${vo.eventNum}"><p>${vo.eventName }</p></a>
                     <hr class="seperatorLogo">
                     <ul class="list-type1">
                        <c:forTokens var="content" items="${vo.eventContent }" delims="!@#">

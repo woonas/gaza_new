@@ -19,7 +19,7 @@ public interface MemberInterface {
 	public String findId(MemberVO vo);
 
 	public String findPw(MemberVO vo);
-
+	
 	public void verification(MemberVO vo);
 	
 	public int pwdChk(MemberVO vo);

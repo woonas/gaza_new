@@ -286,7 +286,7 @@ const birth_option_generator = () => {
         dayOptions = "<option value=''>일</option>";
 
     const thisYear = new Date().getFullYear();
-    for (let i = thisYear-100; i <= thisYear; i++)
+    for (let i = thisYear; i >= thisYear-100; i--)
         yearOptions += `<option value=${i}>${i}</option>`;
     year.innerHTML = yearOptions;
     for (let i = 1; i <= 12; i++) {
