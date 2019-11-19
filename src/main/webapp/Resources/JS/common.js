@@ -93,6 +93,7 @@ const cal_init = (index) => {
     if (!index) index = 1;
     if(calendar[index-1]) calendar[index-1].destroy();
     calendar[index-1] = cal_generator('flightDate-' + index);
+    calendar[index-1].el.classList.add('centeredX');
 };
 
 let cal_generator = (strId, startDate, numOfMonths) => {

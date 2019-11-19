@@ -20,38 +20,79 @@
         <c:set var="seatLeftList" value="${bookingVO.seatLeftList}"/>
         <div class="overlay"></div>
         <div class="cur-route itinerary">
-            <div class="row clearfix book-input-form">
-                <div class="col-fourth itinerary-select">
-                    <label for="airportFrom-1">
-                        <i class="fas fa-map-marker-alt"></i>
-                        출발지
-                    </label>
-                    <input type="text" id="airportFrom-1" name="airportFrom-1" class="open-airport-picker" value="${journeyList[0].airportFrom}" readonly>
+            <c:if test="${bookingVO.journeyType == 'multi-way'}">
+                <div class="row clearfix book-input-form multi-way-row">
+                    <div class="col-fourth itinerary-select">
+                        <label for="airportFrom-0">
+                            <i class="fas fa-map-marker-alt"></i>
+                            출발지
+                        </label>
+                        <input type="text" id="airportFrom-0" name="airportFrom-0" class="open-airport-picker" value="다구간" readonly>
+                    </div>
+                    <div class="col-fourth itinerary-select">
+                        <label for="airportTo-0">
+                            <i class="fas fa-map-marker-alt"></i>
+                            도착지
+                        </label>
+                        <input type="text" id="airportTo-0" name="airportTo-0" class="open-airport-picker" value="다구간" readonly>
+                    </div>
+                    <div class="col-fourth itinerary-select">
+                        <label for="flightDate-0">
+                            <i class="far fa-calendar-alt"></i>
+                            탑승일
+                        </label>
+                        <input type="text" id="flightDate-0" name="flightDate-0" class="flightDate" value="다구간" readonly>
+                    </div>
+                    <div class="col-fourth itinerary-select">
+                        <label for="num-of-passengers">
+                            <i class="fas fa-user"></i>
+                            탑승객
+                        </label>
+                        <input type="text" id="num-of-passengers-0" name="num-of-passengers-0" value="${journeyList[0].numOfPassengers}" readonly>
+                    </div>
+                    <i class="fas fa-redo-alt"></i>
                 </div>
-                <div class="col-fourth itinerary-select">
-                    <label for="airportTo-1">
-                        <i class="fas fa-map-marker-alt"></i>
-                        도착지
-                    </label>
-                    <input type="text" id="airportTo-1" name="airportTo-1" class="open-airport-picker" value="${journeyList[0].airportTo}" readonly>
+            </c:if>
+            <c:set var="numOfJourney" value="${fn:length(journeyList)}"/>
+            <c:if test="${bookingVO.journeyType == 'round-way'}">
+                <c:set var="numOfJourney" value="1"/>
+            </c:if>
+            <c:forEach var="i" begin="1" end="${numOfJourney}" step="1">
+                <div class="row clearfix book-input-form">
+                    <div class="col-fourth itinerary-select">
+                        <label for="airportFrom-${i}">
+                            <i class="fas fa-map-marker-alt"></i>
+                            출발지
+                        </label>
+                        <input type="text" id="airportFrom-${i}" name="airportFrom-${i}" class="open-airport-picker" value="${journeyList[i-1].airportFrom}" readonly>
+                    </div>
+                    <div class="col-fourth itinerary-select">
+                        <label for="airportTo-${i}">
+                            <i class="fas fa-map-marker-alt"></i>
+                            도착지
+                        </label>
+                        <input type="text" id="airportTo-${i}" name="airportTo-${i}" class="open-airport-picker" value="${journeyList[i-1].airportTo}" readonly>
+                    </div>
+                    <div class="col-fourth itinerary-select">
+                        <label for="flightDate-${i}">
+                            <i class="far fa-calendar-alt"></i>
+                            탑승일
+                        </label>
+                        <input type="text" id="flightDate-${i}" name="flightDate-${i}" class="flightDate" value="${journeyList[i-1].flightDate}" readonly>
+                    </div>
+                    <c:if test="${i==1}">
+                        <div class="col-fourth itinerary-select">
+                            <label for="num-of-passengers">
+                                <i class="fas fa-user"></i>
+                                탑승객
+                            </label>
+                            <input type="text" id="num-of-passengers" name="num-of-passengers" value="${journeyList[0].numOfPassengers}" readonly>
+                        </div>
+                        <i class="fas fa-redo-alt"></i>
+                    </c:if>
                 </div>
-                <div class="col-fourth itinerary-select">
-                    <label for="flightDate-1">
-                        <i class="far fa-calendar-alt"></i>
-                        탑승일
-                    </label>
-                    <input type="text" id="flightDate-1" name="flightDate-1" class="flightDate" value="${journeyList[0].flightDate}" readonly>
-                </div>
-                <div class="col-fourth itinerary-select">
-                    <label for="num-of-passengers">
-                        <i class="fas fa-user"></i>
-                        탑승객
-                    </label>
-                    <input type="text" id="num-of-passengers" name="num-of-passengers" value="${journeyList[0].numOfPassengers}" readonly>
-                </div>
-                <i class="fas fa-redo-alt"></i>
-            </div>
-            <input type="radio" name="trip-type" id="trip-type" class="hidden" checked>
+            </c:forEach>
+            <input type="hidden" name="trip-type" id="trip-type" value="${bookingVO.journeyType}">
         </div>
         
         <section class="content">

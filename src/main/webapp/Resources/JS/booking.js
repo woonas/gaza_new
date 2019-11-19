@@ -197,7 +197,6 @@ const input_check = () => {
             });
         });
 
-
         document.querySelector('.subtr').addEventListener('click', () => {
             let input_forms = document.querySelectorAll('.book-input-form');
             let num_of_forms = input_forms.length;
@@ -236,8 +235,14 @@ const input_check = () => {
         });
 
         //캘린더
-        cal_init();
-        overlay.addEventListener('click', () => cal_init() );
+        if (document.getElementById('trip-type').value === 'multi-way' ) {
+            for (let i = 1; i <= document.querySelectorAll('div[id^=journey-').length; i++) {
+                calendar[i - 1] = cal_generator('flightDate-' + i, document.getElementById('flightDate-' + i).value);
+                calendar[i - 1].el.classList.add('centeredX');
+            }
+            overlay.addEventListener('click', () => cal_init(calendar_openedBy));
+        } else
+            cal_init();
         //공항picker
         openPicker('.open-airport-picker');
 
@@ -381,7 +386,7 @@ const input_check = () => {
                 targetBody.innerHTML = "";
                 sortedTicketRows.forEach(ticketRow => targetBody.innerHTML += ticketRow.outerHTML);
 
-                document.querySelector('input.checked').classList.remove('checked');
+                document.querySelector(`#journey-${index} input.checked`).classList.remove('checked');
                 item.classList.add('checked');
                 const selected = document.querySelector(`#journey-${index} .selected-ticket`);
                 if (selected) {
@@ -392,7 +397,6 @@ const input_check = () => {
                 ticket_select();
             });
         });
-
 
         /* waypoint */
         // 상단바 변경

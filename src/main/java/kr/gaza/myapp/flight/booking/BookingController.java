@@ -11,6 +11,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.UnsupportedEncodingException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -88,6 +92,11 @@ public class BookingController {
             bookingVO.getSeatLeftList().add(bookingDAO.getSeatLeft(flightList));
         }
 
+        // journeydate 포맷다시 바꾸기
+        for (JourneyVO journeyVO : bookingVO.getJourneyList()){
+            journeyVO.getFlightDate().replace("-","/");
+        }
+
         request.setAttribute("bookingVO", bookingVO);
         if (bookingVO.getJourneyType().equals("multi-way"))
             request.setAttribute("journey", new String[]{"첫번째", "두번째", "세번째", "네번째", "다섯번째", "여섯번째"});
@@ -115,19 +124,46 @@ public class BookingController {
         return modelAndView;
     }
 
-    private int getCheapestPrice(BookingVO vo) {
+    private int getCheapestPrice(BookingVO bookingVO) {
         int price = -1;
         double temp = 0;
+        List<List<Integer>> priceList = new ArrayList<>();
 
-        List<ProductVO> productVOList = vo.getProductList();
-        List<List<FlightVO>> flightVOList = vo.getFlightList();
+        BookingInterface bookingDAO = sqlSession.getMapper(BookingInterface.class);
+        BookingVO vo = new BookingVO();
+        List<JourneyVO> journeyList = bookingVO.getJourneyList();
 
-        for (int i = 0; i < productVOList.size(); i++) {
-            temp = productVOList.get(i).getPrice() * productVOList.get(i).getProductSale();
-            for (int j = 0; j < flightVOList.get(i).size(); j++) {
-                temp *= flightVOList.get(i).get(j).getFlightSale();
+        for (int i = 0; i < journeyList.size(); i++) {
+            String from = journeyList.get(i).getAirportFromIATA();
+            String to = journeyList.get(i).getAirportToIATA();
+            vo.getProductList().add(bookingDAO.getProductVO(from, to));
+        }
+        List<ProductVO> productList = vo.getProductList();
+        for (int dateMod = -3; dateMod < 3; dateMod++) {
+            for (int i = 0; i < productList.size(); i++) {
+                String journeyDate = journeyList.get(i).getFlightDate();
+                String targetDate = journeyDate.replace(journeyDate.charAt(journeyDate.length()-1)+"", journeyDate.charAt(journeyDate.length()-1)+dateMod+"");
+                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy/MM/dd");
+                Date date = new Date();
+                try {
+                    targetDate = simpleDateFormat.format(simpleDateFormat.parse(targetDate));
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                vo.getFlightList().add(bookingDAO.getFlightVO(productList.get(i).getProductNum(), targetDate));
             }
-            if (price == -1 || temp < price) price = (int)(temp/100*100);
+            List<List<FlightVO>> flightVOList = vo.getFlightList();
+            priceList.add(new ArrayList<>());
+            //가격비교
+            for (int i = 0; i < productList.size(); i++) {
+                temp = productList.get(i).getPrice() * productList.get(i).getProductSale();
+                for (int j = 0; j < flightVOList.get(i).size(); j++) {
+                    if (price == -1 || temp * flightVOList.get(i).get(j).getFlightSale() < price) {
+                        price = (int) Math.round(temp * flightVOList.get(i).get(j).getFlightSale() / 100) * 100;
+                    }
+                }
+                priceList.get(0).add(price);
+            }
         }
 
         return price;

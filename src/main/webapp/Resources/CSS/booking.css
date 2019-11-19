@@ -338,7 +338,7 @@ input[name="class-type"].radio2:checked + label { background-position: 35% 5px; 
 
 .cur-route input {
     background-color: #fff;
-    border: none;
+    border: 1px solid #ddd;
     width: calc(100% - 2px);
     font-size: 140%;
 }
@@ -346,8 +346,10 @@ input[name="class-type"].radio2:checked + label { background-position: 35% 5px; 
 .cur-route>.book-input-form {
     display: flex;
     margin-bottom: 0;
-
 }
+
+.cur-route .itinerary-select { max-width: calc(25% - 14px); }
+
 #num-of-passengers-window {
     max-width: 1200px;
     width: 1200px;
@@ -385,7 +387,6 @@ input[name="class-type"].radio2:checked + label { background-position: 35% 5px; 
 .cur-route.sticky {
     position: sticky;
     top: 0;
-    height: 80px;
 }
 
 .cur-route.sticky * { height: 50px !important; }
@@ -402,9 +403,15 @@ input[name="class-type"].radio2:checked + label { background-position: 35% 5px; 
 .cur-route.sticky .col-fourth:first-of-type:after,
 .cur-route.sticky .col-fourth:nth-of-type(2):after { content: "\f3c5"; }
 .cur-route.sticky .col-fourth:nth-of-type(3):after { content: "\f073"; }
-.cur-route.sticky .col-fourth:last-of-type:after { content: "\f007"; }
+.cur-route.sticky .col-fourth:nth-of-type(4):after { content: "\f007"; }
 .cur-route.sticky .fa-redo-alt { line-height: 50px; }
 .sticky>.book-input-form>.itinerary-select>input { padding-left: 10px; }
+
+/* 다구간 상단바 */
+.cur-route:hover>.multi-way-row { display: none; }
+.cur-route>.multi-way-row ~ div { display: none; margin-top: 10px; }
+.cur-route>.multi-way-row + div { margin-top: 0; }
+.cur-route:hover>.multi-way-row ~ div { display: flex; }
 
 /* 여정 */
 
