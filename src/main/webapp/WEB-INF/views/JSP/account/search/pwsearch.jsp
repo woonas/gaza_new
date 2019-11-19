@@ -48,13 +48,13 @@
                             성
                         </div>
                         <div class="two-in-row">
-                            <input type="text" name="firstName" placeholder="한글 성 입력 (예:홍)">
+                            <input type="text" name="lastName" placeholder="한글 성 입력 (예:홍)">
                         </div>
                         <div class="table-row-title">
                             이름
                         </div>
                         <div class="two-in-row">
-                            <input type="text" name="lastName" placeholder="한글 이름 입력 (예:길동)">
+                            <input type="text" name="firstName" placeholder="한글 이름 입력 (예:길동)">
                         </div>
                     </div>
 
@@ -117,7 +117,8 @@
                 </div>
                 </form>
             </div>
-
+			
+			<!-- 본인 인증을 통한 비밀번호 재설정 -->
             <div id="tab-2-container" class="hidden">
                 <div class="mem_input_wrap">
                     <label for="txtUserID">아이디 입력</label>

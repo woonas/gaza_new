@@ -5,9 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>공지사항</title>
-<link rel="stylesheet" href="../../../CSS/navNfooter.css" type="text/css"/>
-<link rel="stylesheet" href="../../../CSS/layout.css" type="text/css"/>
-<link rel="stylesheet" href="../../../CSS/notice.css" type="text/css"/>
+<link rel="stylesheet" href="<%=css %>/layout.css" type="text/css"/>
+<link rel="stylesheet" href="<%=css %>/notice.css" type="text/css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 </head>
@@ -50,7 +49,7 @@
 													NEW
 												</c:if>
 												</span>
-												<a href="<%=request.getContextPath()%>/Resources/JSP/board/noticeBoard/noticeBoard_view.do?num=${v.num}&pageNum=${vo.pageNum}">${v.subject }</a>
+												<a href="<%=jsp %>/board/noticeBoard/noticeBoard_view?num=${v.num}&pageNum=${vo.pageNum}">${v.subject }</a>
 												<br>
 											</h4>
 											${v.content }
@@ -84,10 +83,10 @@
 						<c:forEach var="i" begin="${vo.startPage}" end="${printPage }">
 							<c:if test="${i<=vo.totalPage}">
 								<c:if test="${i == vo.pageNum }">
-									<a href="<%=request.getContextPath() %>/Resources/JSP/board/noticeBoard/noticeBoard_list.do?pageNum=${i}" class="pageNum active">${i}</a>
+									<a href="<%=jsp %>/board/noticeBoard/noticeBoard_list?pageNum=${i}" class="pageNum active">${i}</a>
 								</c:if>
 								<c:if test="${i != vo.pageNum }">
-									<a href="<%=request.getContextPath() %>/Resources/JSP/board/noticeBoard/noticeBoard_list.do?pageNum=${i}" class="pageNum">${i}</a>
+									<a href="<%=jsp %>/board/noticeBoard/noticeBoard_list?pageNum=${i}" class="pageNum">${i}</a>
 								</c:if>
 							</c:if>
 						</c:forEach>
@@ -104,7 +103,6 @@
 		</div>
 	</section>
 	<script>
-	
 		function start(){
 			//탭메뉴
 			 var btnIdList = ['btnAll', 'btnGAZA', 'btnPartner', 'btnOthers'];
@@ -115,7 +113,7 @@
 			for(i=0; i<paneIdList.length; i++){
 				tabBtnHTML += "<button class='tabBtn' id='"+btnIdList[i]+"' onclick='";
 				tabBtnHTML += "openPage(\""+paneIdList[i]+"\", this, \""+btnIdList[i]+"\")'>";
-				tabBtnHTML += "<img src='../../../IMG/icon/check.png'/>"+btnList[i]+"</button> ";
+				tabBtnHTML += "<img src='<%=img %>/icon/check.png'/>"+btnList[i]+"</button> ";
 			}
 			document.getElementById("tabBtn").innerHTML = tabBtnHTML;
 			
@@ -159,6 +157,5 @@
 		}
 	</script>
 	<%@ include file="../../common/footer.jspf" %>
-	<script src="../../../JS/common.js"></script>
 </body>
 </html>
