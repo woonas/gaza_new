@@ -5,7 +5,7 @@
 <head>
     <meta charset = "UTF-8">
     <title>제휴이벤트</title>
-    <link rel = "stylesheet" href = "../../CSS/eventNpackage.css">
+    <link rel = "stylesheet" href = "<%=path %>/Resources//CSS/eventNpackage.css">
     <script>window.onbeforeunload = () => window.scrollTo(0, 0)</script>
 </head>
 <body>
