@@ -19,6 +19,7 @@
            </c:forEach>
         </select>
         <br><br>
+       
         <div class="event-title-wrapper">
             <a href="<%=jsp%>/eventNpackage/event_list"><input type="button" class="blueBtn" value="목록가기" id="Tolist"></a>
             <p class="event-title">

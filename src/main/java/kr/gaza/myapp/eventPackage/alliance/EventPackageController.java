@@ -30,12 +30,12 @@ import org.springframework.web.servlet.ModelAndView;
 		EPallianceInterface dao = sqlSession.getMapper(EPallianceInterface.class);
 		AllianceVO vo = new AllianceVO();
 		vo.setEventNum(Integer.parseInt(req.getParameter("eventNum")));
-		dao.eventSelect(vo);
+		AllianceVO vo2 = dao.eventSelect(vo);
 		
 		List<AllianceVO> lst = dao.getAllRecord();
 		
 		ModelAndView mav = new ModelAndView();
-		mav.addObject("vo",vo);
+		mav.addObject("vo",vo2);
 		mav.addObject("lst",lst);
 		mav.setViewName("JSP/eventNpackage/event_detail");
 		
