@@ -689,6 +689,14 @@ input[name="class-type"].radio2:checked + label { background-position: 35% 5px; 
     transform: rotate(225deg);
     margin-top: 6px;
 }
+
+.next-day {
+    position: absolute;
+    margin-top: 23px;
+    margin-left: 30px;
+    font-size: 60%;
+}
+
 /* ----------------------------------------------- */
 /* 탑승자/예약자 정보입력 booking3.html */
 /* ----------------------------------------------- */

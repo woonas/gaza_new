@@ -101,7 +101,7 @@ public class BookingController {
         if (bookingVO.getJourneyType().equals("multi-way"))
             request.setAttribute("journey", new String[]{"첫번째", "두번째", "세번째", "네번째", "다섯번째", "여섯번째"});
         else request.setAttribute("journey", new String[]{"가는", "오는"});
-        request.setAttribute("cheapestPrice", getCheapestPrice(bookingVO));
+//        request.setAttribute("cheapestPrice", getCheapestPrice(bookingVO));
 
         return modelAndView;
     }
