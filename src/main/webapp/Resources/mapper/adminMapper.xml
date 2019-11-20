@@ -6,4 +6,12 @@
 <select id="airportAllRecord" resultType="kr.gaza.myapp.aviation.airport.AirportVO">
 	select airportnum, iata, continent, city, latitude, longitude, cityimg from airport
 </select>
+
+<select id="flightAllRecord" resultType="kr.gaza.myapp.aviation.flight.FlightVO">
+	select flightnum, airplanename, productnum, departtime, arrivetime, sale from flight
+</select>
+
+<select id="foodAllRecord" resultType="kr.gaza.myapp.aviation.food.FoodVO">
+	select foodnum, foodtype, foodname, foodimg, foodcontent, foodingredient, foodprice from food
+</select>
 </mapper>	

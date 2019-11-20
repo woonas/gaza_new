@@ -6,7 +6,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12">
-                            <h1 class="page-header">제목</h1>
+                            <h1 class="page-header">여정(flight)</h1>
                         </div>
                     </div>
                     
@@ -17,29 +17,34 @@
                                     <div class="table-responsive">
                                         <table class="table table-striped table-bordered table-hover" id="dataTables">
                                             <col-group>
-                                                <col>
-                                                <col>
-                                                <col>
-                                                <col>
+                                                <col width="9%">
+                                                <col width="9%">
+                                                <col width="16.4%">
+                                                <col width="16.4%">
+                                                <col width="16.4%">
+                                                <col width="16.4%">
                                             </col-group>
                                             <thead>
                                                 <tr>
-                                                    <th>아이디</th>
-                                                    <th>이름</th>
-                                                    <th>Platform(s)</th>
-                                                    <th>Engine version</th>
-                                                    <th>CSS grade</th>
+                                                    <th>운행번호</th>
+                                                    <th>기종</th>
+                                                    <th>상품번호</th>
+                                                    <th>출발시간</th>
+                                                    <th>도착시간</th>
+                                                    <th>할인율</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-<!--                                            여기에 반복-->
+												<c:forEach var="vo" items="${lst }">
                                                 <tr class="odd gradeX">
-                                                    <td>Trident</td>
-                                                    <td>Internet Explorer 4.0</td>
-                                                    <td>Win 95+</td>
-                                                    <td class="center">4</td>
-                                                    <td class="center">X</td>
+                                                    <td>${vo.flightNum }</td>
+                                                    <td>${vo.airplaneName }</td>
+                                                    <td>${vo.productNum }</td>
+                                                    <td class="center">${vo.departTime }</td>
+                                                    <td class="center">${vo.arriveTime }</td>
+                                                    <td class="center">${vo.sale }</td>
                                                 </tr>
+                                                </c:forEach>
                                             </tbody>
                                         </table>
                                     </div>
@@ -50,6 +55,7 @@
                         </div>
                         <!-- /.col-lg-12 -->
                     </div>
+                
                 </div>
                 <!-- /.container-fluid -->
             </div>

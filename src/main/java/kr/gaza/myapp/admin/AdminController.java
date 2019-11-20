@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import kr.gaza.myapp.aviation.airport.AirportVO;
+import kr.gaza.myapp.aviation.flight.FlightVO;
+import kr.gaza.myapp.aviation.food.FoodVO;
 @Controller
 public class AdminController {
 	@Autowired
@@ -24,4 +26,25 @@ public class AdminController {
 		return mav;
 	}
 	
+	@RequestMapping("/JSP/admin/admin_flight")
+	public ModelAndView AdminFlight() {
+		AdminInterface dao = sqlSession.getMapper(AdminInterface.class);
+		List<FlightVO> lst = dao.flightAllRecord();
+		
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("lst",lst);
+		mav.setViewName("JSP/admin/admin_flight");
+		return mav;
+	}
+	
+	@RequestMapping("/JSP/admin/admin_food")
+	public ModelAndView AdminFood() {
+		AdminInterface dao = sqlSession.getMapper(AdminInterface.class);
+		List<FoodVO> lst = dao.foodAllRecord();
+		
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("lst",lst);
+		mav.setViewName("JSP/admin/admin_food");
+		return mav;
+	}
 }
