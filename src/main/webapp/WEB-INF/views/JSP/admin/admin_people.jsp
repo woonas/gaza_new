@@ -6,7 +6,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12">
-                            <h1 class="page-header">기내식(food)</h1>
+                            <h1 class="page-header">승객타입(people)</h1>
                         </div>
                     </div>
                     
@@ -17,35 +17,24 @@
                                     <div class="table-responsive">
                                         <table class="table table-striped table-bordered table-hover" id="dataTables">
                                             <col-group>
-                                                <col width="9%">
-                                                <col width="9%">
-                                                <col width="16.4%">
-                                                <col width="16.4%">
-                                                <col width="16.4%">
-                                                <col width="16.4%">
-                                                <col width="16.4%">
+                                                <col width="33.3%">
+                                                <col width="33.3%">
+                                                <col width="33.4%">
+                                                
                                             </col-group>
                                             <thead>
                                                 <tr>
-                                                    <th>기내식번호</th>
-                                                    <th>기내식종류</th>
-                                                    <th>기내식이름</th>
-                                                    <th>기내식이미지</th>
-                                                    <th>기내식설명</th>
-                                                    <th>기내식재료</th>
-                                                    <th>기내식가격</th>
+                                                    <th>승객타입분류번호</th>
+                                                    <th>승객타입</th>
+                                                    <th>할인율</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
 												<c:forEach var="vo" items="${lst }">
                                                 <tr class="odd gradeX">
-                                                    <td>${vo.foodNum }</td>
-                                                    <td>${vo.foodType }</td>
-                                                    <td>${vo.foodName }</td>
-                                                    <td class="center">${vo.foodImg }</td>
-                                                    <td class="center">${vo.foodContent }</td>
-                                                    <td class="center">${vo.foodIngredient }</td>
-                                                    <td>${vo.foodPrice }</td>
+                                                    <td>${vo.peopleNum }</td>
+                                                    <td>${vo.peopleType }</td>
+                                                    <td>${vo.peopleSale }</td>
                                                 </tr>
                                                 </c:forEach>
                                             </tbody>

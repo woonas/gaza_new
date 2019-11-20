@@ -3,7 +3,7 @@ package kr.gaza.myapp.aviation.personType;
 public class peopleVO {
     private int peopleNum;
     private String peopleType;
-    private int peopleSale;
+    private double peopleSale;
 
     public int getPeopleNum() {
         return peopleNum;
@@ -21,11 +21,11 @@ public class peopleVO {
         this.peopleType = peopleType;
     }
 
-    public int getPeopleSale() {
+    public double getPeopleSale() {
         return peopleSale;
     }
 
-    public void setPeopleSale(int peopleSale) {
+    public void setPeopleSale(double peopleSale) {
         this.peopleSale = peopleSale;
     }
 }

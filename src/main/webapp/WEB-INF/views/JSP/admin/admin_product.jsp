@@ -6,7 +6,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12">
-                            <h1 class="page-header">기내식(food)</h1>
+                            <h1 class="page-header">비행상품(product)</h1>
                         </div>
                     </div>
                     
@@ -27,25 +27,25 @@
                                             </col-group>
                                             <thead>
                                                 <tr>
-                                                    <th>기내식번호</th>
-                                                    <th>기내식종류</th>
-                                                    <th>기내식이름</th>
-                                                    <th>기내식이미지</th>
-                                                    <th>기내식설명</th>
-                                                    <th>기내식재료</th>
-                                                    <th>기내식가격</th>
+                                                    <th>상품번호</th>
+                                                    <th>출발지</th>
+                                                    <th>도착지</th>
+                                                    <th>가격</th>
+                                                    <th>예매횟수</th>
+                                                    <th>할인</th>
+                                                    <th>등록일</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
 												<c:forEach var="vo" items="${lst }">
                                                 <tr class="odd gradeX">
-                                                    <td>${vo.foodNum }</td>
-                                                    <td>${vo.foodType }</td>
-                                                    <td>${vo.foodName }</td>
-                                                    <td class="center">${vo.foodImg }</td>
-                                                    <td class="center">${vo.foodContent }</td>
-                                                    <td class="center">${vo.foodIngredient }</td>
-                                                    <td>${vo.foodPrice }</td>
+                                                    <td>${vo.productNum }</td>
+                                                    <td>${vo.depart }</td>
+                                                    <td>${vo.arrive }</td>
+                                                    <td class="center">${vo.price }</td>
+                                                    <td class="center">${vo.productCnt }</td>
+                                                    <td class="center">${vo.sale}</td>
+                                                    <td>${vo.regDate }</td>
                                                 </tr>
                                                 </c:forEach>
                                             </tbody>
