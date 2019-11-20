@@ -85,9 +85,9 @@ drop SEQUENCE Passengernum_sq;
 
 drop SEQUENCE orderedFlightnum_sq;
 
-drop SEQUENCE ordernum_sq;
+drop SEQUENCE ordertblnum_sq;
 
-drop SEQUENCE paynum_sq;
+drop SEQUENCE paymentnum_sq;
 
 drop SEQUENCE adminnum_sq;
 
@@ -111,12 +111,12 @@ drop SEQUENCE gradeTypenum_sq;
 
 drop SEQUENCE eventnum_sq;
 
-drop SEQUENCE recommandnum_sq;
+drop SEQUENCE recommandproductnum_sq;
 
 drop SEQUENCE airportnum_sq;
 
-drop SEQUENCE noticenum_sq;
+drop SEQUENCE noticeboardnum_sq;
 
-drop SEQUENCE reviewnum_sq;
+drop SEQUENCE reviewboardnum_sq;
 
 drop SEQUENCE replynum_sq;
