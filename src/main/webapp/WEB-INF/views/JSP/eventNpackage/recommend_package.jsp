@@ -5,7 +5,7 @@
     <head>
     <meta charset="UTF-8">
     <title>추천상품</title>
-    <link rel="stylesheet" href="<%=path %>/Resources//CSS/eventNpackage.css">
+    <link rel="stylesheet" href="<%=path %>/Resources/CSS/eventNpackage.css">
     <script>window.onbeforeunload=() => window.scrollTo(0, 0)</script>
 </head>
 
@@ -39,7 +39,7 @@
 				    <div id="tab-${j }-product-${i }" class="row product-wrapper change-order">
 				</c:if>
 					<div class="col-three-fourth img-wrapper">
-						<img src="<%=request.getContextPath()%>${vo.cityImg}">
+						<img src="<%=img%>${vo.cityImg}">
 					</div>
 					<div class="col-fourth product-info-wrapper">
 						<p>0${i }</p>
@@ -47,7 +47,7 @@
 						<p>
 							GAZA AIR만의<br />특별한 혜택!<br />지금바로 만나보세요
 						</p>
-						<a href="<%=request.getContextPath()%>/Resources/JSP/flight/booking/booking1.do?city=${v.city}&iata=${v.IATA}"><button class="btn-booking blueBtn">예약하기</button></a>
+						<a href="<%=request.getContextPath()%>/Resources/JSP/flight/booking/booking1?city=${vo.city}&iata=${vo.iata}"><button class="btn-booking blueBtn">예약하기</button></a>
 					</div>
 				</div>
 			<c:set var="i" value="${i+1}" />

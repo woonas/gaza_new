@@ -6,12 +6,11 @@ public class TravelVO {
 	private String regdate;
 	private String city;
 	private String cityImg;
-	
+	private String iata;
 	private int productCnt; 
 	private int onePageRecord=5;
 	
 	private int sale;
-	
 	
 	
 	public int getSale() {
@@ -62,6 +61,11 @@ public class TravelVO {
 	public void setRegdate(String regdate) {
 		this.regdate = regdate;
 	}
-	
+	public String getIata() {
+		return iata;
+	}
+	public void setIata(String iata) {
+		this.iata = iata;
+	}
 	
 }

@@ -10,6 +10,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import kr.gaza.myapp.eventPackage.travel.EPtravelInterface;
+import kr.gaza.myapp.eventPackage.travel.TravelVO;
+
 @Controller
 	public class EventPackageController {
 	@Autowired
@@ -39,6 +42,31 @@ import org.springframework.web.servlet.ModelAndView;
 		mav.addObject("lst",lst);
 		mav.setViewName("JSP/eventNpackage/event_detail");
 		
+		return mav;
+	}
+	
+	@RequestMapping("/JSP/eventNpackage/best_package")
+	public ModelAndView BestPackage() {
+		EPtravelInterface dao = sqlSession.getMapper(EPtravelInterface.class);
+		TravelVO vo = new TravelVO();
+		List<TravelVO> lst = dao.getBestRecord(vo.getOnePageRecord());
+		List<TravelVO> saleList = dao.getSaleRecord(vo.getOnePageRecord());
+		
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("lst",lst);
+		mav.addObject("salelst",saleList);
+		mav.setViewName("JSP/eventNpackage/best_package");
+		return mav;
+	}
+	
+	@RequestMapping("/JSP/eventNpackage/recommend_package")
+	public ModelAndView RecommendPackage() {
+		EPtravelInterface dao = sqlSession.getMapper(EPtravelInterface.class);
+		List<TravelVO> lst = dao.getAllRecord();
+		
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("lst",lst);
+		mav.setViewName("JSP/eventNpackage/recommend_package");
 		return mav;
 	}
 }
