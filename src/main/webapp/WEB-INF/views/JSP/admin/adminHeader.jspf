@@ -1,0 +1,191 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Gaza Air - admin page</title>
+    
+        <!-- Bootstrap Core CSS -->
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+    
+        <!-- MetisMenu CSS -->
+        <link href="../css/metisMenu.min.css" rel="stylesheet">
+    
+        <!-- DataTables CSS -->
+        <link href="../css/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    
+        <!-- DataTables Responsive CSS -->
+        <link href="../css/dataTables/dataTables.responsive.css" rel="stylesheet">
+    
+        <!-- Custom CSS -->
+        <link href="../css/startmin.css" rel="stylesheet">
+    
+        <!-- Custom Fonts -->
+        <script src="https://kit.fontawesome.com/9c923ac74a.js" crossorigin="anonymous"></script>
+
+        <style>
+            #side-menu {
+                max-height: calc(100vh - 71px);
+                overflow: scroll;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <!-- Navigation -->
+            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">GazaAir</a>
+                </div>
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+    
+                <!-- Top Navigation: Left Menu -->
+                <ul class="nav navbar-nav navbar-left navbar-top-links">
+                    <li><a href="#"><i class="fa fa-user fa-fw"></i>홈페이지</a></li>
+                </ul>
+    
+                <!-- Top Navigation: Right Menu -->
+                <ul class="nav navbar-right navbar-top-links">
+                    <li class="dropdown navbar-inverse">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-bell fa-fw"></i> <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu dropdown-alerts">
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-comment fa-fw"></i> 새로운글
+                                        <span class="pull-right text-muted small">4분 전</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a class="text-center" href="#">
+                                    <strong>모두보기</strong>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-user fa-fw"></i> xx <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li><a href="#"><i class="fa fa-user fa-fw"></i> 계정정보</a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-gear fa-fw"></i> 설정</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+    
+                <!-- Sidebar -->
+                <div class="navbar-default sidebar" role="navigation">
+                    <div class="sidebar-nav navbar-collapse">
+
+                        <ul class="nav" id="side-menu">
+                            <li class="sidebar-search">
+                                <div class="input-group custom-search-form">
+                                    <input type="text" class="form-control" placeholder="Search...">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-primary" type="button">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#" class="active"><i class="fa fa-dashboard fa-fw"></i> 대시보드</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-user fa-fw"></i> 회원관리<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="#">관리자계정</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">회원계정</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-plane-departure fa-fw"></i> 항공관련<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="#">공항(airport)</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">비행기(airline)</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">비행상품(product)</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">여정(flight)</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">좌석타입(seat)</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">승객타입(people)</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">기내식(food)</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-sitemap fa-fw"></i> 게시판<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="#">공지사항</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">이용후기</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">자주묻는질문</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-futbol-o fa-fw"></i> 이벤트<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="#"> 상품할인</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> 추천상품<span class="fa arrow"></span></a>
+                                        <ul class="nav nav-third-level">
+                                            <li>
+                                                <a href="#">동아시아</a>
+                                                <a href="#">그외아시아</a>
+                                                <a href="#">유럽</a>
+                                                <a href="#">미주</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">제휴이벤트</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
