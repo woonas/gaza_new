@@ -7,17 +7,14 @@
 	max-width: 1200px;
 	margin: 0px auto;
 }
-#title{
-	height: 200px;
-	text-align:center;
-}
-#title h3{
-	margin: 55px 0;
-}
 .search{
-	width:640px;
-	height:50px;
+	width:100%;
+	height:100px;
 	margin: 0px auto;
+	background-color: #eee;
+	text-align: center;
+	margin-bottom: 50px;
+	position : relative;
 }
 .searchOption{
 	width:180px;
@@ -25,43 +22,46 @@
 	cursor:pointer;
 	-webkit-appearance:none; /* Safari and Chrome */  
 	appearance:none;
-	background:url(../IMG/icon/underArrow.png) no-repeat 95% 50%;
+	background:url(../IMG/icon/underArrow.png) no-repeat 95% 50% #fff;
 	background-size:15px;
 	color:#555;
 	font-weight:bold;
 	padding-left:10px;
 }
-.searchOption:hover{
-	border:1px solid #36f;
+.searchOption:hover{border: 1px solid #36f;}
+.dataTables_filter{
+	float:none !important;
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+    justify-content: center;
+    padding: 25px;
 }
-.textField{
+.dataTables_filter input{
 	width:350px;
 	color:#555;
 	font-size:16px;
 	padding-left:10px;
+	border: 1px solid rgb(169, 169, 169);
 }
-.textField:hover{
+.dataTables_filter label{
+	content: "";
+	text-align: center;
+}
+.dataTables_filter input:hover{
 	border:1px solid #36f;
 }
-.searchBtn{
-	width:100px;
-	background-color:#36f;
-	border: none;
-	border-radius : 5px;
-	outline : none;
-	color: #fff;
-	font-weight: bold;
-	font-size : 16px;
-	cursor:pointer;
+.dataTables_filter input[type=search]{
+	display : none;
 }
-.searchOption, .textField, .searchBtn{
+.searchOption, .dataTables_filter input, .searchBtn{
 	height: 50px;
-	float : left;
 }
 .tabBtn{
 	background-color: #777;
 	color: white;
 	float: left;
+	height: 54px;
 	border: 1px solid gray;
 	outline: none;
 	cursor: pointer;
@@ -70,19 +70,31 @@
 	font-weight: bold;
 	width: 25%;
 	text-align: center;
+	margin-bottom: 30px;
 }
 .tabBtn>img {
 	width: 20px;
 	height: 20px;
-	visibility:hidden;
+	display : none;
 }
+.tabBtn.active{
+	background-color: #fff;
+	color: #555;
+}
+
+.tabBtn.active > img{
+	display : inline-block;
+	margin-right: 5px;
+}
+
 .tabBtn:hover{
 	background-color: #555;
 }
+.tabBtn.active:hover {
+	background-color: #eee;
+}
 .tabcontent {
 	color: white;
-	display: none;
-	padding-top: 100px;
 	height: 100%;
 }
 .boardList {
@@ -92,7 +104,7 @@
 	width: 100%;
 	color: #555;
 	border-collapse: collapse;
-	border-top: 2px solid gray;
+	border-top: 1px solid gray;
 	table-layout:fixed;
 }
 .noticeTag{
@@ -108,20 +120,30 @@
 	font-weight: bold;
 }
 .boardTbl tr {
-	border-top: 1px solid lightgray;
-	border-bottom: 1px solid lightgray;
 	height:100px;
 }
 .boardTbl tr:hover{
 	color: #0022cc;
 	background-color:#f7f7fa;
 }
+.boardTbl tr:hover a{
+	color: #0022cc;
+}
+.boardTbl tr>td:nth-child(1){
+	text-align: center;
+}
+
+.boardTbl tr:nth-child(1),
+.boardTbl tr:nth-child(2){
+	background-color : #dee4f7;
+}
+.boardTbl tr:nth-child(1):hover,
+.boardTbl tr:nth-child(2):hover{
+	background-color : rgba(222, 228, 247, 0.7);
+}
 .boardTbl td {
 	padding: 20px;
 	line-height: 30px;
-}
-.boardTbl thead {
-	background-color:#dee4f7;
 }
 .boardTbl tbody span {
 	color: #81a1ff;
@@ -139,13 +161,15 @@ a:link{
 a:visited{
 	color:#222;
 }
-/*pagination*/
-.pagingDiv{
-	text-align: center;
+/*table length*/
+#noticeTable_length{
+	float:none !important;
 }
-#pagination{
-	display: inline-block;
-	margin: 50px 0;
+
+/*pagination*/
+#noticeTable_paginate{
+	float:none !important;
+	text-align: center !important;
 }
 #pagination a{
 	float:left;
@@ -153,6 +177,13 @@ a:visited{
 	text-decoration: none;
 	transition: background-color .3s;
 	border: 1px solid lightgray;
+}
+a.paginate_button_disabled {
+	background-color: #36f !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, 
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover{
+
 }
 #pagination a.active {
 	background-color: #36f;

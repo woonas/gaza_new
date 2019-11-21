@@ -10,10 +10,94 @@
 <link rel="stylesheet" href="<%=css %>/notice.css" type="text/css"/>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>window.onbeforeunload = () => window.scrollTo(0, 0)</script>
+<link rel="stylesheet" href="<%=resources %>/Admin/css/dataTables/jquery.dataTables.min.css" type="text/css"/>
+<script src="<%=resources %>/Admin/js/dataTables/jquery.dataTables.min.js"></script>
+
 <script>
+	function start(){
+		//탭메뉴 생성.
+		var paneIdList = ['noticeAll','noticeGAZA','noticePartner','noticeOthers'];
+		var btnIdList = ['btnAll', 'btnGAZA', 'btnPartner', 'btnOthers'];
+		var btnList = ['전체','가자항공소식','제휴사소식','기타'];
+		var tabBtnHTML = "";
+		var tabPanelHTML = "";
+		var tabType = ${tabType};
+		for(i=0; i<paneIdList.length; i++){
+			tabBtnHTML += "<button class='tabBtn";
+			if(tabType===i){
+				tabBtnHTML += " active";
+			}
+			tabBtnHTML += "'id='"+btnIdList[i]+"' onclick=\"location.replace('noticeBoard_list?pageNum=1&tabType="+[i]+"')\">";
+			tabBtnHTML += "<img src='<%=img%>/icon/check.png'/>"+btnList[i]+"</button>";
+		}
+		document.getElementById("tabBtn").innerHTML = tabBtnHTML;
+	}
 	$(function(){
+		//테이블 생성. DataTables////////////////////////////////////////////////////////////////////////
+		var table = $("#noticeTable").DataTable({
+			"stateSave" : false,
+			"ordering" : true,
+			"order"          : [0, "desc"],
+			"pagingType"     : "full_numbers",
+			"row-border"     : true,
+			"dom"            : '<"search"fB><"#tabBtn"><t>l<p>',
+			"language"       : {
+				"loadingRecords" : "로딩중...",
+				"processing"     : "잠시만 기다려 주세요...",
+				"infoEmpty"      : "검색된 결과가 없습니다.",
+				"zeroRecords"    : "검색된 결과가 없습니다. 입력한 데이터를 다시 한 번 확인해주세요.",
+				"lengthMenu"     : "_MENU_개씩 보기",
+				"search" : "",
+				"paginate" : {
+					"previous" : "이전",
+					"next" : "다음",
+					"first" : "처음",
+					"last" : "마지막"
+				}
+			},
+			"drawCallback" : function(settings){
+				$("#noticeTable thead").remove();
+			}
+		});
+		//컨텐츠 열 숨기기
+		table.column(4).visible(false,false);
+		
+		//검색조건 추가
+		$(".dataTables_filter").prepend(`
+				<select name="searchOption" id="searchOption" class="searchOption" title="검색 분류 선택">
+				<option value="5">제목 + 내용</option>
+				<option value="1">제목</option>
+				<option value="4">내용</option>
+				<option value="3">날짜</option>
+				</select>
+				`);
+		//검색박스 추가
+		$(".dataTables_filter").append("<input type='text' id='searchBox' placeholder='검색어를 입력해주세요...'>");
+		
+		var selected = 5;
+		//조건변경 이벤트
+		$("#searchOption").change(function(){
+			selected = $("#searchOption option:selected").val();
+		});
+		
+		//조건 변경된 상태에서 검색 시 조건검색 실행.
+			$("#searchBox").keyup(function(){
+				if(selected==5){
+					table.search(this.value).draw();
+				}else if(selected==1){
+					table.columns(1).search(this.value).draw();
+				}else if(selected==4){
+					table.columns(4).search(this.value).draw();
+				}else if(selected==3){
+					table.columns(3).search(this.value).draw();
+				}
+			});
+		
+		//글 타입 태그 추가
 		$(".boardTbl tr:nth-child(1) h4").prepend("<span class='noticeTag'>new</span>");
 		$(".boardTbl tr:nth-child(2) h4").prepend("<span class='noticeTag'>new</span>");
+
 	});
 </script>
 </head>
@@ -22,51 +106,53 @@
 	<section class="content">
 	<div id="warp">
 		<div id="contents">
-			<section id="title">
-				<h3>공지사항</h3>
-				<div class="search">
-					<select name="searchOption" id="searchOption" class="searchOption" title="검색 분류 선택">
-						<option value="0">제목 + 내용</option>
-						<option value="1">제목</option>
-						<option value="2">내용</option>
-					</select>
-					<input type="text" class="textField" placeholder="검색어를 입력하세요." title="검색 내용 작성"/>
-					<button class="searchBtn">검색</button>
-				</div>
-			</section>
+			<h3>공지사항</h3>
 			<section id="board">
-				<div id="tabBtn"></div>
+			
 				<div id="tabPanel">
 					<div id="noticeAll" class='tabcontent'>
 						<div class='boardList'>
-							<table class="boardTbl">
+							<!-- table-------------------------------------------------------------------------- -->
+							<table id="noticeTable" class="boardTbl row-border">
 								<colgroup>
-									<col width="75%">
-									<col width="15%">
+									<col width="10%">
+									<col width="70%">
+									<col width="10%">
 									<col width="10%">
 								</colgroup>
+								<thead>
+									<tr>
+										<th>번호</th>
+										<th>제목</th>
+										<th>조회수</th>
+										<th>게시일</th>
+										<th>내용</th>
+									</tr>
+								</thead>
 								<tbody>
 								<c:forEach var="v" items="${lst}">
 									<tr>
+										<td>${v.noticeNum }</td>
 										<td>
 											<h4><span class="noticeTag">
-												<c:if test="${v.noticeType == 0}">
+												<c:if test="${v.noticeType == 1}">
 													공지
 												</c:if>
-												<c:if test="${v.noticeType == 1}">
+												<c:if test="${v.noticeType == 2}">
 													제휴
 												</c:if>
-												<c:if test="${v.noticeType == 2}">
+												<c:if test="${v.noticeType == 3}">
 													기타
 												</c:if>
 												</span>
-												<a href="<%=jsp %>/board/board_view?num=${v.num}&pageNum=${vo.pageNum}">${v.subject }</a>
+												<a href="<%=jsp %>/board/board_view?noticeNum=${v.noticeNum}&pageNum=${vo.pageNum}&tabType=${vo.tabType}">${v.subject }</a>
 												<br>
 											</h4>
-											<div class="contentOver">${v.content }</div>
+											<div class="contentOver">${v.subject }</div>
 										</td>
-										<td>조회수 ${v.hit}</td>
+										<td>${v.hit}</td>
 										<td>${v.regdate}</td>
+										<td>${v.content }</td>
 									</tr>
 								</c:forEach>
 							</tbody>
@@ -74,101 +160,10 @@
 						</div>
 					</div><!-- noticeAll end -->
 				</div><!-- tabPanel end -->
-				<div class="pagingDiv">
-					<div id="pagination">
-						<c:if test="${vo.pageNum<=1}">
-							<a href="#" onclick="return false;" class="pageNum" >prev</a>
-						</c:if>
-						<c:if test="${vo.pageNum>1}">
-							<a href="<%=jsp %>/board/noticeBoard/noticeBoard_list?pageNum=${vo.pageNum-1}">prev</a>
-						</c:if>
-						
-						<c:if test="${vo.totalPage >= vo.startPage+vo.onePageMax-1 }">
-							<c:set var="printPage" value="${vo.startPage+vo.onePageMax-1 }" />
-						</c:if>
-						
-						<c:if test="${vo.totalPage < vo.startPage+vo.onePageMax-1 }">
-							<c:set var="printPage" value="${vo.totalPage }" />
-						</c:if>
-						
-						<c:forEach var="i" begin="${vo.startPage}" end="${printPage }">
-							<c:if test="${i<=vo.totalPage}">
-								<c:if test="${i == vo.pageNum }">
-									<a href="<%=jsp %>/board/noticeBoard/noticeBoard_list?pageNum=${i}" class="pageNum active">${i}</a>
-								</c:if>
-								<c:if test="${i != vo.pageNum }">
-									<a href="<%=jsp %>/board/noticeBoard/noticeBoard_list?pageNum=${i}" class="pageNum">${i}</a>
-								</c:if>
-							</c:if>
-						</c:forEach>
-						
-						<c:if test="${vo.pageNum==vo.totalPage}">
-							<a href="#" onclick="return false;" class="pageNum">next</a><br/>
-						</c:if>
-						<c:if test="${vo.pageNum<vo.totalPage}">
-							<a href="<%=jsp %>/board/noticeBoard/noticeBoard_list?pageNum=${vo.pageNum+1}">next</a><br/>
-						</c:if>
-					</div>
-				</div>
 			</section>
 		</div>
 	</div>
 	</section>
-	<script>
-	
-		function start(){
-			//탭메뉴
-			var btnIdList = ['btnAll', 'btnGAZA', 'btnPartner', 'btnOthers'];
-			var paneIdList = ['noticeAll','noticeGAZA','noticePartner','noticeOthers'];
-			var btnList = ['전체','가자항공소식','제휴사소식','기타'];
-			var tabBtnHTML = "";
-			var tabPanelHTML = "";
-			for(i=0; i<paneIdList.length; i++){
-				tabBtnHTML += "<button class='tabBtn' id='"+btnIdList[i]+"' onclick='";
-				tabBtnHTML += "openPage(\""+paneIdList[i]+"\", this, \""+btnIdList[i]+"\")'>";
-				tabBtnHTML += "<img src='<%=img%>/icon/check.png'/>"+btnList[i]+"</button> ";
-			}
-			document.getElementById("tabBtn").innerHTML = tabBtnHTML;
-			
-			//로드 시 열리는 페이지 선택
-			document.getElementById("btnAll").click();
-		}
-		function clicked(elmnt){//클릭된 페이지버튼에 클래스 추가
-			var allPageNum = document.getElementsByClassName("pageNum");
-			for(i=0; i<allPageNum.length; i++){
-				allPageNum[i].classList.remove('active');
-			}
-			elmnt.classList.add('active');
-		}
-		function openPage(pageName, elmnt, btnId) {//탭메뉴 클릭시 열리는 페이지 생성
-			var i, tabcontent, tabBtns;
-			
-			// 전체 숨김
-			tabcontent = document.getElementsByClassName("tabcontent");
-			for (i = 0; i < tabcontent.length; i++) {
-				tabcontent[i].style.display = "none";
-			}
-		
-			// 배경색, 체크이미지 전체 삭제
-			tabBtns = document.getElementsByClassName("tabBtn");
-			for (i = 0; i < tabBtns.length; i++) {
-				tabBtns[i].style.backgroundColor = "";
-				tabBtns[i].style.color = "";
-				var imgTag = tabBtns[i].firstChild;
-				imgTag.style.visibility = "hidden";
-			}
-			
-			//체크 이미지 보이기
-			elmnt.firstChild.style.visibility = "visible";
-		
-			// 클릭된 컨텐츠 보이기
-			document.getElementById(pageName).style.display = "block";
-		
-			// 클릭된 버튼 색상 변경
-			elmnt.style.backgroundColor = "#fff";
-			elmnt.style.color = "#555"; 
-		}
-	</script>
 	<%@ include file="../../common/footer.jspf" %>
 </body>
 </html>

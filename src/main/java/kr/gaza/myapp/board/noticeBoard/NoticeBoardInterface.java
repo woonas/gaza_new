@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Param;
 
 public interface NoticeBoardInterface {
 	// 목록
-	public List<NoticeBoardVO> getAllRecord(@Param("param1") int param1, @Param("param2") int param2);
+	public List<NoticeBoardVO> getAllRecord(@Param("param1") int param1);
 	// 글쓰기
 	public int noticeBoardInsert(NoticeBoardVO vo);
 	// 수정
@@ -16,7 +16,7 @@ public interface NoticeBoardInterface {
 	// 조회수
 	public void noticeBoardHit(int num);
 	// 총레코드수
-	public int noticeBoardTotalRecord();
+	public int noticeBoardTotalRecord(int noticeType);
 	// 글내용 보기
 	public void noticeBoardSelect(NoticeBoardVO vo);
 	// 글내용 보기에서 다음글, 이전글 제목가져오기

@@ -43,13 +43,9 @@ button>a {
 	color:#555;
 	text-decoration: none; 
 }
-.contentOver{
-	overflow : hidden;
-	height: 30px;
-}
 .contentOver,
 .contentOver * {
-	color: #aaa !important;
+	color: #777 !important;
 	font-weight : 300 !important;
 	font-size : 1em !important;
 	font-family: 'Noto Sans KR', sans-serif !important;
