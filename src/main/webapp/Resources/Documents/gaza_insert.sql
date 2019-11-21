@@ -455,7 +455,7 @@ INSERT INTO ordertbl VALUES(ordertblnum_sq.nextval);
 INSERT INTO ordertbl VALUES(ordertblnum_sq.nextval);
 INSERT INTO ordertbl VALUES(ordertblnum_sq.nextval);
 
-----payment---------------------------------------------------------------------------
+----payment--------------------------------------------------------------------------- 데이터고칠거★
 INSERT INTO payment VALUES(paymentnum_sq.nextval,1,3841,1,0,1500000,sysdate);
 INSERT INTO payment VALUES(paymentnum_sq.nextval,1,3841,2,0,2500000,sysdate);
 INSERT INTO payment VALUES(paymentnum_sq.nextval,1,7777,1,1,350000,sysdate);
