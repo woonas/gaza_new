@@ -288,13 +288,10 @@ const agreement_check = () => {
 	                type : "POST",
 	                data : params,
 	                success : function(result){
-	                    if(result != ""){
-	                    	alert("1"+result);
+	                    if(result)
 	                        $("#result").html("<h4>고객님의 아이디를 <b style='color:#36f'>이메일로 발송</b>하였습니다. 이메일을 확인해주세요.</h4>");
-	                    }else{
-	                    	alert("2"+result);
+	                    else
 	                        $("#result").html("<h4><b style='color:#36f'>검색된 아이디가 없습니다.</b> 입력하신 정보를 다시 확인해주세요.</h4>");
-	                    }
 	                },
 	                error : function(){
 	                    alert("계정 찾기에 실패했습니다.");

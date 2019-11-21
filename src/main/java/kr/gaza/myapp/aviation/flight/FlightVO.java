@@ -6,7 +6,7 @@ public class FlightVO {
     private int productNum;
     private String departTime;
     private String arriveTime;
-    private float sale;
+    private float flightSale;
 
     public int getFlightNum() {
         return flightNum;
@@ -48,11 +48,11 @@ public class FlightVO {
         this.arriveTime = arriveTime;
     }
 
-    public float getsale() {
-        return sale;
+    public float getFlightSale() {
+        return flightSale;
     }
 
-    public void setsale(float sale) {
-        this.sale = sale;
+    public void setFlightSale(float flightSale) {
+        this.flightSale = flightSale;
     }
 }

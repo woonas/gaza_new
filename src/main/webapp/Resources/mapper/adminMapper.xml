@@ -7,9 +7,9 @@
 	select airportnum, iata, continent, city, latitude, longitude, cityimg from airport
 </select>
 
-<select id="flightAllRecord" resultType="kr.gaza.myapp.aviation.flight.FlightVO">
-	select flightnum, airplanename, productnum, departtime, arrivetime, sale from flight
-</select>
+    <select id="flightAllRecord" resultType="kr.gaza.myapp.aviation.flight.FlightVO">
+        select flightnum, airplanename, productnum, departtime, arrivetime, sale as flightSale from flight
+    </select>
 
 <select id="foodAllRecord" resultType="kr.gaza.myapp.aviation.food.FoodVO">
 	select foodnum, foodtype, foodname, foodimg, foodcontent, foodingredient, foodprice from food
@@ -19,9 +19,9 @@
 	select peoplenum, peopletype, peoplesale from people
 </select>
 
-<select id="productAllRecord" resultType="kr.gaza.myapp.aviation.product.ProductVO">
-	select productnum, depart, arrive, price, productcnt, sale, regdate from product
-</select>
+    <select id="productAllRecord" resultType="kr.gaza.myapp.aviation.product.ProductVO">
+        select productnum, depart, arrive, price, productcnt, sale as productSale, regdate from product
+    </select>
 
 <select id="seatReserveAllRecord" resultType="kr.gaza.myapp.aviation.seatreserve.SeatReserveVO">
 	select seatreservenum, flightnum, seattype, seatno, reserved from seatreserve

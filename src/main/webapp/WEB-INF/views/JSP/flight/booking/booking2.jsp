@@ -2,8 +2,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@ page import="java.util.Date" %>
-<%@ page import="java.text.SimpleDateFormat, java.text.ParseException, java.util.Calendar" %>
+<%@ page import="java.text.SimpleDateFormat" %>
+<%@ page import="java.util.Calendar" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,6 +13,7 @@
         <!-- Font Awesome CDN -->
         <script src="https://kit.fontawesome.com/9c923ac74a.js" crossorigin="anonymous"></script>
         <script>window.onbeforeunload=() => window.scrollTo(0, 0)</script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
     <body>
         <%@ include file="/WEB-INF/views/JSP/common/nav.jspf" %>
@@ -52,7 +53,7 @@
                         </label>
                         <input type="text" id="num-of-passengers-0" name="num-of-passengers-0" value="${journeyList[0].numOfPassengers}" readonly>
                     </div>
-                    <i class="fas fa-redo-alt"></i>
+                    <a href="javascript:" onclick="return input_check()"><i class="fas fa-redo-alt"></i></a>
                 </div>
             </c:if>
             <c:set var="numOfJourney" value="${fn:length(journeyList)}"/>
@@ -99,6 +100,9 @@
         
         <section class="content">
             <c:forEach var="i" begin="1" end="${fn:length(journeyList)}" step="1">
+                <input type="hidden" value="${journeyList[i-1].airportFrom}" id="journey-airportFrom-${i}">
+                <input type="hidden" value="${journeyList[i-1].airportTo}" id="journey-airportTo-${i}">
+                <input type="hidden" value="${journeyList[i-1].flightDate}" id="journey-flightDate-${i}">
                 <div id="journey-${i}" class="journey-wrapper clearfix">
                     <div class="journey-name-fixed hidden" name="journey-${i}">
                         <div class="row">
@@ -146,57 +150,17 @@
                                 <input type="radio" name="price-of-day-${i}" id="journey-${i}-price-${day}" <c:if test="${day==4}">checked</c:if>>
                                 <label for="journey-${i}-price-${day}">
                                     <div class="date">
-                                        <fmt:parseDate var="flightDate2" value="${pageScope.flightDates[day-1]}" pattern="yyyy-MM-dd"/>
+                                        <c:set var="flightDates" value="<%=flightDates%>"/>
+                                        <fmt:parseDate var="flightDate2" value="${flightDates[day-1]}" pattern="yyyy-MM-dd"/>
                                         <fmt:formatDate value="${flightDate2}" pattern="MM.dd (E)"/>
                                     </div>
-                                    <div class="price"><span>KRW</span> 105,500</div>
+                                    <div class="price">
+                                        <span>KRW</span>
+                                        <fmt:formatNumber value="${cheapestPriceList[i-1][day-1]}" type="number"/>
+                                    </div>
                                 </label>
                             </div>
                         </c:forEach>
-                        <div class="price-of-day">
-                            <input type="radio" name="price-of-day-${i}" id="journey-${i}-price-2">
-                            <label for="journey-${i}-price-2">
-                                <div class="date">09.21 (토)</div>
-                                <div class="price"><span>KRW</span> 65,500</div>
-                            </label>
-                        </div>
-                        <div class="price-of-day">
-                            <input type="radio" name="price-of-day-${i}" id="journey-${i}-price-3">
-                            <label for="journey-${i}-price-3">
-                                <div class="date">09.22 (일)</div>
-                                <div class="price"><span>KRW</span> 65,500</div>
-                            </label>
-                        </div>
-                        <div class="price-of-day">
-                            <input type="radio" name="price-of-day-${i}" id="journey-${i}-price-4" checked>
-                            <label for="journey-${i}-price-4">
-                                <div class="date">
-<%--                                    <fmt:formatDate value="${flightDate}" pattern="MM.dd (E)"/>--%>
-                                </div>
-                                <div class="price"><span>KRW</span> 45,500</div>
-                            </label>
-                        </div>
-                        <div class="price-of-day">
-                            <input type="radio" name="price-of-day-${i}" id="journey-${i}-price-5">
-                            <label for="journey-${i}-price-5">
-                                <div class="date">09.24 (화)</div>
-                                <div class="price"><span>KRW</span> 65,500</div>
-                            </label>
-                        </div>
-                        <div class="price-of-day">
-                            <input type="radio" name="price-of-day-${i}" id="journey-${i}-price-6">
-                            <label for="journey-${i}-price-6">
-                                <div class="date">09.25 (수)</div>
-                                <div class="price"><span>KRW</span> 45,500</div>
-                            </label>
-                        </div>
-                        <div class="price-of-day">
-                            <input type="radio" name="price-of-day-${i}" id="journey-${i}-price-7">
-                            <label for="journey-${i}-price-7">
-                                <div class="date">09.26 (목)</div>
-                                <div class="price"><span>KRW</span> 105,500</div>
-                            </label>
-                        </div>
                         <div class="buttons btn-price-next-week"></div>
                     </div>
     

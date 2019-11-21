@@ -7,14 +7,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.UnsupportedEncodingException;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.Calendar;
 import java.util.List;
 
 @Controller
@@ -93,18 +94,58 @@ public class BookingController {
         }
 
         // journeydate 포맷다시 바꾸기
-        for (JourneyVO journeyVO : bookingVO.getJourneyList()){
+        for (JourneyVO journeyVO : bookingVO.getJourneyList())
             journeyVO.getFlightDate().replace("-","/");
-        }
 
         request.setAttribute("bookingVO", bookingVO);
         if (bookingVO.getJourneyType().equals("multi-way"))
             request.setAttribute("journey", new String[]{"첫번째", "두번째", "세번째", "네번째", "다섯번째", "여섯번째"});
         else request.setAttribute("journey", new String[]{"가는", "오는"});
-//        request.setAttribute("cheapestPrice", getCheapestPrice(bookingVO));
 
+        request.setAttribute("cheapestPriceList", getCheapestPrice(bookingVO));
         return modelAndView;
     }
+
+    @PostMapping (value="/JSP/flight/booking/changeDate", produces="application/text;charset=UTF-8")
+    public @Res
+    String changeDate(@RequestParam("airportFrom") String airportFrom,
+                     @RequestParam("airportTo") String airportTo,
+                     @RequestParam("flightDate") String flightDate,
+                     @RequestParam("dateMod") int dateMod,
+                     HttpServletRequest req, HttpServletResponse response) {
+        BookingVO bookingVO = new BookingVO();
+        JourneyVO journeyVO = new JourneyVO();
+        journeyVO.setAirportFrom(airportFrom);
+        journeyVO.setAirportTo(airportTo);
+        flightDate = flightDate.replace("/","-");
+        int targetYear = Integer.parseInt(flightDate.substring(0,4));
+        int targetMonth = Integer.parseInt(flightDate.substring(5,7)) - 1;
+        int targetDate = Integer.parseInt(flightDate.substring(8,10)) + dateMod;
+
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(targetYear, targetMonth, targetDate);
+        journeyVO.setFlightDate(simpleDateFormat.format(calendar.getTime()));
+        bookingVO.getJourneyList().add(journeyVO);
+
+        BookingInterface bookingDAO = sqlSession.getMapper(BookingInterface.class);
+        String from = journeyVO.getAirportFromIATA();
+        String to = journeyVO.getAirportToIATA();
+        bookingVO.getProductList().add(bookingDAO.getProductVO(from, to));
+
+        List<ProductVO> productList = bookingVO.getProductList();
+        bookingVO.getFlightList().add(bookingDAO.getFlightVO(productList.get(0).getProductNum(), journeyVO.getFlightDate()));
+        List<FlightVO> flightList = bookingVO.getFlightList().get(0);
+        bookingVO.getSeatLeftList().add(bookingDAO.getSeatLeft(flightList));
+        ModelAndView modelAndView = new ModelAndView();
+//        modelAndView.addObject("vo", bookingVO);
+        modelAndView.addObject("aa", "dd");
+        return "dd";
+    }
+
+
+
+
 
     @PostMapping (value = "/JSP/flight/booking/booking3")
     public ModelAndView bookingView3(HttpServletRequest request) throws UnsupportedEncodingException {
@@ -124,48 +165,44 @@ public class BookingController {
         return modelAndView;
     }
 
-    private int getCheapestPrice(BookingVO bookingVO) {
-        int price = -1;
+    private List<List<Integer>> getCheapestPrice(BookingVO bookingVO) {
+        int price = 0;
         double temp = 0;
         List<List<Integer>> priceList = new ArrayList<>();
 
         BookingInterface bookingDAO = sqlSession.getMapper(BookingInterface.class);
         BookingVO vo = new BookingVO();
         List<JourneyVO> journeyList = bookingVO.getJourneyList();
-
         for (int i = 0; i < journeyList.size(); i++) {
             String from = journeyList.get(i).getAirportFromIATA();
             String to = journeyList.get(i).getAirportToIATA();
             vo.getProductList().add(bookingDAO.getProductVO(from, to));
         }
         List<ProductVO> productList = vo.getProductList();
-        for (int dateMod = -3; dateMod < 3; dateMod++) {
-            for (int i = 0; i < productList.size(); i++) {
+        for (int i = 0; i < productList.size(); i++) {
+            for (int dateMod = -3; dateMod <= 3; dateMod++) {
                 String journeyDate = journeyList.get(i).getFlightDate();
-                String targetDate = journeyDate.replace(journeyDate.charAt(journeyDate.length()-1)+"", journeyDate.charAt(journeyDate.length()-1)+dateMod+"");
-                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy/MM/dd");
-                Date date = new Date();
-                try {
-                    targetDate = simpleDateFormat.format(simpleDateFormat.parse(targetDate));
-                } catch (ParseException e) {
-                    e.printStackTrace();
-                }
-                vo.getFlightList().add(bookingDAO.getFlightVO(productList.get(i).getProductNum(), targetDate));
+                int targetYear = Integer.parseInt(journeyDate.substring(0,4));
+                int targetMonth = Integer.parseInt(journeyDate.substring(5,7))-1;
+                int targetDate = Integer.parseInt(journeyDate.substring(8,10))+dateMod;
+                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+                Calendar calendar = Calendar.getInstance();
+                calendar.set(targetYear, targetMonth, targetDate);
+                vo.getFlightList().add(bookingDAO.getFlightVO(productList.get(i).getProductNum(), simpleDateFormat.format(calendar.getTime())));
             }
             List<List<FlightVO>> flightVOList = vo.getFlightList();
             priceList.add(new ArrayList<>());
             //가격비교
-            for (int i = 0; i < productList.size(); i++) {
-                temp = productList.get(i).getPrice() * productList.get(i).getProductSale();
-                for (int j = 0; j < flightVOList.get(i).size(); j++) {
-                    if (price == -1 || temp * flightVOList.get(i).get(j).getFlightSale() < price) {
-                        price = (int) Math.round(temp * flightVOList.get(i).get(j).getFlightSale() / 100) * 100;
-                    }
+            temp = productList.get(i).getPrice() * productList.get(i).getProductSale();
+            for (int j = 0; j < flightVOList.size(); j++) {
+                for (int k = 0; k < flightVOList.get(j).size(); k++) {
+                    if (price == 0 || temp * flightVOList.get(j).get(k).getFlightSale() < price)
+                        price = (int) Math.round(temp * flightVOList.get(j).get(k).getFlightSale() / 100) * 100;
                 }
-                priceList.get(0).add(price);
+                priceList.get(i).add(j, price);
+                price = 0;
             }
         }
-
-        return price;
+        return priceList;
     }
 }

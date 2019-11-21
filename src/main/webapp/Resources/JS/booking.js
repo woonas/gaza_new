@@ -369,8 +369,10 @@ const input_check = () => {
                     );
                 } else if (item.id.indexOf('flight') !== -1) {
                     sortedTicketRows = ticketRowsArray[index-1].sort( (a, b) => {
-                            const tempA = a.children[1].innerText;
-                            const tempB = b.children[1].innerText;
+                            let tempA = a.children[1].innerText;
+                            let tempB = b.children[1].innerText;
+                            if (tempA.length>tempB.length) return orderMultiplier;
+                            if (tempB.length>tempA.length) return -orderMultiplier;
                             return tempA === tempB? 0 : tempA>tempB? orderMultiplier : -orderMultiplier;
                         }
                     );
@@ -396,6 +398,29 @@ const input_check = () => {
                 }
                 ticket_select();
             });
+        });
+
+        // 날짜 선택시 ajax
+        $(".price-of-day label").click(function() {
+            var targetJourneyIndex = $(this).attr('for').charAt(8);
+            var dateMod = $(this).attr('for').charAt(16)-4;
+            var targetAirportFrom = $("#journey-airportFrom-"+targetJourneyIndex).val();
+            var targetAirportTo = $("#journey-airportTo-"+targetJourneyIndex).val();
+            var targetFlightDate = $("#journey-flightDate-"+targetJourneyIndex).val();
+            $.ajax({
+                url : "changeDate",
+                type : "POST",
+                data : `airportFrom=${targetAirportFrom}&airportTo=${targetAirportTo}&flightDate=${targetFlightDate}&dateMod=${dateMod}`,
+                success : function(result){
+                    if(result !== "")
+                        alert("dd");
+                    else
+                        alert("ss");
+                },
+                error : function(){
+                    alert("비행기표검색에 실패했습니다.");
+                }
+            })
         });
 
         /* waypoint */
