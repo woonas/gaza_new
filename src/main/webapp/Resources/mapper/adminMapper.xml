@@ -8,7 +8,7 @@
 </select>
 
 <select id="flightAllRecord" resultType="kr.gaza.myapp.aviation.flight.FlightVO">
-	select flightnum, airplanename, productnum, departtime, arrivetime, sale from flight
+	select flightnum, airplanename, productnum, departtime, arrivetime, sale AS FlightSale from flight
 </select>
 
 <select id="foodAllRecord" resultType="kr.gaza.myapp.aviation.food.FoodVO">
