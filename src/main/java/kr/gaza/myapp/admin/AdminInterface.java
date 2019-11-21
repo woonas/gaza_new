@@ -3,6 +3,7 @@ package kr.gaza.myapp.admin;
 import java.util.List;
 
 import kr.gaza.myapp.account.member.MemberVO;
+import kr.gaza.myapp.aviation.airplane.AirplaneVO;
 import kr.gaza.myapp.aviation.airport.AirportVO;
 import kr.gaza.myapp.aviation.flight.FlightVO;
 import kr.gaza.myapp.aviation.food.FoodVO;
@@ -27,5 +28,6 @@ public interface AdminInterface {
 	public List<NoticeBoardVO> noticeAllRecord();
 	public List<ReviewBoardVO> reviewAllRecord();
 	public List<MemberVO> memberAllRecord();
+	public List<AirplaneVO> airplaneAllRecord();
 	
 }
