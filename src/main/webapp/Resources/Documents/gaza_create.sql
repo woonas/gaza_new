@@ -279,7 +279,7 @@ CREATE TABLE admin (
 	adminNum NUMBER NOT NULL,
 	adminId VARCHAR2(15) NOT NULL,
 	adminPwd VARCHAR2(15) NOT NULL,
-	adimName VARCHAR2(10) NOT NULL,
+	adminName VARCHAR2(10) NOT NULL,
 	adminTel VARCHAR2(13) NOT NULL,
 	adminEmail VARCHAR2(50) NOT NULL,
 	adminRegdate DATE DEFAULT sysdate NOT NULL
