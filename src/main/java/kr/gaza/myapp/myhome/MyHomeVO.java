@@ -8,13 +8,82 @@ public class MyHomeVO {
 	private int memberFlightCnt;
 	private int myMileage; 
 	private int needMileage;
+	private int myNeedMileage;
+	private int orderedFlightNum;
+	private int flightNum;
+	private int orderNum;
+	private int productNum;
+	private String departTime;
+	private String arriveTime;
+	private String airplaneName;
+	private String depart;
+	private String arrive;
 	
-	//다른 테이블에서 갖고온 값들
 	
 	
 	
+	public int getOrderedFlightNum() {
+		return orderedFlightNum;
+	}
+	public void setOrderedFlightNum(int orderedFlightNum) {
+		this.orderedFlightNum = orderedFlightNum;
+	}
+	public int getFlightNum() {
+		return flightNum;
+	}
+	public void setFlightNum(int flightNum) {
+		this.flightNum = flightNum;
+	}
+	public int getOrderNum() {
+		return orderNum;
+	}
+	public void setOrderNum(int orderNum) {
+		this.orderNum = orderNum;
+	}
+	public int getProductNum() {
+		return productNum;
+	}
+	public void setProductNum(int productNum) {
+		this.productNum = productNum;
+	}
+	public String getDepartTime() {
+		return departTime;
+	}
+	public void setDepartTime(String departTime) {
+		this.departTime = departTime;
+	}
+	public String getArriveTime() {
+		return arriveTime;
+	}
+	public void setArriveTime(String arriveTime) {
+		this.arriveTime = arriveTime;
+	}
+	public String getAirplaneName() {
+		return airplaneName;
+	}
+	public void setAirplaneName(String airplaneName) {
+		this.airplaneName = airplaneName;
+	}
+	public String getDepart() {
+		return depart;
+	}
+	public void setDepart(String depart) {
+		this.depart = depart;
+	}
+	public String getArrive() {
+		return arrive;
+	}
+	public void setArrive(String arrive) {
+		this.arrive = arrive;
+	}
 	public int getNeedMileage() {
 		return needMileage;
+	}
+	public int getMyNeedMileage() {
+		return myNeedMileage;
+	}
+	public void setMyNeedMileage(int myNeedMileage) {
+		this.myNeedMileage = myNeedMileage;
 	}
 	public void setNeedMileage(int needMileage) {
 		this.needMileage = needMileage;

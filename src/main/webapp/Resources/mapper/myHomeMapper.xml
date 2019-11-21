@@ -9,7 +9,23 @@
 	<select id="memberMiles" resultType="kr.gaza.myapp.myhome.MyHomeVO">
 		select sum(a.point)myMileage from miles a join mymiles b on a.milesnum = b.milesnum where b.membernum=#{membernum}
 	</select>
-	<!-- <select id="memberNeedMiles" resultType="kr.gaza.myapp.myhome.MyHomeVO">
-		<![CDATA[ select gradetype as memberGrade, needmiles from grade where needmiles = (select max(needmiles) needmiles from grade where needMiles<=#{mymiles)]]>
-	</select> -->
+	<select id="memberGrade" resultType="kr.gaza.myapp.myhome.MyHomeVO">
+		<![CDATA[ select gradetype as memberGrade from grade where needmiles = (select max(needmiles) needmiles from grade where needMiles<=#{mymileage})]]>
+	</select>
+	<select id="memberNeedMileage" resultType="kr.gaza.myapp.myhome.MyHomeVO">
+		<![CDATA[ select needmiles as needMileage from grade where needmiles = (select needmiles from grade where needMiles>=#{mymileage} and rownum=1)]]>
+	</select>
+	<select id="orderNumList" resultType="kr.gaza.myapp.myhome.MyHomeVO">
+		select ordernum from payment where membernum=#{memberNum} order by paydate desc
+	</select>
+	<select id="flightList" resultType="kr.gaza.myapp.myhome.MyHomeVO">
+		select flightnum from orderedflight where ordernum=#{orderNum}
+	</select>
+	<select id="flightInfo" resultType="kr.gaza.myapp.myhome.MyHomeVO">
+		select airplanename, productnum, departtime, arrivetime from flight where flightnum=#{flightNum} order by departtime desc
+	</select>
+	<select id="DepAri" resultType="kr.gaza.myapp.myhome.MyHomeVO">
+		select depart, arrive from product where productnum=#{productNum}
+	</select>
+	
 </mapper>

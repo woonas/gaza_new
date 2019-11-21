@@ -53,8 +53,8 @@
                         <div class="section-title bottom-border">
                             등급
                         </div>
-                        <div><span id="username" class="font-brown">홍길동</span> 님의</div>
-                        <div>회원등급은 <span id="usergrade" class="font-blue4">실버등급</span>입니다.</div>
+                        <div><span id="username" class="font-brown">${vo.memberNameKor}</span> 님의</div>
+                        <div>회원등급은 <span id="usergrade" class="font-blue4">${vo3.memberGrade }등급</span>입니다.</div>
                         <div><a
                                 href="../mypage_GradeInfo.html"><input type="button" class="blueBtn" value="등급혜택보기"
                                                                        id="grade-benefit"></a></div>
@@ -76,7 +76,7 @@
                             <div>
                                 <span class="font-blue4">
                                     +
-                                    <span id="usergradeup">20,394</span>
+                                    <span id="usergradeup">${myNeedMiles}</span>
                                     마일
                                 </span>
                                 <span style="font-size: 80%">적립시 등급상승</span>
@@ -122,71 +122,33 @@
                                         <th>상세 보기</th>
                                     </tr>
                                 </thead>
+                                <c:forEach var="vo" items="${flightI }">
                                 <tbody>
                                     <tr>
                                         <td>
                                             <div>01</div>
                                         </td>
                                         <td>
-                                            <div>2019/01/01 (일)</div>
+                                            <div>${vo.departTime }</div>
+                                        </td>
+                                        <c:forEach var="s" items="${flightDepAri }">
+                                        <td>
+                                            <div>${s.depart } → ${s.arrive }</div>
+                                        </td>
+                                        </c:forEach>
+                                        <td>
+                                            <div>${vo.departTime } → ${vo.arriveTime }</div>
                                         </td>
                                         <td>
-                                            <div>샌프란시스코 → 뉴욕</div>
-                                        </td>
-                                        <td>
-                                            <div>20:20 → 02:30</div>
-                                        </td>
-                                        <td>
-                                            <div>OZGO1234</div>
+                                            <div>${vo.airplaneName }</div>
                                         </td>
                                         <td>
                                             <div><a href="reserveStatus.html"><input type="button" class="blueBtn" value="상세보기"
                                                                                      id="detail1"></a></div>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>
-                                            <div>02</div>
-                                        </td>
-                                        <td>
-                                            <div>2019/01/01 (일)</div>
-                                        </td>
-                                        <td>
-                                            <div>뉴욕 → 샌프란시스코</div>
-                                        </td>
-                                        <td>
-                                            <div>20:20 → 02:30</div>
-                                        </td>
-                                        <td>
-                                            <div>OZGO1234</div>
-                                        </td>
-                                        <td>
-                                            <div><a href="reserveStatus.html"><input type="button" class="blueBtn" value="상세보기"
-                                                                                     id="detail2"></a></div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div>03</div>
-                                        </td>
-                                        <td>
-                                            <div>2019/01/01 (일)</div>
-                                        </td>
-                                        <td>
-                                            <div>샌프란시스코 → 뉴욕</div>
-                                        </td>
-                                        <td>
-                                            <div>20:20 → 02:30</div>
-                                        </td>
-                                        <td>
-                                            <div>OZGO1234</div>
-                                        </td>
-                                        <td>
-                                            <div><a href="reserveStatus.html"><input type="button" class="blueBtn" value="상세보기"
-                                                                                     id="detail3"></a></div>
-                                        </td>
-                                    </tr>
                                 </tbody>
+                                </c:forEach>
                             </table>
                         </div>
                     </div>

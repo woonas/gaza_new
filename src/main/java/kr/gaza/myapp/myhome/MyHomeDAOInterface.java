@@ -7,7 +7,15 @@ public interface MyHomeDAOInterface {
 	
 	public MyHomeVO memberMiles(int memberNum);
 	
-	public List<ReservationVO> flightRecord(int memberNum);
+	public MyHomeVO memberGrade(int mymileage);
 	
-	public MyHomeVO memberNeedMiles(int mymileage);
+	public MyHomeVO memberNeedMileage(int mymileage);
+	
+	public List<MyHomeVO> orderNumList(int memberNum);
+	
+	public List<MyHomeVO> flightList(int orderNum);
+	
+	public List<MyHomeVO> flightInfo(int flightNum);
+	
+	public MyHomeVO DepAri(int productNum);
 }
