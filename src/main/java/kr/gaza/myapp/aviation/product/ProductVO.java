@@ -6,7 +6,7 @@ public class ProductVO {
     private String arrive;
     private int price;
     private int productCnt;
-    private float sale;
+    private float ProductSale;
     private String regDate;
 
     public int getProductNum() {
@@ -49,16 +49,16 @@ public class ProductVO {
         this.productCnt = productCnt;
     }
 
-    public float getsale() {
-        return sale;
+    public float getProductSale() {
+        return ProductSale;
     }
 
-    public void setsale(float sale) {
-        this.sale = sale;
+    public void setProductSale(float ProductSale) {
+        this.ProductSale = ProductSale;
     }
 
-    public void setsale(int sale) {
-        this.sale = sale;
+    public void setProductSale(int ProductSale) {
+        this.ProductSale = ProductSale;
     }
 
     public String getRegDate() {
