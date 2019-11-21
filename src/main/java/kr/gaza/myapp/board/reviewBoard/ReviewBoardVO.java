@@ -57,7 +57,7 @@ public class ReviewBoardVO {
 		return ip;
 	}
 	public void setIp(String ip) {
-		this.ip = ip;
+		this.ip = ip; 
 	}
 	
 	

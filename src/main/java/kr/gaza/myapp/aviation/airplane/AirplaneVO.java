@@ -15,7 +15,7 @@ public class AirplaneVO {
 		return seatMax;
 	}
 	public void setSeatMax(int seatMax) {
-		this.seatMax = seatMax;
+		this.seatMax = seatMax; 
 	}
 	
 	
