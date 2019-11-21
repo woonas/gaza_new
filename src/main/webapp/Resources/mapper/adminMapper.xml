@@ -48,7 +48,7 @@
 </select>
 
 <select id="adminAllRecord" resultType="kr.gaza.myapp.admin.AdminVO">
- select adminNum, adminId, adminPwd, adminName, adminTel, adminEmail, to_char(adminRegdate, 'YYYY-MM-DD') adminRegdate from admin
+	select adminNum, adminId, adminPwd, adminName, adminTel, adminEmail, to_char(adminRegdate, 'YYYY-MM-DD') adminRegdate from admin
 </select>
 
 <select id="airplaneAllRecord" resultType="kr.gaza.myapp.aviation.airplane.AirplaneVO">

@@ -50,7 +50,7 @@
     
                 <!-- Top Navigation: Left Menu -->
                 <ul class="nav navbar-nav navbar-left navbar-top-links">
-                    <li><a href="#"><i class="fa fa-user fa-fw"></i>홈페이지</a></li>
+                    <li><a href="<%=jsp%>/admin/admin_dash"><i class="fa fa-user fa-fw"></i>홈페이지</a></li>
                 </ul>
     
                 <!-- Top Navigation: Right Menu -->
@@ -109,16 +109,16 @@
                                 </div>
                             </li>
                             <li>
-                                <a href="#" class="active"><i class="fa fa-dashboard fa-fw"></i> 대시보드</a>
+                                <a href="<%=jsp%>/admin/admin_dash" class="active"><i class="fa fa-dashboard fa-fw"></i> 대시보드</a>
                             </li>
                             <li>
                                 <a href="#"><i class="fa fa-user fa-fw"></i> 회원관리<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>
-                                        <a href="#">관리자계정</a>
+                                        <a href="<%=jsp%>/admin/admin_admin">관리자계정</a>
                                     </li>
                                     <li>
-                                        <a href="#">회원계정</a>
+                                        <a href="<%=jsp%>/admin/admin_member">회원계정</a>
                                     </li>
                                 </ul>
                             </li>
@@ -126,25 +126,28 @@
                                 <a href="#"><i class="fa fa-plane-departure fa-fw"></i> 항공관련<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>
-                                        <a href="#">공항(airport)</a>
+                                        <a href="<%=jsp%>/admin/admin_airport">공항(airport)</a>
                                     </li>
                                     <li>
-                                        <a href="#">비행기(airline)</a>
+                                        <a href="<%=jsp%>/admin/admin_airplane">비행기(airplane)</a>
                                     </li>
                                     <li>
-                                        <a href="#">비행상품(product)</a>
+                                        <a href="<%=jsp%>/admin/admin_product">비행상품(product)</a>
                                     </li>
                                     <li>
-                                        <a href="#">여정(flight)</a>
+                                        <a href="<%=jsp%>/admin/admin_flight">여정(flight)</a>
                                     </li>
                                     <li>
-                                        <a href="#">좌석타입(seat)</a>
+                                        <a href="<%=jsp%>/admin/admin_seat">좌석타입(seat)</a>
                                     </li>
                                     <li>
-                                        <a href="#">승객타입(people)</a>
+                                        <a href="<%=jsp%>/admin/admin_seatReserve">좌석예약(reserve)</a>
                                     </li>
                                     <li>
-                                        <a href="#">기내식(food)</a>
+                                        <a href="<%=jsp%>/admin/admin_people">승객타입(people)</a>
+                                    </li>
+                                    <li>
+                                        <a href="<%=jsp%>/admin/admin_food">기내식(food)</a>
                                     </li>
                                 </ul>
                             </li>
@@ -152,10 +155,10 @@
                                 <a href="#"><i class="fa fa-sitemap fa-fw"></i> 게시판<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>
-                                        <a href="#">공지사항</a>
+                                        <a href="<%=jsp%>/admin/admin_notice">공지사항</a>
                                     </li>
                                     <li>
-                                        <a href="#">이용후기</a>
+                                        <a href="<%=jsp%>/admin/admin_review">이용후기</a>
                                     </li>
                                     <li>
                                         <a href="#">자주묻는질문</a>
@@ -180,7 +183,7 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#">제휴이벤트</a>
+                                        <a href="<%=jsp%>/admin/admin_alliance">제휴이벤트</a>
                                     </li>
                                 </ul>
                             </li>

@@ -24,6 +24,10 @@ import kr.gaza.myapp.eventPackage.AllianceVO;
 public class AdminController {
 	@Autowired
 	SqlSession sqlSession;
+	@RequestMapping("/JSP/admin/admin_dash")
+	public String AdminDash() {
+		return "JSP/admin/admin_dash";
+	}
 	@RequestMapping("/JSP/admin/admin_airport")
 	public ModelAndView AdminAirport() {
 		AdminInterface dao = sqlSession.getMapper(AdminInterface.class);

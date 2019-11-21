@@ -6,7 +6,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12">
-                            <h1 class="page-header">공항(airport)</h1>
+                            <h1 class="page-header">회원(Member)</h1>
                         </div>
                     </div>
                     
