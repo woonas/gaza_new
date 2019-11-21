@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import kr.gaza.myapp.account.member.MemberVO;
 import kr.gaza.myapp.aviation.airport.AirportVO;
 import kr.gaza.myapp.aviation.flight.FlightVO;
 import kr.gaza.myapp.aviation.food.FoodVO;
@@ -130,6 +131,28 @@ public class AdminController {
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("lst",lst);
 		mav.setViewName("JSP/admin/admin_review");
+		return mav;
+	}
+	
+	@RequestMapping("/JSP/admin/admin_member")
+	public ModelAndView AdminMember() {
+		AdminInterface dao = sqlSession.getMapper(AdminInterface.class);
+		List<MemberVO> lst = dao.memberAllRecord();
+		
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("lst", lst);
+		mav.setViewName("JSP/admin/admin_member");
+		return mav;
+	}
+	
+	@RequestMapping("/JSP/admin/admin_admin")
+	public ModelAndView AdminAdmin() {
+		AdminInterface dao = sqlSession.getMapper(AdminInterface.class);
+		List<AdminVO> lst = dao.adminAllRecord();
+		
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("lst",lst);
+		mav.setViewName("JSP/admin/admin_admin");
 		return mav;
 	}
 }
