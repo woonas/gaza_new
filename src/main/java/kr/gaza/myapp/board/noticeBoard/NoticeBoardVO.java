@@ -2,7 +2,7 @@ package kr.gaza.myapp.board.noticeBoard;
 
 public class NoticeBoardVO {
 	
-	private int num;
+	private int noticeNum;
 	private int noticeType;
 	private String subject;
 	private String content;
@@ -18,11 +18,11 @@ public class NoticeBoardVO {
 	private int onePageMax=10; // 한 페이지에 출력할 페이지 번호 수
 	
 
-	public int getNum() {
-		return num;
+	public int getnoticeNum() {
+		return noticeNum;
 	}
-	public void setNum(int num) {
-		this.num = num;
+	public void setnoticeNum(int noticeNum) {
+		this.noticeNum = noticeNum;
 	}
 	public int getNoticeType() {
 		return noticeType;
