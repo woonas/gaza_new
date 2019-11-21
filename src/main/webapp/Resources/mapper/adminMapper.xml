@@ -30,4 +30,17 @@
 <select id="seatAllRecord" resultType="kr.gaza.myapp.aviation.seatType.SeatVO">
 	select seattype, seatcontent from seat
 </select>
+
+<select id="allianceAllRecord" resultType="kr.gaza.myapp.eventPackage.AllianceVO">
+	select eventnum, eventname, eventthumbnail, eventimg, eventcontent, eventcompany, startdate, enddate, to_char(regdate,' YYYY-MM-DD') regdate from event
+</select>
+
+<select id="noticeAllRecord" resultType="kr.gaza.myapp.board.noticeBoard.NoticeBoardVO">
+	select noticenum, noticetype, subject, content, hit, to_char(regdate, 'YYYY-MM-DD') regdate from noticeboard
+</select>
+
+<select id="reviewAllRecord" resultType="kr.gaza.myapp.board.reviewBoard.ReviewBoardVO">
+	select reviewnum, reviewtype, subject, content, writer, hit, to_char(regdate,'YYYY-MM-DD') regdate, ip from reviewboard
+</select>
+
 </mapper>	

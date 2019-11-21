@@ -15,6 +15,9 @@ import kr.gaza.myapp.aviation.personType.peopleVO;
 import kr.gaza.myapp.aviation.product.ProductVO;
 import kr.gaza.myapp.aviation.seatType.SeatVO;
 import kr.gaza.myapp.aviation.seatreserve.SeatReserveVO;
+import kr.gaza.myapp.board.noticeBoard.NoticeBoardVO;
+import kr.gaza.myapp.board.reviewBoard.ReviewBoardVO;
+import kr.gaza.myapp.eventPackage.AllianceVO;
 @Controller
 public class AdminController {
 	@Autowired
@@ -97,4 +100,36 @@ public class AdminController {
 		return mav;
 	}
 	
+	@RequestMapping("/JSP/admin/admin_alliance")
+	public ModelAndView AdminAlliance() {
+		AdminInterface dao = sqlSession.getMapper(AdminInterface.class);
+		List<AllianceVO> lst = dao.allianceAllRecord();
+		
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("lst",lst);
+		mav.setViewName("JSP/admin/admin_alliance");
+		return mav;
+	}
+	
+	@RequestMapping("/JSP/admin/admin_notice")
+	public ModelAndView AdminNotice() {
+		AdminInterface dao = sqlSession.getMapper(AdminInterface.class);
+		List<NoticeBoardVO> lst = dao.noticeAllRecord();
+		
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("lst",lst);
+		mav.setViewName("JSP/admin/admin_notice");
+		return mav;
+	}
+	
+	@RequestMapping("/JSP/admin/admin_review")
+	public ModelAndView AdminReview() {
+		AdminInterface dao = sqlSession.getMapper(AdminInterface.class);
+		List<ReviewBoardVO> lst = dao.reviewAllRecord();
+		
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("lst",lst);
+		mav.setViewName("JSP/admin/admin_review");
+		return mav;
+	}
 }

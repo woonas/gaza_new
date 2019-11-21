@@ -9,6 +9,9 @@ import kr.gaza.myapp.aviation.personType.peopleVO;
 import kr.gaza.myapp.aviation.product.ProductVO;
 import kr.gaza.myapp.aviation.seatType.SeatVO;
 import kr.gaza.myapp.aviation.seatreserve.SeatReserveVO;
+import kr.gaza.myapp.board.noticeBoard.NoticeBoardVO;
+import kr.gaza.myapp.board.reviewBoard.ReviewBoardVO;
+import kr.gaza.myapp.eventPackage.AllianceVO;
 
 public interface AdminInterface {
 	public List<AirportVO> airportAllRecord();
@@ -18,4 +21,7 @@ public interface AdminInterface {
 	public List<ProductVO> productAllRecord();
 	public List<SeatReserveVO> seatReserveAllRecord();
 	public List<SeatVO> seatAllRecord();
+	public List<AllianceVO> allianceAllRecord();
+	public List<NoticeBoardVO> noticeAllRecord();
+	public List<ReviewBoardVO> reviewAllRecord();
 }
