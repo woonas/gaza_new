@@ -7,6 +7,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <h1 class="page-header">좌석타입(seat)</h1>
+                            <input type="button" id="addBtn" value="추가">
                         </div>
                     </div>
                     

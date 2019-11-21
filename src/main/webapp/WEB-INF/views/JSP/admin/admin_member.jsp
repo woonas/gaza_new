@@ -7,6 +7,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <h1 class="page-header">회원(Member)</h1>
+                            <input type="button" id="addBtn" value="추가">
                         </div>
                     </div>
                     
@@ -17,7 +18,7 @@
                                     <div class="table-responsive">
                                         <table class="table table-striped table-bordered table-hover" id="dataTables">
                                             <col-group>
-                                                <col width="5.9%">
+                                                <col width="100%">
                                                 <col width="5.9%">
                                                 <col width="5.9%">
                                                 <col width="5.9%">
