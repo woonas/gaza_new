@@ -43,4 +43,11 @@
 	select reviewnum, reviewtype, subject, content, writer, hit, to_char(regdate,'YYYY-MM-DD') regdate, ip from reviewboard
 </select>
 
+<select id="memberAllRecord" resultType="kr.gaza.myapp.account.member.MemberVO">
+	select membernum, memberid, membernamekor, membernameeng, nation, gender, tel, alttel, zipcode, addr, detailaddr, email, birthday, agree, directronic, flightcnt, to_char(regdate, 'YYYY-MM-DD')regdate from member
+</select>
+
+<select id="adminAllRecord" resultType="kr.gaza.myapp.admin.AdminVO">
+ select adminNum, adminId, adminPwd, adminName, adminTel, adminEmail, to_char(adminRegdate, 'YYYY-MM-DD') adminRegdate from admin
+</select>
 </mapper>	
