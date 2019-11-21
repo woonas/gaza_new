@@ -336,7 +336,7 @@
             
 
             <div class="flex">
-                <a href="booking1.html"><button class="whiteBtn left">&lt; 이전</button></a>
+                <a href="javascript:window.history.back(1);"><button class="whiteBtn left">&lt; 이전</button></a>
                 <a href="booking3.html"><button class="right blueBtn">다음 &gt;</button></a>
             </div>
             
