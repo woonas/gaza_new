@@ -44,7 +44,7 @@
                                                     <td>${vo.arrive }</td>
                                                     <td class="center">${vo.price }</td>
                                                     <td class="center">${vo.productCnt }</td>
-                                                    <td class="center">${vo.sale}</td>
+                                                    <td class="center">${vo.productSale}</td>
                                                     <td>${vo.regDate }</td>
                                                 </tr>
                                                 </c:forEach>

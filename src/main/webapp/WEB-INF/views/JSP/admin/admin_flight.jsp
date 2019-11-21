@@ -42,7 +42,7 @@
                                                     <td>${vo.productNum }</td>
                                                     <td class="center">${vo.departTime }</td>
                                                     <td class="center">${vo.arriveTime }</td>
-                                                    <td class="center">${vo.FlightSale }</td>
+                                                    <td class="center">${vo.flightSale }</td>
                                                 </tr>
                                                 </c:forEach>
                                             </tbody>

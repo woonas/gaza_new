@@ -20,7 +20,7 @@
 </select>
 
 <select id="productAllRecord" resultType="kr.gaza.myapp.aviation.product.ProductVO">
-	select productnum, depart, arrive, price, productcnt, sale, regdate from product
+	select productnum, depart, arrive, price, productcnt, sale AS productSale, to_char(regdate,'YYYY-MM-DD') regdate from product
 </select>
 
 <select id="seatReserveAllRecord" resultType="kr.gaza.myapp.aviation.seatreserve.SeatReserveVO">
