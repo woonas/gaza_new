@@ -513,6 +513,28 @@ insert into reviewboard values(reviewboardnum_sq.nextval,1,'[모스크바/러시
 'harry',123,sysdate,'192.168.0.6');
 insert into reviewboard values(reviewboardnum_sq.nextval,1,'괌여행 - 가자에어 프레스티지석 / 웨스틴호텔','괌여행 - 가자에어 프레스티지석 / 웨스틴호텔',
 'poter',123,sysdate,'192.168.0.1');
+insert into reviewboard values(reviewboardnum_sq.nextval,2,'홍혜진가이드님 세심한 배려에 정말 감사합니다','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gaeeee',2035,sysdate,'192.168.0.2');
+insert into reviewboard values(reviewboardnum_sq.nextval,2,'유정수 가이드님 고마웠습니다','유정수 가이드님 고마웠습니다',
+'uuuu12',1039,sysdate,'192.168.0.3');
+insert into reviewboard values(reviewboardnum_sq.nextval,2,'황민 가이드님 감사했습니다~','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gogugma1234',985,sysdate,'192.168.0.4');
+insert into reviewboard values(reviewboardnum_sq.nextval,2,'위원섭가이드님~섬세한 배려자이십니다~','위원섭가이드님~섬세한 배려자이십니다~',
+'master115',351,sysdate,'192.168.0.5');
+insert into reviewboard values(reviewboardnum_sq.nextval,2,'여행은 한권의 책을 읽는 것과 같다~~','여행은 한권의 책을 읽는 것과 같다~~',
+'vand777',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,2,'감사합니다','감사합니다',
+'monkeydluffy',789,sysdate,'192.168.0.7');
+insert into reviewboard values(reviewboardnum_sq.nextval,2,'미동부,나이아가라,캐나다 인솔 크리스 리 고마워요','미동부,나이아가라,캐나다 인솔 크리스 리 고마워요',
+'dgjc221',3790,sysdate,'192.168.0.8');
+insert into reviewboard values(reviewboardnum_sq.nextval,2,'그날의 여운이 아직도 생생합니다.','그날의 여운이 아직도 생생합니다.',
+'ironman',23,sysdate,'192.168.0.9');
+insert into reviewboard values(reviewboardnum_sq.nextval,2,'크루즈여행을 통해 이야기','크루즈여행을 통해 이야기',
+'caution999',867,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,2,'미동부와캐나다여행','미동부와캐나다여행',
+'gary',2353,sysdate,'192.168.0.11');
+insert into reviewboard values(reviewboardnum_sq.nextval,2,'10월17-28일 동유럽발칸여행','10월17-28일 동유럽발칸여행',
+'gaeko',5689,sysdate,'192.168.0.12');
 
 ------noticeboard------------------------------------------------------------
 

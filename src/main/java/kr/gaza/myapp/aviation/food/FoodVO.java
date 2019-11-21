@@ -8,7 +8,7 @@ public class FoodVO {
     private String foodContent;
     private String foodIngredient;
     private int foodPrice;
-
+    
     public int getFoodNum() {
         return foodNum;
     }

@@ -6,7 +6,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12">
-                            <h1 class="page-header">제목</h1>
+                            <h1 class="page-header">좌석타입(seat)</h1>
                         </div>
                     </div>
                     
@@ -17,29 +17,22 @@
                                     <div class="table-responsive">
                                         <table class="table table-striped table-bordered table-hover" id="dataTables">
                                             <col-group>
-                                                <col>
-                                                <col>
-                                                <col>
-                                                <col>
+                                                <col width="50%">
+                                                <col width="50%">
                                             </col-group>
                                             <thead>
                                                 <tr>
-                                                    <th>아이디</th>
-                                                    <th>이름</th>
-                                                    <th>Platform(s)</th>
-                                                    <th>Engine version</th>
-                                                    <th>CSS grade</th>
+                                                    <th>좌석타입</th>
+                                                    <th>좌석타입이름</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-<!--                                            여기에 반복-->
+												<c:forEach var="vo" items="${lst }">
                                                 <tr class="odd gradeX">
-                                                    <td>Trident</td>
-                                                    <td>Internet Explorer 4.0</td>
-                                                    <td>Win 95+</td>
-                                                    <td class="center">4</td>
-                                                    <td class="center">X</td>
+                                                    <td>${vo.seatType }</td>
+                                                    <td>${vo.seatContent }</td>
                                                 </tr>
+                                                </c:forEach>
                                             </tbody>
                                         </table>
                                     </div>
@@ -50,6 +43,7 @@
                         </div>
                         <!-- /.col-lg-12 -->
                     </div>
+                
                 </div>
                 <!-- /.container-fluid -->
             </div>

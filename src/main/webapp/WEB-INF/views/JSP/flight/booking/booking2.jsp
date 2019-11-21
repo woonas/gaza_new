@@ -2,6 +2,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ page import="java.util.Date" %>
+<%@ page import="java.text.SimpleDateFormat, java.text.ParseException, java.util.Calendar" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -124,16 +126,33 @@
                             </span>
                         </div>
                     </div>
-<%--                    Todo 가격비교...--%>
+                    <c:set var="flightDate" value="${journeyList[i-1].flightDate}"/>
+                    <%
+                        SimpleDateFormat transFormat = new SimpleDateFormat("yyyy-MM-dd");
+                        String flightDate = (String)pageContext.getAttribute("flightDate");
+                        Calendar calendar = Calendar.getInstance();
+                        String[] flightDates = new String[7];
+                        for (int i = 0; i < flightDates.length; i++) {
+                            calendar.set(Integer.parseInt(flightDate.substring(0,4)),
+                                    Integer.parseInt(flightDate.substring(5,7))-1,
+                                    Integer.parseInt(flightDate.substring(8,10))+i-3);
+                            flightDates[i] = transFormat.format(calendar.getTime());
+                        }
+                    %>
                     <div class="price-compare clearfix">
                         <div class="buttons btn-price-last-week"></div>
-                        <div class="price-of-day">
-                            <input type="radio" name="price-of-day-${i}" id="journey-${i}-price-1">
-                            <label for="journey-${i}-price-1">
-                                <div class="date">09.20 (금)</div>
-                                <div class="price"><span>KRW</span> 105,500</div>
-                            </label>
-                        </div>
+                        <c:forEach var="day" begin="1" end="7" step="1">
+                            <div class="price-of-day">
+                                <input type="radio" name="price-of-day-${i}" id="journey-${i}-price-${day}" <c:if test="${day==4}">checked</c:if>>
+                                <label for="journey-${i}-price-${day}">
+                                    <div class="date">
+                                        <fmt:parseDate var="flightDate2" value="${pageScope.flightDates[day-1]}" pattern="yyyy-MM-dd"/>
+                                        <fmt:formatDate value="${flightDate2}" pattern="MM.dd (E)"/>
+                                    </div>
+                                    <div class="price"><span>KRW</span> 105,500</div>
+                                </label>
+                            </div>
+                        </c:forEach>
                         <div class="price-of-day">
                             <input type="radio" name="price-of-day-${i}" id="journey-${i}-price-2">
                             <label for="journey-${i}-price-2">
@@ -151,7 +170,9 @@
                         <div class="price-of-day">
                             <input type="radio" name="price-of-day-${i}" id="journey-${i}-price-4" checked>
                             <label for="journey-${i}-price-4">
-                                <div class="date">09.23 (월)</div>
+                                <div class="date">
+<%--                                    <fmt:formatDate value="${flightDate}" pattern="MM.dd (E)"/>--%>
+                                </div>
                                 <div class="price"><span>KRW</span> 45,500</div>
                             </label>
                         </div>
@@ -236,20 +257,36 @@
                                     <c:set var="flight" value="${flightList[i-1]}"/>
                                     <c:set var="seatLeft" value="${seatLeftList[i-1]}"/>
                                     <c:set var="price" value="${productList[i-1].price * productList[i-1].productSale * flight[j-1].flightSale}"/>
+                                    
+<%--                                    날짜계산--%>
+                                    <c:set var="departTime" value="${flight[j-1].departTime}"/>
+                                    <c:set var="departLength" value="${fn:length(departTime)}"/>
+                                    <c:set var="departDate" value="${fn:substring(departTime, 0, departLength-5)}"/>
+                                    <c:set var="departHour" value="${fn:substring(departTime, departLength-5, departLength-3)}"/>
+                                    <c:set var="departMin" value="${fn:substring(departTime, departLength-2, departLength)}"/>
+                                    <c:set var="arriveTime" value="${flight[j-1].arriveTime}"/>
+                                    <c:set var="arriveLength" value="${fn:length(arriveTime)}"/>
+                                    <c:set var="arriveDate" value="${fn:substring(arriveTime, 0, arriveLength-5)}"/>
+                                    <c:set var="arriveHour" value="${fn:substring(arriveTime, arriveLength-5, arriveLength-3)}"/>
+                                    <c:set var="arriveMin" value="${fn:substring(arriveTime, arriveLength-2, arriveLength)}"/>
+                                    
+                                    <c:set var="flightDuration" value="${(arriveHour*60+arriveMin) - (departHour*60+departMin)}"/>
+                                    <c:if test="${flightDuration<0}">
+                                        <c:set var="flightDuration" value="${1440 - (departHour*60+departMin) + (arriveHour*60+arriveMin)}"/>
+                                    </c:if>
+                                    <fmt:formatNumber var="durationHour" value="${flightDuration/60}" pattern="0"/>
+                                    <fmt:formatNumber var="durationMin" value="${flightDuration%60}" pattern="0" minIntegerDigits="2"/>
                                     <tr>
                                         <td>
-                                            <c:set var="departTime" value="${flight[j-1].departTime}"/>
-                                            <c:set var="length" value="${fn:length(departTime)}"/>
-                                            ${fn:substring(departTime, length-5, length)}
+                                            ${departHour}:${departMin}
                                         </td>
                                         <td style="background: url(<%=img%>/icon/flight-table.svg);">
-                                            <div><i class="far fa-clock"></i>1시간 10분</div>
+                                            <div><i class="far fa-clock"></i>${durationHour}시간 ${durationMin}분</div>
                                             <div>직항</div>
                                         </td>
                                         <td>
-                                            <c:set var="arriveTime" value="${flight[j-1].arriveTime}"/>
-                                            <c:set var="length" value="${fn:length(arriveTime)}"/>
-                                            ${fn:substring(arriveTime, length-5, length)}
+                                            <c:if test="${departDate != arriveDate}"><div class="font-red next-day">+1 DAY</div></c:if>
+                                            ${arriveHour}:${arriveMin}
                                         </td>
                                         <td>${flight[j-1].airplaneName}</td>
                                         <td>
@@ -299,7 +336,7 @@
             
 
             <div class="flex">
-                <a href="booking1.html"><button class="whiteBtn left">&lt; 이전</button></a>
+                <a href="javascript:window.history.back(1);"><button class="whiteBtn left">&lt; 이전</button></a>
                 <a href="booking3.html"><button class="right blueBtn">다음 &gt;</button></a>
             </div>
             

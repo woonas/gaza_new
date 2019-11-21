@@ -19,7 +19,6 @@ public class NoticeBoardVO {
 	private int onePageMax=10; // 한 페이지에 출력할 페이지 번호 수
 	
 
-
 	public int getNoticeNum() {
 		return noticeNum;
 	}

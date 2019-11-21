@@ -9,19 +9,19 @@
         <title>가자에어 관리자페이지</title>
     
         <!-- Bootstrap Core CSS -->
-        <link href="/Resources/Admin/css/bootstrap.min.css" rel="stylesheet">
+        <link href="<%=resources %>/Admin/css/bootstrap.min.css" rel="stylesheet">
     
         <!-- MetisMenu CSS -->
-        <link href="/Resources/Admin/css/metisMenu.min.css" rel="stylesheet">
+        <link href="<%=resources %>/Admin/css/metisMenu.min.css" rel="stylesheet">
     
         <!-- DataTables CSS -->
-        <link href="/Resources/Admin/css/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+        <link href="<%=resources %>/Admin/css/dataTables/dataTables.bootstrap.css" rel="stylesheet">
     
         <!-- DataTables Responsive CSS -->
-        <link href="/Resources/Admin/css/dataTables/dataTables.responsive.css" rel="stylesheet">
+        <link href="<%=resources %>/Admin/css/dataTables/dataTables.responsive.css" rel="stylesheet">
     
         <!-- Custom CSS -->
-        <link href="/Resources/Admin/css/startmin.css" rel="stylesheet">
+        <link href="<%=resources %>/Admin/css/startmin.css" rel="stylesheet">
     
         <!-- Custom Fonts -->
         <script src="https://kit.fontawesome.com/9c923ac74a.js" crossorigin="anonymous"></script>

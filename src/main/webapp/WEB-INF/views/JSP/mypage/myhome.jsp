@@ -28,12 +28,12 @@
 
                 <div class="row clearfix">
                     <div>
-                        <div id="grade"><a href="#" class="font-white">실버</a></div>
+                        <div id="grade"><a href="#" class="font-white">${vo3.memberGrade }</a></div>
                         <div id="memberNo">777 888 9999</div>
                     </div>
                     <div>
                         <div><a href="" class="font-gray3">소멸 예정 마일리지</a></div>
-                        <div id="mileage">473830</div>
+                        <div id="mileage">${vo2.myMileage }</div>
                     </div>
                 </div>
                 <div id="boarding">

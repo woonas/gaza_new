@@ -1,4 +1,4 @@
-package kr.gaza.myapp.eventPackage.travel;
+package kr.gaza.myapp.eventPackage;
 
 import java.util.List;
 

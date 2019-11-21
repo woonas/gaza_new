@@ -8,8 +8,11 @@ public class MyHomeVO {
 	private int memberFlightCnt;
 	private int myMileage; 
 	private int needMileage;
+	
 	//다른 테이블에서 갖고온 값들
-
+	
+	
+	
 	public int getNeedMileage() {
 		return needMileage;
 	}

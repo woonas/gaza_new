@@ -1,7 +1,7 @@
 package kr.gaza.myapp.aviation.airport;
 
 public class AirportVO {
-    private int airportName;
+    private int airportNum;
     private String IATA;
     private String city;
     private String continent;
@@ -9,12 +9,12 @@ public class AirportVO {
     private String longitude;
     private String cityImg;
 
-    public int getAirportName() {
-        return airportName;
+    public int getAirportNum() {
+        return airportNum;
     }
 
-    public void setAirportName(int airportName) {
-        this.airportName = airportName;
+    public void setAirportNum(int airportNum) {
+        this.airportNum = airportNum;
     }
 
     public String getIATA() {

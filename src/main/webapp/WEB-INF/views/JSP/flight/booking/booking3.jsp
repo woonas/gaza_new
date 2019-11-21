@@ -1,15 +1,14 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <title>항공권 예약 - 탑승자/예약자 정보입력</title>
-    <link rel="stylesheet" href="../../../CSS/booking.css">
+    <link rel="stylesheet" href="<%=css%>/booking.css">
     <!-- 국제 전화번호-->
-    <link rel="stylesheet" href="../../../../Vendor/intl-tel-input-16.0.0/build/css/intlTelInput.css">
-    <script src="../../../../Vendor/intl-tel-input-16.0.0/build/js/intlTelInput.js"></script>
+    <link rel="stylesheet" href="<%=vendor%>/intl-tel-input-16.0.0/build/css/intlTelInput.css">
+    <script src="<%=vendor%>/intl-tel-input-16.0.0/build/js/intlTelInput.js"></script>
     <!-- Font Awesome CDN -->
     <script src="https://kit.fontawesome.com/9c923ac74a.js" crossorigin="anonymous"></script>
     <script>window.onbeforeunload = () => window.scrollTo(0, 0)</script>
@@ -221,7 +220,7 @@
         </div>
        
         <div class="flex">
-            <a href="#" onclick="history.back()"><button class="whiteBtn left">&lt; 이전</button></a>
+            <a href="javascript:history.back()"><button class="whiteBtn left">&lt; 이전</button></a>
             <a href="<%=path %>/Resources/JSP/flight/booking/booking4.jsp"><button class="right blueBtn">다음 &gt;</button></a>
         </div>
 
@@ -233,6 +232,6 @@
         </ul>
     </section>
     <%@ include file="../../common/footer.jspf" %>
-    <script src="../../../JS/booking.js"></script>
+    <script src="<%=js%>/booking.js"></script>
 </body>
 </html>

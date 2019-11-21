@@ -8,4 +8,6 @@ public interface MyHomeDAOInterface {
 	public MyHomeVO memberMiles(int memberNum);
 	
 	public List<ReservationVO> flightRecord(int memberNum);
+	
+	public MyHomeVO memberNeedMiles(int mymileage);
 }
