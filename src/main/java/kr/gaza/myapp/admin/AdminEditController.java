@@ -23,8 +23,8 @@ public class AdminEditController {
 	public ModelAndView writeOk(AdminVO vo, HttpServletRequest req) {
 		
 		AdminEditInterface dao = sqlSession.getMapper(AdminEditInterface.class);
-		int cnt = dao.InsertAdmin(vo);
-		
+		int cnt = dao.insertAdmin(vo);
+			
 		ModelAndView mav = new ModelAndView();
 		if(cnt>0) {
 			mav.setViewName("redirect:admin_admin");

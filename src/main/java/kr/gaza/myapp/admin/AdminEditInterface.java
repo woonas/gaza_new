@@ -1,5 +1,5 @@
 package kr.gaza.myapp.admin;
 
 public interface AdminEditInterface {
-	public int InsertAdmin(AdminVO vo);
+	public int insertAdmin(AdminVO vo);
 }

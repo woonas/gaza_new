@@ -3,5 +3,8 @@
 	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.gaza.myapp.admin.AdminEditInterface">
-
+<insert id="insertAdmin" parameterType="kr.gaza.myapp.admin.AdminVO">
+	insert into admin(adminnum, adminid, adminpwd, adminname, admintel, adminemail, adminregdate)
+		values(adminnum_sq.nextval, #{adminId}, #{adminPwd}, #{adminName}, #{adminTel}, #{adminEmail}, sysdate)
+</insert>
 </mapper>
