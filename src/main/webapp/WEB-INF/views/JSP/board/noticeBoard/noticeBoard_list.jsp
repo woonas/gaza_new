@@ -15,24 +15,6 @@
 <script src="<%=resources %>/Admin/js/dataTables/jquery.dataTables.min.js"></script>
 
 <script>
-	function start(){
-		//탭메뉴 생성.
-		var paneIdList = ['noticeAll','noticeGAZA','noticePartner','noticeOthers'];
-		var btnIdList = ['btnAll', 'btnGAZA', 'btnPartner', 'btnOthers'];
-		var btnList = ['전체','가자항공소식','제휴사소식','기타'];
-		var tabBtnHTML = "";
-		var tabPanelHTML = "";
-		var tabType = ${tabType};
-		for(i=0; i<paneIdList.length; i++){
-			tabBtnHTML += "<button class='tabBtn";
-			if(tabType===i){
-				tabBtnHTML += " active";
-			}
-			tabBtnHTML += "'id='"+btnIdList[i]+"' onclick=\"location.replace('noticeBoard_list?pageNum=1&tabType="+[i]+"')\">";
-			tabBtnHTML += "<img src='<%=img%>/icon/check.png'/>"+btnList[i]+"</button>";
-		}
-		document.getElementById("tabBtn").innerHTML = tabBtnHTML;
-	}
 	$(function(){
 		//테이블 생성. DataTables////////////////////////////////////////////////////////////////////////
 		var table = $("#noticeTable").DataTable({
@@ -60,6 +42,24 @@
 				$("#noticeTable thead").remove();
 			}
 		});
+		
+		//탭메뉴 생성.
+		var paneIdList = ['noticeAll','noticeGAZA','noticePartner','noticeOthers'];
+		var btnIdList = ['btnAll', 'btnGAZA', 'btnPartner', 'btnOthers'];
+		var btnList = ['전체','가자항공소식','제휴사소식','기타'];
+		var tabBtnHTML = "";
+		var tabPanelHTML = "";
+		var tabType = ${tabType};
+		for(i=0; i<paneIdList.length; i++){
+			tabBtnHTML += "<button class='tabBtn";
+			if(tabType===i){
+				tabBtnHTML += " active";
+			}
+			tabBtnHTML += "'id='"+btnIdList[i]+"' onclick=\"location.replace('noticeBoard_list?pageNum=1&tabType="+[i]+"')\">";
+			tabBtnHTML += "<img src='<%=img%>/icon/check.png'/>"+btnList[i]+"</button>";
+		}
+		document.getElementById("tabBtn").innerHTML = tabBtnHTML;
+		
 		//컨텐츠 열 숨기기
 		table.column(4).visible(false,false);
 		
@@ -100,7 +100,7 @@
 	});
 </script>
 </head>
-<body onload="start()">
+<body>
 	<%@ include file="../../common/nav.jspf" %>
 	<section class="content">
 	<div id="warp">
