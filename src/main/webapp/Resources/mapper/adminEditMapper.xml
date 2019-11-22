@@ -12,4 +12,8 @@
 	insert into airport(airportnum, iata, city, continent, latitude, longitude, cityimg)
 		values(airport_sq.nextval, #{iata}, #{city}, #{contitnent}, #{latitude}, #{longitude}, #{cityImg})
 </insert>
+
+<delete id="deleteAdmin">
+		delete from admin where adminnum=#{adminNum} 
+</delete>
 </mapper>

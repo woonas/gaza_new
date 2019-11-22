@@ -49,7 +49,8 @@
                                                     <td class="center">${vo.adminTel }</td>
                                                     <td class="center">${vo.adminEmail }</td>
                                                     <td>${vo.adminEmail }</td>
-                                                    <td><input type="button" value="삭제"/></td>
+                                                    <td><a href="del?adminNum=${vo.adminNum}">삭제</a></td>
+                                                    
                                                 </tr>
                                                 </c:forEach>
                                             </tbody>
