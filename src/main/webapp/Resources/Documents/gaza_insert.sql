@@ -501,42 +501,583 @@ INSERT INTO event VALUES(eventnum_sq.nextval,'신한카드와 함께!','/event/e
 항공마일리지와 사은품','신한은행','2019-10-29','2019-12-20',sysdate);
 
 ----reviewboard---------------------------------------------------------------------------
-insert into reviewboard values(reviewboardnum_sq.nextval,1,'가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...','가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...',
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...','가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...',
 'hi0933',22,sysdate,'192.168.0.10');
-insert into reviewboard values(reviewboardnum_sq.nextval,2,'가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식','가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식',
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식','가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식',
 'seif23',99,sysdate,'192.168.0.34');
-insert into reviewboard values(reviewboardnum_sq.nextval,1,'인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...','인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...',
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...','인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...',
 'liewi',99,sysdate,'192.168.0.32');
-insert into reviewboard values(reviewboardnum_sq.nextval,1,'9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이','9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이',
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이','9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이',
 '3943we',123,sysdate,'192.168.0.30');
-insert into reviewboard values(reviewboardnum_sq.nextval,1,'[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...','[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...',
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...','[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...',
 'harry',123,sysdate,'192.168.0.6');
-insert into reviewboard values(reviewboardnum_sq.nextval,1,'괌여행 - 가자에어 프레스티지석 / 웨스틴호텔','괌여행 - 가자에어 프레스티지석 / 웨스틴호텔',
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'괌여행 - 가자에어 프레스티지석 / 웨스틴호텔','괌여행 - 가자에어 프레스티지석 / 웨스틴호텔',
 'poter',123,sysdate,'192.168.0.1');
-insert into reviewboard values(reviewboardnum_sq.nextval,2,'홍혜진가이드님 세심한 배려에 정말 감사합니다','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'홍혜진가이드님 세심한 배려에 정말 감사합니다','홍혜진가이드님 세심한 배려에 정말 감사합니다',
 'gaeeee',2035,sysdate,'192.168.0.2');
-insert into reviewboard values(reviewboardnum_sq.nextval,2,'유정수 가이드님 고마웠습니다','유정수 가이드님 고마웠습니다',
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'유정수 가이드님 고마웠습니다','유정수 가이드님 고마웠습니다',
 'uuuu12',1039,sysdate,'192.168.0.3');
-insert into reviewboard values(reviewboardnum_sq.nextval,2,'황민 가이드님 감사했습니다~','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'황민 가이드님 감사했습니다~','홍혜진가이드님 세심한 배려에 정말 감사합니다',
 'gogugma1234',985,sysdate,'192.168.0.4');
-insert into reviewboard values(reviewboardnum_sq.nextval,2,'위원섭가이드님~섬세한 배려자이십니다~','위원섭가이드님~섬세한 배려자이십니다~',
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'위원섭가이드님~섬세한 배려자이십니다~','위원섭가이드님~섬세한 배려자이십니다~',
 'master115',351,sysdate,'192.168.0.5');
-insert into reviewboard values(reviewboardnum_sq.nextval,2,'여행은 한권의 책을 읽는 것과 같다~~','여행은 한권의 책을 읽는 것과 같다~~',
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'여행은 한권의 책을 읽는 것과 같다~~','여행은 한권의 책을 읽는 것과 같다~~',
 'vand777',123,sysdate,'192.168.0.6');
-insert into reviewboard values(reviewboardnum_sq.nextval,2,'감사합니다','감사합니다',
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'감사합니다','감사합니다',
 'monkeydluffy',789,sysdate,'192.168.0.7');
-insert into reviewboard values(reviewboardnum_sq.nextval,2,'미동부,나이아가라,캐나다 인솔 크리스 리 고마워요','미동부,나이아가라,캐나다 인솔 크리스 리 고마워요',
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부,나이아가라,캐나다 인솔 크리스 리 고마워요','미동부,나이아가라,캐나다 인솔 크리스 리 고마워요',
 'dgjc221',3790,sysdate,'192.168.0.8');
-insert into reviewboard values(reviewboardnum_sq.nextval,2,'그날의 여운이 아직도 생생합니다.','그날의 여운이 아직도 생생합니다.',
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'그날의 여운이 아직도 생생합니다.','그날의 여운이 아직도 생생합니다.',
 'ironman',23,sysdate,'192.168.0.9');
-insert into reviewboard values(reviewboardnum_sq.nextval,2,'크루즈여행을 통해 이야기','크루즈여행을 통해 이야기',
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'크루즈여행을 통해 이야기','크루즈여행을 통해 이야기',
 'caution999',867,sysdate,'192.168.0.10');
-insert into reviewboard values(reviewboardnum_sq.nextval,2,'미동부와캐나다여행','미동부와캐나다여행',
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부와캐나다여행','미동부와캐나다여행',
 'gary',2353,sysdate,'192.168.0.11');
-insert into reviewboard values(reviewboardnum_sq.nextval,2,'10월17-28일 동유럽발칸여행','10월17-28일 동유럽발칸여행',
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'10월17-28일 동유럽발칸여행','10월17-28일 동유럽발칸여행',
+'gaeko',5689,sysdate,'192.168.0.12');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...','가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...',
+'hi0933',22,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식','가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식',
+'seif23',99,sysdate,'192.168.0.34');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...','인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...',
+'liewi',99,sysdate,'192.168.0.32');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이','9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이',
+'3943we',123,sysdate,'192.168.0.30');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...','[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...',
+'harry',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'괌여행 - 가자에어 프레스티지석 / 웨스틴호텔','괌여행 - 가자에어 프레스티지석 / 웨스틴호텔',
+'poter',123,sysdate,'192.168.0.1');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'홍혜진가이드님 세심한 배려에 정말 감사합니다','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gaeeee',2035,sysdate,'192.168.0.2');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'유정수 가이드님 고마웠습니다','유정수 가이드님 고마웠습니다',
+'uuuu12',1039,sysdate,'192.168.0.3');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'황민 가이드님 감사했습니다~','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gogugma1234',985,sysdate,'192.168.0.4');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'위원섭가이드님~섬세한 배려자이십니다~','위원섭가이드님~섬세한 배려자이십니다~',
+'master115',351,sysdate,'192.168.0.5');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'여행은 한권의 책을 읽는 것과 같다~~','여행은 한권의 책을 읽는 것과 같다~~',
+'vand777',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'감사합니다','감사합니다',
+'monkeydluffy',789,sysdate,'192.168.0.7');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부,나이아가라,캐나다 인솔 크리스 리 고마워요','미동부,나이아가라,캐나다 인솔 크리스 리 고마워요',
+'dgjc221',3790,sysdate,'192.168.0.8');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'그날의 여운이 아직도 생생합니다.','그날의 여운이 아직도 생생합니다.',
+'ironman',23,sysdate,'192.168.0.9');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'크루즈여행을 통해 이야기','크루즈여행을 통해 이야기',
+'caution999',867,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부와캐나다여행','미동부와캐나다여행',
+'gary',2353,sysdate,'192.168.0.11');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'10월17-28일 동유럽발칸여행','10월17-28일 동유럽발칸여행',
+'gaeko',5689,sysdate,'192.168.0.12');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...','가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...',
+'hi0933',22,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식','가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식',
+'seif23',99,sysdate,'192.168.0.34');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...','인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...',
+'liewi',99,sysdate,'192.168.0.32');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이','9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이',
+'3943we',123,sysdate,'192.168.0.30');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...','[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...',
+'harry',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'괌여행 - 가자에어 프레스티지석 / 웨스틴호텔','괌여행 - 가자에어 프레스티지석 / 웨스틴호텔',
+'poter',123,sysdate,'192.168.0.1');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'홍혜진가이드님 세심한 배려에 정말 감사합니다','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gaeeee',2035,sysdate,'192.168.0.2');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'유정수 가이드님 고마웠습니다','유정수 가이드님 고마웠습니다',
+'uuuu12',1039,sysdate,'192.168.0.3');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'황민 가이드님 감사했습니다~','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gogugma1234',985,sysdate,'192.168.0.4');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'위원섭가이드님~섬세한 배려자이십니다~','위원섭가이드님~섬세한 배려자이십니다~',
+'master115',351,sysdate,'192.168.0.5');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'여행은 한권의 책을 읽는 것과 같다~~','여행은 한권의 책을 읽는 것과 같다~~',
+'vand777',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'감사합니다','감사합니다',
+'monkeydluffy',789,sysdate,'192.168.0.7');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부,나이아가라,캐나다 인솔 크리스 리 고마워요','미동부,나이아가라,캐나다 인솔 크리스 리 고마워요',
+'dgjc221',3790,sysdate,'192.168.0.8');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'그날의 여운이 아직도 생생합니다.','그날의 여운이 아직도 생생합니다.',
+'ironman',23,sysdate,'192.168.0.9');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'크루즈여행을 통해 이야기','크루즈여행을 통해 이야기',
+'caution999',867,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부와캐나다여행','미동부와캐나다여행',
+'gary',2353,sysdate,'192.168.0.11');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'10월17-28일 동유럽발칸여행','10월17-28일 동유럽발칸여행',
+'gaeko',5689,sysdate,'192.168.0.12');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...','가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...',
+'hi0933',22,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식','가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식',
+'seif23',99,sysdate,'192.168.0.34');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...','인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...',
+'liewi',99,sysdate,'192.168.0.32');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이','9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이',
+'3943we',123,sysdate,'192.168.0.30');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...','[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...',
+'harry',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'괌여행 - 가자에어 프레스티지석 / 웨스틴호텔','괌여행 - 가자에어 프레스티지석 / 웨스틴호텔',
+'poter',123,sysdate,'192.168.0.1');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'홍혜진가이드님 세심한 배려에 정말 감사합니다','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gaeeee',2035,sysdate,'192.168.0.2');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'유정수 가이드님 고마웠습니다','유정수 가이드님 고마웠습니다',
+'uuuu12',1039,sysdate,'192.168.0.3');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'황민 가이드님 감사했습니다~','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gogugma1234',985,sysdate,'192.168.0.4');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'위원섭가이드님~섬세한 배려자이십니다~','위원섭가이드님~섬세한 배려자이십니다~',
+'master115',351,sysdate,'192.168.0.5');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'여행은 한권의 책을 읽는 것과 같다~~','여행은 한권의 책을 읽는 것과 같다~~',
+'vand777',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'감사합니다','감사합니다',
+'monkeydluffy',789,sysdate,'192.168.0.7');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부,나이아가라,캐나다 인솔 크리스 리 고마워요','미동부,나이아가라,캐나다 인솔 크리스 리 고마워요',
+'dgjc221',3790,sysdate,'192.168.0.8');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'그날의 여운이 아직도 생생합니다.','그날의 여운이 아직도 생생합니다.',
+'ironman',23,sysdate,'192.168.0.9');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'크루즈여행을 통해 이야기','크루즈여행을 통해 이야기',
+'caution999',867,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부와캐나다여행','미동부와캐나다여행',
+'gary',2353,sysdate,'192.168.0.11');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'10월17-28일 동유럽발칸여행','10월17-28일 동유럽발칸여행',
+'gaeko',5689,sysdate,'192.168.0.12');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...','가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...',
+'hi0933',22,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식','가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식',
+'seif23',99,sysdate,'192.168.0.34');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...','인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...',
+'liewi',99,sysdate,'192.168.0.32');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이','9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이',
+'3943we',123,sysdate,'192.168.0.30');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...','[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...',
+'harry',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'괌여행 - 가자에어 프레스티지석 / 웨스틴호텔','괌여행 - 가자에어 프레스티지석 / 웨스틴호텔',
+'poter',123,sysdate,'192.168.0.1');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'홍혜진가이드님 세심한 배려에 정말 감사합니다','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gaeeee',2035,sysdate,'192.168.0.2');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'유정수 가이드님 고마웠습니다','유정수 가이드님 고마웠습니다',
+'uuuu12',1039,sysdate,'192.168.0.3');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'황민 가이드님 감사했습니다~','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gogugma1234',985,sysdate,'192.168.0.4');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'위원섭가이드님~섬세한 배려자이십니다~','위원섭가이드님~섬세한 배려자이십니다~',
+'master115',351,sysdate,'192.168.0.5');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'여행은 한권의 책을 읽는 것과 같다~~','여행은 한권의 책을 읽는 것과 같다~~',
+'vand777',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'감사합니다','감사합니다',
+'monkeydluffy',789,sysdate,'192.168.0.7');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부,나이아가라,캐나다 인솔 크리스 리 고마워요','미동부,나이아가라,캐나다 인솔 크리스 리 고마워요',
+'dgjc221',3790,sysdate,'192.168.0.8');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'그날의 여운이 아직도 생생합니다.','그날의 여운이 아직도 생생합니다.',
+'ironman',23,sysdate,'192.168.0.9');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'크루즈여행을 통해 이야기','크루즈여행을 통해 이야기',
+'caution999',867,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부와캐나다여행','미동부와캐나다여행',
+'gary',2353,sysdate,'192.168.0.11');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'10월17-28일 동유럽발칸여행','10월17-28일 동유럽발칸여행',
+'gaeko',5689,sysdate,'192.168.0.12');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...','가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...',
+'hi0933',22,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식','가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식',
+'seif23',99,sysdate,'192.168.0.34');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...','인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...',
+'liewi',99,sysdate,'192.168.0.32');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이','9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이',
+'3943we',123,sysdate,'192.168.0.30');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...','[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...',
+'harry',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'괌여행 - 가자에어 프레스티지석 / 웨스틴호텔','괌여행 - 가자에어 프레스티지석 / 웨스틴호텔',
+'poter',123,sysdate,'192.168.0.1');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'홍혜진가이드님 세심한 배려에 정말 감사합니다','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gaeeee',2035,sysdate,'192.168.0.2');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'유정수 가이드님 고마웠습니다','유정수 가이드님 고마웠습니다',
+'uuuu12',1039,sysdate,'192.168.0.3');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'황민 가이드님 감사했습니다~','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gogugma1234',985,sysdate,'192.168.0.4');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'위원섭가이드님~섬세한 배려자이십니다~','위원섭가이드님~섬세한 배려자이십니다~',
+'master115',351,sysdate,'192.168.0.5');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'여행은 한권의 책을 읽는 것과 같다~~','여행은 한권의 책을 읽는 것과 같다~~',
+'vand777',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'감사합니다','감사합니다',
+'monkeydluffy',789,sysdate,'192.168.0.7');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부,나이아가라,캐나다 인솔 크리스 리 고마워요','미동부,나이아가라,캐나다 인솔 크리스 리 고마워요',
+'dgjc221',3790,sysdate,'192.168.0.8');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'그날의 여운이 아직도 생생합니다.','그날의 여운이 아직도 생생합니다.',
+'ironman',23,sysdate,'192.168.0.9');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'크루즈여행을 통해 이야기','크루즈여행을 통해 이야기',
+'caution999',867,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부와캐나다여행','미동부와캐나다여행',
+'gary',2353,sysdate,'192.168.0.11');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'10월17-28일 동유럽발칸여행','10월17-28일 동유럽발칸여행',
+'gaeko',5689,sysdate,'192.168.0.12');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...','가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...',
+'hi0933',22,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식','가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식',
+'seif23',99,sysdate,'192.168.0.34');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...','인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...',
+'liewi',99,sysdate,'192.168.0.32');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이','9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이',
+'3943we',123,sysdate,'192.168.0.30');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...','[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...',
+'harry',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'괌여행 - 가자에어 프레스티지석 / 웨스틴호텔','괌여행 - 가자에어 프레스티지석 / 웨스틴호텔',
+'poter',123,sysdate,'192.168.0.1');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'홍혜진가이드님 세심한 배려에 정말 감사합니다','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gaeeee',2035,sysdate,'192.168.0.2');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'유정수 가이드님 고마웠습니다','유정수 가이드님 고마웠습니다',
+'uuuu12',1039,sysdate,'192.168.0.3');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'황민 가이드님 감사했습니다~','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gogugma1234',985,sysdate,'192.168.0.4');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'위원섭가이드님~섬세한 배려자이십니다~','위원섭가이드님~섬세한 배려자이십니다~',
+'master115',351,sysdate,'192.168.0.5');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'여행은 한권의 책을 읽는 것과 같다~~','여행은 한권의 책을 읽는 것과 같다~~',
+'vand777',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'감사합니다','감사합니다',
+'monkeydluffy',789,sysdate,'192.168.0.7');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부,나이아가라,캐나다 인솔 크리스 리 고마워요','미동부,나이아가라,캐나다 인솔 크리스 리 고마워요',
+'dgjc221',3790,sysdate,'192.168.0.8');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'그날의 여운이 아직도 생생합니다.','그날의 여운이 아직도 생생합니다.',
+'ironman',23,sysdate,'192.168.0.9');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'크루즈여행을 통해 이야기','크루즈여행을 통해 이야기',
+'caution999',867,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부와캐나다여행','미동부와캐나다여행',
+'gary',2353,sysdate,'192.168.0.11');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'10월17-28일 동유럽발칸여행','10월17-28일 동유럽발칸여행',
+'gaeko',5689,sysdate,'192.168.0.12');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...','가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...',
+'hi0933',22,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식','가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식',
+'seif23',99,sysdate,'192.168.0.34');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...','인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...',
+'liewi',99,sysdate,'192.168.0.32');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이','9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이',
+'3943we',123,sysdate,'192.168.0.30');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...','[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...',
+'harry',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'괌여행 - 가자에어 프레스티지석 / 웨스틴호텔','괌여행 - 가자에어 프레스티지석 / 웨스틴호텔',
+'poter',123,sysdate,'192.168.0.1');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'홍혜진가이드님 세심한 배려에 정말 감사합니다','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gaeeee',2035,sysdate,'192.168.0.2');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'유정수 가이드님 고마웠습니다','유정수 가이드님 고마웠습니다',
+'uuuu12',1039,sysdate,'192.168.0.3');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'황민 가이드님 감사했습니다~','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gogugma1234',985,sysdate,'192.168.0.4');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'위원섭가이드님~섬세한 배려자이십니다~','위원섭가이드님~섬세한 배려자이십니다~',
+'master115',351,sysdate,'192.168.0.5');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'여행은 한권의 책을 읽는 것과 같다~~','여행은 한권의 책을 읽는 것과 같다~~',
+'vand777',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'감사합니다','감사합니다',
+'monkeydluffy',789,sysdate,'192.168.0.7');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부,나이아가라,캐나다 인솔 크리스 리 고마워요','미동부,나이아가라,캐나다 인솔 크리스 리 고마워요',
+'dgjc221',3790,sysdate,'192.168.0.8');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'그날의 여운이 아직도 생생합니다.','그날의 여운이 아직도 생생합니다.',
+'ironman',23,sysdate,'192.168.0.9');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'크루즈여행을 통해 이야기','크루즈여행을 통해 이야기',
+'caution999',867,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부와캐나다여행','미동부와캐나다여행',
+'gary',2353,sysdate,'192.168.0.11');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'10월17-28일 동유럽발칸여행','10월17-28일 동유럽발칸여행',
+'gaeko',5689,sysdate,'192.168.0.12');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...','가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...',
+'hi0933',22,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식','가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식',
+'seif23',99,sysdate,'192.168.0.34');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...','인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...',
+'liewi',99,sysdate,'192.168.0.32');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이','9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이',
+'3943we',123,sysdate,'192.168.0.30');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...','[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...',
+'harry',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'괌여행 - 가자에어 프레스티지석 / 웨스틴호텔','괌여행 - 가자에어 프레스티지석 / 웨스틴호텔',
+'poter',123,sysdate,'192.168.0.1');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'홍혜진가이드님 세심한 배려에 정말 감사합니다','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gaeeee',2035,sysdate,'192.168.0.2');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'유정수 가이드님 고마웠습니다','유정수 가이드님 고마웠습니다',
+'uuuu12',1039,sysdate,'192.168.0.3');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'황민 가이드님 감사했습니다~','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gogugma1234',985,sysdate,'192.168.0.4');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'위원섭가이드님~섬세한 배려자이십니다~','위원섭가이드님~섬세한 배려자이십니다~',
+'master115',351,sysdate,'192.168.0.5');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'여행은 한권의 책을 읽는 것과 같다~~','여행은 한권의 책을 읽는 것과 같다~~',
+'vand777',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'감사합니다','감사합니다',
+'monkeydluffy',789,sysdate,'192.168.0.7');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부,나이아가라,캐나다 인솔 크리스 리 고마워요','미동부,나이아가라,캐나다 인솔 크리스 리 고마워요',
+'dgjc221',3790,sysdate,'192.168.0.8');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'그날의 여운이 아직도 생생합니다.','그날의 여운이 아직도 생생합니다.',
+'ironman',23,sysdate,'192.168.0.9');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'크루즈여행을 통해 이야기','크루즈여행을 통해 이야기',
+'caution999',867,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부와캐나다여행','미동부와캐나다여행',
+'gary',2353,sysdate,'192.168.0.11');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'10월17-28일 동유럽발칸여행','10월17-28일 동유럽발칸여행',
+'gaeko',5689,sysdate,'192.168.0.12');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...','가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...',
+'hi0933',22,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식','가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식',
+'seif23',99,sysdate,'192.168.0.34');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...','인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...',
+'liewi',99,sysdate,'192.168.0.32');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이','9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이',
+'3943we',123,sysdate,'192.168.0.30');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...','[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...',
+'harry',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'괌여행 - 가자에어 프레스티지석 / 웨스틴호텔','괌여행 - 가자에어 프레스티지석 / 웨스틴호텔',
+'poter',123,sysdate,'192.168.0.1');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'홍혜진가이드님 세심한 배려에 정말 감사합니다','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gaeeee',2035,sysdate,'192.168.0.2');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'유정수 가이드님 고마웠습니다','유정수 가이드님 고마웠습니다',
+'uuuu12',1039,sysdate,'192.168.0.3');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'황민 가이드님 감사했습니다~','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gogugma1234',985,sysdate,'192.168.0.4');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'위원섭가이드님~섬세한 배려자이십니다~','위원섭가이드님~섬세한 배려자이십니다~',
+'master115',351,sysdate,'192.168.0.5');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'여행은 한권의 책을 읽는 것과 같다~~','여행은 한권의 책을 읽는 것과 같다~~',
+'vand777',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'감사합니다','감사합니다',
+'monkeydluffy',789,sysdate,'192.168.0.7');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부,나이아가라,캐나다 인솔 크리스 리 고마워요','미동부,나이아가라,캐나다 인솔 크리스 리 고마워요',
+'dgjc221',3790,sysdate,'192.168.0.8');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'그날의 여운이 아직도 생생합니다.','그날의 여운이 아직도 생생합니다.',
+'ironman',23,sysdate,'192.168.0.9');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'크루즈여행을 통해 이야기','크루즈여행을 통해 이야기',
+'caution999',867,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부와캐나다여행','미동부와캐나다여행',
+'gary',2353,sysdate,'192.168.0.11');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'10월17-28일 동유럽발칸여행','10월17-28일 동유럽발칸여행',
+'gaeko',5689,sysdate,'192.168.0.12');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...','가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...',
+'hi0933',22,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식','가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식',
+'seif23',99,sysdate,'192.168.0.34');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...','인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...',
+'liewi',99,sysdate,'192.168.0.32');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이','9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이',
+'3943we',123,sysdate,'192.168.0.30');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...','[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...',
+'harry',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'괌여행 - 가자에어 프레스티지석 / 웨스틴호텔','괌여행 - 가자에어 프레스티지석 / 웨스틴호텔',
+'poter',123,sysdate,'192.168.0.1');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'홍혜진가이드님 세심한 배려에 정말 감사합니다','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gaeeee',2035,sysdate,'192.168.0.2');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'유정수 가이드님 고마웠습니다','유정수 가이드님 고마웠습니다',
+'uuuu12',1039,sysdate,'192.168.0.3');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'황민 가이드님 감사했습니다~','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gogugma1234',985,sysdate,'192.168.0.4');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'위원섭가이드님~섬세한 배려자이십니다~','위원섭가이드님~섬세한 배려자이십니다~',
+'master115',351,sysdate,'192.168.0.5');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'여행은 한권의 책을 읽는 것과 같다~~','여행은 한권의 책을 읽는 것과 같다~~',
+'vand777',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'감사합니다','감사합니다',
+'monkeydluffy',789,sysdate,'192.168.0.7');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부,나이아가라,캐나다 인솔 크리스 리 고마워요','미동부,나이아가라,캐나다 인솔 크리스 리 고마워요',
+'dgjc221',3790,sysdate,'192.168.0.8');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'그날의 여운이 아직도 생생합니다.','그날의 여운이 아직도 생생합니다.',
+'ironman',23,sysdate,'192.168.0.9');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'크루즈여행을 통해 이야기','크루즈여행을 통해 이야기',
+'caution999',867,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부와캐나다여행','미동부와캐나다여행',
+'gary',2353,sysdate,'192.168.0.11');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'10월17-28일 동유럽발칸여행','10월17-28일 동유럽발칸여행',
 'gaeko',5689,sysdate,'192.168.0.12');
 
 ------noticeboard------------------------------------------------------------
+
+
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '10월 국내선 유류할증료', '10월 국내선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '10월 국내선 유류할증료', '10월 국내선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '10월 국내선 유류할증료', '10월 국내선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '10월 국내선 유류할증료', '10월 국내선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '10월 국내선 유류할증료', '10월 국내선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '10월 국내선 유류할증료', '10월 국내선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '10월 국내선 유류할증료', '10월 국내선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '10월 국내선 유류할증료', '10월 국내선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '10월 국내선 유류할증료', '10월 국내선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '10월 국내선 유류할증료', '10월 국내선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '10월 국내선 유류할증료', '10월 국내선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '10월 국내선 유류할증료', '10월 국내선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '10월 국내선 유류할증료', '10월 국내선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '10월 국내선 유류할증료', '10월 국내선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
+
+
+
 
 insert into noticeboard values(noticeboardnum_sq.nextval, 2, '스타얼라이언스 및 제휴 항공사 사후적립요청 접수처 축소', '<div class="list_view_cont">
 <div class="notice_edt_wrap"> 
@@ -1166,18 +1707,3 @@ insert into noticeboard values(noticeboardnum_sq.nextval, 3, '12월 국내선 �
 <p>2019년 12월 1일 ~ 12월 31일 (한국 시각 기준)</p> 
 <p>&nbsp;</p> <br> 감사합니다. </div>
 </div>', 6941, sysdate-67);
-
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '10월 국내선 유류할증료', '10월 국내선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
