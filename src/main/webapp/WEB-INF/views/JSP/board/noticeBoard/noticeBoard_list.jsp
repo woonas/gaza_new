@@ -46,7 +46,7 @@
 				"loadingRecords" : "로딩중...",
 				"processing"     : "잠시만 기다려 주세요...",
 				"infoEmpty"      : "검색된 결과가 없습니다.",
-				"zeroRecords"    : "검색된 결과가 없습니다. 입력한 데이터를 다시 한 번 확인해주세요.",
+				"zeroRecords"    : "검색된 결과가 없습니다. 검색어를 다시 한 번 확인해주세요.",
 				"lengthMenu"     : "_MENU_개씩 보기",
 				"search" : "",
 				"paginate" : {
