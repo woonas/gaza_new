@@ -18,6 +18,11 @@ public class NoticeBoardVO {
 	private int startPage; // 페이지 넘버 시작값
 	private int onePageMax=10; // 한 페이지에 출력할 페이지 번호 수
 	
+	// 이전글 다음글
+	private int prevNum;
+	private String prevSubject;
+	private int nextNum;
+	private String nextSubject;
 
 	public int getNoticeNum() {
 		return noticeNum;
@@ -97,4 +102,29 @@ public class NoticeBoardVO {
 	public void setOnePageMax(int onePageMax) {
 		this.onePageMax = onePageMax;
 	}
+	public int getPrevNum() {
+		return prevNum;
+	}
+	public void setPrevNum(int prevNum) {
+		this.prevNum = prevNum;
+	}
+	public String getPrevSubject() {
+		return prevSubject;
+	}
+	public void setPrevSubject(String prevSubject) {
+		this.prevSubject = prevSubject;
+	}
+	public int getNextNum() {
+		return nextNum;
+	}
+	public void setNextNum(int nextNum) {
+		this.nextNum = nextNum;
+	}
+	public String getNextSubject() {
+		return nextSubject;
+	}
+	public void setNextSubject(String nextSubject) {
+		this.nextSubject = nextSubject;
+	}
+	
 }

@@ -4,10 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" href="../../../CSS/navNfooter.css" type="text/css"/>
-<link rel="stylesheet" href="../../../CSS/board.css" type="text/css"/>
-
+<title>${vo.subject }</title>
+<link rel="stylesheet" href="<%=css %>/board.css" type="text/css"/>
+<script>
+	alert("레코드번호="+${vo.noticeNum}+"마지막번호="+${lastNum});
+</script>
 </head>
 <body>
 	<%@ include file="../../common/nav.jspf" %>
@@ -25,29 +26,40 @@
 		<hr/>
 			<div class="brd_bottom">
 			∧ 다음글
-			<c:if test="${vo.num == vo.totalRecord}" >
-				<a href="#none" onclick="return false;">다음 글이 없습니다.</a>
-			</c:if>
-			<c:if test="${vo.num != vo.totalRecord}">
-				<a href="<%=request.getContextPath()%>/Resources/JSP/board/noticeBoard/noticeBoard_view.do?num=${vo.num+1}&pageNum=${vo.pageNum}">${next}</a>
-			</c:if>
+				<a href="<%=jsp%>/board/noticeBoard/noticeBoard_view?&pageNum=${vo.pageNum}&tabType=${tabType}
+						<c:if test="${nextNum != 0}">
+							&noticeNum=${nextNum}
+						</c:if>
+						" 
+						<c:if test="${nextNum == 0}">
+							onclick="return false"
+						</c:if>
+						>
+						${nextSubject}
+				</a>
 			</div>
 		<hr style="border:1px solid #eee"/>
 			<div class="brd_bottom">
 			∨ 이전글
-			<c:if test="${vo.num != 1}">
-				<a href="<%=request.getContextPath() %>/Resources/JSP/board/noticeBoard/noticeBoard_view.do?num=${vo.num-1}&pageNum=${vo.pageNum}">${prev}</a>
-			</c:if>
-			<c:if test="${vo.num == 1}">
-				<a href="#none" onclick="return false;">이전 글이 없습니다.</a>
-			</c:if>
+				<a href="<%=jsp %>/board/noticeBoard/noticeBoard_view?pageNum=${vo.pageNum}&tabType=${tabType}
+						<c:if test="${prevNum != 0}">
+							&noticeNum=${prevNum}
+						</c:if>
+						" 
+						<c:if test="${prevNum == 0}">
+							onclick="return false"
+						</c:if>
+						>
+						${prevSubject}
+				</a>
 			</div>
 		<hr style="border:1px solid #eee"/>
 		<div id="list_btn">
-			<button class="whiteBtn"><a href="<%=request.getContextPath()%>/Resources/JSP/board/noticeBoard/noticeBoard_list.do?pageNum=${vo.pageNum}">목록보기</a></button>
+			<a href="<%=jsp%>/board/noticeBoard/noticeBoard_list?pageNum=${vo.pageNum}&tabType=${tabType}">
+				<button class="whiteBtn">목록보기</button>
+			</a>
 		</div>
 	</section>
 	<%@ include file="../../common/footer.jspf" %>
-	<script src="../../../JS/common.js"></script>
 </body>
 </html>

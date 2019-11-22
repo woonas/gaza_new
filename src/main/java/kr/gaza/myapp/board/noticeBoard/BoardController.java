@@ -20,9 +20,12 @@ public class BoardController {
 		NoticeBoardInterface dao = sqlSession.getMapper(NoticeBoardInterface.class);
 		NoticeBoardVO vo = new NoticeBoardVO();
 		
+		int totalRecord = dao.noticeBoardTotalRecord(tabType);
+		
 		if(pageNum!=null && !pageNum.equals("")) {
 			vo.setPageNum(Integer.parseInt(pageNum));
 			vo.setTabType(tabType);
+			vo.setTotalRecord(totalRecord);
 		}
 		List<NoticeBoardVO> lst;
 		
@@ -32,6 +35,29 @@ public class BoardController {
 		mav.addObject("vo", vo);
 		mav.addObject("lst", lst);
 		mav.setViewName("JSP/board/noticeBoard/noticeBoard_list");
+		return mav;
+	}
+	//공지사항 글 보기 페이지
+	@RequestMapping("/JSP/board/noticeBoard/noticeBoard_view")
+	public ModelAndView noticeDetailView(@RequestParam("noticeNum") int noticeNum, @RequestParam("pageNum") int pageNum,
+			@RequestParam("tabType") int tabType) {
+		NoticeBoardInterface dao = sqlSession.getMapper(NoticeBoardInterface.class);
+		
+		NoticeBoardVO vo = new NoticeBoardVO();
+		vo.setNoticeNum(noticeNum);
+		vo.setPageNum(pageNum);
+		
+		NoticeBoardVO vo2 = dao.noticeBoardSelect(vo);
+		vo = dao.noticeBoardGetPrevNext(tabType, noticeNum);
+		
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("JSP/board/noticeBoard/noticeBoard_view");
+		mav.addObject("vo", vo2);
+		mav.addObject("tabType", tabType);
+		mav.addObject("prevNum", vo.getPrevNum());
+		mav.addObject("prevSubject", vo.getPrevSubject());
+		mav.addObject("nextNum", vo.getNextNum());
+		mav.addObject("nextSubject", vo.getNextSubject());
 		return mav;
 	}
 }

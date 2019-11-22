@@ -97,7 +97,6 @@
 		//글 타입 태그 추가
 		$(".boardTbl tr:nth-child(1) h4").prepend("<span class='noticeTag'>new</span>");
 		$(".boardTbl tr:nth-child(2) h4").prepend("<span class='noticeTag'>new</span>");
-
 	});
 </script>
 </head>
@@ -145,7 +144,9 @@
 													기타
 												</c:if>
 												</span>
-												<a href="<%=jsp %>/board/board_view?noticeNum=${v.noticeNum}&pageNum=${vo.pageNum}&tabType=${vo.tabType}">${v.subject }</a>
+												<a href="<%=jsp %>/board/noticeBoard/noticeBoard_view?
+														noticeNum=${v.noticeNum}&pageNum=${vo.pageNum}
+														&tabType=${vo.tabType}">${v.subject }</a>
 												<br>
 											</h4>
 											<div class="contentOver">${v.subject }</div>
