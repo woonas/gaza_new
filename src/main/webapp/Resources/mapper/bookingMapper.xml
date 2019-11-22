@@ -35,4 +35,10 @@
         group by
             FLIGHTNUM
     </select>
+
+    <insert id="addPassenger" parameterType="kr.gaza.myapp.flight.booking.PassengerVO">
+        insert into
+            passenger
+        values(passenger_sq.nextval, #{peopleNum}, #{passengerName}, #{passengerBirth}, #{passengerMemberNum}, #{PassengerDiscount}, #{flightNum})
+    </insert>
 </mapper>

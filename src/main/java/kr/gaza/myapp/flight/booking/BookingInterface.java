@@ -10,5 +10,5 @@ public interface BookingInterface {
     ProductVO getProductVO(@Param("from") String from, @Param("to") String to);
     List<FlightVO> getFlightVO(@Param("productNum") int productNum, @Param("flightDate") String flightDate);
     List<Integer> getSeatLeft(@Param("flightList") List<FlightVO> flightList);
-    
+    void addPAssenger(PassengerVO passengerVO);
 }

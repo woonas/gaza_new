@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>항공권 예약 - 운임확인 및 최종동의</title>
-    <link rel="stylesheet" href="../../../CSS/booking.css">
+    <link rel="stylesheet" href="<%=css%>/booking.css">
     <script src="https://kit.fontawesome.com/9c923ac74a.js" crossorigin="anonymous"></script>
     <script>window.onbeforeunload = () => window.scrollTo(0, 0)</script>
 </head>
@@ -39,7 +39,7 @@
                     </div>
                     <div class="col-two-fourth flight-detail">
                         <span><i class="far fa-clock"></i> 1시간 10분</span>
-                        <img src = "../../../IMG/icon/flight-table.svg" alt = "">
+                        <img src = "<%=img%>/icon/flight-table.svg" alt = "">
                         <span>직항</span>
                     </div>
                     <div class="col-fourth">
@@ -69,7 +69,7 @@
                         <div>06:05</div>
                     </div>
                     <div class="col-two-fourth">
-                        <img src = "../../../IMG/icon/flight-table.svg" alt = "">
+                        <img src = "<%=img%>/IMG/icon/flight-table.svg" alt = "">
                     </div>
                     <div class="col-fourth">
                         <div>제주</div>
@@ -248,7 +248,7 @@
         <div id="regulation-2">
             <p><span class="font-blue4">02</span> 서울/김포 <span>→</span> 제주</p>
             <input type="checkbox" class="hidden" id="fold-2" checked>
-            <label for="fold-2"><img src = "../../../IMG/icon/underArrow.png" alt = ""></label>
+            <label for="fold-2"><img src = "<%=img%>/icon/underArrow.png" alt = ""></label>
             <div>
                 <h4>· 운임종류</h4>
                 <div>정상운임 (Y)</div>
@@ -315,10 +315,10 @@
         
         <div class="flex">
             <a href="#" onclick="history.back()"><button class="whiteBtn left">&lt; 이전</button></a>
-            <a href="<%=path %>/Resources/JSP/flight/payment/payment.jsp"><button class="right blueBtn">결제 &gt;</button></a>
+            <a href="<%=jsp%>/flight/payment/payment.jsp"><button class="right blueBtn">결제 &gt;</button></a>
         </div>
     </section>
     <%@ include file="../../common/footer.jspf" %>
-    <script src="../../../JS/booking.js"></script>
+    <script src="<%=js%>/booking.js"></script>
 </body>
 </html>

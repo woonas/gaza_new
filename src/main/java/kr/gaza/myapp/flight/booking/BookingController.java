@@ -143,11 +143,7 @@ public class BookingController {
         modelAndView.addObject("aa", "dd");
         return modelAndView;
     }
-
-
-
-
-
+    
     @GetMapping (value = "/JSP/flight/booking/booking3")
     public ModelAndView bookingView3(HttpServletRequest request) throws UnsupportedEncodingException {
         request.setCharacterEncoding("UTF-8");
@@ -157,7 +153,7 @@ public class BookingController {
         return modelAndView;
     }
 
-    @PostMapping (value = "/JSP/flight/booking/booking4")
+    @GetMapping (value = "/JSP/flight/booking/booking4")
     public ModelAndView bookingView4(HttpServletRequest request) throws UnsupportedEncodingException {
         request.setCharacterEncoding("UTF-8");
         ModelAndView modelAndView = new ModelAndView();

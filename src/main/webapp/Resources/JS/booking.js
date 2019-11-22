@@ -104,6 +104,140 @@ const input_check = () => {
 };
 
 
+function toBooking3(){
+    if (sessionStorage.getItem('prices')) sessionStorage.removeItem('prices');
+    if (sessionStorage.getItem('flightArr')) sessionStorage.removeItem('flightArr');
+    if (sessionStorage.getItem('numOfPassenger')) sessionStorage.removeItem('numOfPassenger');
+    let priceArr = [];
+    let flightArr = [];
+    const numOfPassenger = document.getElementById('num-of-passengers').value;
+    for(var i = 1; i <= document.querySelectorAll('div.journey-wrapper').length; i++) {
+        const target = document.querySelector('input[name=flight-ticket-'+i+']:checked');
+        if(!target) {
+            alert('각 여행별 비행기티켓을 모두 선택해주세요.');
+            return false;
+        }
+        priceArr.push(document.getElementById('lastPrice-'+i).innerText);
+        const targetParent = target.parentElement.parentElement;
+        const cnt = target.parentElement.parentElement.childElementCount;
+        flightArr.push([targetParent.children[cnt-3].value, targetParent.children[cnt-2].value, targetParent.children[cnt-1].value]);
+    }
+    sessionStorage.setItem('prices', JSON.stringify(priceArr));
+    sessionStorage.setItem('flightArr', JSON.stringify(flightArr));
+    sessionStorage.setItem('numOfPassengers', numOfPassenger);
+    return true;
+}
+
+
+// booking 3 view
+function booking3View() {
+    const numOfPassengers = sessionStorage.getItem('numOfPassengers');
+    const passengers = [];
+    passengers.push(numOfPassengers.indexOf('성인'));
+    passengers.push(numOfPassengers.indexOf('소아'));
+    passengers.push(numOfPassengers.indexOf('유아'));
+    let k = 1;
+
+    for (let i = 0; i < passengers.length; i++) {
+        if (passengers[i] !== -1) {
+            document.getElementById('reservation-info').insertAdjacentHTML('beforebegin', `
+            <li class="subtitle">
+                <span>${numOfPassengers.substring(passengers[i],passengers[i]+4)}</span>
+            </li>`);
+            for (let j = 1; j <= numOfPassengers.charAt(passengers[i]+3); j++) {
+                document.getElementById('reservation-info').insertAdjacentHTML('beforebegin', `<div class="table-wrapper" id="table${k++}">
+                    <div class="table-form">
+                        <div class="row clearfix">
+                            <div class="table-row-title">
+                                성
+                            </div>
+                            <div class="two-in-row">
+                                <input type="text" placeholder="한글 성 입력 (예:홍)" name="lastname">
+                            </div>
+                            <div class="table-row-title">
+                                이름
+                            </div>
+                            <div class="two-in-row">
+                                <input type="text" placeholder="한글 이름 입력 (예:길동)" name="firstname">
+                            </div>
+                        </div>
+            
+                        <div class="row clearfix">
+                            <div class="table-row-title">
+                                생년월일
+                            </div>
+                            <div>
+                                <select id="year" name="year" title="생년월일&nbsp;연도" style="width: 200px">
+                                    <option value="">년</option>
+                                </select>
+            
+                                <select id="month" name="month" title="생년월일월" style="width: 200px">
+                                    <option value="">월</option>
+                                </select>
+            
+                                <select id="day" name="day" title="생년월일일" style="width: 200px">
+                                    <option value="">일</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="row clearfix">
+                            <div class="table-row-title">
+                                성별
+                            </div>
+                            <div class="gender-wrapper">
+                                <input type="radio" class="radio3" name="gender-${k}" id="male-${k}" value="M">
+                                <label for="male-${k}">남성</label>
+                                <input type="radio" class="radio3" name="gender-${k}" id="female-${k}" value="F">
+                                <label for="female-${k}">여성</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>`);
+            }
+        }
+    }
+}
+
+function toBooking4() {
+    if (sessionStorage.getItem('passengerArr')) sessionStorage.removeItem('passengerArr');
+    let passengerArr = [];
+    const tables = document.querySelectorAll('.table-wrapper');
+    let isFilled = true;
+    tables.forEach(table => {
+        const lastname = document.querySelector(`#${table.id} input[name=lastname]`).value;
+        const firstname = document.querySelector(`#${table.id} input[name=firstname]`).value;
+        if (!lastname || !firstname) isFilled = false;
+        const name =  lastname + " " + firstname;
+        const birthSelects = document.querySelectorAll(`#${table.id} select`);
+        let birthDate = "";
+        birthSelects.forEach(birthSelect => {
+            if (birthSelect.selectedIndex === 0) isFilled = false;
+            if (birthSelect.name !== 'year') birthDate += "/";
+            birthDate += birthSelect[birthSelect.selectedIndex].value;
+        });
+        const gender = document.querySelector(`#${table.id} input[name^=gender-]:checked`);
+        if (!gender) isFilled = false;
+        else passengerArr.push([name, birthDate, gender.value]);
+    });
+    const emailDomain = document.getElementById('emailDomain');
+    const emailAddress = document.getElementById('emailAddress');
+    let emailFull;
+    if (emailDomain.selectedIndex === 0) {
+        emailFull = emailAddress + document.getElementById('emailDomainText').value;
+    } else {
+        emailFull = emailAddress + emailDomain[emailDomain.selectedIndex].value;
+
+    }
+
+    if (isFilled) {
+        sessionStorage.setItem('passengerArr', JSON.stringify(passengerArr));
+        return true;
+    } else {
+        alert("모든 입력칸을 완성해주십시오.");
+        return false;
+    }
+}
 
 (() => {
     if(location.pathname.indexOf('booking1') !== -1) {
@@ -326,7 +460,8 @@ const input_check = () => {
                     tempText += `</div></div><div class="col-three-fifth"><span class="people-type">(성인 ${adultNum})</span><span>${(price * adultNum).toLocaleString()}</span>`;
                     if (childNum !== " ") tempText += `<span>+</span><span class="people-type">(소아 ${childNum})</span><span>${(price / 200 * 100 * childNum).toLocaleString()}</span>`;
                     if (infantNum !== " ") tempText += `<span>+</span><span class="people-type">(유아 ${infantNum})</span><span>0</span>`;
-                    tempText += `<span>=</span> KRW ${((price * adultNum) + (price / 200 * 100 * childNum)).toLocaleString()}</div></td>`;
+                    const index = e.target.htmlFor.charAt(8);
+                    tempText += `<span>=</span> KRW <span id="lastPrice-${index}">${((price * adultNum) + (price / 200 * 100 * childNum)).toLocaleString()}</span></div></td>`;
                     tableRow.innerHTML = tempText;
                     insertAfter(parent.parentElement, tableRow);
                     e.target.parentElement.classList.add('selected-ticket');
@@ -464,8 +599,18 @@ const input_check = () => {
     }
 
     else if (location.pathname.indexOf('booking3') !== -1) {
-        hintWindow('membership-hint');
+        booking3View();
         birth_option_generator();
+
+        const emailSelect = document.getElementById("emailDomain");
+        const emailDomainText = document.getElementById("emailDomainText");
+        emailSelect.addEventListener('change', () => {
+            if (emailSelect.selectedIndex === 0) emailDomainText.removeAttribute('disabled');
+            else {
+                emailDomainText.value = "";
+                emailDomainText.setAttribute('disabled', 'disabled');
+            }
+        });
 
         const input = document.getElementById("phone");
         window.intlTelInput(input, {
@@ -474,5 +619,7 @@ const input_check = () => {
             preferredCountries: ['kr', 'us', 'cn'],
             utilsScript: "../../../Vendor/intl-tel-input-16.0.0/build/js/utils.js",
         });
+
+
     }
 })();
