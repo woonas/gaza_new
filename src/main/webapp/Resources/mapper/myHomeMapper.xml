@@ -18,11 +18,11 @@
 	<select id="orderNumList" resultType="kr.gaza.myapp.myhome.MyHomeVO">
 		select ordernum from payment where membernum=#{memberNum} order by paydate desc
 	</select>
-	<select id="flightList" resultType="kr.gaza.myapp.myhome.MyHomeVO">
+	<select id="flightList" resultType="int">
 		select flightnum from orderedflight where ordernum=#{orderNum}
 	</select>
 	<select id="flightInfo" resultType="kr.gaza.myapp.myhome.MyHomeVO">
-		select airplanename, productnum, departtime, arrivetime from flight where flightnum=#{flightNum} order by departtime desc
+		select airplanename, productnum, departtime, arrivetime from flight where flightnum=#{flightNum}
 	</select>
 	<select id="DepAri" resultType="kr.gaza.myapp.myhome.MyHomeVO">
 		select depart, arrive from product where productnum=#{productNum}

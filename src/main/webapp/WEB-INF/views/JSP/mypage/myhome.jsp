@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -37,8 +40,8 @@
                     </div>
                 </div>
                 <div id="boarding">
-                    <div>가자에어 탑승 <span>1</span></div>
-                    <div>가자에어외 탑승 <span>2</span></div>
+                    <div>가자에어 탑승 <span>${vo.memberFlightCnt }</span></div>
+                    <div>가자에어외 탑승 <span>0</span></div>
                     <div>일반 제휴 및 기타 <span>0</span></div>
                 </div>
                 <div class="circle">
@@ -115,40 +118,46 @@
                                 <thead>
                                     <tr>
                                         <th>여정</th>
-                                        <th>일자</th>
+                                        <th>출발 일자</th>
                                         <th>출발 - 도착지</th>
-                                        <th>출발 - 도착 시간</th>
+                                        <th>도착 일자</th>
                                         <th>편명</th>
                                         <th>상세 보기</th>
                                     </tr>
                                 </thead>
-                                <c:forEach var="vo" items="${flightI }">
                                 <tbody>
+                           
+                                <c:forEach var="i" begin="1" end="3" step="1">
+                                <fmt:parseDate value="${flightI[i-1].departTime}" pattern="yyyy-MM-dd HH:mm" var="depart"/>
+                                <fmt:formatDate var="date1" pattern="yyyy-MM-dd HH:mm" value="${depart }"/>
+                                <fmt:parseDate value="${flightI[i-1].arriveTime}" pattern="yyyy-MM-dd HH:mm" var="arrive"/>
+                                 <fmt:formatDate var="arriveTime" pattern="yyyy-MM-dd HH:mm" value="${arrive }"/>  
                                     <tr>
                                         <td>
-                                            <div>01</div>
+                                            <div>${i }</div>
                                         </td>
                                         <td>
-                                            <div>${vo.departTime }</div>
+                                            <div>${date1 }</div>
                                         </td>
-                                        <c:forEach var="s" items="${flightDepAri }">
+                                        
                                         <td>
-                                            <div>${s.depart } → ${s.arrive }</div>
+                                            <div>${flightI[i-1].depart } → ${flightI[i-1].arrive }</div>
                                         </td>
-                                        </c:forEach>
+                                        
                                         <td>
-                                            <div>${vo.departTime } → ${vo.arriveTime }</div>
+                                            <div>${arriveTime }</div>
                                         </td>
                                         <td>
-                                            <div>${vo.airplaneName }</div>
+                                            <div>${flightI[i-1].airplaneName }</div>
                                         </td>
                                         <td>
                                             <div><a href="reserveStatus.html"><input type="button" class="blueBtn" value="상세보기"
                                                                                      id="detail1"></a></div>
                                         </td>
                                     </tr>
+                                   </c:forEach> 
                                 </tbody>
-                                </c:forEach>
+                               
                             </table>
                         </div>
                     </div>
@@ -192,12 +201,12 @@
             </div>
         </section>
         <div style="height: 150px; background-color: #fff; clear:both;"></div>
+         <%@ include file="../common/footer.jspf" %>
         <script src="https://rawgit.com/kottenator/jquery-circle-progress/1.2.1/dist/circle-progress.js"></script>
-        <script src="<%=request.getContextPath() %>/Resources/JS/common.js"></script>
         <script type="text/javascript">
-        	let my_mileage = ${myMiles};
+        	//let my_mileage = ${myMiles};
         </script>
         <script src="<%=request.getContextPath() %>/Resources/JS/mypage.js"></script>
-        <%@ include file="../common/footer.jspf" %>
+       
     </body>
 </html>

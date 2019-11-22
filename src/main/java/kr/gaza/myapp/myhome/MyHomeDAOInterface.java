@@ -13,9 +13,9 @@ public interface MyHomeDAOInterface {
 	
 	public List<MyHomeVO> orderNumList(int memberNum);
 	
-	public List<MyHomeVO> flightList(int orderNum);
+	public int flightList(int orderNum);
 	
-	public List<MyHomeVO> flightInfo(int flightNum);
+	public MyHomeVO flightInfo(int flightNum);
 	
 	public MyHomeVO DepAri(int productNum);
 }
