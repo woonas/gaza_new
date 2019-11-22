@@ -7,4 +7,9 @@
 	insert into admin(adminnum, adminid, adminpwd, adminname, admintel, adminemail, adminregdate)
 		values(adminnum_sq.nextval, #{adminId}, #{adminPwd}, #{adminName}, #{adminTel}, #{adminEmail}, sysdate)
 </insert>
+
+<insert id="insertAirport" parameterType="kr.gaza.myapp.aviation.airport.AirportVO">
+	insert into airport(airportnum, iata, city, continent, latitude, longitude, cityimg)
+		values(airport_sq.nextval, #{iata}, #{city}, #{contitnent}, #{latitude}, #{longitude}, #{cityImg})
+</insert>
 </mapper>

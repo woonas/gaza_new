@@ -20,11 +20,12 @@
                                             <col-group>
                                                 <col width="10%">
                                                 <col width="10%">
-                                                <col width="16%">
-                                                <col width="16%">
-                                                <col width="16%">
-                                                <col width="16%">
-                                                <col width="16%">
+                                                <col width="10%">
+                                                <col width="10%">
+                                                <col width="10%">
+                                                <col width="10%">
+                                                <col width="10%">
+                                                <col>
                                             </col-group>
                                             <thead>
                                                 <tr>
@@ -35,6 +36,7 @@
                                                     <th>관리자번호</th>
                                                     <th>이메일</th>
                                                     <th>등록일</th>
+                                                    <th>삭제</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -47,6 +49,7 @@
                                                     <td class="center">${vo.adminTel }</td>
                                                     <td class="center">${vo.adminEmail }</td>
                                                     <td>${vo.adminEmail }</td>
+                                                    <td><input type="button" value="삭제"/></td>
                                                 </tr>
                                                 </c:forEach>
                                             </tbody>
