@@ -4,10 +4,31 @@ insert into member values(membernum_sq.nextval, 'test3333', 'qwerqwer1', '홍 �
 
 set define off;
 -----airplane---------------------------------------------------------------------------
-INSERT INTO airplane VALUES('GZ777',250);
-INSERT INTO airplane VALUES('GZ815',250);
-INSERT INTO airplane VALUES('GZ999',250);
-INSERT INTO airplane VALUES('GZ000',250);
+INSERT INTO airplane VALUES('GZ123',270);
+INSERT INTO airplane VALUES('GZ567',270);
+INSERT INTO airplane VALUES('GZ890',270);
+INSERT INTO airplane VALUES('GZ127',270);
+INSERT INTO airplane VALUES('GZ356',270);
+INSERT INTO airplane VALUES('GZ661',270);
+INSERT INTO airplane VALUES('GZ780',270);
+INSERT INTO airplane VALUES('GZ111',270);
+INSERT INTO airplane VALUES('GZ222',270);
+INSERT INTO airplane VALUES('GZ103',270);
+INSERT INTO airplane VALUES('GZ555',270);
+INSERT INTO airplane VALUES('GZ301',270);
+INSERT INTO airplane VALUES('GZ777',270);
+INSERT INTO airplane VALUES('GZ888',270);
+INSERT INTO airplane VALUES('GZ999',270);
+INSERT INTO airplane VALUES('GZ815',270);
+INSERT INTO airplane VALUES('GZ005',270);
+INSERT INTO airplane VALUES('GZ007',270);
+INSERT INTO airplane VALUES('GZ009',270);
+INSERT INTO airplane VALUES('GZ010',270);
+INSERT INTO airplane VALUES('GZ017',270);
+INSERT INTO airplane VALUES('GZ013',270);
+INSERT INTO airplane VALUES('GZ129',270);
+INSERT INTO airplane VALUES('GZ916',270);
+INSERT INTO airplane VALUES('GZ712',270);
 
 -----airport---------------------------------------------------------------------------
 INSERT INTO airport VALUES(airportnum_sq.nextval,'NGO','나고야','동아시아','34.858618','136.811189','/new_product_img/saipan.jpg');
@@ -141,11 +162,16 @@ INSERT INTO airport VALUES(airportnum_sq.nextval,'AUH','아부다비','중동/�
 INSERT INTO airport VALUES(airportnum_sq.nextval,'TLV','텔아비브','중동/아프리카','32.005505','34.8854','/new_product_img/saipan.jpg');
 
 -----product---------------------------------------------------------------------------
-INSERT INTO product VALUES(productnum_sq.nextval,'ICN','JFK',1500000,0,0,sysdate);
-INSERT INTO product VALUES(productnum_sq.nextval,'GMP','CJU',128400,0,0,sysdate);
-INSERT INTO product VALUES(productnum_sq.nextval,'GMP','PUS',81400,0,0,sysdate);
-INSERT INTO product VALUES(productnum_sq.nextval,'ICN','DAD',311000,0,0,sysdate);
-INSERT INTO product VALUES(productnum_sq.nextval,'ICN','VVO',511000,0,0,sysdate);
+INSERT INTO product VALUES(productnum_sq.nextval,'ICN','PRG',1548900,1395,0.8,sysdate);
+INSERT INTO product VALUES(productnum_sq.nextval,'GMP','CJU',51500,2089,0.99,sysdate);
+INSERT INTO product VALUES(productnum_sq.nextval,'ICN','ULN',313400,873,0.9,sysdate);
+INSERT INTO product VALUES(productnum_sq.nextval,'ICN','CEB',366000,1287,0.95,sysdate);
+INSERT INTO product VALUES(productnum_sq.nextval,'ICN','JFK',1407800,589,0.85,sysdate);
+INSERT INTO product VALUES(productnum_sq.nextval,'LHR','ICN',1395000,312,0.82,sysdate);
+INSERT INTO product VALUES(productnum_sq.nextval,'CEB','ICN',488500,678,0.9,sysdate);
+INSERT INTO product VALUES(productnum_sq.nextval,'ROR','ICN',631800,512,0.97,sysdate);
+INSERT INTO product VALUES(productnum_sq.nextval,'LAX','ICN',2805900,839,0.79,sysdate);
+INSERT INTO product VALUES(productnum_sq.nextval,'ULN','ICN',322000,719,0.95,sysdate);
 
 -----recommandProduct-----------------------------------------------------------------
 INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,1,sysdate);
