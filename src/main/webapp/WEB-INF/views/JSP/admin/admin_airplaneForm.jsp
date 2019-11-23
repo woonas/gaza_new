@@ -6,7 +6,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12">
-                            <h1 class="page-header">제목</h1>
+                            <h1 class="page-header">비행기 추가</h1>
                         </div>
                     </div>
                     
@@ -14,13 +14,10 @@
                         <div class="col-lg-12">	
                             <div class="panel panel-default">
                                 <div class="panel-body">
-                                    <form method="post" action="adminAddOk">
-										아이디: <input type="text" name="adminId"><br/>
-										비밀번호: <input type="text" name="adminPwd"><br/>
-										관리자이름: <input type="text" name="adminName"><br/>
-										관리자번호: <input type="text" name="adminTel"><br/>
-										이메일: <input type="text" name="adminEmail"><br>
-										<input type="submit" name="adminAdd" value="관리자 추가"><br/>
+                                    <form method="post" action="airplaneAddOk">
+										기종: <input type="text" name="airplaneName"><br/>
+										총좌석수: <input type="text" name="seatMax"><br/>
+										<input type="submit" name="airplaneAdd" value="비행기 추가"><br/>
 									</form>
                                 </div>
                                 <!-- /.panel-body -->

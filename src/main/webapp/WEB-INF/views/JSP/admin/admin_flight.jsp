@@ -7,7 +7,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <h1 class="page-header">여정(flight)</h1>
-                            <input type="button" id="addBtn" value="추가">
+                            <a href="<%=jsp%>/admin/admin_flightForm"><input type="button" id="addBtn" value="추가"></a>
                         </div>
                     </div>
                     
@@ -33,6 +33,7 @@
                                                     <th>출발시간</th>
                                                     <th>도착시간</th>
                                                     <th>할인율</th>
+                                                    <th>삭제</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -44,6 +45,7 @@
                                                     <td class="center">${vo.departTime }</td>
                                                     <td class="center">${vo.arriveTime }</td>
                                                     <td class="center">${vo.flightSale }</td>
+                                                    <td><a href="flightDel?flightNum=${vo.flightNum}">삭제</a></td>
                                                 </tr>
                                                 </c:forEach>
                                             </tbody>

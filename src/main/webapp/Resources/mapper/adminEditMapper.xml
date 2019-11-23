@@ -8,12 +8,38 @@
 		values(adminnum_sq.nextval, #{adminId}, #{adminPwd}, #{adminName}, #{adminTel}, #{adminEmail}, sysdate)
 </insert>
 
-<insert id="insertAirport" parameterType="kr.gaza.myapp.aviation.airport.AirportVO">
-	insert into airport(airportnum, iata, city, continent, latitude, longitude, cityimg)
-		values(airport_sq.nextval, #{iata}, #{city}, #{contitnent}, #{latitude}, #{longitude}, #{cityImg})
-</insert>
-
 <delete id="deleteAdmin">
 		delete from admin where adminnum=#{adminNum} 
+</delete>
+
+<insert id="insertAirport" parameterType="kr.gaza.myapp.aviation.airport.AirportVO">
+	insert into airport(airportnum, iata, city, continent, latitude, longitude, cityimg)
+		values(airport_sq.nextval, #{IATA}, #{city}, #{continent}, #{latitude}, #{longitude}, #{cityImg})
+</insert>
+
+<delete id="deleteAirport">
+		delete from airport where airportnum=#{airportNum} 
+</delete>
+
+<insert id="insertAirplane" parameterType="kr.gaza.myapp.aviation.airplane.AirplaneVO">
+	insert into airplane(airplanename, seatmax) values(#{airplaneName}, #{seatMax})
+</insert>
+
+<insert id="insertProduct" parameterType="kr.gaza.myapp.aviation.product.ProductVO">
+	insert into product(productnum, depart, arrive, price, productcnt, sale, regdate) 
+		values(productnum_sq.nextval, #{depart}, #{arrive}, #{price}, #{productCnt}, #{productSale}, sysdate)
+</insert>
+
+<delete id="deleteProduct">
+		delete from product where productnum=#{productNum} 
+</delete>
+
+<insert id="insertFlight" parameterType="kr.gaza.myapp.aviation.flight.FlightVO">
+	insert into flight(flightnum, airplanename, productnum, departtime, arrivetime, sale) 
+		values(flightnum_sq.nextval, #{airplaneName}, #{productNum}, #{departTime}, #{arriveTime}, #{flightSale})
+</insert>
+
+<delete id="deleteFlight">
+		delete from flight where flightnum=#{flightNum} 
 </delete>
 </mapper>

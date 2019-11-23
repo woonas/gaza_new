@@ -10,7 +10,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import kr.gaza.myapp.aviation.airplane.AirplaneVO;
 import kr.gaza.myapp.aviation.airport.AirportVO;
+import kr.gaza.myapp.aviation.flight.FlightVO;
+import kr.gaza.myapp.aviation.product.ProductVO;
 
 @Controller
 public class AdminEditController {
@@ -39,27 +42,6 @@ public class AdminEditController {
 	}
 	
 	
-	@RequestMapping("/JSP/admin/admin_airportForm")
-	public String AdminAirportForm() {
-		return "JSP/admin/admin_airportForm";
-	}
-	
-	//에어포트 추가
-	@RequestMapping(value="/JSP/admin/airpotAddOk",method=RequestMethod.POST)
-	public ModelAndView AdminAirpotAddOk(AirportVO vo, HttpServletRequest req) {
-		
-		AdminEditInterface dao = sqlSession.getMapper(AdminEditInterface.class);
-		int cnt = dao.insertAirport(vo);
-			
-		ModelAndView mav = new ModelAndView();
-		if(cnt>0) {
-			mav.setViewName("redirect:admin_airport");
-		}else {
-			mav.setViewName("redirect:admin_editForm");
-		}
-		return mav;
-	}
-	
 	//어드민 삭제
 	@RequestMapping("/JSP/admin/del")
 	public ModelAndView AdminDelete(@RequestParam("adminNum") int adminNum) {
@@ -75,4 +57,149 @@ public class AdminEditController {
 		}
 		return mav;
 	}
+	
+	
+	//에어포트 수정폼 이동
+	@RequestMapping("/JSP/admin/admin_airportForm")
+	public String AdminAirportForm() {
+		return "JSP/admin/admin_airportForm";
+	}
+	
+		
+	//에어포트 추가
+	@RequestMapping(value="/JSP/admin/airportAddOk",method=RequestMethod.POST)
+	public ModelAndView AdminAirpotAddOk(AirportVO vo, HttpServletRequest req) {
+		
+		AdminEditInterface dao = sqlSession.getMapper(AdminEditInterface.class);
+		int cnt = dao.insertAirport(vo);
+			
+		ModelAndView mav = new ModelAndView();
+		if(cnt>0) {
+			mav.setViewName("redirect:admin_airport");
+		}else {
+			mav.setViewName("redirect:admin_airportForm");
+		}
+		return mav;
+	}
+	
+	
+	//에어포트 삭제
+		@RequestMapping("/JSP/admin/airportDel")
+		public ModelAndView AirportDelete(@RequestParam("airportNum") int airportNum) {
+			AdminEditInterface dao = sqlSession.getMapper(AdminEditInterface.class);
+			int cnt = dao.deleteAirport(airportNum);
+			
+			ModelAndView mav = new ModelAndView();
+			if(cnt>0) { // 삭제성공
+				mav.setViewName("redirect:admin_airport");
+			}else { //삭제 실패
+				mav.addObject("adminNum",airportNum);
+				mav.setViewName("redirect:admin");
+			}
+			return mav;
+		}
+		
+		
+		//에어플레인 수정폼 이동
+		@RequestMapping("/JSP/admin/admin_airplaneForm")
+		public String AdminAirplaneForm() {
+			return "JSP/admin/admin_airplaneForm";
+		}
+		
+			
+		//에어플레인 추가
+		@RequestMapping(value="/JSP/admin/airplaneAddOk",method=RequestMethod.POST)
+		public ModelAndView AdminAirplaneAddOk(AirplaneVO vo, HttpServletRequest req) {
+			
+			AdminEditInterface dao = sqlSession.getMapper(AdminEditInterface.class);
+			int cnt = dao.insertAirplane(vo);
+				
+			ModelAndView mav = new ModelAndView();
+			if(cnt>0) {
+				mav.setViewName("redirect:admin_airplane");
+			}else {
+				mav.setViewName("redirect:admin");
+			}
+			return mav;
+		}
+		
+		//프로덕트 수정폼 이동
+		@RequestMapping("/JSP/admin/admin_productForm")
+		public String AdminProductForm() {
+			return "JSP/admin/admin_productForm";
+		}
+		
+			
+		//프로덕트 추가
+		@RequestMapping(value="/JSP/admin/productAddOk",method=RequestMethod.POST)
+		public ModelAndView AdminProductAddOk(ProductVO vo, HttpServletRequest req) {
+			
+			AdminEditInterface dao = sqlSession.getMapper(AdminEditInterface.class);
+			int cnt = dao.insertProduct(vo);
+				
+			ModelAndView mav = new ModelAndView();
+			if(cnt>0) {
+				mav.setViewName("redirect:admin_product");
+			}else {
+				mav.setViewName("redirect:admin");
+			}
+			return mav;
+		}
+		
+		
+		//프로덕트 삭제
+			@RequestMapping("/JSP/admin/productDel")
+			public ModelAndView productDelete(@RequestParam("productNum") int productNum) {
+				AdminEditInterface dao = sqlSession.getMapper(AdminEditInterface.class);
+				int cnt = dao.deleteProduct(productNum);
+				
+				ModelAndView mav = new ModelAndView();
+				if(cnt>0) { // 삭제성공
+					mav.setViewName("redirect:admin_product");
+				}else { //삭제 실패
+					mav.addObject("adminNum",productNum);
+					mav.setViewName("redirect:admin");
+				}
+				return mav;
+			}
+			
+			//플라이트 수정폼 이동
+			@RequestMapping("/JSP/admin/admin_flightForm")
+			public String AdminFlightForm() {
+				return "JSP/admin/admin_flightForm";
+			}
+			
+				
+			//프로덕트 추가
+			@RequestMapping(value="/JSP/admin/flightAddOk",method=RequestMethod.POST)
+			public ModelAndView AdminFlightAddOk(FlightVO vo, HttpServletRequest req) {
+				
+				AdminEditInterface dao = sqlSession.getMapper(AdminEditInterface.class);
+				int cnt = dao.insertFlight(vo);
+					
+				ModelAndView mav = new ModelAndView();
+				if(cnt>0) {
+					mav.setViewName("redirect:admin_flight");
+				}else {
+					mav.setViewName("redirect:admin");
+				}
+				return mav;
+			}
+			
+			
+			//플라이트 삭제
+				@RequestMapping("/JSP/admin/flightDel")
+				public ModelAndView flightDelete(@RequestParam("flightNum") int flightNum) {
+					AdminEditInterface dao = sqlSession.getMapper(AdminEditInterface.class);
+					int cnt = dao.deleteFlight(flightNum);
+					
+					ModelAndView mav = new ModelAndView();
+					if(cnt>0) { // 삭제성공
+						mav.setViewName("redirect:admin_flight");
+					}else { //삭제 실패
+						mav.addObject("adminNum",flightNum);
+						mav.setViewName("redirect:admin");
+					}
+					return mav;
+				}
 }

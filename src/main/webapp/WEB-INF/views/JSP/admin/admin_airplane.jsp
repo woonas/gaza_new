@@ -7,7 +7,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <h1 class="page-header">비행기(Airplane)</h1>
-                            <input type="button" id="addBtn" value="추가">
+                            <a href="<%=jsp%>/admin/admin_airplaneForm"><input type="button" id="addBtn" value="추가"></a>
                         </div>
                     </div>
                     

@@ -14,13 +14,13 @@
                         <div class="col-lg-12">	
                             <div class="panel panel-default">
                                 <div class="panel-body">
-                                    <form method="post" action="adminAddOk">
-										아이디: <input type="text" name="adminId"><br/>
-										비밀번호: <input type="text" name="adminPwd"><br/>
-										관리자이름: <input type="text" name="adminName"><br/>
-										관리자번호: <input type="text" name="adminTel"><br/>
-										이메일: <input type="text" name="adminEmail"><br>
-										<input type="submit" name="adminAdd" value="관리자 추가"><br/>
+                                    <form method="post" action="flightAddOk">
+										기종: <input type="text" name="airplaneName"><br/>
+										상품번호: <input type="text" name="productNum"><br/>
+										출발시간: <input type="text" name="departTime"><br/>
+										도착시간: <input type="text" name="arriveTime"><br/>
+										할인율: <input type="text" name="flightSale"><br>
+										<input type="submit" name="flightAdd" value="비행여정 추가"><br/>
 									</form>
                                 </div>
                                 <!-- /.panel-body -->

@@ -14,13 +14,13 @@
                         <div class="col-lg-12">	
                             <div class="panel panel-default">
                                 <div class="panel-body">
-                                    <form method="post" action="adminAddOk">
-										아이디: <input type="text" name="adminId"><br/>
-										비밀번호: <input type="text" name="adminPwd"><br/>
-										관리자이름: <input type="text" name="adminName"><br/>
-										관리자번호: <input type="text" name="adminTel"><br/>
-										이메일: <input type="text" name="adminEmail"><br>
-										<input type="submit" name="adminAdd" value="관리자 추가"><br/>
+                                    <form method="post" action="productAddOk">
+										출발지: <input type="text" name="depart"><br/>
+										도착지: <input type="text" name="arrive"><br/>
+										가격: <input type="text" name="price"><br/>
+										예매횟수: <input type="text" name="productCnt"><br/>
+										할인: <input type="text" name="productSale"><br>
+										<input type="submit" name="adminAdd" value="여행상품 추가"><br/>
 									</form>
                                 </div>
                                 <!-- /.panel-body -->
