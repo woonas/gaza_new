@@ -1,8 +1,8 @@
 set define off;
+
 -----member---------------------------------------------------------------------------
 insert into member values(membernum_sq.nextval, 'test3333', 'qwerqwer1', '홍 길동', 'gildong hong', 'South Korea (대한민국)', 'M', '010-3333-3333', '없음', '13480', '경기 성남시 분당구 대왕판교로 477', '111-11', 'test@naver.com', '2019/10/15', 'on/off', 'on/off', 10, sysdate);
 
-set define off;
 -----airplane---------------------------------------------------------------------------
 INSERT INTO airplane VALUES('GZ123',270);
 INSERT INTO airplane VALUES('GZ567',270);
@@ -179,268 +179,10 @@ INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,2,sysdate);
 INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,3,sysdate);
 INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,4,sysdate);
 
------flight---------------------------------------------------------------------------
-INSERT INTO flight VALUES(flightnum_sq.nextval,1,1,'2019-11-02 12:50','2019-11-02 14:00',0);
-INSERT INTO flight VALUES(flightnum_sq.nextval,2,2,'2019-11-03 08:50','2019-11-04 10:00',0);
-INSERT INTO flight VALUES(flightnum_sq.nextval,3,3,'2019-11-04 12:50','2019-11-04 00:50',0);
-INSERT INTO flight VALUES(flightnum_sq.nextval,4,4,'2019-11-05 12:00','2019-11-02 16:40',0);
-
 -----seat---------------------------------------------------------------------------
 INSERT INTO seat VALUES(1,'퍼스트');
 INSERT INTO seat VALUES(2,'비지니스');
 INSERT INTO seat VALUES(3,'이코노미');
-
------seatreserve---------------------------------------------------------------------------
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,1,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,2,1);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,3,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,4,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,5,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,6,1);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,7,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,8,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,9,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,10,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,11,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,12,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,13,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,14,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,15,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,16,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,17,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,18,1);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,19,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,20,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,21,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,22,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,23,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,24,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,25,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,26,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,27,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,28,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,29,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,30,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,31,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,32,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,33,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,34,1);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,35,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,36,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,37,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,38,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,39,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,40,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,41,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,42,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,43,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,44,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,45,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,46,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,47,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,48,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,49,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,50,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,51,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,52,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,53,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,54,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,55,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,56,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,57,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,58,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,59,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,60,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,61,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,62,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,63,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,64,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,65,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,66,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,67,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,68,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,69,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,70,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,71,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,72,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,73,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,74,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,75,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,76,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,77,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,78,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,79,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,80,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,81,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,82,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,83,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,84,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,85,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,86,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,87,1);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,88,1);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,89,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,90,1);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,91,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,92,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,93,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,94,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,95,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,96,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,97,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,98,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,99,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,100,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,101,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,102,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,103,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,104,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,105,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,106,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,107,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,108,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,109,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,110,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,111,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,112,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,113,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,114,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,115,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,116,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,117,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,118,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,119,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,120,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,121,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,122,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,123,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,124,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,125,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,126,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,127,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,128,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,129,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,130,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,131,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,132,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,133,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,134,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,135,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,136,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,137,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,138,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,139,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,140,1);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,141,1);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,142,1);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,143,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,144,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,145,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,146,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,147,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,148,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,149,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,150,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,151,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,152,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,153,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,154,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,155,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,156,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,157,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,158,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,159,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,160,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,161,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,162,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,163,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,164,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,165,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,166,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,167,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,168,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,169,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,170,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,171,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,172,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,173,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,174,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,175,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,176,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,177,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,178,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,179,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,180,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,181,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,182,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,183,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,184,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,185,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,186,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,187,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,188,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,189,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,190,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,191,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,192,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,193,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,194,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,195,1);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,196,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,197,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,198,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,199,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,200,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,201,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,202,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,203,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,204,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,205,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,206,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,207,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,208,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,209,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,210,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,211,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,212,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,213,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,214,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,215,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,216,1);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,217,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,218,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,219,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,220,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,221,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,222,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,223,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,224,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,225,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,226,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,227,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,228,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,229,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,230,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,231,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,232,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,233,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,234,1);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,235,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,236,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,237,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,238,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,239,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,240,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,241,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,242,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,243,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,244,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,245,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,246,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,247,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,248,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,249,0);
-INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,1,3,250,0);
 
 -----people---------------------------------------------------------------------------
 INSERT INTO people VALUES(1,'성인',1);
@@ -527,6 +269,22 @@ INSERT INTO event VALUES(eventnum_sq.nextval,'신한카드와 함께!','/event/e
 항공마일리지와 사은품','신한은행','2019-10-29','2019-12-20',sysdate);
 
 ----reviewboard---------------------------------------------------------------------------
+insert into reviewboard values(reviewboardnum_sq.nextval,1,'홈페이지에서 구매 후 운임영수증을 출력할 수 있나요',
+'홈페이지에서 로그인 후  구매하신 항공권 운임 영수증은 로그인 하신 후 예약>예약조회>항공권 구매내역에서 영수증 출력이 가능합니다.','test333',10,sysdate,'192.168.0.10');
+
+insert into reviewboard values(reviewboardnum_sq.nextval,1,'저 대신 다른 사람이 제 예약으로 갈 수는 없나요?',
+'예약된 승객(탑승자)의 이름은 변경할 수 없습니다. 항공권은 탑승자 실명 예약으로, 탑승자의 이름 변경 시 기존의 예약을 취소하신 후 실제 탑승 승객의 이름으로 다시 예약 하셔야 합니다.','test333',11,sysdate,'192.168.0.10');
+
+insert into reviewboard values(reviewboardnum_sq.nextval,1,'마일리지 항공권은 어떻게 발급 받나요?',
+'가자에어 홈페이지 또는 예약영업센터를 통해 예약하실 수 있습니다.예약영업센터에서 예약 하시는 경우 반드시 마일리지 여행임을 말씀해 주시기 바라며, 안내 받으신 마일리지 항공권 발권 시한(Ticket Time Limit)까지 가자에어 홈페이지 및 모바일을 통해 발급 가능합니다.','test333',8,sysdate,'192.168.0.10');
+
+insert into reviewboard values(reviewboardnum_sq.nextval,1,'예약확인을 하려면 예약번호를 반드시 알아야 하나요?',
+'온라인 예약조회는 로그인 예약조회와 비로그인 예약조회로 운영되고 있습니다. 로그인 예약조회는 예약기록에 회원정보가 입력되어 있는 경우 이용 가능하며 예약번호를 모르시더라도 로그인하신 후 일정 재확인을 하실 수 있습니다.
+비로그인 예약조회는 예약기록에 회원정보가 없는 경우 이용하실 수 있으며  예약번호, 탑승일, 탑승구간, 이름을 입력하신 후 예약 조회를 하실 수 있습니다.','qwerwqer',5,sysdate,'192.168.0.34');
+
+insert into reviewboard values(reviewboardnum_sq.nextval,1,'마일리지는 어떻게 적립하나요?','회원님께서는 아시아나항공, 
+스타얼라이언스 항공사 탑승 및 아시아나항공과 제휴된 신용카드, 호텔, 렌터카, 인터넷 쇼핑몰 등을 이용하여 마일리지를 적립하실 수 있습니다. ','test333',7,sysdate,'192.168.0.10');
+
 insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...','가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...',
 'hi0933',22,sysdate,'192.168.0.10');
 insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식','가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식',
@@ -1108,7 +866,7 @@ insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위�
 insert into noticeboard values(noticeboardnum_sq.nextval, 2, '스타얼라이언스 및 제휴 항공사 사후적립요청 접수처 축소', '<div class="list_view_cont">
 <div class="notice_edt_wrap"> 
 <h6>1. 대상</h6> 
-<p>- 김해국제공항 아시아나클럽 카운터</p> 
+<p>- 김해국제공항 가자에어클럽 카운터</p> 
 <h6 class="mar_to20">2. 변경 내용</h6> 
 <table class="table_list taC mar_to10"> 
 <caption> <strong>스타얼라이언스 및 제휴 항공사 변경 내용</strong> 
@@ -1138,15 +896,15 @@ insert into noticeboard values(noticeboardnum_sq.nextval, 2, '스타얼라이언
 </table> 
 <h6 class="mar_to20">3. 적용일</h6> 
 <p>- 2019년 12월 1일</p> 
-<p class="mar_to30">※ 스타얼라이언스 혹은 제휴항공사 탑승전 반드시 예약이나 탑승수속시 회원님의 회원번호를 제시하여 주시기 바랍니다. 회원번호는 아시아나항공 홈페이지 로그인 후 마이아시아나 또는 아시아나항공 앱을 통한 디지털카드로 확인 가능하십니다.</p> 
+<p class="mar_to30">※ 스타얼라이언스 혹은 제휴항공사 탑승전 반드시 예약이나 탑승수속시 회원님의 회원번호를 제시하여 주시기 바랍니다. 회원번호는 가자에어항공 홈페이지 로그인 후 마이가자에어 또는 가자에어항공 앱을 통한 디지털카드로 확인 가능하십니다.</p> 
 <p class="mar_to10">※ 탑승전 마일리지 적립을 하지 못하셨다면, 홈페이지 누락마일리지 적립을 통해 온라인 사후적립요청이 가능합니다.<br> 단, QR (카타르항공), KC (에어아스타나항공) 은 온라인 서비스가 불가하여 우편접수를 부탁드리겠습니다.</p> 
 <p class="mar_to20"><a href="#" onclick="linkConvert(''/C/KR/KO/contents/star-alliance-partner-airlines'',''_blank'');return false;" title="새창" class="btn_arrow">누락마일리지 적립 바로가기</a></p></div>
 </div>', 23, sysdate-25);
 
 insert into noticeboard values(noticeboardnum_sq.nextval, 2, '아드리아항공 (JP) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '<div class="list_view_cont">
-<p>아시아나와 함께 그동안 스타얼라이언스 회원사였던 아드리아항공(JP)이 2019년 10월 2일부로 스타얼라이언스에서 탈퇴함에 따라 <br> 
+<p>가자에어와 함께 그동안 스타얼라이언스 회원사였던 아드리아항공(JP)이 2019년 10월 2일부로 스타얼라이언스에서 탈퇴함에 따라 <br> 
 당사와 아드리아항공(JP)의 마일리지 제휴는 2019년 10월 2일부로 종료됨을 안내하여 드립니다. </p><br>
-<p>이에 따른 아시아나클럽 회원의 아드리아항공(JP) 탑승 관련 아래의 유의사항을 참조하여 주시기 바랍니다.</p><br>
+<p>이에 따른 가자에어클럽 회원의 아드리아항공(JP) 탑승 관련 아래의 유의사항을 참조하여 주시기 바랍니다.</p><br>
 <li> <strong>1. 마일리지 적립</strong>: 2019년 10월 2일까지 가능 <br>
 <strong>※ 누락 마일리지 사후 적립 불가</strong></li>
 <li><strong>2. 마일리지 항공권 탑승</strong>: 2019년 10월 2일 발권분까지 가능 </li>
@@ -1259,7 +1017,7 @@ insert into noticeboard values(noticeboardnum_sq.nextval, 3, '광명역 도심�
 
 
 insert into noticeboard values(noticeboardnum_sq.nextval, 1, '애플사 맥북프로 제품 운송 제한', '<div class="list_view_cont">
-<p>아시아나항공에서 고객 여러분께 안내 말씀 드립니다.</p><br>
+<p>가자에어항공에서 고객 여러분께 안내 말씀 드립니다.</p><br>
 <p>국토부 애플 맥북프로 항공운송 관련 안전조치에 따른 권고사항을 안내 드리오니 여행 계획 시 참고하여 주시기 바랍니다.</p><br>
 <p><strong>1. 항공기 내에서 전원을 끌 것</strong></p><br>
 <p><strong>2. 항공기 내에서 충전을 하지 말 것</strong></p><br>
@@ -1323,7 +1081,7 @@ insert into noticeboard values(noticeboardnum_sq.nextval, 2, '현대렌탈케어
 <div class="img-box"><img src="https://ozimg.flyasiana.com/editor/image/20190711/fdeeeb5c-3aa5-434e-8dee-92b8bc432335.png" alt=""></div><br><br>
 <p style="font-size: 16px;"><strong>1. 마일리지 적립</strong></p> 
 <ul class="sub-list"> 
-<li>대상: 아시아나항공 마일리지 적립몰을 경유하여 현대렌탈케어 상품 신규 가입 고객</li> 
+<li>대상: 가자에어항공 마일리지 적립몰을 경유하여 현대렌탈케어 상품 신규 가입 고객</li> 
 <li>적립마일: 5,000마일 적립/1개 상품당(인당 최대 3개 상품까지 마일리지 적립 가능)</li> 
 </ul><br><br>
 <p style="font-size: 16px;"><strong>2. 제휴 개시일</strong></p> 
@@ -1341,7 +1099,7 @@ insert into noticeboard values(noticeboardnum_sq.nextval, 2, '트립닷컴(Trip.
 <p>2019년 4월 25일부, 호텔검색엔진 ''트립닷컴'' 과의 마일리지 적립 신규제휴를 안내드리오니 많은 이용 부탁드립니다. </p> <br>
 <img src="https://ozimg.flyasiana.com/editor/image/20190424/789036c2-1021-4c84-acae-7fbf70b33972.png" alt="트립닷컴" style="width: 238px; max-width: 100%; left: 7px; top: 40px; height: 57px;" class=""> <br><br>
 <p><strong>1. 마일리지 적립</strong><br>
- &nbsp;&nbsp;- 아시아나 ''<a class="link_popup" href="https://flyasiana.com/C/KR/KO/club/earn-mileage-mall?menuId=CM201802220000728447" target="_blank" title="새창">마일리지&nbsp;적립몰</a>''을&nbsp;경유하여 트립닷컴 예약시 1천원당 1.5마일 적립<br>
+ &nbsp;&nbsp;- 가자에어 ''<a class="link_popup" href="https://flyasiana.com/C/KR/KO/club/earn-mileage-mall?menuId=CM201802220000728447" target="_blank" title="새창">마일리지&nbsp;적립몰</a>''을&nbsp;경유하여 트립닷컴 예약시 1천원당 1.5마일 적립<br>
 &nbsp;&nbsp;&nbsp;&nbsp;(단, 세금과 봉사료등 제외 순수 숙박료에 대해서만 마일리지 제공)<br>
 &nbsp;&nbsp;- 마일리지 적립 시점: 체크아웃 후 약 6주 후 <br>
 <br>
@@ -1547,8 +1305,8 @@ to_clob('<tr>
 <li style="line-height: 150%;"><span style="font-size: 12pt;">해당 항공편 유료 좌석 서비스 요금 지불은 해당 항공편 탑승 이전까지 적립된 마일리지로만 이용하실 수 있습니다.</span><br>
  <span style="font-size: 12pt;"> - 해당 항공편 탑승 시 적립 예정인 마일리지는 사용 불가합니다.</span></li> 
 <li style="line-height: 150%;"><span style="font-size: 12pt;">유료 좌석 서비스 이용 요금 결제는 탑승 회원님 본인 마일리지로만 가능합니다.</span><br>
- <span style="font-size: 12pt;"> - 양도 및 가족합산, 아시아나 코퍼리트 클럽 마일리지는 해당되지 않습니다.</span></li> 
-<li style="line-height: 150%;"><span style="font-size: 12pt;">유료 좌석 서비스 마일리지 공제는 아시아나항공이 운항하는 아시아나항공편 탑승 시에 한하여 적용 가능합니다.</span><br>
+ <span style="font-size: 12pt;"> - 양도 및 가족합산, 가자에어 코퍼리트 클럽 마일리지는 해당되지 않습니다.</span></li> 
+<li style="line-height: 150%;"><span style="font-size: 12pt;">유료 좌석 서비스 마일리지 공제는 가자에어항공이 운항하는 가자에어항공편 탑승 시에 한하여 적용 가능합니다.</span><br>
  <span style="font-size: 12pt;"> ※ 유료 좌석 서비스 관련 안내는 홈페이지를 참조 부탁드립니다. </span><strong><a href="https://flyasiana.com/C/KR/KO/contents/royal-business" target="_blank"><span style="color: rgb(102, 51, 204); font-size: 12pt;">[유료 부가 서비스 안내]</span></a></strong></li> 
 </ul></div> 
 <p style="line-height: 150%;"><span style="font-size: 12pt;">&nbsp;</span></p> 
