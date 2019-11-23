@@ -95,8 +95,8 @@
 			});
 		
 		//글 타입 태그 추가
-		$(".boardTbl tr:nth-child(1) h4").prepend("<span class='noticeTag'>new</span>");
-		$(".boardTbl tr:nth-child(2) h4").prepend("<span class='noticeTag'>new</span>");
+		$(".boardTbl tr:nth-child(1) h4").prepend("<span class='subjectTag'>new</span>");
+		$(".boardTbl tr:nth-child(2) h4").prepend("<span class='subjectTag'>new</span>");
 	});
 </script>
 </head>
@@ -105,7 +105,12 @@
 	<section class="content">
 	<div id="warp">
 		<div id="contents">
-			<h3>공지사항</h3>
+			<h3>
+			<c:if test="${vo.tabType==0 }">공지사항</c:if>
+			<c:if test="${vo.tabType==1 }">가자항공소식</c:if>
+			<c:if test="${vo.tabType==2 }">제휴사소식</c:if>
+			<c:if test="${vo.tabType==3 }">기타 공지사항</c:if>
+			</h3>
 			<section id="board">
 			
 				<div id="tabPanel">
@@ -133,7 +138,7 @@
 									<tr>
 										<td>${v.noticeNum }</td>
 										<td>
-											<h4><span class="noticeTag">
+											<h4><span class="subjectTag">
 												<c:if test="${v.noticeType == 1}">
 													공지
 												</c:if>

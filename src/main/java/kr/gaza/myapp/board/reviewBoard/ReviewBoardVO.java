@@ -10,6 +10,9 @@ public class ReviewBoardVO {
 	private String regdate;
 	private String ip;
 	
+	private int pageNum;
+	private int totalRecord;
+	
 	
 	public int getReviewNum() {
 		return reviewNum;
@@ -58,6 +61,18 @@ public class ReviewBoardVO {
 	}
 	public void setIp(String ip) {
 		this.ip = ip; 
+	}
+	public int getPageNum() {
+		return pageNum;
+	}
+	public void setPageNum(int pageNum) {
+		this.pageNum = pageNum;
+	}
+	public int getTotalRecord() {
+		return totalRecord;
+	}
+	public void setTotalRecord(int totalRecord) {
+		this.totalRecord = totalRecord;
 	}
 	
 	

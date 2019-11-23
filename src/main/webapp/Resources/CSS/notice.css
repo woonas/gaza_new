@@ -72,6 +72,9 @@
 	text-align: center;
 	margin-bottom: 30px;
 }
+.reviewTabBtn{
+	width: 50%;
+}
 .tabBtn>img {
 	width: 20px;
 	height: 20px;
@@ -107,7 +110,7 @@
 	border-top: 1px solid gray;
 	table-layout:fixed;
 }
-.noticeTag{
+.subjectTag{
 	border: 1.5px solid #36f;
 	color: #36f;
 	width: 40px;
@@ -162,12 +165,12 @@ a:visited{
 	color:#222;
 }
 /*table length*/
-#noticeTable_length{
+#boardTable_length{
 	float:none !important;
 }
 
 /*pagination*/
-#noticeTable_paginate{
+#boardTable_paginate{
 	float:none !important;
 	text-align: center !important;
 }
