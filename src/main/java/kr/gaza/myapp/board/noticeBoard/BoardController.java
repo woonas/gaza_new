@@ -13,7 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class BoardController {
 	@Autowired
 	SqlSession sqlSession;
-	//로그인 페이지로 이동.
+	//공지사항 리스트 페이지로 이동.
 	@RequestMapping("/JSP/board/noticeBoard/noticeBoard_list")
 	public ModelAndView noticeBoardList(@RequestParam("pageNum") String pageNum, @RequestParam("tabType") int tabType) {
 		

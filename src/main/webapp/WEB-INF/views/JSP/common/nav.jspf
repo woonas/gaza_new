@@ -48,7 +48,7 @@
 							<ul>
 								<li><a href="<%=jsp %>/board/noticeBoard/noticeBoard_list?pageNum=1&tabType=0">공지사항</a></li>
 								<li><a href="<%=path %>/Resources/HTML/service_faq.html">FAQ</a></li>
-								<li><a href="<%=path %>/Resources/JSP/board/reviewBoard/reviewBoard_list.do">이용후기</a></li>
+								<li><a href="<%=jsp %>/board/reviewBoard/reviewBoard_list?pageNum=1&reviewType=0">이용후기</a></li>
 							</ul>
 							<ul>
 								<c:if test="${memberName==null }">
