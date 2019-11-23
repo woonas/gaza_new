@@ -7,7 +7,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <h1 class="page-header">공지사항(Notice)</h1>
-                            <input type="button" id="addBtn" value="추가">
+                            <a href="<%=jsp%>/admin/admin_noticeForm"><input type="button" id="addBtn" value="추가"></a>
                         </div>
                     </div>
                     
@@ -33,6 +33,7 @@
                                                     <th>공지내용</th>
                                                     <th>조회수</th>
                                                     <th>등록일</th>	
+                                                    <th>삭제</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -44,6 +45,7 @@
                                                     <td class="center">${vo.content }</td>
                                                     <td class="center">${vo.hit }</td>
                                                     <td class="center">${vo.regdate }</td>
+                                                    <td><a href="noticeDel?noticeNum=${vo.noticeNum}">삭제</a></td>
                                                 </tr>
                                                 </c:forEach>
                                             </tbody>

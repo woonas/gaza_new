@@ -4,6 +4,7 @@ import kr.gaza.myapp.aviation.airplane.AirplaneVO;
 import kr.gaza.myapp.aviation.airport.AirportVO;
 import kr.gaza.myapp.aviation.flight.FlightVO;
 import kr.gaza.myapp.aviation.product.ProductVO;
+import kr.gaza.myapp.board.noticeBoard.NoticeBoardVO;
 
 public interface AdminEditInterface {
 	public int insertAdmin(AdminVO vo);
@@ -15,4 +16,6 @@ public interface AdminEditInterface {
 	public int deleteProduct(int num);
 	public int insertFlight(FlightVO vo);
 	public int deleteFlight(int num);
+	public int insertNotice(NoticeBoardVO vo);
+	public int deleteNotice(int num);
 }

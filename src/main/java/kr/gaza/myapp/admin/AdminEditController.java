@@ -14,6 +14,7 @@ import kr.gaza.myapp.aviation.airplane.AirplaneVO;
 import kr.gaza.myapp.aviation.airport.AirportVO;
 import kr.gaza.myapp.aviation.flight.FlightVO;
 import kr.gaza.myapp.aviation.product.ProductVO;
+import kr.gaza.myapp.board.noticeBoard.NoticeBoardVO;
 
 @Controller
 public class AdminEditController {
@@ -93,7 +94,7 @@ public class AdminEditController {
 			if(cnt>0) { // 삭제성공
 				mav.setViewName("redirect:admin_airport");
 			}else { //삭제 실패
-				mav.addObject("adminNum",airportNum);
+				mav.addObject("airportNum",airportNum);
 				mav.setViewName("redirect:admin");
 			}
 			return mav;
@@ -157,7 +158,7 @@ public class AdminEditController {
 				if(cnt>0) { // 삭제성공
 					mav.setViewName("redirect:admin_product");
 				}else { //삭제 실패
-					mav.addObject("adminNum",productNum);
+					mav.addObject("productNum",productNum);
 					mav.setViewName("redirect:admin");
 				}
 				return mav;
@@ -197,9 +198,51 @@ public class AdminEditController {
 					if(cnt>0) { // 삭제성공
 						mav.setViewName("redirect:admin_flight");
 					}else { //삭제 실패
-						mav.addObject("adminNum",flightNum);
+						mav.addObject("flightNum",flightNum);
 						mav.setViewName("redirect:admin");
 					}
 					return mav;
 				}
+				
+				
+				//공지사항 수정폼 이동
+				@RequestMapping("/JSP/admin/admin_noticeForm")
+				public String AdminNoticeForm() {
+					return "JSP/admin/admin_noticeForm";
+				}
+				
+					
+				//공지사항 추가
+				@RequestMapping(value="/JSP/admin/noticeAddOk",method=RequestMethod.POST)
+				public ModelAndView AdminNoticeAddOk(NoticeBoardVO vo, HttpServletRequest req) {
+					
+					AdminEditInterface dao = sqlSession.getMapper(AdminEditInterface.class);
+					int cnt = dao.insertNotice(vo);
+						
+					ModelAndView mav = new ModelAndView();
+					if(cnt>0) {
+						mav.setViewName("redirect:admin_notice");
+					}else {
+						mav.setViewName("redirect:admin");
+					}
+					return mav;
+				}
+				
+				
+				//공지사항 삭제
+					@RequestMapping("/JSP/admin/noticeDel")
+					public ModelAndView noticeDelete(@RequestParam("noticeNum") int noticeNum) {
+						AdminEditInterface dao = sqlSession.getMapper(AdminEditInterface.class);
+						int cnt = dao.deleteNotice(noticeNum);
+						
+						ModelAndView mav = new ModelAndView();
+						if(cnt>0) { // 삭제성공
+							mav.setViewName("redirect:admin_notice");
+						}else { //삭제 실패
+							mav.addObject("noticeNum",noticeNum);
+							mav.setViewName("redirect:admin");
+						}
+						return mav;
+					}
+				
 }

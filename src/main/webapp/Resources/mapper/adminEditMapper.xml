@@ -42,4 +42,13 @@
 <delete id="deleteFlight">
 		delete from flight where flightnum=#{flightNum} 
 </delete>
+
+<insert id="insertNotice" parameterType="kr.gaza.myapp.board.noticeBoard.NoticeBoardVO">
+	insert into noticeboard(noticenum, noticetype, subject, content, hit, regdate) 
+		values(noticeboardnum_sq.nextval, #{noticeType}, #{subject}, #{content}, #{hit}, sysdate)
+</insert>
+
+<delete id="deleteNotice">
+		delete from noticeboard where noticenum=#{noticeNum}
+</delete>
 </mapper>
