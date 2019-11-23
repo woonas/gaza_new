@@ -6,14 +6,16 @@
 <meta charset="UTF-8">
 <title>${vo.subject }</title>
 <link rel="stylesheet" href="<%=css %>/board.css" type="text/css"/>
-<script>
-	alert("레코드번호="+${vo.noticeNum}+"마지막번호="+${lastNum});
-</script>
 </head>
 <body>
 	<%@ include file="../../common/nav.jspf" %>
 	<section class="content">
-		<h3>공지사항</h3>
+		<h3>
+			<c:if test="${tabType==0 }">공지사항</c:if>
+			<c:if test="${tabType==1 }">가자항공소식</c:if>
+			<c:if test="${tabType==2 }">제휴사소식</c:if>
+			<c:if test="${tabType==3 }">기타 공지사항</c:if>
+		</h3>
 		<hr/>
 		<div id="brd_title" class="col-three-fourth">
 			${vo.subject }

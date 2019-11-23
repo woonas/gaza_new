@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import kr.gaza.myapp.board.reviewBoard.ReviewBoardInterface;
 import kr.gaza.myapp.board.reviewBoard.ReviewBoardVO;
 
 @Controller
@@ -51,6 +52,29 @@ public class ReviewController {
 		
 		mav.setViewName("JSP/board/reviewBoard/reviewBoard_list");
 		
+		return mav;
+	}
+	//이용후기 글 보기 페이지
+	@RequestMapping("/JSP/board/reviewBoard/reviewBoard_view")
+	public ModelAndView noticeDetailView(@RequestParam("reviewNum") int reviewNum, @RequestParam("pageNum") int pageNum,
+			@RequestParam("reviewType") int reviewType) {
+		ReviewBoardInterface dao = sqlSession.getMapper(ReviewBoardInterface.class);
+		
+		ReviewBoardVO vo = new ReviewBoardVO();
+		vo.setReviewNum(reviewNum);
+		
+		ReviewBoardVO vo2 = dao.reviewBoardSelect(vo);
+		vo = dao.reviewBoardGetPrevNext(reviewType, reviewNum);
+		vo2.setPageNum(pageNum);
+		
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("JSP/board/reviewBoard/reviewBoard_view");
+		mav.addObject("vo", vo2);
+		mav.addObject("reviewType", reviewType);
+		mav.addObject("prevNum", vo.getPrevNum());
+		mav.addObject("prevSubject", vo.getPrevSubject());
+		mav.addObject("nextNum", vo.getNextNum());
+		mav.addObject("nextSubject", vo.getNextSubject());
 		return mav;
 	}
 }

@@ -4,58 +4,62 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" href="../../../CSS/board.css" type="text/css"/>
+<title>${vo.subject }</title>
+<link rel="stylesheet" href="<%=css %>/board.css" type="text/css"/>
 </head>
 <body>
 	<%@ include file="../../common/nav.jspf" %>
 	<section class="content">
-		<h3>고객의 말씀</h3>
+		<h3>
+			<c:if test="${vo.reviewType==0 }">이용후기</c:if>
+			<c:if test="${vo.reviewType==1 }">문의사항</c:if>
+		</h3>
 		<hr/>
-		<div id="brd_all">
-			<div id="brd_title" class="col-two-third">
-				제목자리~
-			</div>
-			<div id="hitNdate">작성자 홍길동동동 │ 조회수 99999 │ 날짜 2019.10.23</div>
+		<div id="brd_title" class="col-three-fifth reviewSubject">
+			${vo.subject }
+		</div>
+		<div id="hitNdate">작성자 ${vo.writer} │ 조회수 ${vo.hit } │ 날짜 ${vo.regdate }</div>
 		<hr style="border:1px solid #eee"/>
 			<div id="brd_content">
-			내용<br/>
-			내용<br/>
-			내용<br/>
-			내용<br/>
-			내용<br/>
-			내용<br/>
-			내용<br/>
-			내용<br/>
-			내용<br/>
-			내용<br/>
+				${vo.content }
 			</div>
-		<hr style="border:1px solid #eee"/>
-		<div id="commentt">
-		<c:forEach var="rv" items="${list}">
-			<div class="row clearfix">
-				<div class="col-nine-tenth" id="userid">${rv.memberId}</div><a href="#"> 수정</a> | <a href="#">삭제</a><br/>
-			</div>
-			<div id="reply">
-			${rv.commentt}
-			</div>
-		</c:forEach>
-		</div>
 		<hr/>
 			<div class="brd_bottom">
-			∧ 이전글 <a href="#">이전글내용이전글내용이전글내용이전글내용이전글내용</a>
+			∧ 다음글
+				<a href="<%=jsp%>/board/reviewBoard/reviewBoard_view?&pageNum=${vo.pageNum}&reviewType=${reviewType}
+						<c:if test="${nextNum != 0}">
+							&reviewNum=${nextNum}
+						</c:if>
+						" 
+						<c:if test="${nextNum == 0}">
+							onclick="return false"
+						</c:if>
+						>
+						${nextSubject}
+				</a>
 			</div>
 		<hr style="border:1px solid #eee"/>
 			<div class="brd_bottom">
-			∨ 다음글 <a href="#">다음글내용다음글내용다음글내용다음글내용다음글내용</a>
+			∨ 이전글
+				<a href="<%=jsp %>/board/reviewBoard/reviewBoard_view?pageNum=${vo.pageNum}&reviewType=${reviewType}
+						<c:if test="${prevNum != 0}">
+							&reviewNum=${prevNum}
+						</c:if>
+						" 
+						<c:if test="${prevNum == 0}">
+							onclick="return false"
+						</c:if>
+						>
+						${prevSubject}
+				</a>
 			</div>
 		<hr style="border:1px solid #eee"/>
 		<div id="list_btn">
-			<button class="whiteBtn">목록보기</button>
-		</div>
+			<a href="<%=jsp%>/board/reviewBoard/reviewBoard_list?pageNum=${vo.pageNum}&reviewType=${reviewType}">
+				<button class="whiteBtn">목록보기</button>
+			</a>
 		</div>
 	</section>
 	<%@ include file="../../common/footer.jspf" %>
-	<script src="../../../JS/common.js"></script>
 </body>
 </html>

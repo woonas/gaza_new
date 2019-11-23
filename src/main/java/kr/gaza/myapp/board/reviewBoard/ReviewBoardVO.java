@@ -13,6 +13,11 @@ public class ReviewBoardVO {
 	private int pageNum;
 	private int totalRecord;
 	
+	// 이전글 다음글
+	private int prevNum;
+	private String prevSubject;
+	private int nextNum;
+	private String nextSubject;
 	
 	public int getReviewNum() {
 		return reviewNum;
@@ -73,6 +78,30 @@ public class ReviewBoardVO {
 	}
 	public void setTotalRecord(int totalRecord) {
 		this.totalRecord = totalRecord;
+	}
+	public int getPrevNum() {
+		return prevNum;
+	}
+	public void setPrevNum(int prevNum) {
+		this.prevNum = prevNum;
+	}
+	public String getPrevSubject() {
+		return prevSubject;
+	}
+	public void setPrevSubject(String prevSubject) {
+		this.prevSubject = prevSubject;
+	}
+	public int getNextNum() {
+		return nextNum;
+	}
+	public void setNextNum(int nextNum) {
+		this.nextNum = nextNum;
+	}
+	public String getNextSubject() {
+		return nextSubject;
+	}
+	public void setNextSubject(String nextSubject) {
+		this.nextSubject = nextSubject;
 	}
 	
 	

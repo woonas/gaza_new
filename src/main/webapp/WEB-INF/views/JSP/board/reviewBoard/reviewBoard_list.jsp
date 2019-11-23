@@ -23,7 +23,7 @@
 			"order"          : [0, "desc"],
 			"pagingType"     : "full_numbers",
 			"row-border"     : true,
-			"dom"            : '<"search"fB><"#tabBtn"><t>l<p>',
+			"dom"            : '<"search"fB><"#tabBtn"><"#writeBtnWrap"><t>l<p>',
 			"language"       : {
 				"loadingRecords" : "로딩중...",
 				"processing"     : "잠시만 기다려 주세요...",
@@ -116,6 +116,10 @@
 		if("${reviewType}"=="0"){
 			$(".boardTbl tr:nth-child(1) h4").prepend("<span class='subjectTag'>new</span>");
 			$(".boardTbl tr:nth-child(2) h4").prepend("<span class='subjectTag'>new</span>");
+		}
+		//글쓰기 버튼 추가
+		if(${vo.reviewType}==1){
+			$("#writeBtnWrap").append("<button id='writeBtn' title='문의 글 작성 게시판으로 이동.'>문의 글 작성하기</button>");
 		}
 	});
 </script>

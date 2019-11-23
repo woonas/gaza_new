@@ -16,7 +16,8 @@
 	</select>
 	
 	<select id="reviewBoardSelect" parameterType="kr.gaza.myapp.board.reviewBoard.ReviewBoardVO" resultType="kr.gaza.myapp.board.reviewBoard.ReviewBoardVO">
-			select reviewNum, reviewType, subject, content, hit, to_char(regDate, 'YYYY.MM.DD') regDate from reviewBoard where reviewNum=#{reviewNum}
+			select reviewNum, reviewType, writer, subject, content, hit, to_char(regDate, 'YYYY.MM.DD') regDate 
+			from reviewBoard where reviewNum=#{reviewNum}
 	</select>
 	
 	<select id="reviewBoardGetPrevNext" parameterType="int" resultType="kr.gaza.myapp.board.reviewBoard.ReviewBoardVO">
@@ -27,10 +28,7 @@
 				lag(subject, 1, '이전 글이 없습니다.') over (order by reviewNum) prevSubject, 
 				lead(reviewNum, 1) over (order by reviewNum) nextNum, 
 				lead(subject, 1, '다음 글이 없습니다.') over (order by reviewNum) nextSubject 
-				from reviewBoard
-				<if test="param1!=0">
-					where reviewType=#{param1}
-				</if>
+				from reviewBoard where reviewType=#{param1}
 			)
 			where reviewNum=#{param2}
 	</select>
