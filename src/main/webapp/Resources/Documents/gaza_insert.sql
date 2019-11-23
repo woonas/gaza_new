@@ -1067,7 +1067,7 @@ insert into noticeboard values(noticeboardnum_sq.nextval, 3, '12월 국내선 �
 <tr> 
 <th class="first NamoSE_border_show" scope="col"><strong>구분</strong></th> 
 <th scope="col" class="NamoSE_border_show"><strong>현행(11월)</strong></th> 
-<th scope="col" class="NamoSE_border_show"><strong>변경(12월)</strong></th> 
+<th scope="col" class="NamoSE_border_show"><strong>변경(12월)</strong></th>
 </tr> 
 </thead> 
 <tbody> 
@@ -1096,6 +1096,6 @@ insert into noticeboard values(noticeboardnum_sq.nextval, 3, '12월 국내선 �
 <p>&nbsp;</p> <br> 감사합니다. </div>
 </div>', 6941, sysdate-67);
 
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '인천 ↔ 뉴욕 탑승 시 JFK 공항 ↔ 뉴저지, 필라델피아 무료 셔틀 이용 안내', '<img src="/myapp/Resources/IMG/board/nihao.png"/>', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '우수회원제도 개편 1주년 기념 회원제도 안내', '<img src="/myapp/Resources/IMG/board/nihao.png"/>', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '인천 ↔ 뉴욕 탑승 시 JFK 공항 ↔ 뉴저지, 필라델피아 무료 셔틀 이용 안내', '<img src="/myapp/Resources/IMG/board/shuttlebus.png"/>', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '우수회원제도 개편 1주년 기념 회원제도 안내', '<img src="/myapp/Resources/IMG/board/vipmember.png"/>', 0, sysdate);
 insert into noticeboard values(noticeboardnum_sq.nextval, 1, '니하오, 난 아론이야! 챗봇 중국어 서비스 OPEN!', '<img src="/myapp/Resources/IMG/board/nihao.png"/>', 0, sysdate);
