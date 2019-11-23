@@ -467,9 +467,6 @@ insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 11월 한�
 insert into noticeboard values(noticeboardnum_sq.nextval, 1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', 0, sysdate);
 insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
 
-
-
-
 insert into noticeboard values(noticeboardnum_sq.nextval, 2, '스타얼라이언스 및 제휴 항공사 사후적립요청 접수처 축소', '<div class="list_view_cont">
 <div class="notice_edt_wrap"> 
 <h6>1. 대상</h6> 
@@ -821,7 +818,7 @@ insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국제선 미주 �
 <p><strong>2. 적용일 : 2018년 5월 1일 부 (공제일 기준)</strong></p>
 </div></div>', 956, sysdate);
 
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '유료 좌석 서비스 마일리지 사용 확대 안내', to_clob('<div class="list_view_cont">
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '인천 ↔ 뉴욕 탑승 시 JFK 공항 ↔ 뉴저지, 필라델피아 무료 셔틀 이용 안내', to_clob('<div class="list_view_cont">
 <p style="line-height: 150%;"><span style="font-size: 12pt;">2018년 5월 1일부터 유료로 제공하던 좌석 관련 서비스를 마일리지 공제로 이용할 수 있음을 안내드립니다.</span></p>
 <p style="line-height: 150%;"><span style="font-size: 12pt;">&nbsp;</span></p>
 <p style="line-height: 150%;"><strong><span style="font-size: 12pt;">1. 공제 마일리지 안내</span></strong></p>
@@ -1098,3 +1095,7 @@ insert into noticeboard values(noticeboardnum_sq.nextval, 3, '12월 국내선 �
 <p>2019년 12월 1일 ~ 12월 31일 (한국 시각 기준)</p> 
 <p>&nbsp;</p> <br> 감사합니다. </div>
 </div>', 6941, sysdate-67);
+
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '인천 ↔ 뉴욕 탑승 시 JFK 공항 ↔ 뉴저지, 필라델피아 무료 셔틀 이용 안내', '/board/shuttlebus.png', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '우수회원제도 개편 1주년 기념 회원제도 안내', '/board/vipmember.png', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '니하오, 난 아론이야! 챗봇 중국어 서비스 OPEN!', '/board/nihao.png', 0, sysdate);
