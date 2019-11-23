@@ -1,4 +1,396 @@
 set define off;
+
+insert into reviewboard values(reviewboardnum_sq.nextval,1,'홈페이지에서 구매 후 운임영수증을 출력할 수 있나요',
+'홈페이지에서 로그인 후  구매하신 항공권 운임 영수증은 로그인 하신 후 예약>예약조회>항공권 구매내역에서 영수증 출력이 가능합니다.','test333',10,sysdate,'192.168.0.10');
+
+insert into reviewboard values(reviewboardnum_sq.nextval,1,'저 대신 다른 사람이 제 예약으로 갈 수는 없나요?',
+'예약된 승객(탑승자)의 이름은 변경할 수 없습니다. 항공권은 탑승자 실명 예약으로, 탑승자의 이름 변경 시 기존의 예약을 취소하신 후 실제 탑승 승객의 이름으로 다시 예약 하셔야 합니다.','test333',11,sysdate,'192.168.0.10');
+
+insert into reviewboard values(reviewboardnum_sq.nextval,1,'마일리지 항공권은 어떻게 발급 받나요?',
+'가자에어 홈페이지 또는 예약영업센터를 통해 예약하실 수 있습니다.예약영업센터에서 예약 하시는 경우 반드시 마일리지 여행임을 말씀해 주시기 바라며, 안내 받으신 마일리지 항공권 발권 시한(Ticket Time Limit)까지 가자에어 홈페이지 및 모바일을 통해 발급 가능합니다.','test333',8,sysdate,'192.168.0.10');
+
+insert into reviewboard values(reviewboardnum_sq.nextval,1,'예약확인을 하려면 예약번호를 반드시 알아야 하나요?',
+'온라인 예약조회는 로그인 예약조회와 비로그인 예약조회로 운영되고 있습니다. 로그인 예약조회는 예약기록에 회원정보가 입력되어 있는 경우 이용 가능하며 예약번호를 모르시더라도 로그인하신 후 일정 재확인을 하실 수 있습니다.
+비로그인 예약조회는 예약기록에 회원정보가 없는 경우 이용하실 수 있으며  예약번호, 탑승일, 탑승구간, 이름을 입력하신 후 예약 조회를 하실 수 있습니다.','qwerwqer',5,sysdate,'192.168.0.34');
+
+insert into reviewboard values(reviewboardnum_sq.nextval,1,'마일리지는 어떻게 적립하나요?','회원님께서는 아시아나항공, 
+스타얼라이언스 항공사 탑승 및 아시아나항공과 제휴된 신용카드, 호텔, 렌터카, 인터넷 쇼핑몰 등을 이용하여 마일리지를 적립하실 수 있습니다. ','test333',7,sysdate,'192.168.0.10');
+
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...','가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...',
+'hi0933',22,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식','가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식',
+'seif23',99,sysdate,'192.168.0.34');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...','인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...',
+'liewi',99,sysdate,'192.168.0.32');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이','9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이',
+'3943we',123,sysdate,'192.168.0.30');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...','[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...',
+'harry',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'괌여행 - 가자에어 프레스티지석 / 웨스틴호텔','괌여행 - 가자에어 프레스티지석 / 웨스틴호텔',
+'poter',123,sysdate,'192.168.0.1');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'홍혜진가이드님 세심한 배려에 정말 감사합니다','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gaeeee',2035,sysdate,'192.168.0.2');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'유정수 가이드님 고마웠습니다','유정수 가이드님 고마웠습니다',
+'uuuu12',1039,sysdate,'192.168.0.3');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'황민 가이드님 감사했습니다~','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gogugma1234',985,sysdate,'192.168.0.4');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'위원섭가이드님~섬세한 배려자이십니다~','위원섭가이드님~섬세한 배려자이십니다~',
+'master115',351,sysdate,'192.168.0.5');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'여행은 한권의 책을 읽는 것과 같다~~','여행은 한권의 책을 읽는 것과 같다~~',
+'vand777',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'감사합니다','감사합니다',
+'monkeydluffy',789,sysdate,'192.168.0.7');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부,나이아가라,캐나다 인솔 크리스 리 고마워요','미동부,나이아가라,캐나다 인솔 크리스 리 고마워요',
+'dgjc221',3790,sysdate,'192.168.0.8');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'그날의 여운이 아직도 생생합니다.','그날의 여운이 아직도 생생합니다.',
+'ironman',23,sysdate,'192.168.0.9');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'크루즈여행을 통해 이야기','크루즈여행을 통해 이야기',
+'caution999',867,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부와캐나다여행','미동부와캐나다여행',
+'gary',2353,sysdate,'192.168.0.11');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'10월17-28일 동유럽발칸여행','10월17-28일 동유럽발칸여행',
+'gaeko',5689,sysdate,'192.168.0.12');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...','가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...',
+'hi0933',22,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식','가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식',
+'seif23',99,sysdate,'192.168.0.34');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...','인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...',
+'liewi',99,sysdate,'192.168.0.32');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이','9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이',
+'3943we',123,sysdate,'192.168.0.30');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...','[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...',
+'harry',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'괌여행 - 가자에어 프레스티지석 / 웨스틴호텔','괌여행 - 가자에어 프레스티지석 / 웨스틴호텔',
+'poter',123,sysdate,'192.168.0.1');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'홍혜진가이드님 세심한 배려에 정말 감사합니다','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gaeeee',2035,sysdate,'192.168.0.2');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'유정수 가이드님 고마웠습니다','유정수 가이드님 고마웠습니다',
+'uuuu12',1039,sysdate,'192.168.0.3');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'황민 가이드님 감사했습니다~','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gogugma1234',985,sysdate,'192.168.0.4');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'위원섭가이드님~섬세한 배려자이십니다~','위원섭가이드님~섬세한 배려자이십니다~',
+'master115',351,sysdate,'192.168.0.5');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'여행은 한권의 책을 읽는 것과 같다~~','여행은 한권의 책을 읽는 것과 같다~~',
+'vand777',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'감사합니다','감사합니다',
+'monkeydluffy',789,sysdate,'192.168.0.7');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부,나이아가라,캐나다 인솔 크리스 리 고마워요','미동부,나이아가라,캐나다 인솔 크리스 리 고마워요',
+'dgjc221',3790,sysdate,'192.168.0.8');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'그날의 여운이 아직도 생생합니다.','그날의 여운이 아직도 생생합니다.',
+'ironman',23,sysdate,'192.168.0.9');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'크루즈여행을 통해 이야기','크루즈여행을 통해 이야기',
+'caution999',867,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부와캐나다여행','미동부와캐나다여행',
+'gary',2353,sysdate,'192.168.0.11');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'10월17-28일 동유럽발칸여행','10월17-28일 동유럽발칸여행',
+'gaeko',5689,sysdate,'192.168.0.12');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...','가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...',
+'hi0933',22,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식','가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식',
+'seif23',99,sysdate,'192.168.0.34');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...','인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...',
+'liewi',99,sysdate,'192.168.0.32');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이','9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이',
+'3943we',123,sysdate,'192.168.0.30');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...','[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...',
+'harry',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'괌여행 - 가자에어 프레스티지석 / 웨스틴호텔','괌여행 - 가자에어 프레스티지석 / 웨스틴호텔',
+'poter',123,sysdate,'192.168.0.1');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'홍혜진가이드님 세심한 배려에 정말 감사합니다','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gaeeee',2035,sysdate,'192.168.0.2');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'유정수 가이드님 고마웠습니다','유정수 가이드님 고마웠습니다',
+'uuuu12',1039,sysdate,'192.168.0.3');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'황민 가이드님 감사했습니다~','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gogugma1234',985,sysdate,'192.168.0.4');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'위원섭가이드님~섬세한 배려자이십니다~','위원섭가이드님~섬세한 배려자이십니다~',
+'master115',351,sysdate,'192.168.0.5');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'여행은 한권의 책을 읽는 것과 같다~~','여행은 한권의 책을 읽는 것과 같다~~',
+'vand777',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'감사합니다','감사합니다',
+'monkeydluffy',789,sysdate,'192.168.0.7');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부,나이아가라,캐나다 인솔 크리스 리 고마워요','미동부,나이아가라,캐나다 인솔 크리스 리 고마워요',
+'dgjc221',3790,sysdate,'192.168.0.8');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'그날의 여운이 아직도 생생합니다.','그날의 여운이 아직도 생생합니다.',
+'ironman',23,sysdate,'192.168.0.9');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'크루즈여행을 통해 이야기','크루즈여행을 통해 이야기',
+'caution999',867,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부와캐나다여행','미동부와캐나다여행',
+'gary',2353,sysdate,'192.168.0.11');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'10월17-28일 동유럽발칸여행','10월17-28일 동유럽발칸여행',
+'gaeko',5689,sysdate,'192.168.0.12');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...','가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...',
+'hi0933',22,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식','가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식',
+'seif23',99,sysdate,'192.168.0.34');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...','인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...',
+'liewi',99,sysdate,'192.168.0.32');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이','9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이',
+'3943we',123,sysdate,'192.168.0.30');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...','[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...',
+'harry',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'괌여행 - 가자에어 프레스티지석 / 웨스틴호텔','괌여행 - 가자에어 프레스티지석 / 웨스틴호텔',
+'poter',123,sysdate,'192.168.0.1');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'홍혜진가이드님 세심한 배려에 정말 감사합니다','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gaeeee',2035,sysdate,'192.168.0.2');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'유정수 가이드님 고마웠습니다','유정수 가이드님 고마웠습니다',
+'uuuu12',1039,sysdate,'192.168.0.3');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'황민 가이드님 감사했습니다~','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gogugma1234',985,sysdate,'192.168.0.4');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'위원섭가이드님~섬세한 배려자이십니다~','위원섭가이드님~섬세한 배려자이십니다~',
+'master115',351,sysdate,'192.168.0.5');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'여행은 한권의 책을 읽는 것과 같다~~','여행은 한권의 책을 읽는 것과 같다~~',
+'vand777',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'감사합니다','감사합니다',
+'monkeydluffy',789,sysdate,'192.168.0.7');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부,나이아가라,캐나다 인솔 크리스 리 고마워요','미동부,나이아가라,캐나다 인솔 크리스 리 고마워요',
+'dgjc221',3790,sysdate,'192.168.0.8');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'그날의 여운이 아직도 생생합니다.','그날의 여운이 아직도 생생합니다.',
+'ironman',23,sysdate,'192.168.0.9');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'크루즈여행을 통해 이야기','크루즈여행을 통해 이야기',
+'caution999',867,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부와캐나다여행','미동부와캐나다여행',
+'gary',2353,sysdate,'192.168.0.11');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'10월17-28일 동유럽발칸여행','10월17-28일 동유럽발칸여행',
+'gaeko',5689,sysdate,'192.168.0.12');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...','가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...',
+'hi0933',22,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식','가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식',
+'seif23',99,sysdate,'192.168.0.34');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...','인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...',
+'liewi',99,sysdate,'192.168.0.32');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이','9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이',
+'3943we',123,sysdate,'192.168.0.30');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...','[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...',
+'harry',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'괌여행 - 가자에어 프레스티지석 / 웨스틴호텔','괌여행 - 가자에어 프레스티지석 / 웨스틴호텔',
+'poter',123,sysdate,'192.168.0.1');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'홍혜진가이드님 세심한 배려에 정말 감사합니다','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gaeeee',2035,sysdate,'192.168.0.2');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'유정수 가이드님 고마웠습니다','유정수 가이드님 고마웠습니다',
+'uuuu12',1039,sysdate,'192.168.0.3');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'황민 가이드님 감사했습니다~','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gogugma1234',985,sysdate,'192.168.0.4');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'위원섭가이드님~섬세한 배려자이십니다~','위원섭가이드님~섬세한 배려자이십니다~',
+'master115',351,sysdate,'192.168.0.5');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'여행은 한권의 책을 읽는 것과 같다~~','여행은 한권의 책을 읽는 것과 같다~~',
+'vand777',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'감사합니다','감사합니다',
+'monkeydluffy',789,sysdate,'192.168.0.7');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부,나이아가라,캐나다 인솔 크리스 리 고마워요','미동부,나이아가라,캐나다 인솔 크리스 리 고마워요',
+'dgjc221',3790,sysdate,'192.168.0.8');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'그날의 여운이 아직도 생생합니다.','그날의 여운이 아직도 생생합니다.',
+'ironman',23,sysdate,'192.168.0.9');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'크루즈여행을 통해 이야기','크루즈여행을 통해 이야기',
+'caution999',867,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부와캐나다여행','미동부와캐나다여행',
+'gary',2353,sysdate,'192.168.0.11');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'10월17-28일 동유럽발칸여행','10월17-28일 동유럽발칸여행',
+'gaeko',5689,sysdate,'192.168.0.12');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...','가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...',
+'hi0933',22,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식','가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식',
+'seif23',99,sysdate,'192.168.0.34');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...','인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...',
+'liewi',99,sysdate,'192.168.0.32');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이','9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이',
+'3943we',123,sysdate,'192.168.0.30');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...','[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...',
+'harry',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'괌여행 - 가자에어 프레스티지석 / 웨스틴호텔','괌여행 - 가자에어 프레스티지석 / 웨스틴호텔',
+'poter',123,sysdate,'192.168.0.1');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'홍혜진가이드님 세심한 배려에 정말 감사합니다','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gaeeee',2035,sysdate,'192.168.0.2');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'유정수 가이드님 고마웠습니다','유정수 가이드님 고마웠습니다',
+'uuuu12',1039,sysdate,'192.168.0.3');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'황민 가이드님 감사했습니다~','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gogugma1234',985,sysdate,'192.168.0.4');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'위원섭가이드님~섬세한 배려자이십니다~','위원섭가이드님~섬세한 배려자이십니다~',
+'master115',351,sysdate,'192.168.0.5');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'여행은 한권의 책을 읽는 것과 같다~~','여행은 한권의 책을 읽는 것과 같다~~',
+'vand777',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'감사합니다','감사합니다',
+'monkeydluffy',789,sysdate,'192.168.0.7');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부,나이아가라,캐나다 인솔 크리스 리 고마워요','미동부,나이아가라,캐나다 인솔 크리스 리 고마워요',
+'dgjc221',3790,sysdate,'192.168.0.8');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'그날의 여운이 아직도 생생합니다.','그날의 여운이 아직도 생생합니다.',
+'ironman',23,sysdate,'192.168.0.9');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'크루즈여행을 통해 이야기','크루즈여행을 통해 이야기',
+'caution999',867,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부와캐나다여행','미동부와캐나다여행',
+'gary',2353,sysdate,'192.168.0.11');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'10월17-28일 동유럽발칸여행','10월17-28일 동유럽발칸여행',
+'gaeko',5689,sysdate,'192.168.0.12');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...','가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...',
+'hi0933',22,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식','가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식',
+'seif23',99,sysdate,'192.168.0.34');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...','인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...',
+'liewi',99,sysdate,'192.168.0.32');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이','9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이',
+'3943we',123,sysdate,'192.168.0.30');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...','[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...',
+'harry',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'괌여행 - 가자에어 프레스티지석 / 웨스틴호텔','괌여행 - 가자에어 프레스티지석 / 웨스틴호텔',
+'poter',123,sysdate,'192.168.0.1');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'홍혜진가이드님 세심한 배려에 정말 감사합니다','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gaeeee',2035,sysdate,'192.168.0.2');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'유정수 가이드님 고마웠습니다','유정수 가이드님 고마웠습니다',
+'uuuu12',1039,sysdate,'192.168.0.3');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'황민 가이드님 감사했습니다~','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gogugma1234',985,sysdate,'192.168.0.4');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'위원섭가이드님~섬세한 배려자이십니다~','위원섭가이드님~섬세한 배려자이십니다~',
+'master115',351,sysdate,'192.168.0.5');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'여행은 한권의 책을 읽는 것과 같다~~','여행은 한권의 책을 읽는 것과 같다~~',
+'vand777',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'감사합니다','감사합니다',
+'monkeydluffy',789,sysdate,'192.168.0.7');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부,나이아가라,캐나다 인솔 크리스 리 고마워요','미동부,나이아가라,캐나다 인솔 크리스 리 고마워요',
+'dgjc221',3790,sysdate,'192.168.0.8');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'그날의 여운이 아직도 생생합니다.','그날의 여운이 아직도 생생합니다.',
+'ironman',23,sysdate,'192.168.0.9');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'크루즈여행을 통해 이야기','크루즈여행을 통해 이야기',
+'caution999',867,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부와캐나다여행','미동부와캐나다여행',
+'gary',2353,sysdate,'192.168.0.11');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'10월17-28일 동유럽발칸여행','10월17-28일 동유럽발칸여행',
+'gaeko',5689,sysdate,'192.168.0.12');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...','가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...',
+'hi0933',22,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식','가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식',
+'seif23',99,sysdate,'192.168.0.34');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...','인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...',
+'liewi',99,sysdate,'192.168.0.32');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이','9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이',
+'3943we',123,sysdate,'192.168.0.30');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...','[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...',
+'harry',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'괌여행 - 가자에어 프레스티지석 / 웨스틴호텔','괌여행 - 가자에어 프레스티지석 / 웨스틴호텔',
+'poter',123,sysdate,'192.168.0.1');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'홍혜진가이드님 세심한 배려에 정말 감사합니다','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gaeeee',2035,sysdate,'192.168.0.2');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'유정수 가이드님 고마웠습니다','유정수 가이드님 고마웠습니다',
+'uuuu12',1039,sysdate,'192.168.0.3');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'황민 가이드님 감사했습니다~','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gogugma1234',985,sysdate,'192.168.0.4');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'위원섭가이드님~섬세한 배려자이십니다~','위원섭가이드님~섬세한 배려자이십니다~',
+'master115',351,sysdate,'192.168.0.5');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'여행은 한권의 책을 읽는 것과 같다~~','여행은 한권의 책을 읽는 것과 같다~~',
+'vand777',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'감사합니다','감사합니다',
+'monkeydluffy',789,sysdate,'192.168.0.7');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부,나이아가라,캐나다 인솔 크리스 리 고마워요','미동부,나이아가라,캐나다 인솔 크리스 리 고마워요',
+'dgjc221',3790,sysdate,'192.168.0.8');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'그날의 여운이 아직도 생생합니다.','그날의 여운이 아직도 생생합니다.',
+'ironman',23,sysdate,'192.168.0.9');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'크루즈여행을 통해 이야기','크루즈여행을 통해 이야기',
+'caution999',867,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부와캐나다여행','미동부와캐나다여행',
+'gary',2353,sysdate,'192.168.0.11');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'10월17-28일 동유럽발칸여행','10월17-28일 동유럽발칸여행',
+'gaeko',5689,sysdate,'192.168.0.12');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...','가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...',
+'hi0933',22,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식','가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식',
+'seif23',99,sysdate,'192.168.0.34');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...','인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...',
+'liewi',99,sysdate,'192.168.0.32');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이','9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이',
+'3943we',123,sysdate,'192.168.0.30');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...','[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...',
+'harry',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'괌여행 - 가자에어 프레스티지석 / 웨스틴호텔','괌여행 - 가자에어 프레스티지석 / 웨스틴호텔',
+'poter',123,sysdate,'192.168.0.1');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'홍혜진가이드님 세심한 배려에 정말 감사합니다','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gaeeee',2035,sysdate,'192.168.0.2');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'유정수 가이드님 고마웠습니다','유정수 가이드님 고마웠습니다',
+'uuuu12',1039,sysdate,'192.168.0.3');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'황민 가이드님 감사했습니다~','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gogugma1234',985,sysdate,'192.168.0.4');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'위원섭가이드님~섬세한 배려자이십니다~','위원섭가이드님~섬세한 배려자이십니다~',
+'master115',351,sysdate,'192.168.0.5');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'여행은 한권의 책을 읽는 것과 같다~~','여행은 한권의 책을 읽는 것과 같다~~',
+'vand777',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'감사합니다','감사합니다',
+'monkeydluffy',789,sysdate,'192.168.0.7');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부,나이아가라,캐나다 인솔 크리스 리 고마워요','미동부,나이아가라,캐나다 인솔 크리스 리 고마워요',
+'dgjc221',3790,sysdate,'192.168.0.8');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'그날의 여운이 아직도 생생합니다.','그날의 여운이 아직도 생생합니다.',
+'ironman',23,sysdate,'192.168.0.9');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'크루즈여행을 통해 이야기','크루즈여행을 통해 이야기',
+'caution999',867,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부와캐나다여행','미동부와캐나다여행',
+'gary',2353,sysdate,'192.168.0.11');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'10월17-28일 동유럽발칸여행','10월17-28일 동유럽발칸여행',
+'gaeko',5689,sysdate,'192.168.0.12');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...','가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...',
+'hi0933',22,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식','가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식',
+'seif23',99,sysdate,'192.168.0.34');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...','인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...',
+'liewi',99,sysdate,'192.168.0.32');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이','9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이',
+'3943we',123,sysdate,'192.168.0.30');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...','[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...',
+'harry',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'괌여행 - 가자에어 프레스티지석 / 웨스틴호텔','괌여행 - 가자에어 프레스티지석 / 웨스틴호텔',
+'poter',123,sysdate,'192.168.0.1');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'홍혜진가이드님 세심한 배려에 정말 감사합니다','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gaeeee',2035,sysdate,'192.168.0.2');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'유정수 가이드님 고마웠습니다','유정수 가이드님 고마웠습니다',
+'uuuu12',1039,sysdate,'192.168.0.3');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'황민 가이드님 감사했습니다~','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gogugma1234',985,sysdate,'192.168.0.4');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'위원섭가이드님~섬세한 배려자이십니다~','위원섭가이드님~섬세한 배려자이십니다~',
+'master115',351,sysdate,'192.168.0.5');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'여행은 한권의 책을 읽는 것과 같다~~','여행은 한권의 책을 읽는 것과 같다~~',
+'vand777',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'감사합니다','감사합니다',
+'monkeydluffy',789,sysdate,'192.168.0.7');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부,나이아가라,캐나다 인솔 크리스 리 고마워요','미동부,나이아가라,캐나다 인솔 크리스 리 고마워요',
+'dgjc221',3790,sysdate,'192.168.0.8');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'그날의 여운이 아직도 생생합니다.','그날의 여운이 아직도 생생합니다.',
+'ironman',23,sysdate,'192.168.0.9');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'크루즈여행을 통해 이야기','크루즈여행을 통해 이야기',
+'caution999',867,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부와캐나다여행','미동부와캐나다여행',
+'gary',2353,sysdate,'192.168.0.11');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'10월17-28일 동유럽발칸여행','10월17-28일 동유럽발칸여행',
+'gaeko',5689,sysdate,'192.168.0.12');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...','가자에어 기내식 이코노미석 인천에서 자그레브 직항 대실망...',
+'hi0933',22,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식','가자에어 하노이 탑승후기, 비즈니스 클래스, 기내식',
+'seif23',99,sysdate,'192.168.0.34');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...','인천-밀라노 가자에어 KE927 프레스티지 슬리피 좌석 및...',
+'liewi',99,sysdate,'192.168.0.32');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이','9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이',
+'3943we',123,sysdate,'192.168.0.30');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...','[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...',
+'harry',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'괌여행 - 가자에어 프레스티지석 / 웨스틴호텔','괌여행 - 가자에어 프레스티지석 / 웨스틴호텔',
+'poter',123,sysdate,'192.168.0.1');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'홍혜진가이드님 세심한 배려에 정말 감사합니다','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gaeeee',2035,sysdate,'192.168.0.2');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'유정수 가이드님 고마웠습니다','유정수 가이드님 고마웠습니다',
+'uuuu12',1039,sysdate,'192.168.0.3');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'황민 가이드님 감사했습니다~','홍혜진가이드님 세심한 배려에 정말 감사합니다',
+'gogugma1234',985,sysdate,'192.168.0.4');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'위원섭가이드님~섬세한 배려자이십니다~','위원섭가이드님~섬세한 배려자이십니다~',
+'master115',351,sysdate,'192.168.0.5');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'여행은 한권의 책을 읽는 것과 같다~~','여행은 한권의 책을 읽는 것과 같다~~',
+'vand777',123,sysdate,'192.168.0.6');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'감사합니다','감사합니다',
+'monkeydluffy',789,sysdate,'192.168.0.7');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부,나이아가라,캐나다 인솔 크리스 리 고마워요','미동부,나이아가라,캐나다 인솔 크리스 리 고마워요',
+'dgjc221',3790,sysdate,'192.168.0.8');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'그날의 여운이 아직도 생생합니다.','그날의 여운이 아직도 생생합니다.',
+'ironman',23,sysdate,'192.168.0.9');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'크루즈여행을 통해 이야기','크루즈여행을 통해 이야기',
+'caution999',867,sysdate,'192.168.0.10');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'미동부와캐나다여행','미동부와캐나다여행',
+'gary',2353,sysdate,'192.168.0.11');
+insert into reviewboard values(reviewboardnum_sq.nextval,0,'10월17-28일 동유럽발칸여행','10월17-28일 동유럽발칸여행',
+'gaeko',5689,sysdate,'192.168.0.12');
+
 insert into reviewboard values(reviewboardnum_sq.nextval, 0, '가자에어 비즈니스석 후기 GZ999 인천ㅡ세부', to_clob('<div class="se_component_wrap sect_dsc __se_component_area">
 <div class="se_component se_paragraph default">
 <div class="se_sectionArea">
