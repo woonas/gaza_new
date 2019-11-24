@@ -1,7 +1,5 @@
 package kr.gaza.myapp.admin;
 
-import java.util.List;
-
 import kr.gaza.myapp.aviation.airplane.AirplaneVO;
 import kr.gaza.myapp.aviation.airport.AirportVO;
 import kr.gaza.myapp.aviation.flight.FlightVO;
@@ -14,7 +12,7 @@ public interface AdminEditInterface {
 	public int insertAirport(AirportVO vo);
 	public int deleteAirport(int num);
 	public int insertAirplane(AirplaneVO vo);
-	public List<ProductVO> productAllSelect(int num);
+	public ProductVO productAllSelect(int num);
 	public int insertProduct(ProductVO vo);
 	public int updateProduct(ProductVO vo);
 	public int deleteProduct(int num);

@@ -17,7 +17,7 @@
 <script>
 	$(function(){
 		//테이블 생성. DataTables////////////////////////////////////////////////////////////////////////
-		var table = $("#noticeTable").DataTable({
+		var table = $("#boardTable").DataTable({
 			"stateSave" : false,
 			"ordering" : true,
 			"order"          : [0, "desc"],
@@ -39,7 +39,7 @@
 				}
 			},
 			"drawCallback" : function(settings){
-				$("#noticeTable thead").remove();
+				$("#boardTable thead").remove();
 			}
 		});
 		
@@ -117,7 +117,7 @@
 					<div id="noticeAll" class='tabcontent'>
 						<div class='boardList'>
 							<!-- table-------------------------------------------------------------------------- -->
-							<table id="noticeTable" class="boardTbl row-border">
+							<table id="boardTable" class="boardTbl row-border">
 								<colgroup>
 									<col width="10%">
 									<col width="70%">

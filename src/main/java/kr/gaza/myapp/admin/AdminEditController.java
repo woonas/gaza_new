@@ -154,7 +154,9 @@ public class AdminEditController {
 		AdminEditInterface dao = sqlSession.getMapper(AdminEditInterface.class);
 		
 		ModelAndView mav = new ModelAndView();
-		mav.addObject("vo",dao.productAllSelect(productNum));
+		ProductVO vo = dao.productAllSelect(productNum);
+		
+		mav.addObject("vo", vo);
 		System.out.println(productNum);
 		mav.setViewName("JSP/admin/admin_productEdit");
 		return mav;
