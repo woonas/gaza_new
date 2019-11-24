@@ -35,7 +35,7 @@
                                                     <th>예매횟수</th>
                                                     <th>할인</th>
                                                     <th>등록일</th>
-                                                    <th>삭제</th>
+                                                    <th>수정/삭제</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -48,8 +48,8 @@
                                                     <td class="center">${vo.productCnt }</td>
                                                     <td class="center">${vo.productSale}</td>
                                                     <td>${vo.regDate }</td>
-                                                    <td><a href="productDel?productNum=${vo.productNum}">삭제</a></td>	
-                                                </tr>
+                                                    <td><a href="admin_productEdit?productNum=${vo.productNum }">수정</a>/<a href="productDel?productNum=${vo.productNum}">삭제</a></td>	
+                                                </tr>	
                                                 </c:forEach>
                                             </tbody>
                                         </table>

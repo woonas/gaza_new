@@ -30,6 +30,10 @@
 		values(productnum_sq.nextval, #{depart}, #{arrive}, #{price}, #{productCnt}, #{productSale}, sysdate)
 </insert>
 
+<select id="productAllSelect" resultType="kr.gaza.myapp.aviation.product.ProductVO">
+	select productnum, depart, arrive, price, productcnt, sale AS productSale, to_char(regdate,'YYYY-MM-DD') regdate from product where productnum =#{productNum}
+</select>
+
 <delete id="deleteProduct">
 		delete from product where productnum=#{productNum} 
 </delete>
