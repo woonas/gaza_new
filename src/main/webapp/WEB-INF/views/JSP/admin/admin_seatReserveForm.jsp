@@ -15,10 +15,9 @@
                             <div class="panel panel-default">
                                 <div class="panel-body">
                                     <form method="post" action="seatReserveAddOk">
-										좌석일련번호: <input type="text" name="seatReserveNum"><br/>
 										운행번호: <input type="text" name="flightNum"><br/>
 										좌석타입: <input type="text" name="seatType"><br/>
-										좌석번호: <input type="text" name="seatNum"><br/>
+										좌석번호: <input type="text" name="seatNo"><br/>
 										예약여부: <input type="text" name="reserved"><br>
 										<input type="submit" name="adminAdd" value="좌석일련번호 추가"><br/>
 									</form>
