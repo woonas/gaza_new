@@ -14,13 +14,10 @@
                         <div class="col-lg-12">	
                             <div class="panel panel-default">
                                 <div class="panel-body">
-                                    <form method="post" action="adminAddOk">
-										아이디: <input type="text" name="adminId"><br/>
-										비밀번호: <input type="text" name="adminPwd"><br/>
-										관리자이름: <input type="text" name="adminName"><br/>
-										관리자번호: <input type="text" name="adminTel"><br/>
-										이메일: <input type="text" name="adminEmail"><br>
-										<input type="submit" name="adminAdd" value="관리자 추가"><br/>
+                                    <form method="post" action="peopleAddOk">
+										승객타입: <input type="text" name="peopleType"><br/>
+										할인율: <input type="text" name="peopleSale"><br/>
+										<input type="submit" name="adminAdd" value="승객타입 분류 추가"><br/>
 									</form>
                                 </div>
                                 <!-- /.panel-body -->

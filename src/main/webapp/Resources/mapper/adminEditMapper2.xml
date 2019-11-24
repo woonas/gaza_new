@@ -15,4 +15,10 @@
 <delete id="deleteSeatReserve" parameterType="kr.gaza.myapp.admin.AdminVO2">
 	delete from seatreserve where seatreservenum=#{seatReserveNum}
 </delete>
+<insert id="insertPeople" parameterType="kr.gaza.myapp.admin.AdminVO2">
+	INSERT INTO people VALUES(people_sq.nextval,#{peopleType},#{peopleSale})
+</insert>
+<delete id="deletePeople" parameterType="kr.gaza.myapp.admin.AdminVO2">
+	delete from people where peoplenum=#{peopleNum}
+</delete>
 </mapper>

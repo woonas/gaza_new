@@ -7,7 +7,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <h1 class="page-header">승객타입(people)</h1>
-                            <input type="button" id="addBtn" value="추가">
+                            <a href="<%=jsp %>/admin/admin_peopleForm"><input type="button" id="addBtn" value="추가"></a>
                         </div>
                     </div>
                     
@@ -28,6 +28,7 @@
                                                     <th>승객타입분류번호</th>
                                                     <th>승객타입</th>
                                                     <th>할인율</th>
+                                                    <th>삭제</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -36,6 +37,7 @@
                                                     <td>${vo.peopleNum }</td>
                                                     <td>${vo.peopleType }</td>
                                                     <td>${vo.peopleSale }</td>
+                                                    <td><a href="peopleDelOk?peopleNum=${vo.peopleNum }">삭제</a></td>
                                                 </tr>
                                                 </c:forEach>
                                             </tbody>

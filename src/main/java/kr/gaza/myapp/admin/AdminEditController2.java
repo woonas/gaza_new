@@ -55,21 +55,21 @@ public class AdminEditController2 {
 			return "JSP/admin/admin_seatReserveForm";
 		}
 		//seatReserve 추가 
-				@RequestMapping(value="/JSP/admin/seatReserveAddOk",method=RequestMethod.POST)
-				public ModelAndView SeatReserveAddOk(AdminVO2 vo, HttpServletRequest req) {
-					
-					AdminEditInterface2 dao = sqlSession.getMapper(AdminEditInterface2.class);
-					int cnt = dao.insertSeatReserve(vo);
-						
-					ModelAndView mav = new ModelAndView();
-					if(cnt>0) {
-						mav.setViewName("redirect:admin_seatReserve");
-					}else {
-						mav.setViewName("redirect:admin_seatReserveForm");
-					}
-					return mav;
-				}
-		
+		@RequestMapping(value="/JSP/admin/seatReserveAddOk",method=RequestMethod.POST)
+		public ModelAndView SeatReserveAddOk(AdminVO2 vo, HttpServletRequest req) {
+			
+			AdminEditInterface2 dao = sqlSession.getMapper(AdminEditInterface2.class);
+			int cnt = dao.insertSeatReserve(vo);
+				
+			ModelAndView mav = new ModelAndView();
+			if(cnt>0) {
+				mav.setViewName("redirect:admin_seatReserve");
+			}else {
+				mav.setViewName("redirect:admin_seatReserveForm");
+			}
+			return mav;
+		}
+
 		//seatReserve 삭제
 		@RequestMapping("/JSP/admin/seatReserveDelOk")
 		public ModelAndView SeatReserveDelete(@RequestParam("seatReserveNum") int seatReserveNum) {
@@ -85,8 +85,41 @@ public class AdminEditController2 {
 			}
 			return mav;
 		}
-		
-		
+		//people 수정폼 이동
+		@RequestMapping("/JSP/admin/admin_peopleForm")
+		public String PeopleEditForm() {
+			return "JSP/admin/admin_peopleForm";
+		}
+		//people 추가
+		@RequestMapping(value="/JSP/admin/peopleAddOk",method=RequestMethod.POST)
+		public ModelAndView PeopleAddOk(AdminVO2 vo, HttpServletRequest req) {
+			AdminEditInterface2 dao = sqlSession.getMapper(AdminEditInterface2.class);
+			int cnt = dao.insertPeople(vo);
+			
+			ModelAndView mav = new ModelAndView();
+			if(cnt>0) {
+				mav.setViewName("redirect:admin_people");
+			}else {
+				mav.setViewName("redirect:admin_peopleForm");
+			}
+			
+			return mav;
+		}
+		//people 삭제
+		@RequestMapping("/JSP/admin/peopleDelOk")
+		public ModelAndView PeopleDelete(@RequestParam("peopleNum") int peopleNum) {
+			
+			AdminEditInterface2 dao = sqlSession.getMapper(AdminEditInterface2.class);
+			int cnt = dao.deletePeople(peopleNum);
+			ModelAndView mav = new ModelAndView();
+			if(cnt>0) {
+				mav.setViewName("redirect:admin_people");
+			}else{
+				mav.addObject("peopleNum",peopleNum);
+				mav.setViewName("redirect:admin");
+			}
+			return mav;
+		}
 		
 		
 		

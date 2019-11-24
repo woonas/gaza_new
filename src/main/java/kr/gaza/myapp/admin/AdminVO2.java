@@ -9,10 +9,33 @@ public class AdminVO2 {
 	private int flightNum;
 	private int seatType;
 	private int reserved;
+	//
+	private int peopleNum;
+	private String peopleType;
+	private String peopleSale;
 	
 	
 	
 	
+	
+	public String getPeopleSale() {
+		return peopleSale;
+	}
+	public void setPeopleSale(String peopleSale) {
+		this.peopleSale = peopleSale;
+	}
+	public int getPeopleNum() {
+		return peopleNum;
+	}
+	public void setPeopleNum(int peopleNum) {
+		this.peopleNum = peopleNum;
+	}
+	public String getPeopleType() {
+		return peopleType;
+	}
+	public void setPeopleType(String peopleType) {
+		this.peopleType = peopleType;
+	}
 	public int getSeatNo() {
 		return seatNo;
 	}
