@@ -7,7 +7,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <h1 class="page-header">좌석예약(SeatReserve)</h1>
-                            <input type="button" id="addBtn" value="추가">
+                            <a href="<%=jsp %>/admin/admin_seatReserveForm"><input type="button" id="addBtn" value="추가"></a>
                         </div>
                     </div>
                     
@@ -41,6 +41,7 @@
                                                     <td>${vo.seatType }</td>
                                                     <td class="center">${vo.seatNo }</td>
                                                     <td class="center">${vo.reserved }</td>
+                                                    <td><a href="seatDelOk?seatNum=${vo.seatReserveNum}">삭제</a></td>
                                                 </tr>
                                                 </c:forEach>
                                             </tbody>

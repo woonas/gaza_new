@@ -7,7 +7,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <h1 class="page-header">좌석타입(seat)</h1>
-                            <input type="button" id="addBtn" value="추가">
+                            <a href="<%=jsp %>/admin/admin_seatForm"><input type="button" id="addBtn" value="추가"></a>
                         </div>
                     </div>
                     
@@ -25,6 +25,7 @@
                                                 <tr>
                                                     <th>좌석타입</th>
                                                     <th>좌석타입이름</th>
+                                                    <th>삭제</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -32,6 +33,7 @@
                                                 <tr class="odd gradeX">
                                                     <td>${vo.seatType }</td>
                                                     <td>${vo.seatContent }</td>
+                                                    <td><a href="seatDelOk?seatNum=${vo.seatType}">삭제</a></td>
                                                 </tr>
                                                 </c:forEach>
                                             </tbody>
