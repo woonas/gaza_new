@@ -54,23 +54,37 @@ public class AdminEditController2 {
 		public String SeatReserveEditForm() {
 			return "JSP/admin/admin_seatReserveForm";
 		}
-		//seatType 추가 
+		//seatReserve 추가 
 				@RequestMapping(value="/JSP/admin/seatReserveAddOk",method=RequestMethod.POST)
 				public ModelAndView SeatReserveAddOk(AdminVO2 vo, HttpServletRequest req) {
 					
 					AdminEditInterface2 dao = sqlSession.getMapper(AdminEditInterface2.class);
-					int cnt = dao.insertSeat(vo);
+					int cnt = dao.insertSeatReserve(vo);
 						
 					ModelAndView mav = new ModelAndView();
 					if(cnt>0) {
-						mav.setViewName("redirect:admin_seat");
+						mav.setViewName("redirect:admin_seatReserve");
 					}else {
-						mav.setViewName("redirect:admin_seatForm");
+						mav.setViewName("redirect:admin_seatReserveForm");
 					}
 					return mav;
 				}
 		
-		
+		//seatReserve 삭제
+		@RequestMapping("/JSP/admin/seatReserveDelOk")
+		public ModelAndView SeatReserveDelete(@RequestParam("seatReserveNum") int seatReserveNum) {
+			
+			AdminEditInterface2 dao = sqlSession.getMapper(AdminEditInterface2.class);
+			int cnt = dao.deleteSeatReserve(seatReserveNum);
+			ModelAndView mav = new ModelAndView();
+			if(cnt>0) {
+				mav.setViewName("redirect:admin_seatReserve");
+			}else{
+				mav.addObject("seatReserveNum",seatReserveNum);
+				mav.setViewName("redirect:admin");
+			}
+			return mav;
+		}
 		
 		
 		

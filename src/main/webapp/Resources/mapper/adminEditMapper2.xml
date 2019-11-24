@@ -11,7 +11,9 @@
 	delete from seat where seattype=#{seatNum}
 </delete>
 <insert id="insertSeatReserve" parameterType="kr.gaza.myapp.admin.AdminVO2">
-	insert into seat(seattype, seatcontent)
-		values(seat_sq.nextval, #{seatTypeName})
+	INSERT INTO seatreserve VALUES(seatreservenum_sq.nextval,#{flightNum},#{seatType},#{seatNo},#{reserved})
 </insert>
+<delete id="deleteSeatReserve" parameterType="kr.gaza.myapp.admin.AdminVO2">
+	delete from seatreserve where seatreservenum=#{seatReserveNum}
+</delete>
 </mapper>

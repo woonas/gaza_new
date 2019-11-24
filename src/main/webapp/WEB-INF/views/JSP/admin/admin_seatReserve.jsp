@@ -31,6 +31,7 @@
                                                     <th>좌석타입</th>
                                                     <th>좌석번호</th>
                                                     <th>예약여부</th>
+                                                    <th>삭제</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -41,7 +42,7 @@
                                                     <td>${vo.seatType }</td>
                                                     <td class="center">${vo.seatNo }</td>
                                                     <td class="center">${vo.reserved }</td>
-                                                    <td><a href="seatDelOk?seatNum=${vo.seatReserveNum}">삭제</a></td>
+                                                    <td><a href="seatReserveDelOk?seatReserveNum=${vo.seatReserveNum}">삭제</a></td>
                                                 </tr>
                                                 </c:forEach>
                                             </tbody>
