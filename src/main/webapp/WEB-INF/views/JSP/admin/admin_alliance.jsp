@@ -7,7 +7,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <h1 class="page-header">제휴이벤트(Alliance)</h1>
-                            <input type="button" id="addBtn" value="추가">
+                            <a href="<%=jsp%>/admin/admin_allianceForm"><input type="button" id="addBtn" value="추가"></a>
                         </div>
                     </div>
                     
@@ -39,6 +39,7 @@
                                                     <th>이벤트시작일</th>
                                                     <th>이벤트마감일</th>
                                                     <th>이벤트등록일</th>
+                                                    <th>삭제</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -53,6 +54,7 @@
                                                     <td>${vo.startDate }</td>
                                                     <td>${vo.endDate }</td>
                                                     <td>${vo.regDate }</td>
+                                                    <td><a href="allianceDel?eventNum=${vo.eventNum}">삭제</a></td>
                                                 </tr>
                                                 </c:forEach>
                                             </tbody>

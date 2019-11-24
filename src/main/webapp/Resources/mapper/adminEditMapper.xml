@@ -59,4 +59,13 @@
 <delete id="deleteNotice">
 		delete from noticeboard where noticenum=#{noticeNum}
 </delete>
+
+<insert id="insertAlliance" parameterType="kr.gaza.myapp.eventPackage.AllianceVO">
+	insert into event(eventnum, eventname, eventthumbnail, eventimg, eventcontent, eventcompany, startdate, enddate, regdate) 
+		values(eventnum_sq.nextval, #{eventName}, #{eventThumbnail}, #{eventImg}, #{eventContent}, #{eventCompany}, #{startDate}, #{endDate}, sysdate)
+</insert>
+
+<delete id="deleteAlliance">
+		delete from event where eventnum=#{eventNum}
+</delete>
 </mapper>

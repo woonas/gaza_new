@@ -15,6 +15,7 @@ import kr.gaza.myapp.aviation.airport.AirportVO;
 import kr.gaza.myapp.aviation.flight.FlightVO;
 import kr.gaza.myapp.aviation.product.ProductVO;
 import kr.gaza.myapp.board.noticeBoard.NoticeBoardVO;
+import kr.gaza.myapp.eventPackage.AllianceVO;
 
 @Controller
 public class AdminEditController {
@@ -275,7 +276,41 @@ public class AdminEditController {
 		return mav;
 	}
 		
+	//이벤트 수정폼 이동
+	@RequestMapping("/JSP/admin/admin_allianceForm")
+	public String AdminAllianceForm() {
+		return "JSP/admin/admin_allianceForm";
+	}
 	
+	//이벤트 추가 
+	@RequestMapping(value="/JSP/admin/allianceAddOk",method=RequestMethod.POST)
+	public ModelAndView AllinaceAddOk(AllianceVO vo, HttpServletRequest req) {
+		
+		AdminEditInterface dao = sqlSession.getMapper(AdminEditInterface.class);
+		int cnt = dao.insertAlliance(vo);
+			
+		ModelAndView mav = new ModelAndView();
+		if(cnt>0) {
+			mav.setViewName("redirect:admin_alliance");
+		}else {
+			mav.setViewName("redirect:admin_allianceForm");
+		}
+		return mav;
+	}
 	
-				
+	//이벤트 삭제
+	@RequestMapping("/JSP/admin/allianceDel")
+	public ModelAndView EventDelete(@RequestParam("eventNum") int eventNum) {
+		AdminEditInterface dao = sqlSession.getMapper(AdminEditInterface.class);
+		int cnt = dao.deleteAlliance(eventNum);
+		
+		ModelAndView mav = new ModelAndView();
+		if(cnt>0) { // 삭제성공
+			mav.setViewName("redirect:admin_alliance");
+		}else { //삭제 실패
+			mav.addObject("adminNum",eventNum);
+			mav.setViewName("redirect:admin");
+		}
+		return mav;
+	}			
 }
