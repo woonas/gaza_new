@@ -157,12 +157,27 @@ public class AdminEditController {
 		ProductVO vo = dao.productAllSelect(productNum);
 		
 		mav.addObject("vo", vo);
-		System.out.println(productNum);
 		mav.setViewName("JSP/admin/admin_productEdit");
 		return mav;
 	}
 		
-	
+	//프로덕트 수정
+		@RequestMapping(value="JSP/admin/productEditOk", method=RequestMethod.POST)
+		public ModelAndView productUpdate(ProductVO vo) {
+			
+			AdminEditInterface dao = sqlSession.getMapper(AdminEditInterface.class);
+			int cnt = dao.updateProduct(vo);
+			
+			ModelAndView mav = new ModelAndView();
+			mav.addObject("productNum",vo.getProductNum());
+			if(cnt>0) {
+				mav.setViewName("redirect:admin_product");
+			}else {
+				mav.setViewName("redirect:admin");
+			}
+			return mav;
+		}
+		
 	//프로덕트 삭제
 		@RequestMapping("/JSP/admin/productDel")
 		public ModelAndView productDelete(@RequestParam("productNum") int productNum) {

@@ -34,6 +34,10 @@
 	select productnum, depart, arrive, price, productcnt, sale AS productSale, to_char(regdate,'YYYY-MM-DD') regdate from product where productnum =#{productNum}
 </select>
 
+<update id="updateProduct" parameterType="kr.gaza.myapp.aviation.product.ProductVO">
+		update product set depart=#{depart}, arrive=#{arrive}, price=#{price}, sale=#{productSale} where productnum=#{productNum}
+</update>
+	
 <delete id="deleteProduct">
 		delete from product where productnum=#{productNum} 
 </delete>
