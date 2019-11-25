@@ -26,5 +26,5 @@ public interface ReviewBoardInterface {
 	// 마지막 레코드 번호 가져오기
 	public int reviewBoardGetLastNum(int tabType);
 	// 이전 글, 다음 글 가져오기
-	public ReviewBoardVO reviewBoardGetPrevNext(int reviewType, int reviewNum);
+	public ReviewBoardVO reviewBoardGetPrevNext(ReviewBoardVO vo);
 }

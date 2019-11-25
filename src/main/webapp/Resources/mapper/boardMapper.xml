@@ -36,4 +36,7 @@
 			)
 			where noticeNum=#{param2}
 	</select>
+	<update id="noticeHitUpdate" parameterType="int">
+			update noticeBoard set hit= hit+1 where noticeNum=#{param1}
+	</update>
 </mapper>

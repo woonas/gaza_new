@@ -17,5 +17,6 @@ public interface NoticeBoardInterface {
 	public int noticeBoardGetLastNum(int tabType);
 	// 이전 글, 다음 글 가져오기
 	public NoticeBoardVO noticeBoardGetPrevNext(int tabType, int noticeNum);
-	
+	// 조회수 증가
+	public void noticeHitUpdate(int noticeNum);
 }

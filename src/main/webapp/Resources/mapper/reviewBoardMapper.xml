@@ -20,7 +20,7 @@
 			from reviewBoard where reviewNum=#{reviewNum}
 	</select>
 	
-	<select id="reviewBoardGetPrevNext" parameterType="int" resultType="kr.gaza.myapp.board.reviewBoard.ReviewBoardVO">
+	<select id="reviewBoardGetPrevNext" parameterType="kr.gaza.myapp.board.reviewBoard.ReviewBoardVO" resultType="kr.gaza.myapp.board.reviewBoard.ReviewBoardVO">
 			select * from(
 				SELECT 
 				reviewNum, subject, 
@@ -28,8 +28,14 @@
 				lag(subject, 1, '이전 글이 없습니다.') over (order by reviewNum) prevSubject, 
 				lead(reviewNum, 1) over (order by reviewNum) nextNum, 
 				lead(subject, 1, '다음 글이 없습니다.') over (order by reviewNum) nextSubject 
-				from reviewBoard where reviewType=#{param1}
+				from reviewBoard where reviewType=#{reviewType}
+				<if test="reviewType == 1">
+				and writer=#{writer}
+				</if>
 			)
-			where reviewNum=#{param2}
+			where reviewNum=#{reviewNum}
 	</select>
+	<update id="reviewBoardHit" parameterType="int">
+			update reviewBoard set hit= hit+1 where reviewNum=#{param1}
+	</update>
 </mapper>

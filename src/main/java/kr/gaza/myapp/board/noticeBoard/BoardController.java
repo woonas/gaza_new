@@ -2,6 +2,10 @@ package kr.gaza.myapp.board.noticeBoard;
 
 import java.util.List;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -40,8 +44,28 @@ public class BoardController {
 	//공지사항 글 보기 페이지
 	@RequestMapping("/JSP/board/noticeBoard/noticeBoard_view")
 	public ModelAndView noticeDetailView(@RequestParam("noticeNum") int noticeNum, @RequestParam("pageNum") int pageNum,
-			@RequestParam("tabType") int tabType) {
+			@RequestParam("tabType") int tabType, HttpServletRequest req, HttpServletResponse res) {
 		NoticeBoardInterface dao = sqlSession.getMapper(NoticeBoardInterface.class);
+		
+		//쿠키에서 값 검색 후 조회수 증가
+		Cookie cookies[] = req.getCookies();
+		boolean viewed = false;
+		for(int i=0; i<cookies.length; i++) {
+			String name = cookies[i].getName();
+			if(name.equals("notice"+noticeNum)) {//쿠키에 페이지가 있으면
+				viewed = true;
+				break;
+			}
+		}
+		
+		if(viewed==false) {
+			Cookie c = new Cookie("notice"+noticeNum, "view");
+			c.setMaxAge(60*60*24*30);
+			res.addCookie(c);
+			
+			//조회수 증가
+			dao.noticeHitUpdate(noticeNum);
+		}
 		
 		NoticeBoardVO vo = new NoticeBoardVO();
 		vo.setNoticeNum(noticeNum);

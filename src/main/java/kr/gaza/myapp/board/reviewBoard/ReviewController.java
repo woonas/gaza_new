@@ -2,7 +2,9 @@ package kr.gaza.myapp.board.reviewBoard;
 
 import java.util.List;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.apache.ibatis.session.SqlSession;
@@ -11,9 +13,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
-
-import kr.gaza.myapp.board.reviewBoard.ReviewBoardInterface;
-import kr.gaza.myapp.board.reviewBoard.ReviewBoardVO;
 
 @Controller
 public class ReviewController {
@@ -57,14 +56,41 @@ public class ReviewController {
 	//이용후기 글 보기 페이지
 	@RequestMapping("/JSP/board/reviewBoard/reviewBoard_view")
 	public ModelAndView noticeDetailView(@RequestParam("reviewNum") int reviewNum, @RequestParam("pageNum") int pageNum,
-			@RequestParam("reviewType") int reviewType) {
+			@RequestParam("reviewType") int reviewType, HttpServletRequest req, HttpServletResponse res) {
 		ReviewBoardInterface dao = sqlSession.getMapper(ReviewBoardInterface.class);
 		
+		//쿠키에서 값 검색 후 조회수 증가
+		Cookie cookies[] = req.getCookies();
+		boolean viewed = false;
+		for(int i=0; i<cookies.length; i++) {
+			String name = cookies[i].getName();
+			if(name.equals("review"+reviewNum)) {//쿠키에 페이지가 있으면
+				viewed = true;
+				break;
+			}
+		}
+		
+		if(viewed==false) {
+			Cookie c = new Cookie("review"+reviewNum, "view");
+			c.setMaxAge(60*60*24*30);
+			res.addCookie(c);
+			
+			//조회수 증가
+			dao.reviewBoardHit(reviewNum);
+		}
+	
 		ReviewBoardVO vo = new ReviewBoardVO();
 		vo.setReviewNum(reviewNum);
 		
 		ReviewBoardVO vo2 = dao.reviewBoardSelect(vo);
-		vo = dao.reviewBoardGetPrevNext(reviewType, reviewNum);
+		
+		//이전글 다음글 가져오기
+		ReviewBoardVO vo3 = new ReviewBoardVO();
+		HttpSession sess = req.getSession();
+		vo3.setReviewNum(reviewNum);
+		vo3.setWriter((String)sess.getAttribute("memberId"));
+		vo3.setReviewType(reviewType);
+		vo = dao.reviewBoardGetPrevNext(vo3);
 		vo2.setPageNum(pageNum);
 		
 		ModelAndView mav = new ModelAndView();
