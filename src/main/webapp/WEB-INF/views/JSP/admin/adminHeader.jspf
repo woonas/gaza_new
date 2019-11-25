@@ -46,6 +46,30 @@
                 white-space: nowrap;
             }
             td { vertical-align: middle; }
+
+            .clearfix {zoom: 1;}
+            .clearfix:after {
+                content: '.';
+                clear: both;
+                display: block;
+                height: 0;
+                visibility: hidden;
+            }
+
+            .row {
+                max-width: 100%;
+                margin: 0 auto;
+            }
+
+            .col-fifth,
+            .col-two-fifth,
+            .col-three-fifth,
+            .col-four-fifth { float: left; }
+
+            .col-fifth { width: 20% !important; }
+            .col-two-fifth { width: 40% !important; }
+            .col-three-fifth { width: 60% !important; }
+            .col-four-fifth { width: 80% !important; }
         </style>
     </head>
     <body>
