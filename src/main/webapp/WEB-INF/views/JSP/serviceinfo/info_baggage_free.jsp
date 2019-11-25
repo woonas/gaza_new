@@ -46,23 +46,22 @@
                     <tr>
                         <td class="text-align-center">
                             
-                            <div style="height: 97px; width: 65px; padding:25px 0; margin:0; background: url(<%=path%>/Resources/IMG/information/icoset_baggage.png) no-repeat 0 0; clear: both;"></div>
-                            <div style="height: 97px; width: 65px; padding:25px 0; margin:0; background: url(<%=path%>/Resources/IMG/information/icoset_baggage.png) no-repeat 0 0; clear: both;"></div>
+                            <div style="height: 97px; width: 65px; padding:25px 0; margin:0; background: url(<%=path%>/Resources/IMG/information/icoset_baggage.png) no-repeat 0 0; clear: both; display:inline-block;"></div>
+                            <div style="height: 97px; width: 65px; padding:25px 0; margin:0; background: url(<%=path%>/Resources/IMG/information/icoset_baggage.png) no-repeat 0 0; clear: both; display: inline-block;"></div>
                             <div style="font-size: 110%">무게 : 32kg(70lbs) 이내<br/>허용 개수 : 2개</div>
                             
                             
                         </td>
                         <td class="text-align-center">
-                            <div style="height: 97px; width: 60px;padding:25px 0; margin:0; background: url(<%=path%>/Resources/IMG/information/icoset_baggage.png) no-repeat -72px 0; clear: both;"></div>
-                            <div style="height: 97px; width: 60px;padding:25px 0; margin:0; background: url(<%=path%>/Resources/IMG/information/icoset_baggage.png) no-repeat -72px 0; clear: both;"></div>
+                            <div style="height: 97px; width: 60px;padding:25px 0; margin:0; background: url(<%=path%>/Resources/IMG/information/icoset_baggage.png) no-repeat -72px 0; clear: both; display: inline-block;"></div>
+                            <div style="height: 97px; width: 60px;padding:25px 0; margin:0; background: url(<%=path%>/Resources/IMG/information/icoset_baggage.png) no-repeat -72px 0; clear: both; display: inline-block;"></div>
                             <div style="font-size: 110%">무게 : 23kg(50lbs) 이내<br/>허용 개수 : 2개</div>
                              
                         </td>
                         <td class="text-align-center">
-                            <div style="height: 97px; width: 60px; padding:25px 0; margin:0;  background: url(<%=path%>/Resources/IMG/information/icoset_baggage.png) no-repeat -72 0; clear: both;"></div>
-                            <div style="height: 97px; width: 77px; padding:25px 0; margin:0;  background: url(<%=path%>/Resources/IMG/information/icoset_baggage.png) no-repeat -347px 0; clear: both;"></div>
+                            <div style="height: 97px; width: 60px; padding:25px 0; margin:0;  background: url(<%=path%>/Resources/IMG/information/icoset_baggage.png) no-repeat -72 0; clear: both; display: inline-block;"></div>
+                            <div style="height: 97px; width: 77px; padding:25px 0; margin:0;  background: url(<%=path%>/Resources/IMG/information/icoset_baggage.png) no-repeat -347px 0; clear: both; display: inline-block;"></div>
                             <div style="font-size: 110%">무게 : 23kg(50lbs) 이내<br/>허용 개수 : 1개 + 접을 수 있는 유모차,<br/>유아 운반용 요람,<br/>유아용 카시트 중 1개 추가 가능</div>
-                             
                         </td>
                     </tr>
                 </tbody>

@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <title>체크인</title>
 <link rel="stylesheet" href="<%=path %>/Resources/CSS/information.css">
+<script>window.onbeforeunload = () => window.scrollTo(0, 0)</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <style>
 hr {
@@ -159,6 +160,7 @@ table td {
 </head>
 <body onload="start()">
 	<%@ include file="../common/nav.jspf" %>
+     <%@ include file="info_nav.jspf" %>
 		<div id="contents">
 			<section id="title">
 				<h3 style="margin-bottom:">체크인</h3>
@@ -240,5 +242,6 @@ table td {
 
 	</div>
 	<%@ include file="../common/footer.jspf" %>
+	<script src="<%=path %>/Resources/JS/information.js"></script>
 </body>
 </html>
