@@ -48,7 +48,7 @@
                                                     <td class="center">${vo.foodContent }</td>
                                                     <td class="center">${vo.foodIngredient }</td>
                                                     <td>${vo.foodPrice }</td>
-                                                    <td><a href="foodDelOk?foodNum=${vo.foodNum }">삭제</a></td>
+                                                    <td><a href="admin_foodEdit?foodNum=${vo.foodNum }">수정</a>/<a href="foodDelOk?foodNum=${vo.foodNum }">삭제</a></td>
                                                 </tr>
                                                 </c:forEach>
                                             </tbody>

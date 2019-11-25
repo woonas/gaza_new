@@ -8,5 +8,8 @@ public interface AdminEditInterface2 {
 	public int insertPeople(AdminVO2 vo);
 	public int deletePeople(int num);
 	public int insertFood(AdminVO2 vo);
+	public AdminVO2 foodAllSelect(int num);
+	public int updateFood(AdminVO2 vo);
 	public int deleteFood(int num);
+	
 }

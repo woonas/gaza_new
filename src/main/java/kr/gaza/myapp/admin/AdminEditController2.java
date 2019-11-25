@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import kr.gaza.myapp.aviation.product.ProductVO;
+
 @Controller
 public class AdminEditController2 {
 	@Autowired
@@ -138,6 +140,34 @@ public class AdminEditController2 {
 				mav.setViewName("redirect:admin_foodForm");
 			}
 			
+			return mav;
+		}
+		//food 수정폼 이동
+		@RequestMapping("/JSP/admin/admin_foodEdit")
+		public ModelAndView AdminProductEdit(@RequestParam("foodNum") int foodNum) {
+			AdminEditInterface2 dao = sqlSession.getMapper(AdminEditInterface2.class);
+			
+			ModelAndView mav = new ModelAndView();
+			AdminVO2 vo = dao.foodAllSelect(foodNum);
+			
+			mav.addObject("vo", vo);
+			mav.setViewName("JSP/admin/admin_foodEdit");
+			return mav;
+		}
+		//food 수정
+		@RequestMapping(value="JSP/admin/foodEditOk", method=RequestMethod.POST)
+		public ModelAndView foodUpdate(AdminVO2 vo) {
+			
+			AdminEditInterface2 dao = sqlSession.getMapper(AdminEditInterface2.class);
+			int cnt = dao.updateFood(vo);
+			
+			ModelAndView mav = new ModelAndView();
+			mav.addObject("foodNum",vo.getFoodNum());
+			if(cnt>0) {
+				mav.setViewName("redirect:admin_food");
+			}else {
+				mav.setViewName("redirect:admin");
+			}
 			return mav;
 		}
 		//food 삭제

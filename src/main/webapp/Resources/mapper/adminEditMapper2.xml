@@ -24,6 +24,12 @@
 <insert id="insertFood" parameterType="kr.gaza.myapp.admin.AdminVO2">
 	INSERT INTO food VALUES(food_sq.nextval,#{foodType},#{foodName},#{foodImg},#{foodContent},#{foodIngredient},#{foodPrice})
 </insert>
+<select id="foodAllSelect" resultType="kr.gaza.myapp.admin.AdminVO2">
+	select foodnum, foodType, foodName, foodImg, foodContent, foodIngredient, foodPrice from food where foodnum =#{foodNum}
+</select>
+<update id="updateFood" parameterType="kr.gaza.myapp.admin.AdminVO2">
+		update food set foodType=#{foodType}, foodName=#{foodName}, foodImg=#{foodImg}, foodContent=#{foodContent}, foodIngredient=#{foodIngredient}, foodPrice=#{foodPrice} where foodnum=#{foodNum}
+</update>
 <delete id="deleteFood" parameterType="kr.gaza.myapp.admin.AdminVO2">
 	delete from food where foodNum=#{foodNum}
 </delete>
