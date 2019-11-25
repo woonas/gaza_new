@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.io.UnsupportedEncodingException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 
@@ -113,7 +113,8 @@ public class BookingController {
                      @RequestParam("airportTo") String airportTo,
                      @RequestParam("flightDate") String flightDate,
                      @RequestParam("dateMod") int dateMod,
-                     HttpServletRequest req, HttpServletResponse response) {
+                     HttpServletRequest request) throws UnsupportedEncodingException {
+        request.setCharacterEncoding("UTF-8");
         BookingVO bookingVO = new BookingVO();
         JourneyVO journeyVO = new JourneyVO();
         journeyVO.setAirportFrom(airportFrom);
@@ -153,11 +154,19 @@ public class BookingController {
         return modelAndView;
     }
 
-    @GetMapping (value = "/JSP/flight/booking/booking4")
+    @PostMapping (value = "/JSP/flight/booking/booking4")
     public ModelAndView bookingView4(HttpServletRequest request) throws UnsupportedEncodingException {
         request.setCharacterEncoding("UTF-8");
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("JSP/flight/booking/booking4");
+        List<String> airportFroms = Arrays.asList(request.getParameter("airportFrom").split("#@!"));
+        List<String> airportTos = Arrays.asList(request.getParameter("airportTo").split("#@!"));
+        List<String> flightNums = Arrays.asList(request.getParameter("flightNum").split("#@!"));
+        BookingInterface bookingDAO = sqlSession.getMapper(BookingInterface.class);
+
+        modelAndView.addObject("airportFroms", airportFroms);
+        modelAndView.addObject("airportTos", airportTos);
+        modelAndView.addObject("flightList", bookingDAO.getFlightList(flightNums));
 
         return modelAndView;
     }

@@ -41,4 +41,16 @@
             passenger
         values(passenger_sq.nextval, #{peopleNum}, #{passengerName}, #{passengerBirth}, #{passengerMemberNum}, #{PassengerDiscount}, #{flightNum})
     </insert>
+
+    <select id="getFlightList" parameterType="String" resultType="kr.gaza.myapp.aviation.flight.FlightVO">
+        select
+            FLIGHTNUM, AIRPLANENAME, PRODUCTNUM, DEPARTTIME, ARRIVETIME, SALE
+        from
+            FLIGHT
+        where
+            FLIGHTNUM in
+            <foreach collection="list" item="flightNum" index="index" separator="," open="(" close=")">
+                #{flightNum}
+            </foreach>
+    </select>
 </mapper>

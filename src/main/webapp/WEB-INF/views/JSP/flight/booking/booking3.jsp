@@ -31,7 +31,6 @@
                 </a>
             </li>
         </ul>
-        
     
         <h3 id="reservation-info">예약자 연락처 정보</h3>
         <ul class="list-type2">
@@ -74,7 +73,7 @@
                     전화번호
                 </div>
                 <div class="two-in-row">
-                    <input id="phone" name="phone" type="number">
+                    <input id="phone" name="phone" type="text">
                 </div>
                 <div class="table-row-title">
                     수신동의
@@ -87,7 +86,7 @@
                 </div>
             </div>
         </div>
-<%--       "<%=jsp %>/flight/booking/booking4--%>
+
         <div class="flex">
             <a href="javascript:history.back()"><button class="whiteBtn left">&lt; 이전</button></a>
             <a href="javascript:" onclick="return toBooking4()"><button class="right blueBtn">다음 &gt;</button></a>
@@ -100,6 +99,11 @@
             <li>실제 운항항공사가 스타얼라이언스 및 마일리지 제휴항공사가 아닌 공동운항편은 아시아나클럽 계정으로 사후 적립만 가능합니다.<br>현재 시스템 문제로, 숫자와 영문을 조합한 이메일 주소만 사용 가능합니다.</li>
         </ul>
     </section>
+    <form action="<%=jsp %>/flight/booking/booking4" method="post" id="booking3frm">
+        <input type="hidden" name="airportFrom">
+        <input type="hidden" name="airportTo">
+        <input type="hidden" name="flightNum">
+    </form>
     <%@ include file="../../common/footer.jspf" %>
     <script src="<%=js%>/booking.js"></script>
 </body>

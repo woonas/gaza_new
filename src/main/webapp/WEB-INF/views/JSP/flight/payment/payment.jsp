@@ -1,13 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <title>결제</title>
-    <link rel="stylesheet" href="../../../CSS/booking.css">
-    <link rel="stylesheet" href="<%=request.getContextPath() %>/Resources/CSS/navNfooter.css" type="text/css"/>
+    <link rel="stylesheet" href="<%=css%>>/booking.css">
     <script src="https://kit.fontawesome.com/9c923ac74a.js" crossorigin="anonymous"></script>
     <script>window.onbeforeunload = () => window.scrollTo(0, 0)</script>
 </head>

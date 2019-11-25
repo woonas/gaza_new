@@ -771,16 +771,15 @@ input[name="class-type"].radio2:checked + label { background-position: 35% 5px; 
 .trip-table>div:first-of-type>div { min-height: 0; }
 .trip-table>div:not(.table-row-title)>div{ padding: 25px 15px; min-height: 155px; }
 .trip-table>div.table-row-title>div{ padding: 15px; }
-
+.trip-table>.row:not(:first-of-type) {border-bottom: 1px solid #ccc; }
 .trip-num>div:first-of-type {
     font-size: 120%;
     margin-top: 25px;
 }
 .trip-airline>div,
 .trip-type>div { margin-top: 35px; }
-.trip-detail { padding: 25px 50px !important; }
 .trip-detail>div>div:first-of-type {
-    margin-top: 30px;
+    margin-top: 13px;
     font-size: 110%;
 }
 
@@ -790,7 +789,7 @@ input[name="class-type"].radio2:checked + label { background-position: 35% 5px; 
 .flight-detail>span:first-of-type {
     position: absolute;
     top: 23px;
-    left: 85px;
+    left: 55px;
     font-size: 80%;
     color: #888;
 }
@@ -813,7 +812,7 @@ input[name="class-type"].radio2:checked + label { background-position: 35% 5px; 
     height: 30px;
     border-radius: 50%;
     border: 4px solid #36f;
-    margin: 17px auto 18px;
+    margin: 17px auto 29px;
 }
 
 .X:before {
@@ -823,7 +822,7 @@ input[name="class-type"].radio2:checked + label { background-position: 35% 5px; 
     color: #ff4500;
     font-weight: 400;
 }
-.X { margin-top: -23px; }
+.X { margin-top: -14px; }
 
 
 /*  가격 표(결제 bag부분 가져다씀) */
@@ -901,7 +900,7 @@ div[id^=regulation]>input[type=checkbox]:checked + label {
 .trip>div:first-of-type {
     text-align: left;
     margin-left: -20px;
-    line-height: 222px;
+    line-height: 184px;
 }
 
 .airport-name,
@@ -910,7 +909,7 @@ div[id^=regulation]>input[type=checkbox]:checked + label {
 
 .airport-name {
     font-size: 150%;
-    margin-top: 65px;
+    margin-top: 55px;
     white-space: nowrap;
     text-overflow: ellipsis;
 }

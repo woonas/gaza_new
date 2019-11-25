@@ -106,9 +106,11 @@ const input_check = () => {
 
 function toBooking3(){
     if (sessionStorage.getItem('prices')) sessionStorage.removeItem('prices');
+    if (sessionStorage.getItem('prices2')) sessionStorage.removeItem('prices2');
     if (sessionStorage.getItem('flightArr')) sessionStorage.removeItem('flightArr');
     if (sessionStorage.getItem('numOfPassenger')) sessionStorage.removeItem('numOfPassenger');
     let priceArr = [];
+    let priceArr2 = [];
     let flightArr = [];
     const numOfPassenger = document.getElementById('num-of-passengers').value;
     for(var i = 1; i <= document.querySelectorAll('div.journey-wrapper').length; i++) {
@@ -118,11 +120,13 @@ function toBooking3(){
             return false;
         }
         priceArr.push(document.getElementById('lastPrice-'+i).innerText);
+        priceArr2.push(target.nextElementSibling.nextElementSibling.lastElementChild.innerText);
         const targetParent = target.parentElement.parentElement;
         const cnt = target.parentElement.parentElement.childElementCount;
         flightArr.push([targetParent.children[cnt-3].value, targetParent.children[cnt-2].value, targetParent.children[cnt-1].value]);
     }
     sessionStorage.setItem('prices', JSON.stringify(priceArr));
+    sessionStorage.setItem('prices2', JSON.stringify(priceArr2));
     sessionStorage.setItem('flightArr', JSON.stringify(flightArr));
     sessionStorage.setItem('numOfPassengers', numOfPassenger);
     return true;
@@ -197,11 +201,27 @@ function booking3View() {
             }
         }
     }
+    const airportFromTxt = document.querySelector('input[name=airportFrom]');
+    const airportToTxt = document.querySelector('input[name=airportTo]');
+    const flightNumTxt = document.querySelector('input[name=flightNum]');
+    const flightArr = JSON.parse(sessionStorage.getItem('flightArr'));
+    for (let i =0; i<flightArr.length; i++ ) {
+        if (i !== 0) {
+            airportFromTxt.value += "#@!";
+            airportToTxt.value += "#@!";
+            flightNumTxt.value += "#@!";
+        }
+        airportFromTxt.value += flightArr[i][0];
+        airportToTxt.value += flightArr[i][1];
+        flightNumTxt.value += flightArr[i][2];
+    }
 }
 
 function toBooking4() {
     if (sessionStorage.getItem('passengerArr')) sessionStorage.removeItem('passengerArr');
+    if (sessionStorage.getItem('reservationInfo')) sessionStorage.removeItem('reservationInfo');
     let passengerArr = [];
+
     const tables = document.querySelectorAll('.table-wrapper');
     let isFilled = true;
     tables.forEach(table => {
@@ -222,21 +242,62 @@ function toBooking4() {
     });
     const emailDomain = document.getElementById('emailDomain');
     const emailAddress = document.getElementById('emailAddress');
-    let emailFull;
-    if (emailDomain.selectedIndex === 0) {
-        emailFull = emailAddress + document.getElementById('emailDomainText').value;
-    } else {
-        emailFull = emailAddress + emailDomain[emailDomain.selectedIndex].value;
 
-    }
+    let emailFull, phone, directronics = "";
+    if (emailDomain.selectedIndex === 0) emailFull = emailAddress.value + "@" + document.getElementById('emailDomainText').value;
+    else emailFull = emailAddress.value + "@" + emailDomain[emailDomain.selectedIndex].value;
+
+    let reg = /\w{4,12}[@][a-z]{2,10}[.][a-z]{2,3}[.]?[a-z]{0,2}/;
+    if(!reg.test(emailFull)) isFilled = false;
+
+    phone = document.getElementById('phone');
+    if (!phone.value) isFilled = false;
+
+    if (document.getElementById('email').checked) directronics += 'on';
+    else directronics += 'off';
+    directronics += '/';
+    if (document.getElementById('sms').checked) directronics += 'on';
+    else directronics += 'off';
 
     if (isFilled) {
         sessionStorage.setItem('passengerArr', JSON.stringify(passengerArr));
-        return true;
+        sessionStorage.setItem('reservationInfo', JSON.stringify([emailFull, phone.value, directronics]));
+        document.getElementById('booking3frm').submit();
     } else {
         alert("모든 입력칸을 완성해주십시오.");
         return false;
     }
+}
+
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+function booking4View() {
+    const priceList = JSON.parse(sessionStorage.getItem('prices2'));
+    let calcPriceList = JSON.parse(sessionStorage.getItem('prices'));
+    let lastPrice = 0;
+    for (let i = 0; i < priceList.length; i++) {
+        while (priceList[i].indexOf(',') !== -1)
+            priceList[i] = priceList[i].replace(',', '');
+        document.querySelector('.price-'+(i+1)+'-1').innerText = numberWithCommas(priceList[i] * 0.7);
+        document.querySelector('.price-'+(i+1)+'-2').innerText = numberWithCommas(priceList[i] * 0.1);
+        document.querySelector('.price-'+(i+1)+'-3').innerText = numberWithCommas(priceList[i] * 0.2);
+        document.querySelector('.price-'+(i+1)+'-4').innerText = sessionStorage.getItem('numOfPassengers');
+        document.querySelector('.price-'+(i+1)+'-5').innerText = numberWithCommas(calcPriceList[i]);
+        while(calcPriceList[i].indexOf(',') !== -1)
+            calcPriceList[i] = calcPriceList[i].replace(',', '');
+        lastPrice += parseInt(calcPriceList[i]);
+    }
+    document.querySelector('.last-price').innerText = numberWithCommas(lastPrice) + ' 원';
+}
+
+function toPayment() {
+    if(document.getElementById('agree_1').checked && document.getElementById('agree_2').checked &&
+        document.getElementById('agree_3').checked)
+        return true;
+    alert('모두 항목에 동의하셔야 예약이 가능합니다.');
+    return false;
 }
 
 (() => {
@@ -619,6 +680,9 @@ function toBooking4() {
             preferredCountries: ['kr', 'us', 'cn'],
             utilsScript: "../../../Vendor/intl-tel-input-16.0.0/build/js/utils.js",
         });
+    }
+    else if (location.pathname.indexOf('booking4') !== -1) {
+        booking4View();
 
 
     }
