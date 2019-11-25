@@ -8,7 +8,6 @@
 <title>체크인</title>
 <link rel="stylesheet" href="<%=path %>/Resources/CSS/information.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="../../HTML/not_using/main.js"></script>
 <style>
 hr {
 	margin-bottom: 20px;
@@ -121,7 +120,7 @@ table td {
 		for (i = 0; i < paneIdList.length; i++) {
 			checkBtnHTML += "<button class='checkBtn' id='" + btnIdList[i]
 					+ "' onclick='openPage(\"" + paneIdList[i] + "\", this, \""
-					+ btnIdList[i] + "\")'><img src='../../IMG/icon/check.png'/>"
+					+ btnIdList[i] + "\")'><img src='../../Resources/IMG/icon/check.png'/>"
 					+ btnList[i] + "</button> ";
 		}
 		document.getElementById("checkBtn").innerHTML = checkBtnHTML;
