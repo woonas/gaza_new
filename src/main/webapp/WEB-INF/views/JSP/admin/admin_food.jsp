@@ -7,7 +7,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <h1 class="page-header">기내식(food)</h1>
-                            <input type="button" id="addBtn" value="추가">
+                            <a href="<%=jsp %>/admin/admin_foodForm"><input type="button" id="addBtn" value="추가"></a>
                         </div>
                     </div>
                     
@@ -35,6 +35,7 @@
                                                     <th>기내식설명</th>
                                                     <th>기내식재료</th>
                                                     <th>기내식가격</th>
+                                                    <th>삭제</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -47,6 +48,7 @@
                                                     <td class="center">${vo.foodContent }</td>
                                                     <td class="center">${vo.foodIngredient }</td>
                                                     <td>${vo.foodPrice }</td>
+                                                    <td><a href="foodDelOk?foodNum=${vo.foodNum }">삭제</a></td>
                                                 </tr>
                                                 </c:forEach>
                                             </tbody>

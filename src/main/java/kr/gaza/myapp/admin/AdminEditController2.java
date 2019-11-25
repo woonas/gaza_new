@@ -120,6 +120,41 @@ public class AdminEditController2 {
 			}
 			return mav;
 		}
+		//food 수정폼 이동
+		@RequestMapping("/JSP/admin/admin_foodForm")
+		public String FoodEditForm() {
+			return "JSP/admin/admin_foodForm";
+		}
+		//food 추가
+		@RequestMapping(value="/JSP/admin/foodAddOk",method=RequestMethod.POST)
+		public ModelAndView FoodAddOk(AdminVO2 vo, HttpServletRequest req) {
+			AdminEditInterface2 dao = sqlSession.getMapper(AdminEditInterface2.class);
+			int cnt = dao.insertFood(vo);
+			
+			ModelAndView mav = new ModelAndView();
+			if(cnt>0) {
+				mav.setViewName("redirect:admin_food");
+			}else {
+				mav.setViewName("redirect:admin_foodForm");
+			}
+			
+			return mav;
+		}
+		//food 삭제
+		@RequestMapping("/JSP/admin/foodDelOk")
+		public ModelAndView FoodDelete(@RequestParam("foodNum") int foodNum) {
+			
+			AdminEditInterface2 dao = sqlSession.getMapper(AdminEditInterface2.class);
+			int cnt = dao.deleteFood(foodNum);
+			ModelAndView mav = new ModelAndView();
+			if(cnt>0) {
+				mav.setViewName("redirect:admin_food");
+			}else{
+				mav.addObject("foodNum",foodNum);
+				mav.setViewName("redirect:admin");
+			}
+			return mav;
+		}
 		
 		
 		

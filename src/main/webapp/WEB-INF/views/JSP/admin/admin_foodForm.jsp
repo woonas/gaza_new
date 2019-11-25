@@ -14,13 +14,14 @@
                         <div class="col-lg-12">	
                             <div class="panel panel-default">
                                 <div class="panel-body">
-                                    <form method="post" action="adminAddOk">
-										아이디: <input type="text" name="adminId"><br/>
-										비밀번호: <input type="text" name="adminPwd"><br/>
-										관리자이름: <input type="text" name="adminName"><br/>
-										관리자번호: <input type="text" name="adminTel"><br/>
-										이메일: <input type="text" name="adminEmail"><br>
-										<input type="submit" name="adminAdd" value="관리자 추가"><br/>
+                                    <form method="post" action="foodAddOk">
+										기내식 종류: <input type="text" name="foodType"><br/>
+										기내식 이름: <input type="text" name="foodName"><br/>
+										기내식 이미지: <input type="text" name="foodImg"><br/>
+										기내식 설명: <input type="text" name="foodContent"><br/>
+										기내식 재료: <input type="text" name="foodIngredient"><br>
+										기내식 가격: <input type="text" name="foodPrice"><br>
+										<input type="submit" name="adminAdd" value="기내식 추가"><br/>
 									</form>
                                 </div>
                                 <!-- /.panel-body -->

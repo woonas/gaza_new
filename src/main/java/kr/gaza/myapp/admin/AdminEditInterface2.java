@@ -7,4 +7,6 @@ public interface AdminEditInterface2 {
 	public int deleteSeatReserve(int num);
 	public int insertPeople(AdminVO2 vo);
 	public int deletePeople(int num);
+	public int insertFood(AdminVO2 vo);
+	public int deleteFood(int num);
 }

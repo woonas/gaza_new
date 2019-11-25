@@ -21,4 +21,10 @@
 <delete id="deletePeople" parameterType="kr.gaza.myapp.admin.AdminVO2">
 	delete from people where peoplenum=#{peopleNum}
 </delete>
+<insert id="insertFood" parameterType="kr.gaza.myapp.admin.AdminVO2">
+	INSERT INTO food VALUES(food_sq.nextval,#{foodType},#{foodName},#{foodImg},#{foodContent},#{foodIngredient},#{foodPrice})
+</insert>
+<delete id="deleteFood" parameterType="kr.gaza.myapp.admin.AdminVO2">
+	delete from food where foodNum=#{foodNum}
+</delete>
 </mapper>
