@@ -9,6 +9,8 @@ import kr.gaza.myapp.board.reviewBoard.ReviewBoardVO;
 public interface ReviewBoardInterface {
 	// 글쓰기
 	public int reviewBoardInsert(ReviewBoardVO vo);
+	// 글쓰고 뷰페이지 불러올 때 새로운 num 가져오기
+	public int getInsertedNum(String memberId);
 	// 수정
 	public int reviewBoardUpdate(ReviewBoardVO vo);
 	// 삭제

@@ -13,8 +13,8 @@
 </head>
 <body>
 <h1>후기작성</h1>
-	<form method="post" action="<%=request.getContextPath()%>/Resources/JSP/reviewBoard/writeOk.do">
-		작성자 : ${userId}<br/>
+	<form method="post" action="<%=jsp%>/reviewBoard/writeOk">
+		작성자 : ${memberId}<br/>
 		제목 : <input type="text" name="subject" id="subject"/><br/>
 		글내용 : <textarea name="content" id="content"></textarea>
 		<script>

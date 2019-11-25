@@ -58,6 +58,14 @@
 			<a href="<%=jsp%>/board/reviewBoard/reviewBoard_list?pageNum=${vo.pageNum}&reviewType=${reviewType}">
 				<button class="whiteBtn">목록보기</button>
 			</a>
+			<c:if test="${vo.writer==memberId }">
+			<a href="<%=jsp%>/board/reviewBoard/reviewBoard_edit?pageNum=${vo.pageNum}&reviewType=${reviewType}">
+				<button class="whiteBtn">글 수정</button>
+			</a>
+			<a href="<%=jsp%>/board/reviewBoard/reviewBoard_del?pageNum=${vo.pageNum}&reviewType=${reviewType}">
+				<button class="whiteBtn">글 삭제</button>
+			</a>
+			</c:if>
 		</div>
 	</section>
 	<%@ include file="../../common/footer.jspf" %>

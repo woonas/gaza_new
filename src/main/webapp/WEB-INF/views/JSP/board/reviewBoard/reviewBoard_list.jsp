@@ -49,7 +49,7 @@
 		var btnList = ['이용후기','문의사항'];
 		var tabBtnHTML = "";
 		var tabPanelHTML = "";
-		var reviewType = ${reviewType};
+		var reviewType = ${vo.reviewType};
 		for(i=0; i<paneIdList.length; i++){
 			tabBtnHTML += "<button class='reviewTabBtn tabBtn";
 			if(reviewType===i){
@@ -113,14 +113,19 @@
 			});
 		
 		//글 타입 태그 추가
-		if("${reviewType}"=="0"){
+		if("${vo.reviewType}"=="0"){
 			$(".boardTbl tr:nth-child(1) h4").prepend("<span class='subjectTag'>new</span>");
 			$(".boardTbl tr:nth-child(2) h4").prepend("<span class='subjectTag'>new</span>");
 		}
 		//글쓰기 버튼 추가
-		if(${vo.reviewType}==1){
-			$("#writeBtnWrap").append("<button id='writeBtn' title='문의 글 작성 게시판으로 이동.'>문의 글 작성하기</button>");
+		var writeTxt = "<a href='<%=jsp%>/board/reviewBoard/guest_review_write?reviewType=${vo.reviewType}'><button id='writeBtn' title='글 작성 페이지로 이동.'>";
+		if("${vo.reviewType}"=="0"){
+			writeTxt += "이용후기";
+		}else{
+			writeTxt += "문의사항";
 		}
+		writeTxt += " 글쓰기</button></a>";
+		$("#writeBtnWrap").append(writeTxt);
 	});
 </script>
 </head>

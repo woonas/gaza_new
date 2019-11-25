@@ -45,7 +45,6 @@ public class ReviewController {
 		
 		lst = dao.getAllRecord(vo);
 		ModelAndView mav = new ModelAndView();
-		mav.addObject("reviewType", reviewType);
 		mav.addObject("vo", vo);
 		mav.addObject("lst", lst);
 		
@@ -95,6 +94,7 @@ public class ReviewController {
 		
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("JSP/board/reviewBoard/reviewBoard_view");
+		mav.addObject("memberId", (String)sess.getAttribute("memberId"));
 		mav.addObject("vo", vo2);
 		mav.addObject("reviewType", reviewType);
 		mav.addObject("prevNum", vo.getPrevNum());
@@ -103,4 +103,53 @@ public class ReviewController {
 		mav.addObject("nextSubject", vo.getNextSubject());
 		return mav;
 	}
+	//글쓰기 페이지로 이동.
+	@RequestMapping("/JSP/board/reviewBoard/guest_review_write")
+	public ModelAndView writeView(HttpServletRequest req, @RequestParam("reviewType") int reviewType) {
+		ReviewBoardInterface dao = sqlSession.getMapper(ReviewBoardInterface.class);
+		
+		HttpSession sess = req.getSession();
+		String memberId = (String)sess.getAttribute("memberId");
+		
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("JSP/board/reviewBoard/guest_review_write");
+		mav.addObject("pageNum", 1);
+		mav.addObject("reviewType", reviewType);
+		mav.addObject("memberId", memberId);
+		return mav;
+	}
+	//글쓴 내용 DB등록.
+	@RequestMapping("/JSP/board/reviewBoard/writeOk")
+	public ModelAndView writeOk(ReviewBoardVO vo, @RequestParam("txtType") String txtType ,HttpServletRequest req) {
+		ReviewBoardInterface dao = sqlSession.getMapper(ReviewBoardInterface.class);
+		HttpSession sess = req.getSession();
+		String memberId = (String)sess.getAttribute("memberId");
+		
+		vo.setIp(req.getRemoteAddr());
+		vo.setWriter(memberId);
+		
+		//컨텐츠 앞에 텍스트 타입 붙이기.
+		String contents = txtType+"<br/>"+vo.getContent();
+		vo.setContent(contents);
+		
+		int cnt = dao.reviewBoardInsert(vo);
+		
+		int reviewNum = dao.getInsertedNum(memberId);
+		
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("reviewNum", cnt);
+		if(cnt>0) {
+			mav.addObject("reviewNum", reviewNum);
+			mav.addObject("pageNum", 1);
+			mav.addObject("reviewType", vo.getReviewType());
+			mav.setViewName("redirect:reviewBoard_view");
+		}else if(cnt<=0) {
+			mav.addObject("cnt", cnt);
+			mav.addObject("reviewType", vo.getReviewType());
+			mav.setViewName("JSP/board/reviewBoard/guest_review_write");
+		}
+		
+		return mav;
+	}
+	
 }

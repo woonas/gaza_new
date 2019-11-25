@@ -29,7 +29,8 @@
 
 #list_btn{
 	margin:70px auto;
-	width:150px;
+	display : flex;
+	justify-content : center;
 }
 
 #list_btn button{

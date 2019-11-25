@@ -38,4 +38,10 @@
 	<update id="reviewBoardHit" parameterType="int">
 			update reviewBoard set hit= hit+1 where reviewNum=#{param1}
 	</update>
+	<insert id="reviewBoardInsert">
+			insert into reviewBoard values(reviewBoardNum_sq.nextVal, #{reviewType}, #{subject}, #{content}, #{writer}, 0, sysDate, #{ip}) 
+	</insert>
+	<select id="getInsertedNum" parameterType="String" resultType="int">
+			select reviewNum from (select reviewNum from reviewBoard where writer=#{value} order by reviewNum desc) where rownum = 1
+	</select>
 </mapper>
