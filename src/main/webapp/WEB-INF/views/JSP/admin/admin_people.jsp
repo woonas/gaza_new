@@ -37,7 +37,7 @@
                                                     <td>${vo.peopleNum }</td>
                                                     <td>${vo.peopleType }</td>
                                                     <td>${vo.peopleSale }</td>
-                                                    <td><a href="peopleDelOk?peopleNum=${vo.peopleNum }">삭제</a></td>
+                                                    <td><a href="admin_peopleEdit?peopleNum=${vo.peopleNum }">수정</a>/<a href="peopleDelOk?peopleNum=${vo.peopleNum }">삭제</a></td>
                                                 </tr>
                                                 </c:forEach>
                                             </tbody>

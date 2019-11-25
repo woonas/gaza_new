@@ -42,7 +42,7 @@
                                                     <td>${vo.seatType }</td>
                                                     <td class="center">${vo.seatNo }</td>
                                                     <td class="center">${vo.reserved }</td>
-                                                    <td><a href="seatReserveDelOk?seatReserveNum=${vo.seatReserveNum}">삭제</a></td>
+                                                    <td><a href="admin_seatReserveEdit?seatReserveNum=${vo.seatReserveNum }">수정</a>/<a href="seatReserveDelOk?seatReserveNum=${vo.seatReserveNum}">삭제</a></td>
                                                 </tr>
                                                 </c:forEach>
                                             </tbody>

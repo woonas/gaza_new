@@ -33,7 +33,7 @@
                                                 <tr class="odd gradeX">
                                                     <td>${vo.seatType }</td>
                                                     <td>${vo.seatContent }</td>
-                                                    <td><a href="seatDelOk?seatNum=${vo.seatType}">삭제</a></td>
+                                                    <td><a href="admin_seatEdit?seatType=${vo.seatType }">수정</a>/<a href="seatDelOk?seatType=${vo.seatType}">삭제</a></td>
                                                 </tr>
                                                 </c:forEach>
                                             </tbody>

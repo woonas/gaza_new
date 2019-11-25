@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import kr.gaza.myapp.aviation.product.ProductVO;
 
 @Controller
 public class AdminEditController2 {
@@ -36,17 +35,45 @@ public class AdminEditController2 {
 			}
 			return mav;
 		}
-		//seatType 삭제
-		@RequestMapping("/JSP/admin/seatDelOk")
-		public ModelAndView SeatDelete(@RequestParam("seatNum") int seatNum) {
+		//seatType 수정폼 이동
+		@RequestMapping("/JSP/admin/admin_seatEdit")
+		public ModelAndView AdminSeatEdit(@RequestParam("seatType") int seatType) {
+			AdminEditInterface2 dao = sqlSession.getMapper(AdminEditInterface2.class);
+			
+			ModelAndView mav = new ModelAndView();
+			AdminVO2 vo = dao.seatAllSelect(seatType);
+			
+			mav.addObject("vo", vo);
+			mav.setViewName("JSP/admin/admin_seatEdit");
+			return mav;
+		}
+		//seatType 수정
+		@RequestMapping(value="JSP/admin/seatEditOk", method=RequestMethod.POST)
+		public ModelAndView seatUpdate(AdminVO2 vo) {
 			
 			AdminEditInterface2 dao = sqlSession.getMapper(AdminEditInterface2.class);
-			int cnt = dao.deleteSeat(seatNum);
+			int cnt = dao.updateSeat(vo);
+			
+			ModelAndView mav = new ModelAndView();
+			mav.addObject("seatType",vo.getSeatType());
+			if(cnt>0) {
+				mav.setViewName("redirect:admin_seat");
+			}else {
+				mav.setViewName("redirect:admin");
+			}
+			return mav;
+		}
+		//seatType 삭제
+		@RequestMapping("/JSP/admin/seatDelOk")
+		public ModelAndView SeatDelete(@RequestParam("seatType") int seatType) {
+			
+			AdminEditInterface2 dao = sqlSession.getMapper(AdminEditInterface2.class);
+			int cnt = dao.deleteSeat(seatType);
 			ModelAndView mav = new ModelAndView();
 			if(cnt>0) {
 				mav.setViewName("redirect:admin_seat");
 			}else{
-				mav.addObject("seatNum",seatNum);
+				mav.addObject("seatType",seatType);
 				mav.setViewName("redirect:admin");
 			}
 			return mav;
@@ -68,6 +95,34 @@ public class AdminEditController2 {
 				mav.setViewName("redirect:admin_seatReserve");
 			}else {
 				mav.setViewName("redirect:admin_seatReserveForm");
+			}
+			return mav;
+		}
+		//seatReserve 수정폼 이동
+		@RequestMapping("/JSP/admin/admin_seatReserveEdit")
+		public ModelAndView AdminSeatReserveEdit(@RequestParam("seatReserveNum") int seatReserveNum) {
+			AdminEditInterface2 dao = sqlSession.getMapper(AdminEditInterface2.class);
+			
+			ModelAndView mav = new ModelAndView();
+			AdminVO2 vo = dao.seatReserveAllSelect(seatReserveNum);
+			
+			mav.addObject("vo", vo);
+			mav.setViewName("JSP/admin/admin_seatReserveEdit");
+			return mav;
+		}
+		//seatReserve 수정
+		@RequestMapping(value="JSP/admin/seatReserveEditOk", method=RequestMethod.POST)
+		public ModelAndView seatReserveUpdate(AdminVO2 vo) {
+			
+			AdminEditInterface2 dao = sqlSession.getMapper(AdminEditInterface2.class);
+			int cnt = dao.updateSeatReserve(vo);
+			
+			ModelAndView mav = new ModelAndView();
+			mav.addObject("seatReserveNum",vo.getSeatReserveNum());
+			if(cnt>0) {
+				mav.setViewName("redirect:admin_seatReserve");
+			}else {
+				mav.setViewName("redirect:admin");
 			}
 			return mav;
 		}
@@ -107,6 +162,34 @@ public class AdminEditController2 {
 			
 			return mav;
 		}
+		//people 수정폼 이동
+		@RequestMapping("/JSP/admin/admin_peopleEdit")
+		public ModelAndView AdminPeopleEdit(@RequestParam("peopleNum") int peopleNum) {
+			AdminEditInterface2 dao = sqlSession.getMapper(AdminEditInterface2.class);
+			
+			ModelAndView mav = new ModelAndView();
+			AdminVO2 vo = dao.peopleAllSelect(peopleNum);
+			
+			mav.addObject("vo", vo);
+			mav.setViewName("JSP/admin/admin_peopleEdit");
+			return mav;
+		}
+		//people 수정
+		@RequestMapping(value="JSP/admin/peopleEditOk", method=RequestMethod.POST)
+		public ModelAndView peopleUpdate(AdminVO2 vo) {
+			
+			AdminEditInterface2 dao = sqlSession.getMapper(AdminEditInterface2.class);
+			int cnt = dao.updatePeople(vo);
+			
+			ModelAndView mav = new ModelAndView();
+			mav.addObject("peopleNum",vo.getPeopleNum());
+			if(cnt>0) {
+				mav.setViewName("redirect:admin_people");
+			}else {
+				mav.setViewName("redirect:admin");
+			}
+			return mav;
+		}
 		//people 삭제
 		@RequestMapping("/JSP/admin/peopleDelOk")
 		public ModelAndView PeopleDelete(@RequestParam("peopleNum") int peopleNum) {
@@ -144,7 +227,7 @@ public class AdminEditController2 {
 		}
 		//food 수정폼 이동
 		@RequestMapping("/JSP/admin/admin_foodEdit")
-		public ModelAndView AdminProductEdit(@RequestParam("foodNum") int foodNum) {
+		public ModelAndView AdminFoodEdit(@RequestParam("foodNum") int foodNum) {
 			AdminEditInterface2 dao = sqlSession.getMapper(AdminEditInterface2.class);
 			
 			ModelAndView mav = new ModelAndView();
