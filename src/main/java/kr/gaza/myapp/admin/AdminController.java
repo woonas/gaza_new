@@ -24,7 +24,7 @@ public class AdminController {
 	@Autowired
 	SqlSession sqlSession;
 
-    @RequestMapping("/JSP/admin/admin_login")
+    @RequestMapping("/admin_login")
     public String adminIndex() {
         return "JSP/admin/admin_login";
     }

@@ -2,58 +2,7 @@
          pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ include file="adminHeader.jspf" %>
-            <div id="page-wrapper">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <h1 class="page-header">제목</h1>
-                        </div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-lg-12">	
-                            <div class="panel panel-default">
-                                <div class="panel-body">
-                                    <div class="table-responsive">
-                                        <table class="table table-striped table-bordered table-hover" id="dataTables">
-                                            <col-group>
-                                                <col>
-                                                <col>
-                                                <col>
-                                                <col>
-                                            </col-group>
-                                            <thead>
-                                                <tr>
-                                                    <th>아이디</th>
-                                                    <th>이름</th>
-                                                    <th>Platform(s)</th>
-                                                    <th>Engine version</th>
-                                                    <th>CSS grade</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-<!--                                            여기에 반복-->
-                                                <tr class="odd gradeX">
-                                                    <td>Trident</td>
-                                                    <td>Internet Explorer 4.0</td>
-                                                    <td>Win 95+</td>
-                                                    <td class="center">4</td>
-                                                    <td class="center">X</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <!-- /.panel-body -->
-                            </div>
-                            <!-- /.panel -->
-                        </div>
-                        <!-- /.col-lg-12 -->
-                    </div>
-                </div>
-                <!-- /.container-fluid -->
-            </div>
-            <!-- /#page-wrapper -->
+
         </div>
         <!-- /#wrapper -->
 
@@ -65,21 +14,10 @@
 
         <!-- Metis Menu Plugin JavaScript -->
         <script src="<%=resources %>/Admin/js/metisMenu.min.js"></script>
-
-        <!-- DataTables JavaScript -->
-        <script src="<%=resources %>/Admin/js/dataTables/jquery.dataTables.min.js"></script>
-        <script src="<%=resources %>/Admin/js/dataTables/dataTables.bootstrap.min.js"></script>
-
         <!-- Custom Theme JavaScript -->
         <script src="<%=resources %>/Admin/js/startmin.js"></script>
 
         <!-- Page-Level Demo Scripts - Tables - Use for reference -->
-        <script>
-            $(document).ready(function() {
-                $('#dataTables').DataTable({
-                    responsive: true
-                });
-            });
-        </script>
+        
     </body>
 </html>
