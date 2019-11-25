@@ -309,6 +309,3 @@ CREATE TABLE Passenger (
 	PassengerBirth VARCHAR2(10) NOT NULL,
 	flightNum NUMBER NOT NULL
 );
-
-insert into ADMIN values(adminnum_sq.nextval, 'master1234', 'q1w2e3r4!', '김동한', '010-3333-3333', 'kimdonghan@naver.com', sysdate);
-commit;
