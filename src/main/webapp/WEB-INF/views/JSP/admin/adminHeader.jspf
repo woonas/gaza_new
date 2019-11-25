@@ -56,20 +56,19 @@
                 visibility: hidden;
             }
 
-            .row {
-                max-width: 100%;
-                margin: 0 auto;
+            .row2 {
+                max-width: 700px;
+                margin: 20px;
             }
 
-            .col-fifth,
-            .col-two-fifth,
-            .col-three-fifth,
-            .col-four-fifth { float: left; }
-
-            .col-fifth { width: 20% !important; }
-            .col-two-fifth { width: 40% !important; }
-            .col-three-fifth { width: 60% !important; }
-            .col-four-fifth { width: 80% !important; }
+            .col-tenth,
+            .col-nine-tenth { float: left; }
+            .col-tenth { width: 10% !important; }
+            .col-nine-tenth { width: 90% !important; }
+            
+            .submit-wrapper { text-align: right; }
+            
+            div[class^=col-]>input { width: 100%; margin-right: 20px; }
         </style>
     </head>
     <body>

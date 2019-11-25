@@ -16,12 +16,30 @@
                                 <div class="panel-body">
 									<form method="post" action="airportEditOk">
 										<input type="hidden" name="airportNum" value="${vo.airportNum }"/>
-										공항코드: <input type="text" name="IATA" value="${vo.IATA}"><br/>
-										도시: <input type="text" name="city" value="${vo.city}"><br/>
-										대륙: <input type="text" name="continent" value="${vo.continent}"><br/>
-										위도: <input type="text" name="latitude" value="${vo.latitude }"><br/>
-										경도: <input type="text" name="longitude" value="${vo.longitude}"><br>
-										이미지경로: <input type="text" name="cityImg" value="/new_product_img/파일이름.확장자"><br>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">공항코드:</div>
+                                            <div class="col-nine-tenth"><input type="text" name="IATA" value="${vo.IATA}"></div>
+                                        </div>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">도시:</div>
+                                            <div class="col-nine-tenth"><input type="text" name="city" value="${vo.city}"></div>
+                                        </div>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">대륙:</div>
+                                            <div class="col-nine-tenth"><input type="text" name="continent" value="${vo.continent}"></div>
+                                        </div>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">위도: </div>
+                                            <div class="col-nine-tenth"><input type="text" name="latitude" value="${vo.latitude }"></div>
+                                        </div>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">경도:</div>
+                                            <div class="col-nine-tenth"><input type="text" name="longitude" value="${vo.longitude}"></div>
+                                        </div>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">이미지경로:</div>
+                                            <div class="col-nine-tenth"><input type="text" name="cityImg" value="/new_product_img/파일이름.확장자"></div>
+                                        </div>
 										<input type="submit" value="상품수정"/>
 									</form>
                                 </div>

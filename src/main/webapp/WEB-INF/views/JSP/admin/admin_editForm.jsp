@@ -15,12 +15,27 @@
                             <div class="panel panel-default">
                                 <div class="panel-body">
                                     <form method="post" action="adminAddOk">
-										아이디: <input type="text" name="adminId"><br/>
-										비밀번호: <input type="text" name="adminPwd"><br/>
-										관리자이름: <input type="text" name="adminName"><br/>
-										관리자번호: <input type="text" name="adminTel"><br/>
-										이메일: <input type="text" name="adminEmail"><br>
-										<input type="submit" name="adminAdd" value="관리자 추가"><br/>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">아이디:</div> 
+                                            <div class="col-nine-tenth"><input type="text" name="adminId"></div>
+                                        </div>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">비밀번호:</div> 
+                                            <div class="col-nine-tenth"><input type="text" name="adminPwd"></div>
+                                        </div>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">관리자이름:</div> 
+                                            <div class="col-nine-tenth"><input type="text" name="adminName"></div>
+                                        </div>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">관리자번호:</div> 
+                                            <div class="col-nine-tenth"><input type="text" name="adminTel"></div>
+                                        </div>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">이메일:</div> 
+                                            <div class="col-nine-tenth"><input type="text" name="adminEmail"></div>
+                                        </div>
+										<input type="submit" name="adminAdd" value="관리자 추가">
 									</form>
                                 </div>
                                 <!-- /.panel-body -->

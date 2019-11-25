@@ -10,17 +10,20 @@
                         </div>
                     </div>
                     
-                    <div class="row">
+                    <div class="row2 row">
                         <div class="col-lg-12">	
                             <div class="panel panel-default">
                                 <div class="panel-body">
                                     <form method="post" action="airplaneAddOk">
-										<div class="row clearfix">
-                                            <div class="col-fifth">기종:</div>
-                                            <div class="col-four-fifth"><input type="text" name="airplaneName"></div>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">기종:</div>
+                                            <div class="col-nine-tenth"><input type="text" name="airplaneName"></div>
                                         </div>
-										총좌석수: <input type="text" name="seatMax"><br/>
-										<input type="submit" name="airplaneAdd" value="비행기 추가"><br/>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">총좌석수: </div>
+                                            <div class="col-nine-tenth"><input type="text" name="seatMax"></div>
+                                        </div>
+										<div class="submit-wrapper"><input type="submit" name="airplaneAdd" value="비행기 추가"></div>
 									</form>
                                 </div>
                                 <!-- /.panel-body -->

@@ -15,13 +15,31 @@
                             <div class="panel panel-default">
                                 <div class="panel-body">
                                     <form method="post" action="airportAddOk">
-										공항코드: <input type="text" name="IATA"><br/>
-										도시: <input type="text" name="city"><br/>
-										대륙: <input type="text" name="continent"><br/>
-										위도: <input type="text" name="latitude"><br/>
-										경도: <input type="text" name="longitude"><br>
-										이미지경로: <input type="text" name="cityImg" value="/new_product_img/파일이름.확장자"><br>
-										<input type="submit" name="airportAdd" value="공항 추가"><br/>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">공항코드:</div>
+                                            <div class="col-nine-tenth"><input type="text" name="IATA"></div>
+                                        </div>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">도시:</div>
+                                            <div class="col-nine-tenth"><input type="text" name="city"></div>
+                                        </div>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">대륙:</div>
+                                            <div class="col-nine-tenth"><input type="text" name="continent"></div>
+                                        </div>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">위도:</div>
+                                            <div class="col-nine-tenth"><input type="text" name="latitude"></div>
+                                        </div>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">경도:</div>
+                                            <div class="col-nine-tenth"><input type="text" name="longitude"></div>
+                                        </div>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">이미지경로: </div>
+                                            <div class="col-nine-tenth"><input type="text" name="cityImg" value="/new_product_img/파일이름.확장자"></div>
+                                        </div>
+										<input type="submit" name="airportAdd" value="공항 추가">
 									</form>
                                 </div>
                                 <!-- /.panel-body -->

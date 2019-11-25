@@ -15,12 +15,27 @@
                             <div class="panel panel-default">
                                 <div class="panel-body">
                                     <form method="post" action="flightAddOk">
-										기종: <input type="text" name="airplaneName"><br/>
-										상품번호: <input type="text" name="productNum"><br/>
-										출발시간: <input type="text" name="departTime"><br/>
-										도착시간: <input type="text" name="arriveTime"><br/>
-										할인율: <input type="text" name="flightSale"><br>
-										<input type="submit" name="flightAdd" value="비행여정 추가"><br/>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">기종:</div>
+                                            <div class="col-nine-tenth"><input type="text" name="airplaneName"></div>
+                                        </div>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">상품번호:</div>
+                                            <div class="col-nine-tenth"><input type="text" name="productNum"></div>
+                                        </div>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">출발시간:</div>
+                                            <div class="col-nine-tenth"><input type="text" name="departTime"></div>
+                                        </div>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">도착시간:</div>
+                                            <div class="col-nine-tenth"><input type="text" name="arriveTime"></div>
+                                        </div>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">할인율:</div>
+                                            <div class="col-nine-tenth"><input type="text" name="flightSale"></div>
+                                        </div>
+										<input type="submit" name="flightAdd" value="비행여정 추가">
 									</form>
                                 </div>
                                 <!-- /.panel-body -->
