@@ -18,24 +18,23 @@
                                     <div class="table-responsive">
                                         <table class="table table-striped table-bordered table-hover" id="dataTables">
                                             <col-group>
-                                                <col width="100%">
-                                                <col width="5.9%">
-                                                <col width="5.9%">
-                                                <col width="5.9%">
-                                                <col width="5.9%">
-                                                <col width="5.9%">
-                                                <col width="5.9%">
-                                                <col width="5.9%">
-                                                <col width="5.9%">
-                                                <col width="5.9%">
-                                                <col width="5.9%">
-                                                <col width="5.9%">
-                                                <col width="5.9%">
-                                                <col width="5.9%">
-                                                <col width="5.9%">
-                                                <col width="5.9%">
-                                                <col width="5.9%">
-                                                <col width="5.9%">
+                                                <col width="80px">
+                                                <col width="150px">
+                                                <col width="100px">
+                                                <col width="150px">
+                                                <col width="200px">
+                                                <col width="50px">
+                                                <col width="150px">
+                                                <col width="150px">
+                                                <col width="100px">
+                                                <col width="400px">
+                                                <col width="400px">
+                                                <col width="200px">
+                                                <col width="150px">
+                                                <col width="200px">
+                                                <col width="150px">
+                                                <col width="100px">
+                                                <col width="150px">
                                             </col-group>
                                             <thead>
                                                 <tr>

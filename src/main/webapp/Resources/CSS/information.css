@@ -13,7 +13,7 @@
     height: 45px;
     width: 100%;
     left: 0;
-    background-color: #aaa;
+    background-color: #999;
     margin-top: 5px;
 }
 
@@ -63,7 +63,7 @@
     border-color: #555;
     top: 18px;
 }
-.bread_crumbs>div>.menu-item:hover + div { border-left-color: #aaa; }
+.bread_crumbs>div>.menu-item:hover + div { border-left-color: #999; }
 
 .bread_crumbs>div>.menu-item>a {
     overflow: hidden;
@@ -78,7 +78,7 @@
     top: 100%;
     left: -1px;
     display: none;
-    border: 1px solid #aaa;
+    border: 1px solid #999;
     border-top: 0;
     background-color: #fff;
 }

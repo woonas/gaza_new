@@ -18,22 +18,22 @@
                                     <div class="table-responsive">
                                         <table class="table table-striped table-bordered table-hover" id="dataTables">
                                             <col-group>
+                                                <col width="7%">
+                                                <col width="15%">
+                                                <col width="15%">
                                                 <col width="10%">
-                                                <col width="10%">
-                                                <col width="10%">
-                                                <col width="10%">
-                                                <col width="10%">
-                                                <col width="10%">
-                                                <col width="10%">
-                                                <col>
+                                                <col width="15%">
+                                                <col width="15%">
+                                                <col width="15%">
+                                                <col width="8%">
                                             </col-group>
                                             <thead>
                                                 <tr>
-                                                    <th>관리자번호</th>
+                                                    <th>번호</th>
                                                     <th>아이디</th>
                                                     <th>비밀번호</th>
-                                                    <th>관리자이름</th>
-                                                    <th>관리자번호</th>
+                                                    <th>이름</th>
+                                                    <th>연락처</th>
                                                     <th>이메일</th>
                                                     <th>등록일</th>
                                                     <th>삭제</th>
@@ -48,9 +48,8 @@
                                                     <td class="center">${vo.adminName }</td>
                                                     <td class="center">${vo.adminTel }</td>
                                                     <td class="center">${vo.adminEmail }</td>
-                                                    <td>${vo.adminEmail }</td>
+                                                    <td>${vo.adminRegdate }</td>
                                                     <td><a href="del?adminNum=${vo.adminNum}">삭제</a></td>
-                                                    
                                                 </tr>
                                                 </c:forEach>
                                             </tbody>

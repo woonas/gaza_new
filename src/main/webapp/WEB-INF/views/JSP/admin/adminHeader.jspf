@@ -40,6 +40,12 @@
 				border: 1px solid #ccc;
 				margin-bottom : 10px;
             }
+            table {
+                display: block;
+                overflow: scroll;
+                white-space: nowrap;
+            }
+            td { vertical-align: middle; }
         </style>
     </head>
     <body>
