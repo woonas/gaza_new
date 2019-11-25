@@ -16,6 +16,12 @@
 	insert into airport(airportnum, iata, city, continent, latitude, longitude, cityimg)
 		values(airport_sq.nextval, #{IATA}, #{city}, #{continent}, #{latitude}, #{longitude}, #{cityImg})
 </insert>
+<select id="airportAllSelect" resultType="kr.gaza.myapp.aviation.airport.AirportVO">
+	select airportnum, iata, city, continent, latitude, longitude, cityimg from airport where airportNum =#{airportNum}
+</select>
+<update id="updateAirport" parameterType="kr.gaza.myapp.aviation.airport.AirportVO">
+		update seat set iata=#{IATA}, city=#{city}, continent=#{continent}, latitude=#{latitude}, longitude=#{longitude}, cityimg=#{cityImg} where airportNum=#{airportNum}
+</update>
 
 <delete id="deleteAirport">
 		delete from airport where airportnum=#{airportNum} 

@@ -32,12 +32,15 @@
 <div class="clearfix" style="height: 70px;"></div>
 
 <!-- 
-	여행준비 - 체크인 - 사전체크인
-	 		수하물 - 이용안내, 위탁수하물, 수하물 보상
-	 		도움이 필요한 고객 - 유아여행안내, 임신중 여행, 장애인 고객, 패밀리 서비스, 반려동물 동반, 의료도움이 필요한 고객
+	여행준비 - 체크인 - 사전체크인(checkIn)
+	 		수하물 - 이용안내(baggage_guide), 위탁수하물(baggage_free), 수하물 보상(baggage_compensation)
+	 		도움이 필요한 고객 - 유아여행안내(infant), 임신중 여행(pregnant), 장애인 고객(disabled_passenger), 패밀리 서비스(family_service), 반려동물 동반(with_pets), 
+	 						의료도움이 필요한 고객(medical)
 	 		
-	 여행 - 기내에서  - 국내선 기내통신 판매, 기내건강
-	 	  유료부가서비스 - 레그룸좌석, 국내선 비즈니스존, 프론트존, 듀오좌석, 이코노미 스마티움, 업그레이드 스탠바이, 기내건강, 기내 WIFI
+	 여행 - 기내에서  - 국내선 기내통신 판매(domestic), 기내건강(cabin_health)
+	 
+	 	  유료부가서비스 - 레그룸좌석(legroom), 국내선 비즈니스존(businesszone), 프론트존(frontzone), 듀오좌석(duo), 이코노미 스마티움(economysmartium), 
+	 	  			업그레이드 스탠바이(upgradestandby),기내 WIFI(wifi)
 	 	  
 	
  -->
