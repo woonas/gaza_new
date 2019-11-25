@@ -1,13 +1,5 @@
 package kr.gaza.myapp.admin;
 
-import java.util.List;
-
-import org.apache.ibatis.session.SqlSession;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
-
 import kr.gaza.myapp.account.member.MemberVO;
 import kr.gaza.myapp.aviation.airplane.AirplaneVO;
 import kr.gaza.myapp.aviation.airport.AirportVO;
@@ -20,16 +12,30 @@ import kr.gaza.myapp.aviation.seatreserve.SeatReserveVO;
 import kr.gaza.myapp.board.noticeBoard.NoticeBoardVO;
 import kr.gaza.myapp.board.reviewBoard.ReviewBoardVO;
 import kr.gaza.myapp.eventPackage.AllianceVO;
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import java.util.List;
 @Controller
 public class AdminController {
 	@Autowired
 	SqlSession sqlSession;
-	@RequestMapping("/JSP/admin/admin_dash")
-	public String AdminDash() {
+
+    @RequestMapping("/JSP/admin/admin_login")
+    public String adminIndex() {
+        return "JSP/admin/admin_login";
+    }
+
+    @RequestMapping("/JSP/admin/admin_dash")
+	public String adminDash() {
 		return "JSP/admin/admin_dash";
 	}
+
 	@RequestMapping("/JSP/admin/admin_airport")
-	public ModelAndView AdminAirport() {
+	public ModelAndView adminAirport() {
 		AdminInterface dao = sqlSession.getMapper(AdminInterface.class);
 		List<AirportVO> lst = dao.airportAllRecord();
 		
@@ -40,7 +46,7 @@ public class AdminController {
 	}
 	
 	@RequestMapping("/JSP/admin/admin_flight")
-	public ModelAndView AdminFlight() {
+	public ModelAndView adminFlight() {
 		AdminInterface dao = sqlSession.getMapper(AdminInterface.class);
 		List<FlightVO> lst = dao.flightAllRecord();
 		
@@ -51,7 +57,7 @@ public class AdminController {
 	}
 	
 	@RequestMapping("/JSP/admin/admin_food")
-	public ModelAndView AdminFood() {
+	public ModelAndView adminFood() {
 		AdminInterface dao = sqlSession.getMapper(AdminInterface.class);
 		List<FoodVO> lst = dao.foodAllRecord();
 		
@@ -62,7 +68,7 @@ public class AdminController {
 	}
 	
 	@RequestMapping("/JSP/admin/admin_people")
-	public ModelAndView AdminPeople() {
+	public ModelAndView adminPeople() {
 		AdminInterface dao = sqlSession.getMapper(AdminInterface.class);
 		List<peopleVO> lst = dao.peopleAllRecord();
 		
@@ -73,7 +79,7 @@ public class AdminController {
 	}
 	
 	@RequestMapping("/JSP/admin/admin_product")
-	public ModelAndView AdminProduct() {
+	public ModelAndView adminProduct() {
 		AdminInterface dao = sqlSession.getMapper(AdminInterface.class);
 		List<ProductVO> lst = dao.productAllRecord();
 		
@@ -85,7 +91,7 @@ public class AdminController {
 	}
 	
 	@RequestMapping("/JSP/admin/admin_seatReserve")
-	public ModelAndView AdminSeatReserve() {
+	public ModelAndView adminSeatReserve() {
 		AdminInterface dao = sqlSession.getMapper(AdminInterface.class);
 		List<SeatReserveVO> lst = dao.seatReserveAllRecord();
 		
@@ -96,7 +102,7 @@ public class AdminController {
 	}
 	
 	@RequestMapping("/JSP/admin/admin_seat")
-	public ModelAndView AdminSeat() {
+	public ModelAndView adminSeat() {
 		AdminInterface dao = sqlSession.getMapper(AdminInterface.class);
 		List<SeatVO> lst = dao.seatAllRecord();
 		
@@ -107,7 +113,7 @@ public class AdminController {
 	}
 	
 	@RequestMapping("/JSP/admin/admin_alliance")
-	public ModelAndView AdminAlliance() {
+	public ModelAndView adminAlliance() {
 		AdminInterface dao = sqlSession.getMapper(AdminInterface.class);
 		List<AllianceVO> lst = dao.allianceAllRecord();
 		
@@ -118,7 +124,7 @@ public class AdminController {
 	}
 	
 	@RequestMapping("/JSP/admin/admin_notice")
-	public ModelAndView AdminNotice() {
+	public ModelAndView adminNotice() {
 		AdminInterface dao = sqlSession.getMapper(AdminInterface.class);
 		List<NoticeBoardVO> lst = dao.noticeAllRecord();
 		
@@ -129,7 +135,7 @@ public class AdminController {
 	}
 	
 	@RequestMapping("/JSP/admin/admin_review")
-	public ModelAndView AdminReview() {
+	public ModelAndView adminReview() {
 		AdminInterface dao = sqlSession.getMapper(AdminInterface.class);
 		List<ReviewBoardVO> lst = dao.reviewAllRecord();
 		
@@ -140,7 +146,7 @@ public class AdminController {
 	}
 	
 	@RequestMapping("/JSP/admin/admin_member")
-	public ModelAndView AdminMember() {
+	public ModelAndView adminMember() {
 		AdminInterface dao = sqlSession.getMapper(AdminInterface.class);
 		List<MemberVO> lst = dao.memberAllRecord();
 		
@@ -151,7 +157,7 @@ public class AdminController {
 	}
 	
 	@RequestMapping("/JSP/admin/admin_admin")
-	public ModelAndView AdminAdmin() {
+	public ModelAndView adminAdmin() {
 		AdminInterface dao = sqlSession.getMapper(AdminInterface.class);
 		List<AdminVO> lst = dao.adminAllRecord();
 		
@@ -162,7 +168,7 @@ public class AdminController {
 	}
 	
 	@RequestMapping("/JSP/admin/admin_airplane")
-	public ModelAndView AdminAirplane() {
+	public ModelAndView adminAirplane() {
 		AdminInterface dao = sqlSession.getMapper(AdminInterface.class);
 		List<AirplaneVO> lst = dao.airplaneAllRecord();
 		

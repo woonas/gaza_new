@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -31,7 +31,7 @@
                 box-sizing: border-box;
                 font-size: 14px;
             }
-            .form submit {
+            .form button {
                 font-family: "Roboto", sans-serif;
                 text-transform: uppercase;
                 outline: 0;
@@ -41,13 +41,13 @@
                 padding: 15px;
                 color: #FFFFFF;
                 font-size: 14px;
-                -webkit-transition: all 0.3 ease;
-                transition: all 0.3 ease;
+                -webkit-transition: all 0.3s ease;
+                transition: all 0.3s ease;
                 cursor: pointer;
                 margin-top: 10px;
             }
-            .form submit:hover,.form button:active,.form button:focus {
-                background: #43A047;
+            .form button:hover,.form button:active,.form button:focus {
+                background: #58f;
             }
             .form .register-form {
                 display: none;
@@ -97,7 +97,7 @@
                 <form class="login-form">
                     <input type="text" placeholder="username"/>
                     <input type="password" placeholder="password"/>
-                    <submit>login</submit>
+                    <button>login</button>
                 </form>
             </div>
         </div>
