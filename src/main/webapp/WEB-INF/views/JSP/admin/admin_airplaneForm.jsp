@@ -15,7 +15,10 @@
                             <div class="panel panel-default">
                                 <div class="panel-body">
                                     <form method="post" action="airplaneAddOk">
-										기종: <input type="text" name="airplaneName"><br/>
+										<div class="row clearfix">
+                                            <div class="col-fifth">기종:</div>
+                                            <div class="col-four-fifth"><input type="text" name="airplaneName"></div>
+                                        </div>
 										총좌석수: <input type="text" name="seatMax"><br/>
 										<input type="submit" name="airplaneAdd" value="비행기 추가"><br/>
 									</form>
