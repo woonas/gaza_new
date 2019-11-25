@@ -136,7 +136,7 @@ INSERT INTO airport VALUES(airportnum_sq.nextval,'FCO','로마','유럽','41.799
 INSERT INTO airport VALUES(airportnum_sq.nextval,'MAD','마드리드','유럽','40.498193','-3.567663','/new_product_img/saipan.jpg');
 INSERT INTO airport VALUES(airportnum_sq.nextval,'MXP','밀라노','유럽','45.62998','8.725552','/new_product_img/saipan.jpg');
 INSERT INTO airport VALUES(airportnum_sq.nextval,'BCN','바르셀로나','유럽','41.297501','2.08338','/new_product_img/saipan.jpg');
-INSERT INTO airport VALUES(airportnum_sq.nextval,'VIE','비엔나','유럽','48.115812','16.566575','/new_product_img/saipan.jpg');
+INSERT INTO airport VALUES(airportnum_sq.nextval,'VIE','비엔나','유럽','48.115812','16.566575','/new_product_img/budapest.jpg');
 INSERT INTO airport VALUES(airportnum_sq.nextval,'AMS','암스테르담','유럽','52.310571','4.768307','/new_product_img/saipan.jpg');
 INSERT INTO airport VALUES(airportnum_sq.nextval,'IST','이스탄불','유럽','41.260316','28.742821','/new_product_img/saipan.jpg');
 INSERT INTO airport VALUES(airportnum_sq.nextval,'ZAG','자그레브','유럽','45.740646','16.067608','/new_product_img/saipan.jpg');
@@ -162,23 +162,61 @@ INSERT INTO airport VALUES(airportnum_sq.nextval,'AUH','아부다비','중동/�
 INSERT INTO airport VALUES(airportnum_sq.nextval,'TLV','텔아비브','중동/아프리카','32.005505','34.8854','/new_product_img/saipan.jpg');
 
 -----product---------------------------------------------------------------------------
-INSERT INTO product VALUES(productnum_sq.nextval,'ICN','PRG',1548900,1395,0.8,sysdate);
-INSERT INTO product VALUES(productnum_sq.nextval,'GMP','CJU',51500,2089,0.99,sysdate);
+INSERT INTO product VALUES(productnum_sq.nextval,'ICN','PEK',1548900,1395,0.8,sysdate);
+INSERT INTO product VALUES(productnum_sq.nextval,'GMP','SHA',51500,2089,0.99,sysdate);
 INSERT INTO product VALUES(productnum_sq.nextval,'ICN','ULN',313400,873,0.9,sysdate);
 INSERT INTO product VALUES(productnum_sq.nextval,'ICN','CEB',366000,1287,0.95,sysdate);
-INSERT INTO product VALUES(productnum_sq.nextval,'ICN','JFK',1407800,589,0.85,sysdate);
+INSERT INTO product VALUES(productnum_sq.nextval,'ICN','DYG',1407800,589,0.85,sysdate);
 INSERT INTO product VALUES(productnum_sq.nextval,'LHR','ICN',1395000,312,0.82,sysdate);
 INSERT INTO product VALUES(productnum_sq.nextval,'CEB','ICN',488500,678,0.9,sysdate);
 INSERT INTO product VALUES(productnum_sq.nextval,'ROR','ICN',631800,512,0.97,sysdate);
 INSERT INTO product VALUES(productnum_sq.nextval,'LAX','ICN',2805900,839,0.79,sysdate);
 INSERT INTO product VALUES(productnum_sq.nextval,'ULN','ICN',322000,719,0.95,sysdate);
+INSERT INTO product VALUES(productnum_sq.nextval,'GMP','CJU',213000,1098,0.93,sysdate);
+INSERT INTO product VALUES(productnum_sq.nextval,'ICN','KPO',835700,325,0.8,sysdate);
+INSERT INTO product VALUES(productnum_sq.nextval,'ICN','RSU',82500,182,0.99,sysdate);
+INSERT INTO product VALUES(productnum_sq.nextval,'ICN','TAE',64500,172,0.95,sysdate);
+INSERT INTO product VALUES(productnum_sq.nextval,'ICN','USN',247000,3147,0.98,sysdate);
+INSERT INTO product VALUES(productnum_sq.nextval,'ICN','BKK',548000,997,0.91,sysdate);
+INSERT INTO product VALUES(productnum_sq.nextval,'ICN','DAD',1054000,519,0.85,sysdate);
+INSERT INTO product VALUES(productnum_sq.nextval,'ICN','RGN',525300,124,0.87,sysdate);
+INSERT INTO product VALUES(productnum_sq.nextval,'ICN','HAN',358000,215,0.98,sysdate);
+INSERT INTO product VALUES(productnum_sq.nextval,'ICN','SIN',57500,59,0.98,sysdate);
+INSERT INTO product VALUES(productnum_sq.nextval,'ICN','VIE',213000,1098,0.93,sysdate);
+INSERT INTO product VALUES(productnum_sq.nextval,'ICN','FCO',835700,325,0.8,sysdate);
+INSERT INTO product VALUES(productnum_sq.nextval,'ICN','LHR',82500,182,0.99,sysdate);
+INSERT INTO product VALUES(productnum_sq.nextval,'ICN','PRG',64500,172,0.95,sysdate);
+INSERT INTO product VALUES(productnum_sq.nextval,'ICN','VVO',247000,3147,0.98,sysdate);
+INSERT INTO product VALUES(productnum_sq.nextval,'ICN','GUM',548000,997,0.91,sysdate);
+INSERT INTO product VALUES(productnum_sq.nextval,'ICN','LAS',1054000,519,0.85,sysdate);
+INSERT INTO product VALUES(productnum_sq.nextval,'ICN','JFK',525300,124,0.87,sysdate);
+INSERT INTO product VALUES(productnum_sq.nextval,'ICN','HNL',358000,215,0.98,sysdate);
+INSERT INTO product VALUES(productnum_sq.nextval,'ICN','LAX',57500,59,0.98,sysdate);
 
 -----recommandProduct-----------------------------------------------------------------
-INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,1,sysdate);
-INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,2,sysdate);
-INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,3,sysdate);
-INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,4,sysdate);
-
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,11,sysdate);
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,12,sysdate);
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,13,sysdate);
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,14,sysdate);
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,15,sysdate);
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,16,sysdate);
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,17,sysdate);
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,18,sysdate);
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,19,sysdate);
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,20,sysdate);
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,21,sysdate);
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,22,sysdate);
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,23,sysdate);
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,24,sysdate);
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,25,sysdate);
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,26,sysdate);
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,27,sysdate);
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,28,sysdate);
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,29,sysdate);
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,30,sysdate);
+commit;
+select * from recommandproduct;
+select * from product;
 -----seat---------------------------------------------------------------------------
 INSERT INTO seat VALUES(1,'퍼스트');
 INSERT INTO seat VALUES(2,'비지니스');
