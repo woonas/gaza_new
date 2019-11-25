@@ -83,6 +83,35 @@ public class AdminEditController {
 		}
 		return mav;
 	}
+	//에어포트 수정폼 이동
+	@RequestMapping("/JSP/admin/admin_airportEdit")
+	public ModelAndView AdminAirPortEdit(@RequestParam("airportNum") int airportNum) {
+		AdminEditInterface dao = sqlSession.getMapper(AdminEditInterface.class);
+		
+		ModelAndView mav = new ModelAndView();
+		AirportVO vo = dao.airportAllSelect(airportNum);
+		
+		mav.addObject("vo", vo);
+		mav.setViewName("JSP/admin/admin_airportEdit");
+		return mav;
+	}
+		
+	//에어포트 수정
+		@RequestMapping(value="JSP/admin/airportEditOk", method=RequestMethod.POST)
+		public ModelAndView airportUpdate(AirportVO vo) {
+			
+			AdminEditInterface dao = sqlSession.getMapper(AdminEditInterface.class);
+			int cnt = dao.updateAirport(vo);
+			
+			ModelAndView mav = new ModelAndView();
+			mav.addObject("aiportNum",vo.getAirportNum());
+			if(cnt>0) {
+				mav.setViewName("redirect:admin_airport");
+			}else {
+				mav.setViewName("redirect:admin");
+			}
+			return mav;
+		}
 	
 	
 	//에어포트 삭제

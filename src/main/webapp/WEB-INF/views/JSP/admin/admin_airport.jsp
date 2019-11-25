@@ -48,7 +48,7 @@
                                                     <td class="center">${vo.latitude }</td>
                                                     <td class="center">${vo.longitude }</td>
                                                     <td>${vo.cityImg }</td>
-                                                    <td><a href="airportDel?airportNum=${vo.airportNum}">삭제</a></td>
+                                                    <td><a href="admin_airportEdit?airportNum=${vo.airportNum }">수정</a>/<a href="airportDel?airportNum=${vo.airportNum}">삭제</a></td>
                                                 </tr>
                                                 </c:forEach>
                                             </tbody>

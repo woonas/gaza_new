@@ -11,6 +11,8 @@ public interface AdminEditInterface {
 	public int insertAdmin(AdminVO vo);
 	public int deleteAdmin(int num);
 	public int insertAirport(AirportVO vo);
+	public AirportVO airportAllSelect(int num);
+	public int updateAirport(AirportVO vo);;
 	public int deleteAirport(int num);
 	public int insertAirplane(AirplaneVO vo);
 	public ProductVO productAllSelect(int num);
