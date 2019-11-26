@@ -1,5 +1,18 @@
 package kr.gaza.myapp.admin;
 
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
 import kr.gaza.myapp.account.member.MemberVO;
 import kr.gaza.myapp.aviation.airplane.AirplaneVO;
 import kr.gaza.myapp.aviation.airport.AirportVO;
@@ -14,18 +27,6 @@ import kr.gaza.myapp.board.reviewBoard.ReviewBoardVO;
 import kr.gaza.myapp.eventPackage.AllianceVO;
 import kr.gaza.myapp.eventPackage.EPtravelInterface;
 import kr.gaza.myapp.eventPackage.TravelVO;
-
-import org.apache.ibatis.session.SqlSession;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-import java.util.List;
 @Controller
 public class AdminController {
 	@Autowired
