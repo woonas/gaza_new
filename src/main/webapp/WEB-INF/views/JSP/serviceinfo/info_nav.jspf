@@ -4,8 +4,13 @@
     <div>
         <div class="menu-item"><a href="<%=path%>">HOME</a></div>
         <div class="menu-item" id="first_menu">
-            <a href="javascript:"></a>
-            <div class="sub-menu"></div>
+            <a href="javascript:">탑승안내</a>
+            <div class="sub-menu">
+                <div class="menu-item">탑승안내</div>
+                <div class="menu-item">수하물안내</div>
+                <div class="menu-item">고객안내</div>
+                <div class="menu-item">부가서비스</div>
+            </div>
         </div>
         <div class="menu-item" id="second_menu">
             <a href="javascript:"></a>
