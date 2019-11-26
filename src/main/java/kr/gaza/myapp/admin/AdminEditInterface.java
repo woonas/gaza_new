@@ -5,6 +5,7 @@ import kr.gaza.myapp.aviation.airport.AirportVO;
 import kr.gaza.myapp.aviation.flight.FlightVO;
 import kr.gaza.myapp.aviation.product.ProductVO;
 import kr.gaza.myapp.board.noticeBoard.NoticeBoardVO;
+import kr.gaza.myapp.board.reviewBoard.ReviewBoardVO;
 import kr.gaza.myapp.eventPackage.AllianceVO;
 
 public interface AdminEditInterface {
@@ -21,6 +22,8 @@ public interface AdminEditInterface {
 	public int deleteProduct(int num);
 	public int insertFlight(FlightVO vo);
 	public int deleteFlight(int num);
+	public NoticeBoardVO selectNotice(int num);
+	public ReviewBoardVO selectReview(int num);
 	public int insertNotice(NoticeBoardVO vo);
 	public int deleteNotice(int num);
 	public int insertAlliance(AllianceVO vo);

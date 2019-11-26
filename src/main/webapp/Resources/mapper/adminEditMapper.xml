@@ -66,6 +66,13 @@
 		delete from noticeboard where noticenum=#{noticeNum}
 </delete>
 
+<select id="selectNotice" resultType="kr.gaza.myapp.board.noticeBoard.NoticeBoardVO">
+	select noticenum, noticetype, subject, content, hit, regdate from noticeboard where noticenum=#{noticeNum}
+</select>
+
+<select id="selectReview" resultType="kr.gaza.myapp.board.reviewBoard.ReviewBoardVO">
+	select reviewnum, reviewtype, subject, content, writer, hit, regdate,ip from reviewboard where reviewnum=#{reviewNum}
+</select>
 <insert id="insertAlliance" parameterType="kr.gaza.myapp.eventPackage.AllianceVO">
 	insert into event(eventnum, eventname, eventthumbnail, eventimg, eventcontent, eventcompany, startdate, enddate, regdate) 
 		values(eventnum_sq.nextval, #{eventName}, #{eventThumbnail}, #{eventImg}, #{eventContent}, #{eventCompany}, #{startDate}, #{endDate}, sysdate)

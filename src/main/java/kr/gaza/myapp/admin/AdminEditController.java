@@ -15,6 +15,7 @@ import kr.gaza.myapp.aviation.airport.AirportVO;
 import kr.gaza.myapp.aviation.flight.FlightVO;
 import kr.gaza.myapp.aviation.product.ProductVO;
 import kr.gaza.myapp.board.noticeBoard.NoticeBoardVO;
+import kr.gaza.myapp.board.reviewBoard.ReviewBoardVO;
 import kr.gaza.myapp.eventPackage.AllianceVO;
 
 @Controller
@@ -271,6 +272,18 @@ public class AdminEditController {
 		return "JSP/admin/admin_noticeForm";
 	}
 	
+	//공지사항 보기
+	@RequestMapping("/JSP/admin/admin_noticeView")
+	public ModelAndView noticeView(NoticeBoardVO vo ) {
+		AdminEditInterface dao = sqlSession.getMapper(AdminEditInterface.class);
+		vo = dao.selectNotice(vo.getNoticeNum());
+		
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("vo",vo);
+		mav.setViewName("JSP/admin/admin_noticeView");
+		
+		return mav;
+	}
 		
 	//공지사항 추가
 	@RequestMapping(value="/JSP/admin/noticeAddOk",method=RequestMethod.POST)
@@ -304,7 +317,21 @@ public class AdminEditController {
 		}
 		return mav;
 	}
+	
+	//공지사항 보기
+	@RequestMapping("/JSP/admin/admin_reviewView")
+	public ModelAndView reviewView(ReviewBoardVO vo ) {
+		AdminEditInterface dao = sqlSession.getMapper(AdminEditInterface.class);
+		vo = dao.selectReview(vo.getReviewNum());
 		
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("vo",vo);
+		mav.setViewName("JSP/admin/admin_reviewView");
+		
+		return mav;
+	}
+	
+	
 	//이벤트 수정폼 이동
 	@RequestMapping("/JSP/admin/admin_allianceForm")
 	public String AdminAllianceForm() {
