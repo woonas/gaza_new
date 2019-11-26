@@ -496,6 +496,7 @@ input:checked + label>.reserve_wrap {
 .eventDetail{
 	position: absolute;
 	height: 100%;
+	width: 100%;
 	font-size: 80%;
 	color: #fff;
 	z-index: 9999;
@@ -550,14 +551,20 @@ input:checked + label>.reserve_wrap {
 }
 #infoWrap tbody a{
 	color: #555;
+	width: 400px;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 #infoWrap tr{
 	height: 40px;
 }
-#infoWrap td{
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
+#infoWrap tbody a:hover{
+	color : #36f;
+}
+#infoWrap img:hover{
+	background-color : #eee;
 }
 #notice{
 	width:550px;
