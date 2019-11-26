@@ -11,9 +11,9 @@
 					    </a>
 					</div>
 					<div><a href="<%=jsp%>/flight/booking/booking1">항공권예매</a></div>
-					<div><a href="#">상품페이지</a></div>
-					<div><a href="#">서비스안내</a></div>
-					<div><a href="#">고객서비스</a></div>
+					<div><a href="<%=jsp%>/eventNpackage/best_package">상품페이지</a></div>
+					<div><a href="<%=jsp%>/serviceinfo/reservation?abc=0&zyx=0">서비스안내</a></div>
+					<div><a href="<%=jsp%>/board/noticeBoard/noticeBoard_list?pageNum=1&tabType=0">고객서비스</a></div>
 					<div>
                         <c:if test="${memberName==null }">
                             <a href="<%=jsp %>/account/login/loginView">로그인</a>

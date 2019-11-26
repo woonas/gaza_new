@@ -28,7 +28,7 @@
        		 <div id="tab-${j }-container" class="tab-content-container   hidden">
        		<c:set var="list" value="${saleList }"/>
        </c:if>
-       <c:forEach var="v" items="${lst }">
+       <c:forEach var="v" items="${list }">
        <c:if test="${i%2 ==1 }">
            <div id="tab-${j}-product-${i}" class="row product-wrapper">
        </c:if>
@@ -41,7 +41,7 @@
             <div class="col-fourth product-info-wrapper">
                 <p>0${i }</p>
                 <p>${v.city }</p>
-                <p>${v.rContent}</p>
+                <p>GAZA AIR만의<br/>특별한 혜택!<br/>지금바로 만나보세요</p>
                 <a href="<%=request.getContextPath()%>/Resources/JSP/flight/booking/booking1?city=${v.city}&iata=${v.iata}"><button class="btn-booking blueBtn">예약하기</button></a>
             </div>
            </div>

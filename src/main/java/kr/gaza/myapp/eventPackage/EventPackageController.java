@@ -50,7 +50,8 @@ import java.util.List;
 		
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("lst",lst);
-		mav.addObject("salelst",saleList);
+		mav.addObject("saleList",saleList);
+		
 		mav.setViewName("JSP/eventNpackage/best_package");
 		return mav;
 	}
