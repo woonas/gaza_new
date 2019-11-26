@@ -97,7 +97,7 @@
         <div class="login-page" >
             <div class="form">
                 <img src="<%=img%>/logo/logo_basic.png" alt="" style="width: 100%; margin-bottom: 50px;">
-                <form class="login-form" action="/admin_loginOk" method="post">
+                <form class="login-form" action="<%=jsp %>/admin/admin_loginOk" method="post">
                     <input type="text" placeholder="아이디" name="adminId"/>
                     <input type="password" placeholder="비밀번호" name="adminPwd"/>
                     <button onclick="this.parentElement.submit();">로그인</button>

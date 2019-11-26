@@ -14,6 +14,8 @@ import org.springframework.web.servlet.ModelAndView;
 import kr.gaza.myapp.board.noticeBoard.NoticeBoardVO;
 import kr.gaza.myapp.board.reviewBoard.ReviewBoardVO;
 import kr.gaza.myapp.eventPackage.AllianceVO;
+import kr.gaza.myapp.eventPackage.EPtravelInterface;
+import kr.gaza.myapp.eventPackage.TravelVO;
 
 @Controller
 public class HomeController {
@@ -23,6 +25,9 @@ public class HomeController {
 	public ModelAndView home(Locale locale, Model model) {	
 		HomeInterface dao = sqlSession.getMapper(HomeInterface.class);
 		ModelAndView mav = new ModelAndView();
+		//추천상품 글 가져오기
+		EPtravelInterface recommandDao = sqlSession.getMapper(EPtravelInterface.class);
+		List<TravelVO> recommandList = recommandDao.getAllRecord();
 		
 		//이벤트 글 가져오기
 		List<AllianceVO> eventList = dao.getEvent();
@@ -35,6 +40,7 @@ public class HomeController {
 		
 		
 		mav.setViewName("index");
+		mav.addObject("recommandList", recommandList);
 		mav.addObject("eventList", eventList);
 		mav.addObject("noticeList", noticeList);
 		mav.addObject("reviewList", reviewList);

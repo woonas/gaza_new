@@ -337,11 +337,12 @@ input:checked + label>.reserve_wrap {
 	position:absolute !important;
 	left: 50%;
 	transform:translateX(-50%);
-	height: 19px;
+	height: 20px;
 	background-color: rgba(255,255,255,.7);
 	margin: 0 auto;
 	border-radius:10px;
-	padding-top:2px;
+	padding-top : 3px;
+	padding-left : 5px;
 	bottom: 5vh;
     opacity: 0.8;
 }
@@ -363,7 +364,7 @@ input:checked + label>.reserve_wrap {
 	position:relative;
 	width:15px;
 	float:right;
-	top:9px;
+	top : 12px;
 	left:-10px;
 }
 /*section best-------------------------------------------------------------------------*/
@@ -384,6 +385,9 @@ input:checked + label>.reserve_wrap {
 	width : 250px;
 	height : 170px;
 	overflow : hidden;
+}
+.imgFrame>img{
+	height: 170px;
 }
 #bestBannerWrap a:hover img{
 	transform: scale(1.1);

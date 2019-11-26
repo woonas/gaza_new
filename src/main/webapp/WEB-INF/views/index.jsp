@@ -102,69 +102,33 @@
     
         <section id="best">
             <div>
-                <div class="sectionTitle"><p>추천 상품</p><a href="<%=path %>/Resources/JSP/eventNproduct/best_product.do">&nbsp;전체보기 +&nbsp;</a></div>
+                <div class="sectionTitle"><p>추천 상품</p><a href="<%=jsp%>/eventNpackage/best_package">&nbsp;전체보기 +&nbsp;</a></div>
                 <div id="bestBannerWrap">
                     <ul id="bestBanner">
-                        <li>
-                            <a href="<%=path %>/Resources/HTML/prd_BestProduct.html">
-                                <div class="imgFrame">
-                                    <img src='<%=path %>/Resources/IMG/main/newyork.jpg'/>
-                                </div>
-                                <div class="textBox">
-                                    <div>
-                                        <h5>가자에어의 뉴욕 여행기</h5>
-                                        <div>인플루언서가 추천한 뉴욕의 핫플레이스, 나도 가보고 싶은 사람 손~들~어~요~</div>
-                                        <h6>더 보기<img src="<%=path %>/Resources/IMG/icon/ico_arrow_gray.png"/></h6>
-                                    </div>
-                                </div>
-                                <div class="imgTag">미주</div>
-                            </a>
-                        </li>
-                        <li>
-                        	<a href="<%=path %>/Resources/HTML/prd_BestProduct.html">
-	                            <div class="imgFrame">
-	                                <img src='<%=path %>/Resources/IMG/main/bangkok.jpg' title="서울/인천 ＜＝＞ 홍콩 KRW 205,000 ~"/>
-	                            </div>
-	                            <div class="textBox">
-	                                <div>
-	                                    <h5>FUN한 동남아 여행!</h5>
-	                                    <div>뻔한 여행 말고 FUN한 동남아 여행, A380타고 동남아 가자!</div>
-	                                    <h6>더 보기<img src="<%=path %>/Resources/IMG/icon/ico_arrow_gray.png"/></h6>
+                    	<c:forEach var="i" begin="0" end="19" step="5">
+	                        <li>
+	                            <a href="<%=jsp%>/eventNpackage/best_package">
+	                                <div class="imgFrame">
+	                                    <img src='<%=img%>${recommandList[i].cityImg }'/>
 	                                </div>
-	                            </div>
-	                            <div class="imgTag">동남아</div>
-                            </a>
-                        </li>
-                        <li>
-	                        <a href="<%=path %>/Resources/HTML/prd_BestProduct.html">
-	                            <div class="imgFrame">
-	                                <img src='<%=path %>/Resources/IMG/main/paris.jpg' title="서울/김포 ＝＞ 제주 KRW 19,500 ~"/>
-	                            </div>
-	                            <div class="textBox">
-	                                <div>
-	                                    <h5>감성충만 파리 여행</h5>
-	                                    <div>예술가들의 발자취를 따라 걸으며 파리갬성 가득한 인생샷 찍으러!</div>
-	                                    <h6>더 보기<img src="<%=path %>/Resources/IMG/icon/ico_arrow_gray.png"/></h6>
+	                                <div class="textBox">
+	                                    <div>
+	                                        <h5>${recommandList[i].city } GAZA~! </h5>
+	                                        <div>${recommandList[i].rContent }</div>
+	                                        <h6>더 보기<img src="<%=path %>/Resources/IMG/icon/ico_arrow_gray.png"/></h6>
+	                                    </div>
 	                                </div>
-	                            </div>
-	                            <div class="imgTag">유럽</div>
-                            </a>
-                        </li>
-                        <li>
-	                        <a href="<%=path %>/Resources/HTML/prd_BestProduct.html">
-	                            <div class="imgFrame">
-	                                <img src='<%=path %>/Resources/IMG/main/jeju.jpg' title="서울/인천 ＜＝＞ 팔라우 KRW 756,000 ~"/>
-	                            </div>
-	                            <div class="textBox">
-	                                <div>
-	                                    <h5>나만 간직하고 싶은 제주</h5>
-	                                    <div>나 홀로 떠나는 제주여행, 어디를 가도 시원하고 높은 하늘과 선선한 바람을 느끼자</div>
-	                                    <h6>더 보기<img src="<%=path %>/Resources/IMG/icon/ico_arrow_gray.png"/></h6>
+	                                <div class="imgTag">
+	                                <c:choose>
+	                                	<c:when test="${i==0 }">국내</c:when>
+	                                	<c:when test="${i==5 }">아시아</c:when>
+	                                	<c:when test="${i==10 }">유럽</c:when>
+	                                	<c:when test="${i==15 }">미주</c:when>
+	                                </c:choose>
 	                                </div>
-	                            </div>
-	                            <div class="imgTag">국내</div>
-                            </a>
-                        </li>
+	                            </a>
+	                        </li>
+                        </c:forEach>
                     </ul>
                 </div>
             </div>
