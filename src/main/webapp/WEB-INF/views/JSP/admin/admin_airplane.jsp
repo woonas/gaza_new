@@ -25,6 +25,7 @@
                                                 <tr>
                                                     <th>기종</th>
                                                     <th>총 좌석수</th>
+                                                    <th>삭제</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -32,6 +33,7 @@
                                                 <tr class="odd gradeX">
                                                     <td>${vo.airplaneName }</td>
                                                     <td>${vo.seatMax }</td>
+                                                    <td><a href="admin_airplaneEdit?airplaneName=${vo.airplaneName }">수정</a>/<a href="airplaneDel?airplaneName=${vo.airplaneName}">삭제</a></td>
                                                 </tr>
                                                 </c:forEach>
                                             </tbody>

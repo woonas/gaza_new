@@ -17,10 +17,10 @@
 		values(airport_sq.nextval, #{IATA}, #{city}, #{continent}, #{latitude}, #{longitude}, #{cityImg})
 </insert>
 <select id="airportAllSelect" resultType="kr.gaza.myapp.aviation.airport.AirportVO">
-	select airportnum, iata, city, continent, latitude, longitude, cityimg from airport where airportNum =#{airportNum}
+	select airportNum, iata, city, continent, latitude, longitude, cityimg from airport where airportNum=#{airportNum}
 </select>
 <update id="updateAirport" parameterType="kr.gaza.myapp.aviation.airport.AirportVO">
-		update seat set iata=#{IATA}, city=#{city}, continent=#{continent}, latitude=#{latitude}, longitude=#{longitude}, cityimg=#{cityImg} where airportNum=#{airportNum}
+		update airport set iata=#{IATA}, city=#{city}, continent=#{continent}, latitude=#{latitude}, longitude=#{longitude}, cityimg=#{cityImg} where airportNum=#{airportNum}
 </update>
 
 <delete id="deleteAirport">
@@ -30,13 +30,23 @@
 <insert id="insertAirplane" parameterType="kr.gaza.myapp.aviation.airplane.AirplaneVO">
 	insert into airplane(airplanename, seatmax) values(#{airplaneName}, #{seatMax})
 </insert>
+<select id="airplaneAllSelect" resultType="kr.gaza.myapp.aviation.airplane.AirplaneVO">
+	select airplaneName, seatMax from airplane where airplaneName=#{airplaneName}
+</select>
+<update id="updateAirplane"  parameterType="kr.gaza.myapp.aviation.airplane.AirplaneVO">
+		update airplane set seatMax=#{seatMax} where airplaneName=#{airplaneName}
+</update>
+
+<delete id="deleteAirplane">
+		delete from airplane where airplaneName=#{airplaneName} 
+</delete>
 
 <insert id="insertProduct" parameterType="kr.gaza.myapp.aviation.product.ProductVO">
 	insert into product(productnum, depart, arrive, price, productcnt, sale, regdate) 
 		values(productnum_sq.nextval, #{depart}, #{arrive}, #{price}, #{productCnt}, #{productSale}, sysdate)
 </insert>
 
-<select id="foodAllSelect" resultType="kr.gaza.myapp.aviation.product.ProductVO">
+<select id="productAllSelect" resultType="kr.gaza.myapp.aviation.product.ProductVO">
 	select productnum, depart, arrive, price, productcnt, sale AS productSale, to_char(regdate,'YYYY-MM-DD') regdate from product where productnum =#{productNum}
 </select>
 
@@ -52,6 +62,13 @@
 	insert into flight(flightnum, airplanename, productnum, departtime, arrivetime, sale) 
 		values(flightnum_sq.nextval, #{airplaneName}, #{productNum}, #{departTime}, #{arriveTime}, #{flightSale})
 </insert>
+<select id="flightAllSelect" resultType="kr.gaza.myapp.aviation.flight.FlightVO">
+	select flightnum, airplanename, productnum, departtime, arrivetime, sale from flight where flightnum =#{flightNum}
+</select>
+
+<update id="updateFlight" parameterType="kr.gaza.myapp.aviation.flight.FlightVO">
+		update flight set airplanename=#{airplaneName}, productnum=#{productNum}, departtime=#{departTime}, arrivetime=#{arriveTime}, sale=#{flightSale} where flightnum=#{flightNum}
+</update>
 
 <delete id="deleteFlight">
 		delete from flight where flightnum=#{flightNum} 

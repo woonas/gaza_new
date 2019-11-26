@@ -45,7 +45,7 @@
                                                     <td class="center">${vo.departTime }</td>
                                                     <td class="center">${vo.arriveTime }</td>
                                                     <td class="center">${vo.flightSale }</td>
-                                                    <td><a href="flightDel?flightNum=${vo.flightNum}">삭제</a></td>
+                                                    <td><a href="admin_flightEdit?flightNum=${vo.flightNum }">수정</a>/<a href="flightDel?flightNum=${vo.flightNum}">삭제</a></td>
                                                 </tr>
                                                 </c:forEach>
                                             </tbody>
