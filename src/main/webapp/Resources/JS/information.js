@@ -60,7 +60,7 @@ const chatService = () => {
         const firstMenu = ['탑승안내','수하물안내','고객안내','부가서비스'];
         const menuList = [[['예약안내','reservation'],['체크인안내','checkIn'],['운임안내', 'fare']],[['수하물이용', 'baggage_guide'], ['위탁수하물', 'baggage_free'], ['수하물보상', 'baggage_compensation']],
             [['유아여행안내', 'infant'], ['임신고객안내', 'pregnant'], ['장애인고객안내', 'disabled_passenger'], ['패밀리서비스','family_service'], ['반려동물동반', 'with_pets'], ['의료도움이 필요한 고객', 'medical'], ['기내건강', 'cabin_health']],
-            [['레그룸좌석','legroom'], ['비즈니스존','businesszone'], ['프론트존','frontzone'], ['듀오좌석','duo'], ['이코노미','economysmatium'], ['업그레이드', 'upgradestandby'], ['기내와이파이', 'wifi'], ['기내통신판매','domestic']]];
+            [['레그룸좌석','legroom'], ['비즈니스존','businesszone'], ['프론트존','frontzone'], ['듀오좌석','duo'], ['이코노미','economysmartium'], ['업그레이드', 'upgradestandby'], ['기내와이파이', 'wifi'], ['기내통신판매','domestic']]];
 
         const menu1 = document.querySelector('#first_menu>div');
         const menu2 = document.querySelector('#second_menu>div');
