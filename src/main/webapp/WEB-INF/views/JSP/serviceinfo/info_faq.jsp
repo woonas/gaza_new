@@ -18,137 +18,136 @@
                     <p class="faq-title">자주 찾는 안내사항</p>
                     <div class="info-list">
                         <div class="info-section">
-                            <div class="text-align-center bg-blue5 ">가자에어클럽</div>
+                            <div class="text-align-center bg-blue5 ">탑승안내</div>
                             <div>
                                 <ul class="clearfix">
-                                    <li><a href="#" onclick="return false;">11111</a></li>
-                                    <li><a href="#" onclick="return false;">111111111111</a></li>
-                                    <li><a href="#" onclick="return false;">111222222211</a></li>
-                                    <li><a href="#" onclick="return false;">1133333111</a></li>
-                                    <li class="no-compartment"><a href="#" onclick="return false;">1114444411</a></li>
-                                    <li><a href="#" onclick="return false;">115555111</a></li>
-                                    <li><a href="#" onclick="return false;">1166666111</a></li>
-                                    <li><a href="#" onclick="return false;">1133333111</a></li>
+                                    <li><a href="#" onclick="return false;">예약안내</a></li>
+                                    <li><a href="#" onclick="return false;">체크인안내</a></li>
+                                    <li><a href="#" onclick="return false;">운임안내</a></li>
+                                    <li><a href="#" onclick="return false;">우수회원혜택</a></li>
+                                    <li class="no-compartment"><a href="#" onclick="return false;">회원전용 할인 제휴사 안내</a></li>
+                                    <li><a href="#" onclick="return false;">보유 마일리지 조회하기</a></li>
+                                    <li><a href="#" onclick="return false;">내 회원등급 조회하기</a></li>
+                                    <li><a href="#" onclick="return false;">마일리지 유효기간</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="info-section">
-                            <div class="text-align-center bg-blue5 ">가자에어클럽</div>
+                            <div class="text-align-center bg-blue5 ">수하물안내</div>
                             <div>
                                 <ul class="clearfix">
-                                    <li><a href="#" onclick="return false;">11111</a></li>
-                                    <li><a href="#" onclick="return false;">111111111111</a></li>
-                                    <li><a href="#" onclick="return false;">111222222211</a></li>
-                                    <li><a href="#" onclick="return false;">1133333111</a></li>
-                                    <li class="no-compartment"><a href="#" onclick="return false;">1114444411</a></li>
-                                    <li><a href="#" onclick="return false;">115555111</a></li>
-                                    <li><a href="#" onclick="return false;">1166666111</a></li>
-                                    <li><a href="#" onclick="return false;">1133333111</a></li>
+                                    <li><a href="#" onclick="return false;">수하물이용</a></li>
+                                    <li><a href="#" onclick="return false;">위탁수하물</a></li>
+                                    <li><a href="#" onclick="return false;">수하물보상</a></li>
+                                    <li><a href="#" onclick="return false;">국제선 무료 위탁 수화물</a></li>
+                                    <li class="no-compartment"><a href="#" onclick="return false;">국내선 무료 위탁 수화물</a></li>
+                                    <li><a href="#" onclick="return false;">특수 수화물 위탁</a></li>
+                                    <li><a href="#" onclick="return false;">휴대 가능 수하물</a></li>
+                                    <li><a href="#" onclick="return false;">수하물 계산기</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="info-section">
-                            <div class="text-align-center bg-blue5 ">가자에어클럽</div>
+                            <div class="text-align-center bg-blue5 ">고객안내</div>
                             <div>
                                 <ul class="clearfix">
-                                    <li><a href="#" onclick="return false;">11111</a></li>
-                                    <li><a href="#" onclick="return false;">111111111111</a></li>
-                                    <li><a href="#" onclick="return false;">111222222211</a></li>
-                                    <li><a href="#" onclick="return false;">1133333111</a></li>
-                                    <li class="no-compartment"><a href="#" onclick="return false;">1114444411</a></li>
-                                    <li><a href="#" onclick="return false;">115555111</a></li>
-                                    <li><a href="#" onclick="return false;">1166666111</a></li>
-                                    <li><a href="#" onclick="return false;">1133333111</a></li>
+                                    <li><a href="#" onclick="return false;">유아여행안내</a></li>
+                                    <li><a href="#" onclick="return false;">임신고객안내</a></li>
+                                    <li><a href="#" onclick="return false;">장애인고객안내</a></li>
+                                    <li><a href="#" onclick="return false;">패밀리서비스</a></li>
+                                    <li class="no-compartment"><a href="#" onclick="return false;">반려동물동반</a></li>
+                                    <li><a href="#" onclick="return false;">의료도움이 필요한 고객</a></li>
+                                    <li><a href="#" onclick="return false;">기내건강</a></li>
+                                    <li><a href="#" onclick="return false;">혼자 여행하는 청소년</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="info-section">
-                            <div class="text-align-center bg-blue5 ">가자에어클럽</div>
+                            <div class="text-align-center bg-blue5 ">부가서비스</div>
                             <div>
                                 <ul class="clearfix">
-                                    <li><a href="#" onclick="return false;">11111</a></li>
-                                    <li><a href="#" onclick="return false;">111111111111</a></li>
-                                    <li><a href="#" onclick="return false;">111222222211</a></li>
-                                    <li><a href="#" onclick="return false;">1133333111</a></li>
-                                    <li class="no-compartment"><a href="#" onclick="return false;">1114444411</a></li>
-                                    <li><a href="#" onclick="return false;">115555111</a></li>
-                                    <li><a href="#" onclick="return false;">1166666111</a></li>
-                                    <li><a href="#" onclick="return false;">1133333111</a></li>
+                                    <li><a href="#" onclick="return false;">레그룸좌석</a></li>
+                                    <li><a href="#" onclick="return false;">비즈니스존</a></li>
+                                    <li><a href="#" onclick="return false;">프론트존</a></li>
+                                    <li><a href="#" onclick="return false;">듀오좌석</a></li>
+                                    <li class="no-compartment"><a href="#" onclick="return false;">이코노미</a></li>
+                                    <li><a href="#" onclick="return false;">업그레이드</a></li>
+                                    <li><a href="#" onclick="return false;">기내와이파이</a></li>
+                                    <li><a href="#" onclick="return false;">기내통신판매</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="info-section">
-                            <div class="text-align-center bg-blue5 ">가자에어클럽</div>
+                            <div class="text-align-center bg-blue5 ">마일리지 적립</div>
                             <div>
                                 <ul class="clearfix">
-                                    <li><a href="#" onclick="return false;">11111</a></li>
-                                    <li><a href="#" onclick="return false;">111111111111</a></li>
-                                    <li><a href="#" onclick="return false;">111222222211</a></li>
-                                    <li><a href="#" onclick="return false;">1133333111</a></li>
-                                    <li class="no-compartment"><a href="#" onclick="return false;">1114444411</a></li>
-                                    <li><a href="#" onclick="return false;">115555111</a></li>
-                                    <li><a href="#" onclick="return false;">1166666111</a></li>
-                                    <li><a href="#" onclick="return false;">1133333111</a></li>
+                                    <li><a href="#" onclick="return false;">마일리지 적립몰</a></li>
+                                    <li><a href="#" onclick="return false;">마일리지 적립몰 이용안내</a></li>
+                                    <li><a href="#" onclick="return false;">누락마일리지 적립</a></li>
+                                    <li><a href="#" onclick="return false;">기타마일리지 제휴 항공사</a></li>
+                                    <li class="no-compartment"><a href="#" onclick="return false;">마일리지 양도</a></li>
+                                    <li><a href="#" onclick="return false;">마일리지 제휴 신용카드</a></li>
+                                    <li><a href="#" onclick="return false;">마일리지 제휴 호텔</a></li>
+                                    <li><a href="#" onclick="return false;">마일리지 제휴 렌터카</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="info-section">
-                            <div class="text-align-center bg-blue5 ">가자에어클럽</div>
+                            <div class="text-align-center bg-blue5 ">마일리지 사용</div>
                             <div>
                                 <ul class="clearfix">
-                                    <li><a href="#" onclick="return false;">11111</a></li>
-                                    <li><a href="#" onclick="return false;">111111111111</a></li>
-                                    <li><a href="#" onclick="return false;">111222222211</a></li>
-                                    <li><a href="#" onclick="return false;">1133333111</a></li>
-                                    <li class="no-compartment"><a href="#" onclick="return false;">1114444411</a></li>
-                                    <li><a href="#" onclick="return false;">115555111</a></li>
-                                    <li><a href="#" onclick="return false;">1166666111</a></li>
-                                    <li><a href="#" onclick="return false;">1133333111</a></li>
+                                    <li><a href="#" onclick="return false;">마일리지 사용몰</a></li>
+                                    <li><a href="#" onclick="return false;">이용방법</a></li>
+                                    <li><a href="#" onclick="return false;">마일리지 항공권발급</a></li>
+                                    <li><a href="#" onclick="return false;">부가서비스 이용</a></li>
+                                    <li class="no-compartment"><a href="#" onclick="return false;">마일리지 항공권</a></li>
+                                    <li><a href="#" onclick="return false;">마일리지 항공권 공제표</a></li>
+                                    <li><a href="#" onclick="return false;">마일리지 항공권 사용</a></li>
+                                    <li><a href="#" onclick="return false;">마일리지 항공권 양도</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="info-section">
-                            <div class="text-align-center bg-blue5 ">가자에어클럽</div>
+                            <div class="text-align-center bg-blue5 ">항공권예약</div>
                             <div>
                                 <ul class="clearfix">
-                                    <li><a href="#" onclick="return false;">11111</a></li>
-                                    <li><a href="#" onclick="return false;">111111111111</a></li>
-                                    <li><a href="#" onclick="return false;">111222222211</a></li>
-                                    <li><a href="#" onclick="return false;">1133333111</a></li>
-                                    <li class="no-compartment"><a href="#" onclick="return false;">1114444411</a></li>
-                                    <li><a href="#" onclick="return false;">115555111</a></li>
-                                    <li><a href="#" onclick="return false;">1166666111</a></li>
-                                    <li><a href="#" onclick="return false;">1133333111</a></li>
+                                    <li><a href="#" onclick="return false;">PC결제 안내</a></li>
+                                    <li><a href="#" onclick="return false;">모바일 결제 안내</a></li>
+                                    <li><a href="#" onclick="return false;">신용카드 할부 결제</a></li>
+                                    <li><a href="#" onclick="return false;">예약 부도 위약금</a></li>
+                                    <li class="no-compartment"><a href="#" onclick="return false;">마일리지 항공권 유효기간</a></li>
+                                    <li><a href="#" onclick="return false;">국내선 항공권 유효기간</a></li>
+                                    <li><a href="#" onclick="return false;">온라인 할인쿠폰 사용 안내</a></li>
+                                    <li><a href="#" onclick="return false;">유류할증료 안내</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="info-section">
-                            <div class="text-align-center bg-blue5 ">가자에어클럽</div>
+                            <div class="text-align-center bg-blue5 ">체크인/탑승수속</div>
                             <div>
                                 <ul class="clearfix">
-                                    <li><a href="#" onclick="return false;">11111</a></li>
-                                    <li><a href="#" onclick="return false;">111111111111</a></li>
-                                    <li><a href="#" onclick="return false;">111222222211</a></li>
-                                    <li><a href="#" onclick="return false;">1133333111</a></li>
-                                    <li class="no-compartment"><a href="#" onclick="return false;">1114444411</a></li>
-                                    <li><a href="#" onclick="return false;">115555111</a></li>
-                                    <li><a href="#" onclick="return false;">1166666111</a></li>
-                                    <li><a href="#" onclick="return false;">1133333111</a></li>
+                                    <li><a href="#" onclick="return false;">온라인 체크인하기</a></li>
+                                    <li><a href="#" onclick="return false;">오토체크인</a></li>
+                                    <li><a href="#" onclick="return false;">공항 키오스크 셀프 체크인</a></li>
+                                    <li><a href="#" onclick="return false;">셀프 백드랍</a></li>
+                                    <li class="no-compartment"><a href="#" onclick="return false;">공항 카운터 체크인</a></li>
+                                    <li><a href="#" onclick="return false;">온라인 체크인 이용 가능시간</a></li>
+                                    <li><a href="#" onclick="return false;">이용 가능 공항</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="info-section">
-                            <div class="text-align-center bg-blue5 ">가자에어클럽</div>
+                            <div class="text-align-center bg-blue5 ">공항에서</div>
                             <div>
                                 <ul class="clearfix">
-                                    <li><a href="#" onclick="return false;">11111</a></li>
-                                    <li><a href="#" onclick="return false;">111111111111</a></li>
-                                    <li><a href="#" onclick="return false;">111222222211</a></li>
-                                    <li><a href="#" onclick="return false;">1133333111</a></li>
-                                    <li class="no-compartment"><a href="#" onclick="return false;">1114444411</a></li>
-                                    <li><a href="#" onclick="return false;">115555111</a></li>
-                                    <li><a href="#" onclick="return false;">1166666111</a></li>
-                                    <li><a href="#" onclick="return false;">1133333111</a></li>
+                                    <li><a href="#" onclick="return false;">라운지조회</a></li>
+                                    <li><a href="#" onclick="return false;">취항 공항 조회</a></li>
+                                    <li><a href="#" onclick="return false;">출입국 신고서</a></li>
+                                    <li><a href="#" onclick="return false;">기내 서비스 순서</a></li>
+                                    <li class="no-compartment"><a href="#" onclick="return false;">특별 기내식</a></li>
+                                    <li><a href="#" onclick="return false;">이달의 기내 특별 서비스</a></li>
+                                    <li><a href="#" onclick="return false;">국제선 기내면세품</a></li>
+                                    <li><a href="#" onclick="return false;">선호좌석 사전 예매</a></li>
                                 </ul>
                             </div>
                         </div>
