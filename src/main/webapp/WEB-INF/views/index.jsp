@@ -99,10 +99,10 @@
                 </div>
             </form>
         </section>
-
+    
         <section id="best">
             <div>
-                <div class="sectionTitle"><p>베스트 상품</p><a href="<%=path %>/Resources/JSP/eventNproduct/best_product.do">&nbsp;전체보기 +&nbsp;</a></div>
+                <div class="sectionTitle"><p>추천 상품</p><a href="<%=path %>/Resources/JSP/eventNproduct/best_product.do">&nbsp;전체보기 +&nbsp;</a></div>
                 <div id="bestBannerWrap">
                     <ul id="bestBanner">
                         <li>
@@ -171,58 +171,21 @@
         </section>
         <section id="event">
             <div>
-                <div class="sectionTitle"><p>이벤트</p><a href="<%=path %>/Resources/JSP/eventNproduct/event_List.do">&nbsp;전체보기 +&nbsp;</a></div>
+                <div class="sectionTitle"><p>이벤트</p><a href="<%=jsp%>/eventNpackage/event_list">&nbsp;전체보기 +&nbsp;</a></div>
                 <div class="eventBannerWrap">
                     <ul class="eventBanner">
-                        <li><a href="prd_alliance_event.html">
-                            <div class="eventDetail">
-                                <p>가자에어 X 스무디킹 할인 제휴 기념 이벤트</p>
-                                <div>더 보기</div>
-                                <p>2019.10.24~2019.11.24</p>
-                            </div>
-                            <img src='<%=path %>/Resources/IMG/event/event1.jpeg' title="가자에어 X 스무디킹 할인 제휴 기념 이벤트"/>
-                            </a>
-                        </li>
-                        <li><a href="prd_alliance_event.html">
-                            <div class="eventDetail">
-                                <p>KB국민카드 결제 금액의 5%, 돌려드리는 Special</p>
-                                <div>더 보기</div>
-                                <p>2019.10.24~2019.11.24</p>
-                            </div>
-                            <img src='<%=path %>/Resources/IMG/event/event2.jpeg' title="KB국민카드 결제 금액의 5%, 돌려드리는 Special"/></a>
-                        </li>
-                        <li><a href="prd_alliance_event.html">
-                            <div class="eventDetail">
-                                <p>나의 해외여행 동반자 My Trip 카드 이벤트</p>
-                                <div>더 보기</div>
-                                <p>2019.10.24~2019.11.24</p>
-                            </div>
-                            <img src='<%=path %>/Resources/IMG/event/event3.jpeg' title="나의 해외여행 동반자 My Trip 카드 이벤트"/></a>
-                        </li>
-                        <li><a href="prd_alliance_event.html">
-                            <div class="eventDetail">
-                                <p>뉴욕의 낮과 밤을 가자에어와 함께</p>
-                                <div>더 보기</div>
-                                <p>2019.10.24~2019.11.24</p>
-                            </div>
-                            <img src='<%=path %>/Resources/IMG/event/event4.jpeg' title="뉴욕의 낮과 밤을 가자에어와 함께"/></a>
-                        </li>
-                        <li><a href="prd_alliance_event.html">
-                            <div class="eventDetail">
-                                <p>AJ렌터카 마일리지 더블적립 이벤트</p>
-                                <div>더 보기</div>
-                                <p>2019.10.24~2019.11.24</p>
-                            </div>
-                            <img src='<%=path %>/Resources/IMG/event/event5.jpeg' title="AJ렌터카 마일리지 더블적립 이벤트"/></a>
-                        </li>
-                        <li><a href="prd_alliance_event.html">
-                            <div class="eventDetail">
-                                <p>안녕, 몽골!, 반가워, 골드! 우수회원 체험 이벤트</p>
-                                <div>더 보기</div>
-                                <p>2019.10.24~2019.11.24</p>
-                            </div>
-                            <img src='<%=path %>/Resources/IMG/event/event6.jpeg' title="안녕, 몽골!, 반가워, 골드! 우수회원 체험 이벤트"/></a>
-                        </li>
+	                    <c:forEach var="lst" items="${eventList }">
+	                        <li><a href="<%=jsp %>/eventNpackage/event_detail?eventNum=${lst.eventNum}">
+	                            <div class="eventDetail">
+	                            	<br/><br/>
+	                                <p>${lst.eventName }</p>
+	                                <div>더 보기</div>
+	                                <p>${lst.startDate }~${lst.endDate }</p>
+	                            </div>
+	                            <img src='<%=img %>/main${lst.eventThumbnail}' title="${lst.eventName }"/>
+	                            </a>
+	                        </li>
+	                    </c:forEach>
                     </ul>
                 </div>
             </div>
@@ -234,38 +197,24 @@
                         <thead>
                             <tr>
                                 <td>공지사항</td>
-                                <td><a href="<%=path %>/Resources/HTML/notice.html"><img title="더 보기" src="<%=path %>/Resources/IMG/icon/plus_box_ccc.png"/></a></td>
+                                <td>
+                                	<a href="<%=jsp %>/board/noticeBoard/noticeBoard_list?pageNum=1&tabType=0">
+                                	<img title="더 보기" src="<%=img %>/icon/plus_box_ccc.png"/></a>
+                                </td>
                             </tr>
                         </thead>
                         <tbody>
+                        <c:forEach var="lst" items="${noticeList }" end="6">
                             <tr>
-                                <td><a href="#">[공지] 제 13호 태풍 '링링'으로 인한 국제선 결항 안내</a></td>
-                                <td>10.24</td>
+                                <td>
+                                	<a href="<%=jsp %>/board/noticeBoard/noticeBoard_view?
+											noticeNum=${lst.noticeNum}&pageNum=1
+											&tabType=${lst.noticeType}">${lst.subject }
+									</a>
+								</td>
+                                <td>${lst.regdate}</td>
                             </tr>
-                            <tr>
-                                <td><a href="#">[공지] 제 13호 태풍 '링링'으로 인한 국내선 결항 안내</a></td>
-                                <td>10.24</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">[공지] KB국민카드 서비스 일시중단 안내</a></td>
-                                <td>10.24</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">[국내선] 추석연휴 기간 김포-부산(GMP-PUS) 노 ...</a></td>
-                                <td>10.24</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">[국제선] 청주-타이베이(CJJ-TPE) 운항시간 변경 ...</a></td>
-                                <td>10.24</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">2019년 9월 신용카드 할부 서비스 안내</a></td>
-                                <td>10.24</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">[공지] 말레이시아 출국세 부과 안내 (2019.09.01~)</a></td>
-                                <td>10.24</td>
-                            </tr>
+						</c:forEach>
                         </tbody>
                     </table>
                 </div>
@@ -274,38 +223,26 @@
                         <thead>
                             <tr>
                                 <td>이용후기</td>
-                                <td><a href="<%=path %>/Resources/HTML/notice.html"><img title="더 보기" src="<%=path %>/Resources/IMG/icon/plus_box_ccc.png"/></a></td>
+                                <td>
+	                                <a href="<%=jsp %>/board/reviewBoard/reviewBoard_list?pageNum=1&reviewType=0">
+	                                <img title="더 보기" src="<%=path %>/Resources/IMG/icon/plus_box_ccc.png"/>
+	                                </a>
+                                </td>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td><div class="boardTag bt_best">best</div><a href="#">9월 날씨, 인천-다낭 가자에어 탑승 후기, 포켓 와이파이 챙겨서 출발</a></td>
-                                <td>10.24</td>
-                            </tr>
-                            <tr>
-                                <td><div class="boardTag bt_new">new</div><a href="#">[모스크바/러시아] 항공리뷰 : 가자에어(GAZA Air)...</a></td>
-                                <td>10.24</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">동유럽 여행 :) 가자에어 KE0935, KE0938</a></td>
-                                <td>10.24</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">방콕 항공권, 가자에어 KE657 후기! 태국 수완나폼 고고</a></td>
-                                <td>10.24</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">라운지, 가자에어 기내식 과일식 (feat. 공항철도는 어디에서..</a></td>
-                                <td>10.24</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">괌여행 - 가자에어 프레스티지석 / 웨스틴호텔</a></td>
-                                <td>10.24</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">유럽 비행기표예약 & 인천-비엔나 대한항공 KE937 탑승과 근황</a></td>
-                                <td>10.24</td>
-                            </tr>
+	                        <c:forEach var="lst" items="${reviewList }" end="6">
+	                            <tr>
+	                                <td>
+	                                	<a href="<%=jsp %>/board/reviewBoard/reviewBoard_view?
+											reviewNum=${lst.reviewNum}&pageNum=1
+											&reviewType=${lst.reviewType}">
+											${lst.subject }
+										</a>
+									</td>
+	                                <td>10.24</td>
+	                            </tr>
+	                        </c:forEach>
                         </tbody>
                     </table>
                 </div>
