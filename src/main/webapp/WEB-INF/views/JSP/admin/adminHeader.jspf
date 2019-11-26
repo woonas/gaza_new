@@ -203,8 +203,8 @@
                                         <a href="#"> 추천상품<span class="fa arrow"></span></a>
                                         <ul class="nav nav-third-level">
                                             <li>
-                                                <a href="#">동아시아</a>
-                                                <a href="#">그외아시아</a>
+                                                <a href="#">한국</a>
+                                                <a href="#">아시아</a>
                                                 <a href="#">유럽</a>
                                                 <a href="#">미주</a>
                                             </li>

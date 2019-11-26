@@ -28,25 +28,25 @@
                 <c:set var="i" value="${1}" />
                 <c:forEach var="vo" items="${lst }">
                     <c:if test="${i>(j-1)*5 && i <= j*5}">
-                    <c:if test="${i%2 == 1 }">
-                        <div id="tab-${j }-product-${i }" class="row product-wrapper">
-                    </c:if>
-    
-                    <c:if test="${i%2 == 0 }">
-                        <div id="tab-${j }-product-${i }" class="row product-wrapper change-order">
-                    </c:if>
-                        <div class="col-three-fourth img-wrapper">
-                            <img src="<%=img%>${vo.cityImg}">
+                        <c:if test="${i%2 == 1 }">
+                            <div id="tab-${j }-product-${i -((j-1)*5) }" class="row product-wrapper">
+                        </c:if>
+        
+                        <c:if test="${i%2 == 0 }">
+                            <div id="tab-${j }-product-${i -((j-1)*5)}" class="row product-wrapper change-order">
+                        </c:if>
+                            <div class="col-three-fourth img-wrapper">
+                                <img src="<%=img%>${vo.cityImg}">
+                            </div>
+                            <div class="col-fourth product-info-wrapper">
+                                <p>0${i -((j-1)*5) }</p>
+                                <p>${vo.city}</p>
+                                <p>
+                                    GAZA AIR만의<br />특별한 혜택!<br />지금바로 만나보세요
+                                </p>
+                                <a href="<%=request.getContextPath()%>/Resources/JSP/flight/booking/booking1?city=${vo.city}&iata=${vo.iata}"><button class="btn-booking blueBtn">예약하기</button></a>
+                            </div>
                         </div>
-                        <div class="col-fourth product-info-wrapper">
-                            <p>0${i }</p>
-                            <p>${vo.city}</p>
-                            <p>
-                                GAZA AIR만의<br />특별한 혜택!<br />지금바로 만나보세요
-                            </p>
-                            <a href="<%=request.getContextPath()%>/Resources/JSP/flight/booking/booking1?city=${vo.city}&iata=${vo.iata}"><button class="btn-booking blueBtn">예약하기</button></a>
-                        </div>
-                    </div>
                     </c:if>
                     <c:set var="i" value="${i+1}" />
                 </c:forEach>
