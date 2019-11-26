@@ -197,9 +197,6 @@
                                 <a href="#"><i class="fa fa-futbol-o fa-fw"></i> 이벤트<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>
-                                        <a href="#"> 상품할인</a>
-                                    </li>
-                                    <li>
                                         <a href="#"> 추천상품<span class="fa arrow"></span></a>
                                         <ul class="nav nav-third-level">
                                             <li>
