@@ -36,7 +36,7 @@ public class AdminController {
         return "JSP/admin/admin_login";
     }
 
-    @PostMapping("/admin_loginOk")
+    @PostMapping("/JSP/admin/admin_loginOk")
     public ModelAndView adminLoginOk(AdminVO vo1, HttpServletRequest req) {
         AdminInterface dao = sqlSession.getMapper(AdminInterface.class);
         AdminVO vo = dao.login(vo1);
