@@ -9,9 +9,16 @@ public class TravelVO {
 	private String iata;
 	private int productCnt; 
 	private int onePageRecord=5;
-	
-	private int sale;
-	
+	private String rContent;
+    private int sale;
+
+    public String getrContent() {
+        return rContent;
+    }
+
+    public void setrContent(String rContent) {
+        this.rContent = rContent;
+    }
 	
 	public int getSale() {
 		return sale;

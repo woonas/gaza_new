@@ -131,7 +131,8 @@ CREATE TABLE reviewBoard (
 CREATE TABLE recommandProduct (
 	recommandNum NUMBER NOT NULL,
 	productNum NUMBER,
-	regdate DATE DEFAULT sysdate
+	regdate DATE DEFAULT sysdate,
+    rcontent varchar2(200) not null
 );
 
 CREATE TABLE product (

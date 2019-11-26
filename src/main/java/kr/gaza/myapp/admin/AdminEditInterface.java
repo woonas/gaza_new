@@ -16,11 +16,16 @@ public interface AdminEditInterface {
 	public int updateAirport(AirportVO vo);;
 	public int deleteAirport(int num);
 	public int insertAirplane(AirplaneVO vo);
+	public AirplaneVO airplaneAllSelect(String name);
+	public int updateAirplane(AirplaneVO vo);
+	public int deleteAirplane(AirplaneVO vo);
 	public ProductVO productAllSelect(int num);
 	public int insertProduct(ProductVO vo);
 	public int updateProduct(ProductVO vo);
 	public int deleteProduct(int num);
 	public int insertFlight(FlightVO vo);
+	public FlightVO flightAllSelect(int num);
+	public int updateFlight(FlightVO vo);
 	public int deleteFlight(int num);
 	public NoticeBoardVO selectNotice(int num);
 	public ReviewBoardVO selectReview(int num);
