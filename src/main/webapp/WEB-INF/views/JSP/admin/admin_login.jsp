@@ -94,10 +94,10 @@
     <body>
         <div class="login-page">
             <div class="form">
-                <form class="login-form">
-                    <input type="text" placeholder="username"/>
-                    <input type="password" placeholder="password"/>
-                    <button>login</button>
+                <form class="login-form" action="/admin_loginOk" method="post">
+                    <input type="text" placeholder="아이디" name="adminId"/>
+                    <input type="password" placeholder="비밀번호" name="adminPwd"/>
+                    <button onclick="this.parentElement.submit();">로그인</button>
                 </form>
             </div>
         </div>

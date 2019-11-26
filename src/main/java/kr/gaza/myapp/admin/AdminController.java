@@ -15,9 +15,13 @@ import kr.gaza.myapp.eventPackage.AllianceVO;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 @Controller
 public class AdminController {
@@ -27,6 +31,28 @@ public class AdminController {
     @RequestMapping("/admin_login")
     public String adminIndex() {
         return "JSP/admin/admin_login";
+    }
+
+    @PostMapping("/admin_loginOk")
+    public ModelAndView adminLoginOk(AdminVO vo1, HttpServletRequest req) {
+        AdminInterface dao = sqlSession.getMapper(AdminInterface.class);
+        AdminVO vo = dao.login(vo1);
+
+        ModelAndView mav = new ModelAndView();
+        if (vo != null) {
+            HttpSession ses = req.getSession();
+            ses.setAttribute("adminNum", vo.getAdminNum());
+            ses.setAttribute("adminId", vo.getAdminId());
+            ses.setAttribute("adminPwd", vo.getAdminPwd());
+        }
+        mav.setViewName("JSP/admin/admin_loginOk");
+
+        return mav;
+    }
+
+    @GetMapping("/admin_logout")
+    public String logOut() {
+        return "JSP/admin/admin_logout";
     }
 
     @RequestMapping("/JSP/admin/admin_dash")

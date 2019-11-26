@@ -7,7 +7,6 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <h1 class="page-header">이용후기(Review)</h1>
-                            <input type="button" id="addBtn" value="추가">
                         </div>
                     </div>
                     

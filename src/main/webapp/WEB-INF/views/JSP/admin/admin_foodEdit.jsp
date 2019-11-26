@@ -10,33 +10,33 @@
                         </div>
                     </div>
                     
-                    <div class="row">
+                    <div class="row2 row">
                         <div class="col-lg-12">	
                             <div class="panel panel-default">
                                 <div class="panel-body">
 									<form method="post" action="foodEditOk">
 										<input type="hidden" name="foodNum" value="${vo.foodNum }"/>
 										<div class="row2 clearfix">
-                                            <div class="col-tenth">기내식 종류:</div> 
+                                            <div class="col-tenth">종류:</div>
                                             <div class="col-nine-tenth"><input type="text" name="foodType" value="${vo.foodType }"></div>
                                         </div>
 										<div class="row2 clearfix">
-                                            <div class="col-tenth">기내식 이름:</div> 
+                                            <div class="col-tenth">이름:</div>
                                             <div class="col-nine-tenth"><input type="text" name="foodName" value="${vo.foodName}"></div>
                                         </div>
 										<div class="row2 clearfix">
-                                            <div class="col-tenth">기내식 이미지:</div> 
+                                            <div class="col-tenth">이미지:</div>
                                             <div class="col-nine-tenth"><input type="text" name="foodImg" value="${vo.foodImg}"></div>
                                         </div>
 										<div class="row2 clearfix">
-                                            <div class="col-tenth">기내식 설명:</div> 
+                                            <div class="col-tenth">설명:</div>
                                             <div class="col-nine-tenth"><input type="text" name="foodContent" value="${vo.foodContent}"></div>
                                         </div>
 										<div class="row2 clearfix">
-                                            <div class="col-tenth">기내식 재료:</div> 
+                                            <div class="col-tenth">재료:</div>
                                             <div class="col-nine-tenth"><input type="text" name="foodIngredient" value="${vo.foodIngredient}"></div>
                                         </div>
-										<div class="row2 clearfix">기내식 가격: <input type="text" name="foodPrice" value="${vo.foodPrice}"></div>
+										<div class="row2 clearfix">가격: <input type="text" name="foodPrice" value="${vo.foodPrice}"></div>
 										<input type="submit" value="상품수정"/>
 									</form>
                                 </div>

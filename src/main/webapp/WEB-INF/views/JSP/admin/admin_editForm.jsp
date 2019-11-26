@@ -10,7 +10,7 @@
                         </div>
                     </div>
                     
-                    <div class="row">
+                    <div class="row2 row">
                         <div class="col-lg-12">	
                             <div class="panel panel-default">
                                 <div class="panel-body">
@@ -24,11 +24,11 @@
                                             <div class="col-nine-tenth"><input type="text" name="adminPwd"></div>
                                         </div>
 										<div class="row2 clearfix">
-                                            <div class="col-tenth">관리자이름:</div> 
+                                            <div class="col-tenth">이름:</div>
                                             <div class="col-nine-tenth"><input type="text" name="adminName"></div>
                                         </div>
 										<div class="row2 clearfix">
-                                            <div class="col-tenth">관리자번호:</div> 
+                                            <div class="col-tenth">번호:</div>
                                             <div class="col-nine-tenth"><input type="text" name="adminTel"></div>
                                         </div>
 										<div class="row2 clearfix">

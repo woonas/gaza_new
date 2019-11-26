@@ -66,9 +66,9 @@
             .col-tenth { width: 10% !important; }
             .col-nine-tenth { width: 90% !important; }
             
-            .submit-wrapper { text-align: right; }
+            .submit-wrapper { text-align: right; margin-right: 20px; }
             
-            div[class^=col-]>input { width: 100%; margin-right: 20px; }
+            div[class$=tenth]>input { width: 100%; }
         </style>
     </head>
     <body>
@@ -120,12 +120,8 @@
                             <i class="fa fa-user fa-fw"></i> xx <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu dropdown-user">
-                            <li><a href="#"><i class="fa fa-user fa-fw"></i> 계정정보</a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-gear fa-fw"></i> 설정</a>
-                            </li>
-                            <li class="divider"></li>
-                            <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            <li>
+                                <a href="<%=path%>/admin_logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                             </li>
                         </ul>
                     </li>
@@ -145,9 +141,6 @@
                                         </button>
                                     </span>
                                 </div>
-                            </li>
-                            <li>
-                                <a href="<%=jsp%>/admin/admin_dash" class="active"><i class="fa fa-dashboard fa-fw"></i> 대시보드</a>
                             </li>
                             <li>
                                 <a href="#"><i class="fa fa-user fa-fw"></i> 회원관리<span class="fa arrow"></span></a>
@@ -197,9 +190,6 @@
                                     </li>
                                     <li>
                                         <a href="<%=jsp%>/admin/admin_review">이용후기</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">자주묻는질문</a>
                                     </li>
                                 </ul>
                             </li>

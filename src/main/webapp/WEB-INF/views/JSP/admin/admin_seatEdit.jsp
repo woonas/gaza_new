@@ -10,14 +10,14 @@
                         </div>
                     </div>
                     
-                    <div class="row">
+                    <div class="row2 row">
                         <div class="col-lg-12">	
                             <div class="panel panel-default">
                                 <div class="panel-body">
 									<form method="post" action="seatEditOk">
 										<input type="hidden" name="seatType" value="${vo.seatType }"/>
 										<div class="row clearfix">
-                                            <div class="col-tenth">좌석타입이름:</div>
+                                            <div class="col-tenth">좌석타입:</div>
                                             <div class="col-nine-tenth"><input type="text" name="seatTypeName" value="${vo.seatTypeName }"></div>
                                         </div>
 										<div class="submit-wrapper"><input type="submit" value="상품수정"/></div>
