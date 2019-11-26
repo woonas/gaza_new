@@ -14,13 +14,12 @@ import kr.gaza.myapp.board.reviewBoard.ReviewBoardVO;
 import kr.gaza.myapp.eventPackage.AllianceVO;
 import kr.gaza.myapp.eventPackage.EPtravelInterface;
 import kr.gaza.myapp.eventPackage.TravelVO;
-
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
@@ -36,7 +35,7 @@ public class AdminController {
         return "JSP/admin/admin_login";
     }
 
-    @PostMapping("/admin_loginOk")
+    @RequestMapping(value = "/admin_loginOk", method= RequestMethod.POST)
     public ModelAndView adminLoginOk(AdminVO vo1, HttpServletRequest req) {
         AdminInterface dao = sqlSession.getMapper(AdminInterface.class);
         AdminVO vo = dao.login(vo1);
