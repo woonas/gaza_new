@@ -28,7 +28,7 @@
        		 <div id="tab-${j }-container" class="tab-content-container   hidden">
        		<c:set var="list" value="${saleList }"/>
        </c:if>
-       <c:forEach var="v" items="${list }">
+       <c:forEach var="v" items="${lst }">
        <c:if test="${i%2 ==1 }">
            <div id="tab-${j}-product-${i}" class="row product-wrapper">
        </c:if>
