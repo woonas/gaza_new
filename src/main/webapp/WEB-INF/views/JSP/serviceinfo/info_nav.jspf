@@ -2,7 +2,7 @@
 
 <div class="bread_crumbs">
     <div>
-        <div class="menu-item"><a href="<%=path%>">HOME</a></div>
+        <div class="menu-item"><a href="<%=path%>/">HOME</a></div>
         <div class="menu-item" id="first_menu">
             <a href="javascript:">탑승안내</a>
             <div class="sub-menu">
