@@ -12,6 +12,9 @@ import kr.gaza.myapp.aviation.seatreserve.SeatReserveVO;
 import kr.gaza.myapp.board.noticeBoard.NoticeBoardVO;
 import kr.gaza.myapp.board.reviewBoard.ReviewBoardVO;
 import kr.gaza.myapp.eventPackage.AllianceVO;
+import kr.gaza.myapp.eventPackage.EPtravelInterface;
+import kr.gaza.myapp.eventPackage.TravelVO;
+
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -201,6 +204,50 @@ public class AdminController {
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("lst",lst);
 		mav.setViewName("JSP/admin/admin_airplane");
+		return mav;
+	}
+	
+	@RequestMapping("/JSP/admin/admin_recommend_kor")
+	public ModelAndView recommendKor() {
+		EPtravelInterface dao = sqlSession.getMapper(EPtravelInterface.class);
+		List<TravelVO> lst = dao.getAllRecord();
+		
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("lst",lst);
+		mav.setViewName("JSP/admin/admin_recommend_kor");
+		return mav;
+	}
+	
+	@RequestMapping("/JSP/admin/admin_recommend_asia")
+	public ModelAndView recommendAsia() {
+		EPtravelInterface dao = sqlSession.getMapper(EPtravelInterface.class);
+		List<TravelVO> lst = dao.getAllRecord();
+		
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("lst",lst);
+		mav.setViewName("JSP/admin/admin_recommend_asia");
+		return mav;
+	}
+	
+	@RequestMapping("/JSP/admin/admin_recommend_europe")
+	public ModelAndView recommendEurope() {
+		EPtravelInterface dao = sqlSession.getMapper(EPtravelInterface.class);
+		List<TravelVO> lst = dao.getAllRecord();
+		
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("lst",lst);
+		mav.setViewName("JSP/admin/admin_recommend_europe");
+		return mav;
+	}
+	
+	@RequestMapping("/JSP/admin/admin_recommend_america")
+	public ModelAndView recommendAmerica() {
+		EPtravelInterface dao = sqlSession.getMapper(EPtravelInterface.class);
+		List<TravelVO> lst = dao.getAllRecord();
+		
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("lst",lst);
+		mav.setViewName("JSP/admin/admin_recommend_america");
 		return mav;
 	}
 }

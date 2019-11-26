@@ -41,7 +41,7 @@
                                                 <tr class="odd gradeX">
                                                     <td>${vo.noticeNum}</td>
                                                     <td>${vo.noticeType }</td>
-                                                    <td>${vo.subject }</td>
+                                                    <td onClick="location.href='<%=jsp%>/admin/admin_noticeView?noticeNum=${vo.noticeNum}'">${vo.subject }</td>
                                                     <td class="center">${vo.content }</td>
                                                     <td class="center">${vo.hit }</td>
                                                     <td class="center">${vo.regdate }</td>

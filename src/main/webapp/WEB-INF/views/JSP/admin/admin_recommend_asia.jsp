@@ -6,7 +6,8 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12">
-                            <h1 class="page-header">이용후기(Review)</h1>
+                            <h1 class="page-header">추천상품(아시아)</h1>
+                            <a href="<%=jsp%>/admin/admin_editForm"><input type="button" id="addBtn" value="추가"></a>
                         </div>
                     </div>
                     
@@ -17,38 +18,24 @@
                                     <div class="table-responsive">
                                         <table class="table table-striped table-bordered table-hover" id="dataTables">
                                             <col-group>
-                                                <col width="9%">
-                                                <col width="9%">
-                                                <col width="10.25%">
-                                                <col width="10.25%">
-                                                <col width="10.25%">
-                                                <col width="10.25%">
-                                                <col width="10.25%">
-                                                <col width="10.25%">
+                                                <col width="7%">
+                                                <col width="15%">
+                                                <col width="15%">
+                                                <col width="10%">
                                             </col-group>
                                             <thead>
                                                 <tr>
-                                                    <th>리뷰번호</th>
-                                                    <th>글타입</th>
-                                                    <th>제목</th>
-                                                    <th>글내용</th>
-                                                    <th>작성자</th>
-                                                    <th>조회수</th>
-                                                    <th>등록일</th>
-                                                    <th>아이피</th>
+                                                    <th>상품번호</th>
+                                                    <th>도시</th>
+                                                    <th>내용</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-												<c:forEach var="vo" items="${lst }">
+												<c:forEach var="i" begin="5" end="9" step="1">
                                                 <tr class="odd gradeX">
-                                                    <td>${vo.reviewNum }</td>
-                                                    <td>${vo.reviewType }</td>
-                                                    <td onClick="location.href='<%=jsp%>/admin/admin_reviewView?reviewNum=${vo.reviewNum}'">${vo.subject }</td>
-                                                    <td class="center">${vo.content }</td>
-                                                    <td class="center">${vo.writer }</td>
-                                                    <td class="center">${vo.hit }</td>
-                                                    <td>${vo.regdate }</td>
-                                                    <td>${vo.ip }</td>
+                                                    <td>${i-4 }</td>
+                                                    <td>${lst[i].city }</td>
+                                                    <td>GAZA AIR만의 특별한 혜택! 지금바로 만나보세요</td>
                                                 </tr>
                                                 </c:forEach>
                                             </tbody>

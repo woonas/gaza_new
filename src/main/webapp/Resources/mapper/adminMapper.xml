@@ -36,11 +36,11 @@
     </select>
 
     <select id="noticeAllRecord" resultType="kr.gaza.myapp.board.noticeBoard.NoticeBoardVO">
-        select noticenum, noticetype, subject, content, hit, to_char(regdate, 'YYYY-MM-DD') regdate from noticeboard
+        select noticenum, noticetype, subject, content, hit, to_char(regdate, 'YYYY-MM-DD') regdate from noticeboard order by noticenum desc
     </select>
 
     <select id="reviewAllRecord" resultType="kr.gaza.myapp.board.reviewBoard.ReviewBoardVO">
-        select reviewnum, reviewtype, subject, content, writer, hit, to_char(regdate,'YYYY-MM-DD') regdate, ip from reviewboard
+        select reviewnum, reviewtype, subject, content, writer, hit, to_char(regdate,'YYYY-MM-DD') regdate, ip from reviewboard order by reviewnum desc
     </select>
 
     <select id="memberAllRecord" resultType="kr.gaza.myapp.account.member.MemberVO">
