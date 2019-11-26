@@ -3,15 +3,16 @@
 <div class="bread_crumbs">
     <div>
         <div class="menu-item"><a href="<%=path%>">HOME</a></div>
-        <div class="menu-item">
-            <a href="#">공항서비스</a>
+        <div class="menu-item" id="first_menu">
+            <a href="javascript:">탑승안내</a>
             <div class="sub-menu">
-                <div class="menu-item">여행준비</div>
-                <div class="menu-item">여행</div>
-                <div class="menu-item">기타안내</div>
+                <div class="menu-item">탑승안내</div>
+                <div class="menu-item">수하물안내</div>
+                <div class="menu-item">고객안내</div>
+                <div class="menu-item">부가서비스</div>
             </div>
         </div>
-        <div class="menu-item">
+        <div class="menu-item" id="second_menu">
             <a href="#">사전체크인</a>
             <div class="sub-menu">
                 <div class="menu-item"><a href="<%=jsp%>/serviceinfo/checkIn">사전체크인</a></div>
@@ -23,23 +24,3 @@
     </div>
 </div>
 <div class="clearfix" style="height: 70px;"></div>
-
-<!-- 
-	여행준비 - 체크인 - 사전체크인(checkIn)
-	 		수하물 - 이용안내(baggage_guide), 위탁수하물(baggage_free), 수하물 보상(baggage_compensation)
-	 		도움이 필요한 고객 - 유아여행안내(infant), 임신중 여행(pregnant), 장애인 고객(disabled_passenger), 패밀리 서비스(family_service), 반려동물 동반(with_pets), 
-	 						의료도움이 필요한 고객(medical)
-	 		
-	 여행 - 기내에서  - 국내선 기내통신 판매(domestic), 기내건강(cabin_health)
-	 
-	 	  유료부가서비스 - 레그룸좌석(legroom), 국내선 비즈니스존(businesszone), 프론트존(frontzone), 듀오좌석(duo), 이코노미 스마티움(economysmartium), 
-	 	  			업그레이드 스탠바이(upgradestandby),기내 WIFI(wifi)
-
- -->
-
-<script>
-    const first_menu = ['탑승안내', '수하물안내', '고객안내', '부가서비스'];
-    const second_menu = [[['예약안내','checkIn'],['체크인안내','reservation'],['운임안내', 'fare']],[['수하물이용', 'baggage_guide'], ['위탁수하물', 'baggage_free'], ['수하물보상', 'baggage_compensation']],
-        [['유아여행안내', 'infant'], ['임신고객안내', 'pregnant'], ['장애인고객안내', 'disabled_passenger'], ['패밀리서비스','family_service'], ['반려동물동반', 'with_pets'], ['의료도움이 필요한 고객', 'medical'], ['기내건강', []] ],
-        ['레그룸좌석', '비즈니스존', '프론트존', '듀오좌석', '이코노미', '업그레이드', '기내와이파이', '기내통신판매']];
-</script>

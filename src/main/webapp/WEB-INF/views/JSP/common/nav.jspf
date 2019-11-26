@@ -26,7 +26,7 @@
 					<ul id="subMenuWrap">
 						<li id="subMenu">
 							<ul>
-								<li><img src="<%=path %>/Resources/IMG/main/nav_flight.jpg"/></li>
+								<li><img src="<%=img%>/main/nav_flight.jpg"/></li>
 							</ul>
 							<ul>
 								<li><a href="<%=jsp%>/flight/booking/booking1">항공권예약</a></li>
@@ -38,10 +38,10 @@
 								<li><a href="<%=jsp%>/eventNpackage/event_list">제휴이벤트</a></li>
 							</ul>
 							<ul>
-								<li><a href="#">공항서비스</a></li>
-								<li><a href="#">기내서비스</a></li>
-								<li><a href="#">부가서비스</a></li>
-								<li><a href="#">항공기안내</a></li>
+								<li><a href="<%=jsp %>/serviceinfo/checkIn?abc=1&zyx=1">탑승안내</a></li>
+								<li><a href="<%=jsp %>/serviceinfo/baggage_guide?abc=2&zyx=1">수하물안내</a></li>
+								<li><a href="<%=jsp %>/serviceinfo/infant?abc=3&zyx=1">고객안내</a></li>
+								<li><a href="<%=jsp %>/serviceinfo/legroom?abc=4&zyx=1">부가서비스</a></li>
 							</ul>
 							<ul>
 								<li><a href="<%=jsp %>/board/noticeBoard/noticeBoard_list?pageNum=1&tabType=0">공지사항</a></li>

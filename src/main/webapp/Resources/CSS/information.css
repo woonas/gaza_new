@@ -12,6 +12,7 @@
     position: absolute;
     height: 45px;
     width: 100%;
+    min-width: 1240px;
     left: 0;
     background-color: #999;
     margin-top: 5px;
@@ -32,6 +33,7 @@
     border-left: 1px solid rgba(255, 255, 255, 0.3);
     border-right: 1px solid #aaa;
     z-index: 5;
+    cursor: pointer;
 }
 
 .bread_crumbs>div>.menu-item:first-of-type {

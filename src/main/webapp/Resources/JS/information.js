@@ -40,20 +40,6 @@ const chatService = () => {
 
 
 (() => {
-	if (location.pathname.indexOf('cabin_health') !== -1) {
-	       const questions = document.querySelectorAll('.accordion-title');
-	        questions.forEach(question => {
-	            question.addEventListener('click', () =>{
-	                const expanded = document.querySelector('.is-expanded');
-	                if(question.parentElement.classList.contains('is-expanded')) question.parentElement.classList.remove('is-expanded');
-	                else {
-	                    if(expanded) expanded.classList.remove('is-expanded');
-	                    question.parentElement.classList.add('is-expanded');
-	                }
-	            });
-	        });
-	    }
-	
     if (location.pathname.indexOf('faq') !== -1) {
        const questions = document.querySelectorAll('.accordion-title');
         questions.forEach(question => {
@@ -71,14 +57,32 @@ const chatService = () => {
        menuBorderRemover();
 
        // 서비스안내 서브네비 클릭이벤트
+        const menuList = [[['예약안내','checkIn'],['체크인안내','reservation'],['운임안내', 'fare']],[['수하물이용', 'baggage_guide'], ['위탁수하물', 'baggage_free'], ['수하물보상', 'baggage_compensation']],
+            [['유아여행안내', 'infant'], ['임신고객안내', 'pregnant'], ['장애인고객안내', 'disabled_passenger'], ['패밀리서비스','family_service'], ['반려동물동반', 'with_pets'], ['의료도움이 필요한 고객', 'medical'], ['기내건강', 'cabin_health']],
+            [['레그룸좌석','legroom'], ['비즈니스존','businesszone'], ['프론트존','frontzone'], ['듀오좌석','duo'], ['이코노미','economysmatium'], ['업그레이드', 'upgradestandby'], ['기내와이파이', 'wifi'], ['기내통신판매','domestic']]];
 
+        const menu1 = document.querySelector('#first_menu>div');
+        const menu2 = document.querySelector('#second_menu>div');
+        menu1.addEventListener('click', () => {
+            menu1.previousElementSibling.innerText = event.target.innerText;
+            let index;
+            if (event.target.innerHTML === '탑승안내') index = 0;
+            else if (event.target.innerHTML === '수하물안내') index = 1;
+            else if (event.target.innerHTML === '고객안내') index = 2;
+            else if (event.target.innerHTML === '부가서비스') index = 3;
+            const second_index = location.href.charAt(location.href.length-1);
+            menu2.previousElementSibling.innerText = menuList[index][second_index][0];
+            let txt = '';
+            for (let i = 0; i < menuList[index].length; i++)
+                txt += ('<div class="menu-item"><a href="' + menuList[index][i][1] + '?abc=' + index + '&zyx=' + i +'">' + menuList[index][i][0] + '</a></div>');
+            menu2.innerHTML = txt;
+        });
 
        if(location.pathname.indexOf('reservation') !== -1) {
            tabEvent('.tab-menu1');
            tabletabEvent('#table-tab-1');
            tabletabEvent('#table-tab-2');
        }
-
        else if (location.pathname.indexOf('fare') !== -1) {
            tabEvent('.tab-menu1');
        }else if (location.pathname.indexOf('infant') !== -1) {
@@ -89,7 +93,18 @@ const chatService = () => {
            tabEvent('.tab-menu1');
        }else if (location.pathname.indexOf('baggage_compensation') !== -1) {
            tabEvent('.tab-menu1');
+       } else if (location.pathname.indexOf('cabin_health') !== -1) {
+           const questions = document.querySelectorAll('.accordion-title');
+           questions.forEach(question => {
+               question.addEventListener('click', () =>{
+                   const expanded = document.querySelector('.is-expanded');
+                   if(question.parentElement.classList.contains('is-expanded')) question.parentElement.classList.remove('is-expanded');
+                   else {
+                       if(expanded) expanded.classList.remove('is-expanded');
+                       question.parentElement.classList.add('is-expanded');
+                   }
+               });
+           });
        }
-       
    }
 })();

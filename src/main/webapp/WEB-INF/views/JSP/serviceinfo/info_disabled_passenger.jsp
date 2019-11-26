@@ -76,6 +76,6 @@
             </div>
 	</section>
         <%@ include file="../common/footer.jspf" %>
-        <script src="<%=path %>/ResourcesJS/information.js"></script>
+        <script src="<%=js%>/information.js"></script>
     </body>
 </html>
