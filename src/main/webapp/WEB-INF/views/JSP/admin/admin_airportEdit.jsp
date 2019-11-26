@@ -38,9 +38,9 @@
                                         </div>
 										<div class="row2 clearfix">
                                             <div class="col-tenth">이미지경로:</div>
-                                            <div class="col-nine-tenth"><input type="text" name="cityImg" value="/new_product_img/파일이름.확장자"></div>
+                                            <div class="col-nine-tenth"><input type="text" name="cityImg" value="${vo.cityImg}"></div>
                                         </div>
-										<input type="submit" value="상품수정"/>
+                                        <div class="submit-wrapper"><input type="submit" value="상품수정"/></div>
 									</form>
                                 </div>
                                 <!-- /.panel-body -->

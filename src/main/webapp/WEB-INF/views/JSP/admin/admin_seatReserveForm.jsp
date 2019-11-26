@@ -15,11 +15,23 @@
                             <div class="panel panel-default">
                                 <div class="panel-body">
                                     <form method="post" action="seatReserveAddOk">
-										운행번호: <input type="text" name="flightNum"><br/>
-										좌석타입: <input type="text" name="seatType"><br/>
-										좌석번호: <input type="text" name="seatNo"><br/>
-										예약여부: <input type="text" name="reserved"><br>
-										<input type="submit" name="adminAdd" value="좌석일련번호 추가"><br/>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">운행번호:</div>
+                                            <div class="col-nine-tenth"><input type="text" name="flightNum"></div>
+                                        </div>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">좌석타입:</div>
+                                            <div class="col-nine-tenth"><input type="text" name="seatType"></div>
+                                        </div>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">좌석번호:</div>
+                                            <div class="col-nine-tenth"><input type="text" name="seatNo"></div>
+                                        </div>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">예약여부:</div>
+                                            <div class="col-nine-tenth"><input type="text" name="reserved"></div>
+                                        </div>
+										<div class="submit-wrapper"><input type="submit" name="adminAdd" value="좌석일련번호 추가"></div>
 									</form>
                                 </div>
                                 <!-- /.panel-body -->

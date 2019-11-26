@@ -16,9 +16,15 @@
                                 <div class="panel-body">
 									<form method="post" action="peopleEditOk">
 										<input type="hidden" name="peopleNum" value="${vo.peopleNum }"/>
-										승객타입: <input type="text" name="peopleType" value="${vo.peopleType }"><br/>
-										할인율: <input type="text" name="peopleSale" value="${vo.peopleSale }"><br/>
-										<input type="submit" value="상품수정"/>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">승객타입:</div>
+                                            <div class="col-nine-tenth"><input type="text" name="peopleType" value="${vo.peopleType }"></div>
+                                        </div>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">할인율:</div>
+                                            <div class="col-nine-tenth"><input type="text" name="peopleSale" value="${vo.peopleSale }"></div>
+                                        </div>
+										<div class="submit-wrapper"><input type="submit" value="상품수정"/></div>
 									</form>
                                 </div>
                                 <!-- /.panel-body -->

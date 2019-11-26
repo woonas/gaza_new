@@ -35,7 +35,7 @@
                                             <div class="col-tenth">할인율:</div>
                                             <div class="col-nine-tenth"><input type="text" name="flightSale"></div>
                                         </div>
-										<input type="submit" name="flightAdd" value="비행여정 추가">
+                                        <div class="submit-wrapper"><input type="submit" name="flightAdd" value="비행여정 추가"></div>
 									</form>
                                 </div>
                                 <!-- /.panel-body -->

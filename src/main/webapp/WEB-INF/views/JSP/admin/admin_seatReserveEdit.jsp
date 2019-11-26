@@ -16,11 +16,23 @@
                                 <div class="panel-body">
 									<form method="post" action="seatReserveEditOk">
 										<input type="hidden" name="seatReserveNum" value="${vo.seatReserveNum }"/>
-										운행번호: <input type="text" name="flightNum" value="${vo.flightNum }"><br/>
-										좌석타입: <input type="text" name="seatType" value="${vo.seatType }"><br/>
-										좌석번호: <input type="text" name="seatNo" value="${vo.seatNo }"><br/>
-										예약여부: <input type="text" name="reserved" value="${vo.reserved }"><br>
-										<input type="submit" value="상품수정"/>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">운행번호:</div>
+                                            <div class="col-nine-tenth"><input type="text" name="flightNum" value="${vo.flightNum }"></div>
+                                        </div>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">좌석타입:</div>
+                                            <div class="col-nine-tenth"><input type="text" name="seatType" value="${vo.seatType }"></div>
+                                        </div>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">좌석번호:</div> 
+                                            <div class="col-nine-tenth"><input type="text" name="seatNo" value="${vo.seatNo }"></div>
+                                        </div>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">예약여부:</div>
+                                            <div class="col-nine-tenth"><input type="text" name="reserved" value="${vo.reserved }"></div>
+                                        </div>
+										<div class="submit-wrapper"><input type="submit" value="상품수정"/></div>
 									</form>
                                 </div>
                                 <!-- /.panel-body -->

@@ -35,7 +35,7 @@
                                             <div class="col-tenth">이메일:</div> 
                                             <div class="col-nine-tenth"><input type="text" name="adminEmail"></div>
                                         </div>
-										<input type="submit" name="adminAdd" value="관리자 추가">
+                                        <div class="submit-wrapper"><input type="submit" name="adminAdd" value="관리자 추가"></div>
 									</form>
                                 </div>
                                 <!-- /.panel-body -->

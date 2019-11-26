@@ -16,8 +16,11 @@
                                 <div class="panel-body">
 									<form method="post" action="seatEditOk">
 										<input type="hidden" name="seatType" value="${vo.seatType }"/>
-										좌석타입이름: <input type="text" name="seatTypeName" value="${vo.seatTypeName }"><br/>
-										<input type="submit" value="상품수정"/>
+										<div class="row clearfix">
+                                            <div class="col-tenth">좌석타입이름:</div>
+                                            <div class="col-nine-tenth"><input type="text" name="seatTypeName" value="${vo.seatTypeName }"></div>
+                                        </div>
+										<div class="submit-wrapper"><input type="submit" value="상품수정"/></div>
 									</form>
                                 </div>
                                 <!-- /.panel-body -->

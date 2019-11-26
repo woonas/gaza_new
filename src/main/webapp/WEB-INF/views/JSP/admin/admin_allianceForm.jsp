@@ -43,7 +43,7 @@
                                             <div class="col-tenth">이벤트마감일:</div>
                                             <div class="col-nine-tenth"><input type="text" name="endDate"></div>
                                         </div>
-										<input type="submit" name="allianceAdd" value="제휴이벤트 추가">
+                                        <div class="submit-wrapper"><input type="submit" name="allianceAdd" value="제휴이벤트 추가"></div>
 									</form>
                                 </div>
                                 <!-- /.panel-body -->

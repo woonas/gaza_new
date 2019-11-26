@@ -39,7 +39,7 @@
                                             <div class="col-tenth">이미지경로: </div>
                                             <div class="col-nine-tenth"><input type="text" name="cityImg" value="/new_product_img/파일이름.확장자"></div>
                                         </div>
-										<input type="submit" name="airportAdd" value="공항 추가">
+                                        <div class="submit-wrapper"><input type="submit" name="airportAdd" value="공항 추가"></div>
 									</form>
                                 </div>
                                 <!-- /.panel-body -->

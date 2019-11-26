@@ -15,9 +15,15 @@
                             <div class="panel panel-default">
                                 <div class="panel-body">
                                     <form method="post" action="peopleAddOk">
-										승객타입: <input type="text" name="peopleType"><br/>
-										할인율: <input type="text" name="peopleSale"><br/>
-										<input type="submit" name="adminAdd" value="승객타입 분류 추가"><br/>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">승객타입:</div> 
+                                            <div class="col-nine-tenth"><input type="text" name="peopleType"></div>
+                                        </div>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">할인율:</div> 
+                                            <div class="col-nine-tenth"><input type="text" name="peopleSale"></div>
+                                        </div>
+										<div class="submit-wrapper"><input type="submit" name="adminAdd" value="승객타입 분류 추가"></div>
 									</form>
                                 </div>
                                 <!-- /.panel-body -->

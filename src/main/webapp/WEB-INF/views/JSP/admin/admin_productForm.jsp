@@ -15,12 +15,27 @@
                             <div class="panel panel-default">
                                 <div class="panel-body">
                                     <form method="post" action="productAddOk">
-										출발지: <input type="text" name="depart"><br/>
-										도착지: <input type="text" name="arrive"><br/>
-										가격: <input type="text" name="price"><br/>
-										예매횟수: <input type="text" name="productCnt"><br/>
-										할인: <input type="text" name="productSale"><br>
-										<input type="submit" name="adminAdd" value="여행상품 추가"><br/>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">출발지:</div>
+                                            <div class="col-nine-tenth"><input type="text" name="depart"></div>
+                                        </div>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">도착지:</div>
+                                            <div class="col-nine-tenth"><input type="text" name="arrive"></div>
+                                        </div>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">가격:</div> 
+                                            <div class="col-nine-tenth"><input type="text" name="price"></div>
+                                        </div>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">예매횟수:</div>
+                                            <div class="col-nine-tenth"><input type="text" name="productCnt"></div>
+                                        </div>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">할인:</div>
+                                            <div class="col-nine-tenth"><input type="text" name="productSale"></div>
+                                        </div>
+										<div class="submit-wrapper"><input type="submit" name="adminAdd" value="여행상품 추가"></div>
 									</form>
                                 </div>
                                 <!-- /.panel-body -->

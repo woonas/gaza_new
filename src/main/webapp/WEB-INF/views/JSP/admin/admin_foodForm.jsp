@@ -15,13 +15,31 @@
                             <div class="panel panel-default">
                                 <div class="panel-body">
                                     <form method="post" action="foodAddOk">
-										기내식 종류: <input type="text" name="foodType"><br/>
-										기내식 이름: <input type="text" name="foodName"><br/>
-										기내식 이미지: <input type="text" name="foodImg"><br/>
-										기내식 설명: <input type="text" name="foodContent"><br/>
-										기내식 재료: <input type="text" name="foodIngredient"><br>
-										기내식 가격: <input type="text" name="foodPrice"><br>
-										<input type="submit" name="adminAdd" value="기내식 추가"><br/>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">기내식 종류:</div> 
+                                            <div class="col-nine-tenth"><input type="text" name="foodType"></div>
+                                        </div>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">기내식 이름:</div> 
+                                            <div class="col-nine-tenth"><input type="text" name="foodName"></div>
+                                        </div>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">기내식 이미지:</div> 
+                                            <div class="col-nine-tenth"><input type="text" name="foodImg"></div>
+                                        </div>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">기내식 설명:</div>
+                                            <div class="col-nine-tenth"><input type="text" name="foodContent"></div>
+                                        </div>
+										<div class="row2 clearfix">
+                                            <div class="col-tenth">기내식 재료:</div> 
+                                            <div class="col-nine-tenth"><input type="text" name="foodIngredient"></div>
+                                        </div>
+										<div class="row2 clearfix2">
+                                            <div class="col-tenth">기내식 가격:</div> 
+                                            <div class="col-nine-tenth"><input type="text" name="foodPrice"></div>
+                                        </div>
+                                        <div class="submit-wrapper"><input type="submit" name="adminAdd" value="기내식 추가"></div>
 									</form>
                                 </div>
                                 <!-- /.panel-body -->
