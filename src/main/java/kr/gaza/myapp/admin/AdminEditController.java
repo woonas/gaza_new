@@ -104,7 +104,7 @@ public class AdminEditController {
 			int cnt = dao.updateAirport(vo);
 			
 			ModelAndView mav = new ModelAndView();
-			mav.addObject("aiportNum",vo.getAirportNum());
+			mav.addObject("airportNum",vo.getAirportNum());
 			if(cnt>0) {
 				mav.setViewName("redirect:admin_airport");
 			}else {
@@ -149,6 +149,52 @@ public class AdminEditController {
 		if(cnt>0) {
 			mav.setViewName("redirect:admin_airplane");
 		}else {
+			mav.setViewName("redirect:admin");
+		}
+		return mav;
+	}
+	//에어플레인 수정폼 이동
+	@RequestMapping("/JSP/admin/admin_airplaneEdit")
+	public ModelAndView AdminAirPlaneEdit(@RequestParam("airplaneName") String airplaneName) {
+		AdminEditInterface dao = sqlSession.getMapper(AdminEditInterface.class);
+		
+		ModelAndView mav = new ModelAndView();
+		AirplaneVO vo = dao.airplaneAllSelect(airplaneName);
+		
+		mav.addObject("vo", vo);
+		mav.setViewName("JSP/admin/admin_airplaneEdit");
+		return mav;
+	}
+		
+	//에어플레인 수정
+		@RequestMapping(value="JSP/admin/airplaneEditOk", method=RequestMethod.POST)
+		public ModelAndView airplaneUpdate(AirplaneVO vo) {
+			System.out.println(vo.getAirplaneName()+","+vo.getSeatMax());
+			AdminEditInterface dao = sqlSession.getMapper(AdminEditInterface.class);
+			int cnt = dao.updateAirplane(vo);
+			
+			ModelAndView mav = new ModelAndView();
+			mav.addObject("airplaneName",vo.getAirplaneName());
+			if(cnt>0) {
+				mav.setViewName("redirect:admin_airplane");
+			}else {
+				mav.setViewName("redirect:admin");
+			}
+			return mav;
+		}
+	
+	
+	//에어플레인 삭제
+	@RequestMapping("/JSP/admin/airplaneDel")
+	public ModelAndView AirportDelete(AirplaneVO vo) {
+		AdminEditInterface dao = sqlSession.getMapper(AdminEditInterface.class);
+		int cnt = dao.deleteAirplane(vo);
+		
+		ModelAndView mav = new ModelAndView();
+		if(cnt>0) { // 삭제성공
+			mav.setViewName("redirect:admin_airplane");
+		}else { //삭제 실패
+			mav.addObject("airplaneName",vo.getAirplaneName());
 			mav.setViewName("redirect:admin");
 		}
 		return mav;
