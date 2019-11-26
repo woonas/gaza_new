@@ -59,15 +59,27 @@
 				<button class="whiteBtn">목록보기</button>
 			</a>
 			<c:if test="${vo.writer==memberId }">
-			<a href="<%=jsp%>/board/reviewBoard/reviewBoard_edit?pageNum=${vo.pageNum}&reviewType=${reviewType}">
+			<a href="<%=jsp%>/board/reviewBoard/guest_review_edit?pageNum=${vo.pageNum}&reviewType=${reviewType}&reviewNum=${vo.reviewNum}">
 				<button class="whiteBtn">글 수정</button>
 			</a>
-			<a href="<%=jsp%>/board/reviewBoard/reviewBoard_del?pageNum=${vo.pageNum}&reviewType=${reviewType}">
+			<a onclick="delChk()">
 				<button class="whiteBtn">글 삭제</button>
 			</a>
 			</c:if>
 		</div>
 	</section>
 	<%@ include file="../../common/footer.jspf" %>
+	<script>
+		function delChk(){
+			var isDel = confirm("정말 삭제하시겠습니까?");
+			if(isDel){
+				location.href = "<%=jsp%>/board/reviewBoard/reviewBoard_del?pageNum=${vo.pageNum}&reviewType=${reviewType}&reviewNum=${vo.reviewNum}";
+			}
+		}
+		var isCnt = ${cnt!=null};
+		if(isCnt){
+			alert("글 삭제를 실패하였습니다.");
+		}
+	</script>
 </body>
 </html>

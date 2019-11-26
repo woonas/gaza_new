@@ -44,4 +44,10 @@
 	<select id="getInsertedNum" parameterType="String" resultType="int">
 			select reviewNum from (select reviewNum from reviewBoard where writer=#{value} order by reviewNum desc) where rownum = 1
 	</select>
+	<update id="reviewBoardUpdate" parameterType="kr.gaza.myapp.board.reviewBoard.ReviewBoardVO">
+			update reviewBoard set subject=#{subject}, content=#{content} where reviewNum=#{reviewNum}
+	</update>
+	<delete id="reviewBoardDelete" parameterType="int">
+			delete reviewBoard where reviewNum=#{value}
+	</delete>
 </mapper>

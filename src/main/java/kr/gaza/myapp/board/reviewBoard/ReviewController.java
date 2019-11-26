@@ -118,6 +118,7 @@ public class ReviewController {
 		mav.addObject("memberId", memberId);
 		return mav;
 	}
+	
 	//글쓴 내용 DB등록.
 	@RequestMapping("/JSP/board/reviewBoard/writeOk")
 	public ModelAndView writeOk(ReviewBoardVO vo, @RequestParam("txtType") String txtType ,HttpServletRequest req) {
@@ -151,5 +152,63 @@ public class ReviewController {
 		
 		return mav;
 	}
+	//글 수정 페이지로 이동
+	@RequestMapping("/JSP/board/reviewBoard/guest_review_edit")
+	public ModelAndView editView(@RequestParam("pageNum") int pageNum, @RequestParam("reviewType") int reviewType,
+			@RequestParam("reviewNum") int reviewNum) {
+		ReviewBoardInterface dao = sqlSession.getMapper(ReviewBoardInterface.class);
+		ModelAndView mav = new ModelAndView();
 	
+		ReviewBoardVO vo1 = new ReviewBoardVO();
+		vo1.setReviewNum(reviewNum);
+		
+		ReviewBoardVO vo = dao.reviewBoardSelect(vo1);
+		
+		mav.addObject("vo", vo);
+		mav.addObject("pageNum", pageNum);
+		mav.setViewName("JSP/board/reviewBoard/guest_review_edit");
+
+		return mav;
+	}
+	//글 수정하기
+	@RequestMapping("/JSP/board/reviewBoard/editOk")
+	public ModelAndView editOk(ReviewBoardVO vo) {
+		ReviewBoardInterface dao = sqlSession.getMapper(ReviewBoardInterface.class);
+		int cnt = dao.reviewBoardUpdate(vo);
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("cnt", cnt);
+		
+		if(cnt>0) {
+			mav.addObject("reviewNum", vo.getReviewNum());
+			mav.addObject("pageNum", 1);
+			mav.addObject("reviewType", vo.getReviewType());
+			mav.setViewName("redirect:reviewBoard_view");
+		}else if(cnt<=0) {
+			mav.addObject("cnt", cnt);
+			mav.addObject("reviewType", vo.getReviewType());
+			mav.setViewName("JSP/board/reviewBoard/guest_review_edit");
+		}
+		
+		return mav;
+	}
+	@RequestMapping("/JSP/board/reviewBoard/reviewBoard_del")
+	public ModelAndView reviewDel(@RequestParam("pageNum") int pageNum, @RequestParam("reviewType") int reviewType,
+			@RequestParam("reviewNum") int reviewNum) {
+		ReviewBoardInterface dao = sqlSession.getMapper(ReviewBoardInterface.class);
+		int cnt = dao.reviewBoardDelete(reviewNum);
+		ModelAndView mav = new ModelAndView();
+		
+		if(cnt>0) {
+			mav.addObject("pageNum", 1);
+			mav.addObject("reviewType", reviewType);
+			mav.setViewName("redirect:reviewBoard_list");
+		}else if(cnt<=0) {
+			mav.addObject("reviewNum", reviewNum);
+			mav.addObject("pageNum", 1);
+			mav.addObject("reviewType", reviewType);
+			mav.setViewName("redirect:reviewBoard_view");
+		}
+		
+		return mav;
+	}
 }
