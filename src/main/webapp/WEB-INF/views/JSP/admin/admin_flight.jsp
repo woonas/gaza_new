@@ -18,12 +18,12 @@
                                     <div class="table-responsive">
                                         <table class="table table-striped table-bordered table-hover" id="dataTables">
                                             <col-group>
-                                                <col width="9%">
-                                                <col width="9%">
-                                                <col width="16.4%">
-                                                <col width="16.4%">
-                                                <col width="16.4%">
-                                                <col width="16.4%">
+                                                <col width="10%">
+                                                <col width="10%">
+                                                <col width="20%">
+                                                <col width="20%">
+                                                <col width="20%">
+                                                <col width="20%">
                                             </col-group>
                                             <thead>
                                                 <tr>

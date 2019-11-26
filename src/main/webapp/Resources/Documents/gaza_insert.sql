@@ -214,9 +214,7 @@ INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,27,sysdate);
 INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,28,sysdate);
 INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,29,sysdate);
 INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,30,sysdate);
-commit;
-select * from recommandproduct;
-select * from product;
+
 -----seat---------------------------------------------------------------------------
 INSERT INTO seat VALUES(1,'퍼스트');
 INSERT INTO seat VALUES(2,'비지니스');

@@ -7,8 +7,10 @@
         <style>
             .login-page {
                 width: 360px;
-                padding: 8% 0 0;
-                margin: auto;
+                margin: 0 auto;
+                position: absolute;
+                top: calc(50vh - 185px);
+                left: calc(50% - 180px);
             }
             .form {
                 position: relative;
@@ -91,9 +93,10 @@
             }
         </style>
     </head>
-    <body>
-        <div class="login-page">
+    <body style="height: 100vh;">
+        <div class="login-page" >
             <div class="form">
+                <img src="<%=img%>/logo/logo_basic.png" alt="" style="width: 100%; margin-bottom: 50px;">
                 <form class="login-form" action="/admin_loginOk" method="post">
                     <input type="text" placeholder="아이디" name="adminId"/>
                     <input type="password" placeholder="비밀번호" name="adminPwd"/>
