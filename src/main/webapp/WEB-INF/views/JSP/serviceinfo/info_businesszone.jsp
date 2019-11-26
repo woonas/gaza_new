@@ -4,7 +4,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>국내선 비즈니스 존</title>
+        <title>비즈니스 존</title>
         <link rel="stylesheet" href="<%=path %>/Resources/CSS/information.css">
         <script>window.onbeforeunload = () => window.scrollTo(0, 0)</script>
     </head>

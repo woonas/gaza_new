@@ -32,7 +32,7 @@
                             </div>
                             <div class="accordion-content">
                                 <div class="accordion-content-inner">
-                                    <ul class="list-type2 last-note bg-gray6">
+                                    <ul class="list-type2">
 					                    <li>차가운 외부 공기가 압축, 가열되어 기내로 공급되기 때문에 10-20%의 습도를 유지합니다. 사람에게 가장 편안한 습도가 40-60%, 겨울철 난방 시 실내 습도가 10-20%인 점을<br/>
 					                    							 고려한다면 기내 환경이 매우 건조하다는 것을 알 수 있습니다.</li>
 					                    <li>기내에서 물이나 음료를 자주 마십니다.</li>
@@ -49,7 +49,7 @@
                             </div>
                             <div class="accordion-content">
                                 <div class="accordion-content-inner">
-                                    <ul class="list-type2 last-note bg-gray6">
+                                    <ul class="list-type2">
 					                    <li>고도가 높아지면 대기압이 낮아지므로 비행 중에는 특수 장비를 이용하여 기내에 압축된 공기를 공급합니다.<br/>
 											비행 중 고도에 따라 1기압(지상에서의 기압)에서 0.8기압(해발 2000m에서의 기압)까지 변화하며 대부분의 건강한 손님들은 특별한 불편감 없이 여행을 하실 수 있으나,<br/>
 											평소 중이염이나 부비동염 등의 증상이 있으신 손님이나 치과 질환으로 치료가 필요한 손님의 경우 불편감을 느끼실 수 있습니다.</li>
@@ -78,7 +78,7 @@
                             </div>
                             <div class="accordion-content">
                                 <div class="accordion-content-inner">
-                                    <ul class="list-type2 last-note bg-gray6">
+                                    <ul class="list-type2">
 					                  비행기가 불안정한 기류를 지나갈 때 심하게 흔들리는 것을 느낄 수 있습니다. 대개 구름이 많은 곳을 지날 때 흔들리곤 하지만 구름이 전혀 없을 때도 일어날 수 있는 현상이기 때문에
 					                                     예측할 수는 없습니다. 좌석에 앉아 있을 때에는 안전벨트를 착용하며, 비행기의 흔들림이 있을 것이라는 안내가 있을 경우, 즉시 좌석에 앉아 안전벨트를 착용합니다.
 					                    <li >비행멀미<br/>배나 자동차 안에서 이동할 때와 마찬가지로 비행기 안에서도 멀미를 느낄 수 있습니다. 주로 어지러움을 호소하며 심하면 오심, 구토도 동반됩니다.<br/>
@@ -98,7 +98,7 @@
                             </div>
                             <div class="accordion-content">
                                 <div class="accordion-content-inner">
-                                   <ul class="list-type2 last-note bg-gray6">
+                                   <ul class="list-type2">
 					                  2-3 시간 이상 버스를 타는 경우 하차 시 어지러우면서 다리가 저리거나 붓는 경험을 할 수 있습니다. 장시간의 비행시에도 마찬가지로 오랜 시간 좌석에 앉아 자주 움직이지 않을 경우<br/>
 					                  	 비행 후 피로, 근육의 긴장, 다리 부종, 어지럼증, 혈전 형성 등의 증상이 나타날 수 있습니다.
 					                    <li>1.심부정맥 혈전증(속칭, 일반석 증후군)과 관련하여 항공여행 시 주의를 요하는 손님</li>
@@ -127,7 +127,7 @@
                             </div>
                             <div class="accordion-content">
                                 <div class="accordion-content-inner">
-                                    <ul class="list-type2 last-note bg-gray6">
+                                    <ul class="list-type2">
 					                    <li>우주 방사선이란?<br/>방사선은 원소 붕괴에 의해 물체에서 방출되는 입자나 전자기파로서 지구를 포함한 우주공간에는 우주의 생성 시부터 존재하고 있으며 지구의 모든 생명체는 언제나 태양<br/> 
 									                    땅 등 자연계로부터 방출되는 자연 방사선에 노출되고 있습니다. 그 중 태양과 같은 우주 항성의 핵융합 반응으로 나오는 방사선이 우주 공간에서부터 대기를 통해 지구에<br/>
 									                     도달하는 방사선을 우주 방사선이라 합니다. 지구 대기권에 존재하는 우주방사선의 양은 고도와 위도, 태양의 활동 등에 따라 달라집니다.<br/>고도가 올라갈수록 우주방사선으로부터 보호되는 대기권이 얇아지므로 방사선 노출양은 증가하고, 지구자기장의 영향에 따라 적도 지방보다는 북극이나 남극지방으로 갈수록 방사선량이 증가합니다.</li>

@@ -32,7 +32,7 @@
                         <ul class="list-type2">
                             <li>시각, 청각 장애를 가지신 고객</li>
                             <li>휠체어(Wheelchair)가 필요한 고객</li>
-                            <font style="color:red">* 시각,청각장애인 안내견을 동반하는 시각장애 고객의 경우 안내견은 무료로 운송됩니다. 단, 다음 조건이 충족되어야 합니다.</font>
+                            <li class="font-red">* 시각,청각장애인 안내견을 동반하는 시각장애 고객의 경우 안내견은 무료로 운송됩니다. 단, 다음 조건이 충족되어야 합니다.</li>
                             <li>-공인된 기관의 인증서(ID) 소지</li>
                             <li>-하네스(Harness) 착용</li>
                             <li>-목적지 또는 경유지 검역절차 기준에 부합</li>
@@ -74,7 +74,7 @@
                     </div>
                 </div>
             </div>
-	</section>
+	</section>f
         <%@ include file="../common/footer.jspf" %>
         <script src="<%=js%>/information.js"></script>
     </body>

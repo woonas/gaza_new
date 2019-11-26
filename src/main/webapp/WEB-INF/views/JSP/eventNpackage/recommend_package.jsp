@@ -41,9 +41,7 @@
                             <div class="col-fourth product-info-wrapper">
                                 <p>0${i -((j-1)*5) }</p>
                                 <p>${vo.city}</p>
-                                <p>
-                                    GAZA AIR만의<br />특별한 혜택!<br />지금바로 만나보세요
-                                </p>
+                                <p>${vo.rContent}</p>
                                 <a href="<%=request.getContextPath()%>/Resources/JSP/flight/booking/booking1?city=${vo.city}&iata=${vo.iata}"><button class="btn-booking blueBtn">예약하기</button></a>
                             </div>
                         </div>
