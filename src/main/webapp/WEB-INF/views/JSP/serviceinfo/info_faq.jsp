@@ -18,7 +18,7 @@
                     <p class="faq-title">자주 찾는 안내사항</p>
                     <div class="info-list">
                         <div class="info-section">
-                            <div class="text-align-center bg-blue5 ">아시아나클럽</div>
+                            <div class="text-align-center bg-blue5 ">가자에어클럽</div>
                             <div>
                                 <ul class="clearfix">
                                     <li><a href="#" onclick="return false;">11111</a></li>
@@ -33,7 +33,7 @@
                             </div>
                         </div>
                         <div class="info-section">
-                            <div class="text-align-center bg-blue5 ">아시아나클럽</div>
+                            <div class="text-align-center bg-blue5 ">가자에어클럽</div>
                             <div>
                                 <ul class="clearfix">
                                     <li><a href="#" onclick="return false;">11111</a></li>
@@ -48,7 +48,7 @@
                             </div>
                         </div>
                         <div class="info-section">
-                            <div class="text-align-center bg-blue5 ">아시아나클럽</div>
+                            <div class="text-align-center bg-blue5 ">가자에어클럽</div>
                             <div>
                                 <ul class="clearfix">
                                     <li><a href="#" onclick="return false;">11111</a></li>
@@ -63,7 +63,7 @@
                             </div>
                         </div>
                         <div class="info-section">
-                            <div class="text-align-center bg-blue5 ">아시아나클럽</div>
+                            <div class="text-align-center bg-blue5 ">가자에어클럽</div>
                             <div>
                                 <ul class="clearfix">
                                     <li><a href="#" onclick="return false;">11111</a></li>
@@ -78,7 +78,7 @@
                             </div>
                         </div>
                         <div class="info-section">
-                            <div class="text-align-center bg-blue5 ">아시아나클럽</div>
+                            <div class="text-align-center bg-blue5 ">가자에어클럽</div>
                             <div>
                                 <ul class="clearfix">
                                     <li><a href="#" onclick="return false;">11111</a></li>
@@ -93,7 +93,7 @@
                             </div>
                         </div>
                         <div class="info-section">
-                            <div class="text-align-center bg-blue5 ">아시아나클럽</div>
+                            <div class="text-align-center bg-blue5 ">가자에어클럽</div>
                             <div>
                                 <ul class="clearfix">
                                     <li><a href="#" onclick="return false;">11111</a></li>
@@ -108,7 +108,7 @@
                             </div>
                         </div>
                         <div class="info-section">
-                            <div class="text-align-center bg-blue5 ">아시아나클럽</div>
+                            <div class="text-align-center bg-blue5 ">가자에어클럽</div>
                             <div>
                                 <ul class="clearfix">
                                     <li><a href="#" onclick="return false;">11111</a></li>
@@ -123,7 +123,7 @@
                             </div>
                         </div>
                         <div class="info-section">
-                            <div class="text-align-center bg-blue5 ">아시아나클럽</div>
+                            <div class="text-align-center bg-blue5 ">가자에어클럽</div>
                             <div>
                                 <ul class="clearfix">
                                     <li><a href="#" onclick="return false;">11111</a></li>
@@ -138,7 +138,7 @@
                             </div>
                         </div>
                         <div class="info-section">
-                            <div class="text-align-center bg-blue5 ">아시아나클럽</div>
+                            <div class="text-align-center bg-blue5 ">가자에어클럽</div>
                             <div>
                                 <ul class="clearfix">
                                     <li><a href="#" onclick="return false;">11111</a></li>
@@ -163,7 +163,7 @@
                             </div>
                             <div class="accordion-content">
                                 <div class="accordion-content-inner">
-                                    마일리지 사용몰 이용 시 고객님의 개인정보 보호를 위하여 마일리지 비밀번호를 사용하고 있습니다.<br>마일리지 비밀번호 등록을 아직 하지 않으신 고객님께서는 로그인 후 "홈>마이 아시아나>회원정보>마일리지 비밀번호 등록/변경"에서 본인 인증 후에 마일리지 비밀번호 등록을 하실 수 있습니다.
+                                    마일리지 사용몰 이용 시 고객님의 개인정보 보호를 위하여 마일리지 비밀번호를 사용하고 있습니다.<br>마일리지 비밀번호 등록을 아직 하지 않으신 고객님께서는 로그인 후 "홈>마이 가자에어>회원정보>마일리지 비밀번호 등록/변경"에서 본인 인증 후에 마일리지 비밀번호 등록을 하실 수 있습니다.
                                 </div>
                             </div>
                         </div>
@@ -176,11 +176,11 @@
                                     마일리지 항공권 사용 시 부족한 마일리지 만큼 가족합산하여 이용하실 수 있습니다.<br/>등록 가능한 가족범위 내 총 8인까지 등록 가능하며, 마일리지 가족합산제도 신청서와 6개월이내 발급된 가족증빙서류를 아래의 방법으로 제출해주시기 바랍니다.<br/>
 					※ 등록 범위 : 가족대표회원의 배우자, 자녀, 부모, 친/외조부모, 친/외손자녀, 형제, 자매, 사위, 며느리, 배우자의 부모<br/>
 					※ 가족 마일리지 합산제도 신청서<br/>
-					홈페이지 > 아시아나클럽 > 회원안내 > 가족합산 및 마일리지 양도 >신청서 다운로드<br/>
+					홈페이지 > 가자에어클럽 > 회원안내 > 가족합산 및 마일리지 양도 >신청서 다운로드<br/>
 					※ 가족관계 증빙서류<br/>
 					가족관계증명서 또는 주민등록등본 : 6개월이내 발급 서류<br/>
 					※ 등록방법<br/>
-					1) 홈페이지  로그인 후 마이 아시아나 > 가족회원관리에서 파일 업로드<br/>
+					1) 홈페이지  로그인 후 마이 가자에어 > 가족회원관리에서 파일 업로드<br/>
 					2) 팩스 접수 : 02-2669-4275/4276<br/>
                                 </div>
                             </div>
@@ -214,7 +214,7 @@
                             </div>
                             <div class="accordion-content">
                                 <div class="accordion-content-inner">
-                                    아시아나항공 홈페이지(http://flyasiana.com) 또는 예약영업센터를 통해 예약하실 수 있습니다.<br/>예약영업센터에서 예약 하시는 경우 반드시 마일리지 여행임을 말씀해 주시기 바라며, 안내 받으신 마일리지 항공권 발권 시한(Ticket Time Limit)까지 아시아나항공 홈페이지 및 모바일을 통해 발급 가능합니다.
+                                    가자에어항공 홈페이지(http://flyasiana.com) 또는 예약영업센터를 통해 예약하실 수 있습니다.<br/>예약영업센터에서 예약 하시는 경우 반드시 마일리지 여행임을 말씀해 주시기 바라며, 안내 받으신 마일리지 항공권 발권 시한(Ticket Time Limit)까지 가자에어항공 홈페이지 및 모바일을 통해 발급 가능합니다.
                                 </div>
                             </div>
                         </div>
@@ -234,7 +234,7 @@
                             </div>
                             <div class="accordion-content">
                                 <div class="accordion-content-inner">
-                                    회원님께서는 아시아나항공, 스타얼라이언스 항공사 탑승 및 아시아나항공과 제휴된 신용카드, 호텔, 렌터카, 인터넷 쇼핑몰 등을 이용하여 마일리지를 적립하실 수 있습니다.<br/>회원가입일 이전 실적에 대하여는 소급하여 적립되지 않습니다.<br/>적립 제휴사는 '아시아나항공 홈페이지(flyasiana.com) →아시아나클럽→ 마일리지 적립' 메뉴에서 확인하실 수 있습니다.
+                                    회원님께서는 가자에어항공, 스타얼라이언스 항공사 탑승 및 가자에어항공과 제휴된 신용카드, 호텔, 렌터카, 인터넷 쇼핑몰 등을 이용하여 마일리지를 적립하실 수 있습니다.<br/>회원가입일 이전 실적에 대하여는 소급하여 적립되지 않습니다.<br/>적립 제휴사는 '가자에어항공 홈페이지(flyasiana.com) →가자에어클럽→ 마일리지 적립' 메뉴에서 확인하실 수 있습니다.
                                 </div>
                             </div>
                         </div>
@@ -294,7 +294,7 @@
                             </div>
                             <div class="accordion-content">
                                 <div class="accordion-content-inner">
-                                    2008년 10월 1일 부 마일리지 유효기간 제도를 도입하였습니다. 유효기간 제도 도입이전 적립된 마일리지는 유효기간이 없으며 도입일 이후 적립된 마일리지는 유효기간이 적용됩니다. 아시아나항공 및 제휴 항공사를 탑승하신 마일리지는 탑승일 기준으로, 기타 제휴사를 이용하신 마일리지는 적립일 기준으로 유효기간이 적용 됩니다.
+                                    2008년 10월 1일 부 마일리지 유효기간 제도를 도입하였습니다. 유효기간 제도 도입이전 적립된 마일리지는 유효기간이 없으며 도입일 이후 적립된 마일리지는 유효기간이 적용됩니다. 가자에어항공 및 제휴 항공사를 탑승하신 마일리지는 탑승일 기준으로, 기타 제휴사를 이용하신 마일리지는 적립일 기준으로 유효기간이 적용 됩니다.
                                 </div>
                             </div>
                         </div>
@@ -344,7 +344,7 @@
                             </div>
                             <div class="accordion-content">
                                 <div class="accordion-content-inner">
-                                    이메일 주소 변경을 원하실 경우 회원님의 신분증(사진이 부착된 주민등록증, 운전면허증, 여권 등)을 회원번호, 연락처, 수신 가능한 이메일, 요청사항을 기재(이메일 주소 변경과 임시 비밀번호 발송)하여 [아시아나클럽 서비스센터]로 FAX를 보내주시기 바랍니다.<br/>※ 주민등록번호의 경우 뒷자리가 보이지 않도록 마스킹(가려서) 처리 후 전송
+                                    이메일 주소 변경을 원하실 경우 회원님의 신분증(사진이 부착된 주민등록증, 운전면허증, 여권 등)을 회원번호, 연락처, 수신 가능한 이메일, 요청사항을 기재(이메일 주소 변경과 임시 비밀번호 발송)하여 [가자에어클럽 서비스센터]로 FAX를 보내주시기 바랍니다.<br/>※ 주민등록번호의 경우 뒷자리가 보이지 않도록 마스킹(가려서) 처리 후 전송
                                 </div>
                             </div>
                         </div>
