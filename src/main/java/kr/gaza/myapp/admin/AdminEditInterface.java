@@ -23,6 +23,8 @@ public interface AdminEditInterface {
 	public int updateProduct(ProductVO vo);
 	public int deleteProduct(int num);
 	public int insertFlight(FlightVO vo);
+	public FlightVO flightAllSelect(int num);
+	public int updateFlight(FlightVO vo);
 	public int deleteFlight(int num);
 	public int insertNotice(NoticeBoardVO vo);
 	public int deleteNotice(int num);

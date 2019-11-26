@@ -169,7 +169,6 @@ public class AdminEditController {
 	//에어플레인 수정
 		@RequestMapping(value="JSP/admin/airplaneEditOk", method=RequestMethod.POST)
 		public ModelAndView airplaneUpdate(AirplaneVO vo) {
-			System.out.println(vo.getAirplaneName()+","+vo.getSeatMax());
 			AdminEditInterface dao = sqlSession.getMapper(AdminEditInterface.class);
 			int cnt = dao.updateAirplane(vo);
 			
@@ -285,6 +284,34 @@ public class AdminEditController {
 		int cnt = dao.insertFlight(vo);
 			
 		ModelAndView mav = new ModelAndView();
+		if(cnt>0) {
+			mav.setViewName("redirect:admin_flight");
+		}else {
+			mav.setViewName("redirect:admin");
+		}
+		return mav;
+	}
+	//에어플레인 수정폼 이동
+	@RequestMapping("/JSP/admin/admin_flightEdit")
+	public ModelAndView AdminFlightEdit(@RequestParam("flightNum") int flightNum) {
+		AdminEditInterface dao = sqlSession.getMapper(AdminEditInterface.class);
+		
+		ModelAndView mav = new ModelAndView();
+		FlightVO vo = dao.flightAllSelect(flightNum);
+		
+		mav.addObject("vo", vo);
+		mav.setViewName("JSP/admin/admin_flightEdit");
+		return mav;
+	}
+		
+	//에어플레인 수정
+	@RequestMapping(value="JSP/admin/flightEditOk", method=RequestMethod.POST)
+	public ModelAndView flightUpdate(FlightVO vo) {
+		AdminEditInterface dao = sqlSession.getMapper(AdminEditInterface.class);
+		int cnt = dao.updateFlight(vo);
+		
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("flightNum",vo.getFlightNum());
 		if(cnt>0) {
 			mav.setViewName("redirect:admin_flight");
 		}else {
