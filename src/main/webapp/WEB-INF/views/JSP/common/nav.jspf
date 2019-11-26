@@ -30,8 +30,6 @@
 							</ul>
 							<ul>
 								<li><a href="<%=jsp%>/flight/booking/booking1">항공권예약</a></li>
-								<li><a href="#">정기 운항스케줄</a></li>
-								<li><a href="#">실시간 운항스케줄</a></li>
 								<li><a href="<%=jsp %>/flight/schedule/routeMap">운항노선도</a></li>
 							</ul>
 							<ul>
@@ -47,7 +45,7 @@
 							</ul>
 							<ul>
 								<li><a href="<%=jsp %>/board/noticeBoard/noticeBoard_list?pageNum=1&tabType=0">공지사항</a></li>
-								<li><a href="<%=path %>/Resources/HTML/service_faq.html">FAQ</a></li>
+								<li><a href="<%=jsp%>/serviceinfo/faq">FAQ</a></li>
 								<li><a href="<%=jsp %>/board/reviewBoard/reviewBoard_list?pageNum=1&reviewType=0">이용후기</a></li>
 							</ul>
 							<ul>
