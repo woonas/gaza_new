@@ -194,27 +194,27 @@ INSERT INTO product VALUES(productnum_sq.nextval,'ICN','HNL',358000,215,0.98,sys
 INSERT INTO product VALUES(productnum_sq.nextval,'ICN','LAX',57500,59,0.98,sysdate);
 
 -----recommandProduct-----------------------------------------------------------------
-INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,11,sysdate,'나 홀로 떠다는 제주여행, 어디를 가도 시원하고 높은 하늘과 선선한 바람을 느끼자');
-INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,12,sysdate,'일출시티 포항! 다같이 방문해 포항~!');
-INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,13,sysdate,'낭만과 설렘 가득 여수밤바다에서 누릴 수 있는 소소하지만 확실한 행복 여행!');
-INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,14,sysdate,'대구! 어디로 떠나볼까? 김광석길? 앞산전망대? 함께 떠나보자!');
-INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,15,sysdate,'자연이 만들고 울산이 가꾼 정원, 태화강 보러 울산으로 놀러오세요!');
-INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,16,sysdate,'뻔한여행 말고 FUN한 동남아 여행, GAZA에어와 방콕으로 떠나자!');
-INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,17,sysdate,'요즘대세 여행지, 인싸들의 여행지~ 베트남!! 다낭');
-INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,18,sysdate,'순수함 가득한 신비의 나라 미얀마, 새롭게 떠오르는 인싸 여행지 양곤!');
-INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,19,sysdate,'바쁜 일상은 잠시 잊고 온전히 나를 돌아보게 하는 그곳, 동남아의 알프스 하노이');
-INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,20,sysdate,'티타임 가지며 피크닉 즐기기, 마리나 배라지(Marina barrage)에서 싱가폴리안처럼 주말 보내기!');
-INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,21,sysdate,'한 줌의 위로와 휴식, 꿈결인가 싶은 동화속 풍경을 선물하고 싶습니다. 비엔나로 함께 떠나요');
-INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,22,sysdate,'예술가들의 발자취를 따라 걸으며 갬성 가득한 인생샷 찍으러!');
-INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,23,sysdate,'여왕이 사는 도시다운 풍경과 경치, 현대미가 어우러진 도시 런던!');
-INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,24,sysdate,'꼭 한번 가보고싶고, 한번 가면 또 가고싶은 그곳, 숨겨진 소도시 탐방 프라하!');
-INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,25,sysdate,'단 두시간만에 만나는 가장 가까운 유럽, 가장 HOT한 도시 블라디보스톡!');
-INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,26,sysdate,'지금이 바로 떠날 시간! 가자에어가 추천하는 핵인싸 여행지 괌!');
-INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,27,sysdate,'미서부에서 가장 오랫동안 사랑받아온 라스베이거스, 그랜드캐니언까지 함께 즐겨요!');
-INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,28,sysdate,'인플루언서가 추천한 뉴욕의 핫플레이스, 가보고 싶은 사람 손~들~어~요~');
-INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,29,sysdate,'지상 최고의 낙원, 호놀룰루! 지상 낙원에서 바다거북이도 함께 만나보세요!');
-INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,30,sysdate,'꿈의도시, 천사의 도시, 로스앤젤레스!');
-
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,11,sysdate,'나 홀로 떠나는 제주여행,<br/>어디를 가도 시원하고<br/>높은 하늘과 선선한 바람을 느끼자');
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,12,sysdate,'일출시티 포항!<br/>다같이 방문해 포항~!');
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,13,sysdate,'낭만과 설렘 가득<br/>여수밤바다에서 누릴 수 있는<br/>소소하지만 확실한 행복 여행!');
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,14,sysdate,'대구! 어디로 떠나볼까?<br/>김광석길? 앞산전망대?<br/>함께 떠나보자!');
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,15,sysdate,'자연이 만들고 울산이 가꾼 정원,<br/>태화강 보러 울산으로 놀러오세요!');
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,16,sysdate,'뻔한여행 말고 FUN한 동남아 여행,<br/>GAZA에어와 방콕으로 떠나자!');
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,17,sysdate,'요즘대세 여행지,<br/>인싸들의 여행지~<br/>베트남!! 다낭');
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,18,sysdate,'순수함 가득한 신비의 나라 미얀마,<br/>새롭게 떠오르는 인싸 여행지 양곤!');
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,19,sysdate,'바쁜 일상은 잠시 잊고<br/>온전히 나를 돌아보게 하는 그곳,<br/>동남아의 알프스 하노이');
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,20,sysdate,'티타임 가지며 피크닉 즐기기,<br/>마리나 배라지 에서<br/>싱가폴리안처럼 주말 보내기!');
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,21,sysdate,'한 줌의 위로와 휴식을<br/>선물하고 싶습니다.<br/>비엔나로 함께 떠나요');
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,22,sysdate,'예술가들의 발자취를 따라 걸으며<br/>갬성 가득한 인생샷 찍으러!');
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,23,sysdate,'여왕이 사는 도시다운 풍경과 경치,<br/>현대미가 어우러진 도시 런던!');
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,24,sysdate,'꼭 한번 가보고싶고,<br/>한번 가면 또 가고싶은 그곳,<br/>숨겨진 소도시 탐방 프라하!');
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,25,sysdate,'단 두시간만에 만나는<br/>가장 가까운 유럽,<br/>가장 HOT한 도시 블라디보스톡!');
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,26,sysdate,'지금이 바로 떠날 시간!<br/>가자에어가 추천하는<br/>핵인싸 여행지 괌!');
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,27,sysdate,'미서부에서<br/>오랫동안 사랑받아온 라스베이거스,<br/>그랜드캐니언까지 함께 즐겨요!');
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,28,sysdate,'인플루언서가 추천한<br/>뉴욕의 핫플레이스,<br/>가보고 싶은 사람 손~들~어~요~');
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,29,sysdate,'지상 최고의 낙원, 호놀룰루!<br/>지상 낙원에서 바다거북이도<br/>함께 만나보세요!');
+INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,30,sysdate,'꿈의도시, 천사의 도시,<br/>로스앤젤레스!');
+commit;
 -----seat---------------------------------------------------------------------------
 INSERT INTO seat VALUES(1,'퍼스트');
 INSERT INTO seat VALUES(2,'비지니스');
