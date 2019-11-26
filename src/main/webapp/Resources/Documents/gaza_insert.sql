@@ -214,7 +214,7 @@ INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,27,sysdate,'�
 INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,28,sysdate,'인플루언서가 추천한<br/>뉴욕의 핫플레이스,<br/>가보고 싶은 사람 손~들~어~요~');
 INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,29,sysdate,'지상 최고의 낙원, 호놀룰루!<br/>지상 낙원에서 바다거북이도<br/>함께 만나보세요!');
 INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,30,sysdate,'꿈의도시, 천사의 도시,<br/>로스앤젤레스!');
-commit;
+
 -----seat---------------------------------------------------------------------------
 INSERT INTO seat VALUES(1,'퍼스트');
 INSERT INTO seat VALUES(2,'비지니스');
@@ -265,7 +265,7 @@ INSERT INTO payment VALUES(paymentnum_sq.nextval,1,3841,2,0,2500000,sysdate);
 INSERT INTO payment VALUES(paymentnum_sq.nextval,1,7777,1,1,350000,sysdate);
 INSERT INTO payment VALUES(paymentnum_sq.nextval,1,8888,1,1,750000,sysdate);
 
-----orderedFlight---------------------------------------------------------------------------
+----orderedFlight--------------------------------------------------------------------------- 데이터고칠거★
 INSERT INTO orderedFlight VALUES(orderedFlightnum_sq.nextval,1,1,1,1,0000);
 INSERT INTO orderedFlight VALUES(orderedFlightnum_sq.nextval,1,1,1,1,9999);
 INSERT INTO orderedFlight VALUES(orderedFlightnum_sq.nextval,1,1,1,1,8888);
@@ -306,202 +306,267 @@ INSERT INTO event VALUES(eventnum_sq.nextval,'신한카드와 함께!','/event/e
 
 ------noticeboard------------------------------------------------------------
 
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '10월 국내선 유류할증료', '10월 국내선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '10월 국내선 유류할증료', '10월 국내선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '10월 국내선 유류할증료', '10월 국내선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '10월 국내선 유류할증료', '10월 국내선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '10월 국내선 유류할증료', '10월 국내선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '10월 국내선 유류할증료', '10월 국내선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '10월 국내선 유류할증료', '10월 국내선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '10월 국내선 유류할증료', '10월 국내선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '10월 국내선 유류할증료', '10월 국내선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '10월 국내선 유류할증료', '10월 국내선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '10월 국내선 유류할증료', '10월 국내선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '10월 국내선 유류할증료', '10월 국내선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '10월 국내선 유류할증료', '10월 국내선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '10월 국내선 유류할증료', '10월 국내선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여, 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내',0, sysdate-30);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.',0, sysdate-58);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)',0, sysdate-59);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료',0, sysdate-47);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내',0, sysdate-90);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내',0, sysdate-85);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '10월 국내선 유류할증료', '10월 국내선 유류할증료',0, sysdate-89);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.',0, sysdate-78);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내',0, sysdate-4);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)',0, sysdate-65);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내',0, sysdate-60);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료',0, sysdate-28);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)',0, sysdate-67);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내',0, sysdate-63);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.',0, sysdate-69);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)',0, sysdate-99);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료',0, sysdate-57);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내',0, sysdate-46);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내',0, sysdate-89);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '10월 국내선 유류할증료', '10월 국내선 유류할증료',0, sysdate-2);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.',0, sysdate-37);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내',0, sysdate-22);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)',0, sysdate-6);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내',0, sysdate-76);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료',0, sysdate-58);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)',0, sysdate-86);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내',0, sysdate-95);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.',0, sysdate-57);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)',0, sysdate-11);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료',0, sysdate-19);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내',0, sysdate-3);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내',0, sysdate-90);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '10월 국내선 유류할증료', '10월 국내선 유류할증료',0, sysdate-46);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.',0, sysdate-64);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내',0, sysdate-68);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)',0, sysdate-73);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내',0, sysdate-69);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료',0, sysdate-69);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)',0, sysdate-37);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내',0, sysdate-41);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.',0, sysdate-94);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)',0, sysdate-87);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료',0, sysdate-70);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내',0, sysdate-37);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내',0, sysdate-10);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '10월 국내선 유류할증료', '10월 국내선 유류할증료',0, sysdate-78);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.',0, sysdate-61);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내',0, sysdate-40);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)',0, sysdate-80);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내',0, sysdate-71);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료',0, sysdate-35);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)',0, sysdate-85);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내',0, sysdate-67);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.',0, sysdate-86);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)',0, sysdate-99);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료',0, sysdate-29);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내',0, sysdate-98);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내',0, sysdate-54);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '10월 국내선 유류할증료', '10월 국내선 유류할증료',0, sysdate-22);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.',0, sysdate-11);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내',0, sysdate-53);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)',0, sysdate-75);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내',0, sysdate-25);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료',0, sysdate-77);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)',0, sysdate-14);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내',0, sysdate-19);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.',0, sysdate-83);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)',0, sysdate-55);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료',0, sysdate-68);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내',0, sysdate-90);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내',0, sysdate-74);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '10월 국내선 유류할증료', '10월 국내선 유류할증료',0, sysdate-32);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.',0, sysdate-98);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내',0, sysdate-94);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)',0, sysdate-82);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내',0, sysdate-34);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료',0, sysdate-10);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)',0, sysdate-43);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내',0, sysdate-65);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.',0, sysdate-3);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)',0, sysdate-10);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료',0, sysdate-37);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내',0, sysdate-7);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내',0, sysdate-45);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '10월 국내선 유류할증료', '10월 국내선 유류할증료',0, sysdate-24);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.',0, sysdate-97);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내',0, sysdate-6);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)',0, sysdate-47);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내',0, sysdate-6);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료',0, sysdate-63);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)',0, sysdate-93);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내',0, sysdate-55);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.',0, sysdate-4);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)',0, sysdate-50);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료',0, sysdate-46);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내',0, sysdate-93);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내',0, sysdate-71);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '10월 국내선 유류할증료', '10월 국내선 유류할증료',0, sysdate-30);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.',0, sysdate-90);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내',0, sysdate-29);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)',0, sysdate-32);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내',0, sysdate-36);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료',0, sysdate-34);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)',0, sysdate-40);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내',0, sysdate-87);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.',0, sysdate-79);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)',0, sysdate-17);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료',0, sysdate-59);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내',0, sysdate-30);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내',0, sysdate-16);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '10월 국내선 유류할증료', '10월 국내선 유류할증료',0, sysdate-79);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.',0, sysdate-56);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내',0, sysdate-8);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)',0, sysdate-98);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내',0, sysdate-39);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료',0, sysdate-78);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)',0, sysdate-97);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내',0, sysdate-79);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.',0, sysdate-25);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)',0, sysdate-3);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료',0, sysdate-54);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내',0, sysdate-52);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내',0, sysdate-24);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '10월 국내선 유류할증료', '10월 국내선 유류할증료',0, sysdate-9);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.',0, sysdate-48);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내',0, sysdate-15);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)',0, sysdate-21);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내',0, sysdate-34);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료',0, sysdate-33);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)',0, sysdate-59);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내',0, sysdate-98);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.',0, sysdate-89);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)',0, sysdate-20);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료',0, sysdate-95);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내',0, sysdate-51);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내',0, sysdate-68);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '10월 국내선 유류할증료', '10월 국내선 유류할증료',0, sysdate-83);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.',0, sysdate-95);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내',0, sysdate-99);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)',0, sysdate-93);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내',0, sysdate-20);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료',0, sysdate-60);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)',0, sysdate-20);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내',0, sysdate-100);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.',0, sysdate-37);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)',0, sysdate-19);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료',0, sysdate-62);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내',0, sysdate-80);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내',0, sysdate-53);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '10월 국내선 유류할증료', '10월 국내선 유류할증료',0, sysdate-89);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.',0, sysdate-30);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내',0, sysdate-4);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)',0, sysdate-32);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내',0, sysdate-8);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료',0, sysdate-63);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)',0, sysdate-75);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내',0, sysdate-65);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.',0, sysdate-45);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)',0, sysdate-26);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료',0, sysdate-67);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내',0, sysdate-59);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내',0, sysdate-85);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '10월 국내선 유류할증료', '10월 국내선 유류할증료',0, sysdate-18);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.',0, sysdate-96);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내',0, sysdate-97);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)',0, sysdate-7);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내',0, sysdate-66);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료',0, sysdate-29);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)',0, sysdate-64);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내',0, sysdate-80);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.',0, sysdate-98);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)',0, sysdate-98);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료',0, sysdate-38);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내',0, sysdate-70);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내',0, sysdate-20);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '10월 국내선 유류할증료', '10월 국내선 유류할증료',0, sysdate-6);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.',0, sysdate-47);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내',0, sysdate-19);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)',0, sysdate-53);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내',0, sysdate-57);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료',0, sysdate-68);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)',0, sysdate-58);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내',0, sysdate-44);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.',0, sysdate-71);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)',0, sysdate-27);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료',0, sysdate-90);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내',0, sysdate-46);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내',0, sysdate-74);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '10월 국내선 유류할증료', '10월 국내선 유류할증료',0, sysdate-98);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.',0, sysdate-1);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내',0, sysdate-69);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)',0, sysdate-95);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내',0, sysdate-6);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료',0, sysdate-55);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)',0, sysdate-79);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내',0, sysdate-84);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.',0, sysdate-33);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)',0, sysdate-57);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료',0, sysdate-79);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내',0, sysdate-20);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내',0, sysdate-53);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '10월 국내선 유류할증료', '10월 국내선 유류할증료',0, sysdate-46);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.',0, sysdate-16);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내',0, sysdate-55);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)',0, sysdate-1);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내',0, sysdate-88);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료',0, sysdate-21);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)',0, sysdate-18);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내',0, sysdate-3);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.',0, sysdate-92);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)',0, sysdate-90);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료',0, sysdate-51);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내',0, sysdate-71);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내',0, sysdate-22);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '10월 국내선 유류할증료', '10월 국내선 유류할증료',0, sysdate-44);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.',0, sysdate-13);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내',0, sysdate-11);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)',0, sysdate-67);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내',0, sysdate-92);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료',0, sysdate-40);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)',0, sysdate-53);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내',0, sysdate-68);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.',0, sysdate-7);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)',0, sysdate-59);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료',0, sysdate-72);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내',0, sysdate-39);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내',0, sysdate-27);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '10월 국내선 유류할증료', '10월 국내선 유류할증료',0, sysdate-87);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.',0, sysdate-91);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내',0, sysdate-58);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)',0, sysdate-44);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내',0, sysdate-74);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료',0, sysdate-67);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)',0, sysdate-67);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내',0, sysdate-95);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.',0, sysdate-32);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)',0, sysdate-96);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료',0, sysdate-31);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내',0, sysdate-93);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내',0, sysdate-68);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '10월 국내선 유류할증료', '10월 국내선 유류할증료',0, sysdate-77);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.',0, sysdate-46);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내',0, sysdate-20);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)',0, sysdate-25);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내',0, sysdate-23);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료',0, sysdate-86);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)',0, sysdate-31);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국제선/국내선 좌석 유료 사전예매 시행 안내', '국제선/국내선 좌석 유료 사전예매 시행 안내',0, sysdate-33);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '제주공항 위탁수하물 접수 시간 안내', '제주공항발 위탁수하물은 공항 혼잡도 예방을 위하여 항공기 출발 4시간 전부터 국내선 탑승수속 카운터에 위탁하실 수 있습니다.',0, sysdate-14);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)', '인천 ↔ 뉴욕(JFK) 노선 증편 운항 안내 (매일 2편 운항!)',0, sysdate-96);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 10월 한국출발 국제선 유류할증료', '2019년 10월 한국출발 국제선 유류할증료',0, sysdate-97);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내', '추석 연휴기간 사전(웹/모바일)체크인 이용 권유 안내',0, sysdate-53);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내', '항공사 e-티켓 확인증 사칭 악성 메일 주의 안내',0, sysdate-93);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '10월 국내선 유류할증료', '10월 국내선 유류할증료',0, sysdate-53);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '맥북 프로 15인치 베트남 노선 운송 불가 안내', '베트남 당국의 요청으로 배터리 화재의 위험이 있는 맥북 프로 15인치의 운송이 금지됩니다.',0, sysdate-71);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '국내선 셀프체크인 전면 시행 안내', '국내선 셀프체크인 전면 시행 안내',0, sysdate-20);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '아비앙카 인 브라질항공 (O6) 스타얼라이언스 탈퇴 및 제휴 종료 안내', '아비앙카 인 브라질항공 (O6)는 2019년 9월 1일부로 스타얼라이언스에서 탈퇴함에 따라 당사와 아비앙카 인 브라질항공 (O6)',0, sysdate-7);
+insert into noticeboard values(noticeboardnum_sq.nextval,2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '알라모&내셔날 마일리지 적립 서비스 확대 안내',0, sysdate-29);
+insert into noticeboard values(noticeboardnum_sq.nextval,3, '2019년 11월 한국출발 국제선 유류할증료', '2019년 11월 한국출발 국제선 유류할증료',0, sysdate-58);
+insert into noticeboard values(noticeboardnum_sq.nextval,1, '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)', '장거리 선호좌석 구매 시 인천공항 비즈니스 라운지 서비스 무료 제공 (6월~12월)',0, sysdate-39);
+
 
 insert into noticeboard values(noticeboardnum_sq.nextval, 2, '스타얼라이언스 및 제휴 항공사 사후적립요청 접수처 축소', '<div class="list_view_cont">
 <div class="notice_edt_wrap"> 
@@ -641,7 +706,7 @@ insert into noticeboard values(noticeboardnum_sq.nextval, 1, '부산/인천노�
 </ul> 
 <div><br></div> 
 </ul></div>
-</div>', 987, sysdate);
+</div>', 987, sysdate-110);
 
 insert into noticeboard values(noticeboardnum_sq.nextval, 3, '광명역 도심공항 파업으로 인한 탑승수속 불가 안내', '<div class="list_view_cont">
 <p>광명역 도심공항 노동조합의 파업 관련 안내드리오니 이용시 참고부탁드립니다.</p><br>
@@ -653,7 +718,7 @@ insert into noticeboard values(noticeboardnum_sq.nextval, 3, '광명역 도심�
 <li>※ 광명역 → 인천공항 KTX공항버스(6770번) 정상 운행(대체버스 투입)</li> 
 </ul><br>
 <p>4. 탑승수속 관련 문의 : 철도 고객센터 1544-7788/1588-7788(06시~22시)</p>
-</div>', 0, sysdate);
+</div>', 0, sysdate-89);
 
 
 insert into noticeboard values(noticeboardnum_sq.nextval, 1, '애플사 맥북프로 제품 운송 제한', '<div class="list_view_cont">
@@ -666,7 +731,7 @@ insert into noticeboard values(noticeboardnum_sq.nextval, 1, '애플사 맥북�
 <p>※ 단 리콜제품이 수리, 교환된 경우는 적용 안함.</p><br>
 <p>당사 구간 이후 타 항공사로 환승하시는 연결편이 있는 손님께서는 해당 항공사에 문의 하시어 확인 부탁드리겠습니다. </p><br>
 <p><strong>베트남 노선 하노이(HAN), 호치민(SGN), 다낭(DAD), 푸꾸옥(PQC)을 이용하시는 경우 해당 제품의 휴대수하물 및 위탁수하물, 화물 운송이 금지되오니 이용에 참고하여 주시기 바랍니다.</strong></p>
-</div>', 634, sysdate);
+</div>', 634, sysdate-71);
 
 insert into noticeboard values(noticeboardnum_sq.nextval, 2, '알라모&내셔날 마일리지 적립 서비스 확대 안내', '<div class="list_view_cont">
 <div> 
@@ -687,7 +752,7 @@ insert into noticeboard values(noticeboardnum_sq.nextval, 2, '알라모&내셔�
 <ul class="sub-list"> 
 <li>알라모&amp;내셔날 한국 총판(☎ 02-739-3110)</li> 
 </ul> </div>
-</div>', 375, sysdate);
+</div>', 375, sysdate-32);
 
 insert into noticeboard values(noticeboardnum_sq.nextval, 2, '롯데 GRS(SKY31 GIMPO FOOD AVENUE) 할인 제휴 종료 안내', '<div class="list_view_cont">
 <p>2019년 10월 31일 부로 김포공항 국내선 푸드코트 SKY31 GIMPO FOOD AVENUE 할인 제휴가 종료되오니 이용에 참고하여 주시기 바랍니다.</p><br><br>
@@ -713,7 +778,7 @@ insert into noticeboard values(noticeboardnum_sq.nextval, 2, '롯데 GRS(SKY31 G
 </tr> 
 </tbody> 
 </table><br>
-</div>', 867, sysdate);
+</div>', 867, sysdate-10);
 
 insert into noticeboard values(noticeboardnum_sq.nextval, 2, '현대렌탈케어 마일리지 적립 신규제휴 개시 안내', '<div class="list_view_cont">
 <div> 
@@ -732,7 +797,7 @@ insert into noticeboard values(noticeboardnum_sq.nextval, 2, '현대렌탈케어
 <ul class="sub-list"> 
 <li>현대렌탈케어 고객센터(가입문의): ☎ 1800-8888</li> 
 </ul></div>
-</div>', 1265, sysdate);
+</div>', 1265, sysdate-20);
 
 insert into noticeboard values(noticeboardnum_sq.nextval, 2, '트립닷컴(Trip.com) 마일리지 적립 신규제휴 개시 안내', '<div class="list_view_cont">
 <div> 
@@ -747,7 +812,7 @@ insert into noticeboard values(noticeboardnum_sq.nextval, 2, '트립닷컴(Trip.
 &nbsp;&nbsp;-&nbsp;2019년 4월 25일 (목) 부 <br>
 <br>
 <strong>3. 트립닷컴 고객센터</strong><br> &nbsp;&nbsp;- 한국에서 걸때 1666-0060 (24시간 한국어/영어 응대서비스 지원)</p> </div>
-</div>', 496, sysdate);
+</div>', 496, sysdate-74);
 
 insert into noticeboard values(noticeboardnum_sq.nextval, 2, '벅시(BUXI) 마일리지 적립 신규제휴 개시 안내', '<div class="list_view_cont">
 <div> 
@@ -770,7 +835,7 @@ insert into noticeboard values(noticeboardnum_sq.nextval, 2, '벅시(BUXI) 마�
 <li>- 이용방법: 홈페이지/모바일을 통해 예약 및 결제 후 이용</li> 
 <li>- 이용문의: ☎ 1666-2174(평일 10:00~17:00)</li> 
 </ul></div>
-</div>', 249, sysdate);
+</div>', 249, sysdate-81);
 
 insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국제선 미주 외 지역 초과 수하물 마일리지 공제 기준 변경 안내', '<div class="list_view_cont">
 <div class="wrap-bwType-1">
@@ -852,7 +917,7 @@ insert into noticeboard values(noticeboardnum_sq.nextval, 1, '국제선 미주 �
 <p>* 부피 기준 : 수하물 삼변의 합(가로+세로+높이)</p>
 </div>
 <p><strong>2. 적용일 : 2018년 5월 1일 부 (공제일 기준)</strong></p>
-</div></div>', 956, sysdate);
+</div></div>', 956, sysdate-16);
 
 insert into noticeboard values(noticeboardnum_sq.nextval, 1, '유료 좌석 서비스 마일리지 사용 확대 안내', to_clob('<div class="list_view_cont">
 <p style="line-height: 150%;"><span style="font-size: 12pt;">2018년 5월 1일부터 유료로 제공하던 좌석 관련 서비스를 마일리지 공제로 이용할 수 있음을 안내드립니다.</span></p>
@@ -952,7 +1017,7 @@ to_clob('<tr>
 <p style="line-height: 150%;"><span style="font-size: 12pt;">&nbsp;</span></p> 
 <p style="line-height: 150%;"><strong><span style="font-size: 12pt;">2. 적용일 : 2018년 5월 1일 부(공제일 기준)</span></strong></p></div>
 <p style="line-height: 150%;"><span style="font-size: 12pt;">&nbsp;</span></p>
-</div>'), 507, sysdate);
+</div>'), 507, sysdate-12);
 
 insert into noticeboard values(noticeboardnum_sq.nextval, 3, '11월 국내선 유류할증료', '<div class="list_view_cont">
 <p><span style="font-weight: bold;">1.변경 유류할증료(부가가치세 포함)</span></p>
@@ -995,7 +1060,7 @@ insert into noticeboard values(noticeboardnum_sq.nextval, 3, '11월 국내선 �
 <p><span style="font-weight: bold;">4.발권 적용일:</span></p> 
 <p>2019년 11월 1일 ~ 11월 30일 (한국 시각 기준)</p> 
 <p>&nbsp;</p> <br> 감사합니다. </div>
-</div>', 2370, sysdate);
+</div>', 2370, sysdate-5);
 
 insert into noticeboard values(noticeboardnum_sq.nextval, 3, '2019년 11월 한국출발 국제선 유류할증료', to_clob('<div class="list_view_cont">
 <p>고객님께 안내 말씀 드립니다.</p>
@@ -1087,7 +1152,7 @@ to_clob('<tr>
  <strong><a href="http://flyasiana.com/C/pc/ag/common/pdf/fuel_surcharge_international_routes.pdf" target="_blank"><span style="color: rgb(102, 51, 204);">[ 국제항공 노선별 운항거리 기준 ]</span></a></strong></p>
 <p><br>
  감사합니다.<br> &nbsp;</p>
-</div>'), 5716, sysdate);
+</div>'), 5716, sysdate-110);
 
 insert into noticeboard values(noticeboardnum_sq.nextval, 3, '12월 국내선 유류할증료', '<div class="list_view_cont">
 <p><span style="font-weight: bold;">1.변경 유류할증료(부가가치세 포함)</span></p>
@@ -1132,9 +1197,9 @@ insert into noticeboard values(noticeboardnum_sq.nextval, 3, '12월 국내선 �
 <p>&nbsp;</p> <br> 감사합니다. </div>
 </div>', 6941, sysdate-67);
 
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '인천 ↔ 뉴욕 탑승 시 JFK 공항 ↔ 뉴저지, 필라델피아 무료 셔틀 이용 안내', '<img src="/myapp/Resources/IMG/board/shuttlebus.png"/>', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '우수회원제도 개편 1주년 기념 회원제도 안내', '<img src="/myapp/Resources/IMG/board/vipmember.png"/>', 0, sysdate);
-insert into noticeboard values(noticeboardnum_sq.nextval, 1, '니하오, 난 아론이야! 챗봇 중국어 서비스 OPEN!', '<img src="/myapp/Resources/IMG/board/nihao.png"/>', 0, sysdate);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '인천 ↔ 뉴욕 탑승 시 JFK 공항 ↔ 뉴저지, 필라델피아 무료 셔틀 이용 안내', '<img src="/myapp/Resources/IMG/board/shuttlebus.png"/>', 0, sysdate-71);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '우수회원제도 개편 1주년 기념 회원제도 안내', '<img src="/myapp/Resources/IMG/board/vipmember.png"/>', 0, sysdate-16);
+insert into noticeboard values(noticeboardnum_sq.nextval, 1, '니하오, 난 아론이야! 챗봇 중국어 서비스 OPEN!', '<img src="/myapp/Resources/IMG/board/nihao.png"/>', 0, sysdate-37);
 
 -----------------admin-------------------
 insert into ADMIN values(adminnum_sq.nextval, 'master1234', 'q1w2e3r4!', '김동한', '010-3333-3333', 'kimdonghan@naver.com', sysdate);

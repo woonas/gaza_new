@@ -169,7 +169,7 @@ CREATE TABLE ordertbl (
 );
 
 CREATE TABLE orderedFlight (
-	orderedFilghtNum NUMBER NOT NULL,
+	orderedFlightNum NUMBER NOT NULL,
 	orderNum NUMBER,
 	foodNum NUMBER,
 	seatReserveNum NUMBER,
