@@ -21,14 +21,14 @@
                             <div class="text-align-center bg-blue5 ">탑승안내</div>
                             <div>
                                 <ul class="clearfix">
-                                    <li><a href="#" onclick="return false;">예약안내</a></li>
-                                    <li><a href="#" onclick="return false;">체크인안내</a></li>
-                                    <li><a href="#" onclick="return false;">운임안내</a></li>
-                                    <li><a href="#" onclick="return false;">우수회원혜택</a></li>
-                                    <li class="no-compartment"><a href="#" onclick="return false;">회원전용 할인 제휴사 안내</a></li>
-                                    <li><a href="#" onclick="return false;">보유 마일리지 조회하기</a></li>
-                                    <li><a href="#" onclick="return false;">내 회원등급 조회하기</a></li>
-                                    <li><a href="#" onclick="return false;">마일리지 유효기간</a></li>
+                                    <li><a href="<%=jsp%>/serviceinfo/reservation?abc=0&zyx=0">예약안내</a></li>
+                                    <li><a href="<%=jsp%>/serviceinfo/checkIn?abc=0&zyx=1">체크인안내</a></li>
+                                    <li><a href="<%=jsp%>/serviceinfo/fare?abc=0&zyx=2">운임안내</a></li>
+                                    <li><a href="#" onclick="return false;">탑승수속 절차</a></li>
+                                    <li class="no-compartment"><a href="#" onclick="return false;">출입국 신고서</a></li>
+                                    <li><a href="#" onclick="return false;">탑승수속</a></li>
+                                    <li><a href="#" onclick="return false;">연결 탑승수속</a></li>
+                                    <li><a href="#" onclick="return false;">출입국 규정조회</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -36,9 +36,9 @@
                             <div class="text-align-center bg-blue5 ">수하물안내</div>
                             <div>
                                 <ul class="clearfix">
-                                    <li><a href="#" onclick="return false;">수하물이용</a></li>
-                                    <li><a href="#" onclick="return false;">위탁수하물</a></li>
-                                    <li><a href="#" onclick="return false;">수하물보상</a></li>
+                                    <li><a href="<%=jsp%>/serviceinfo/baggage_guide?abc=1&zyx=0">수하물이용</a></li>
+                                    <li><a href="<%=jsp%>/serviceinfo/baggage_free?abc=1&zyx=1">위탁수하물</a></li>
+                                    <li><a href="<%=jsp%>/serviceinfo/baggage_compensation?abc=1&zyx=2">수하물보상</a></li>
                                     <li><a href="#" onclick="return false;">국제선 무료 위탁 수화물</a></li>
                                     <li class="no-compartment"><a href="#" onclick="return false;">국내선 무료 위탁 수화물</a></li>
                                     <li><a href="#" onclick="return false;">특수 수화물 위탁</a></li>
@@ -51,13 +51,13 @@
                             <div class="text-align-center bg-blue5 ">고객안내</div>
                             <div>
                                 <ul class="clearfix">
-                                    <li><a href="#" onclick="return false;">유아여행안내</a></li>
-                                    <li><a href="#" onclick="return false;">임신고객안내</a></li>
-                                    <li><a href="#" onclick="return false;">장애인고객안내</a></li>
-                                    <li><a href="#" onclick="return false;">패밀리서비스</a></li>
-                                    <li class="no-compartment"><a href="#" onclick="return false;">반려동물동반</a></li>
-                                    <li><a href="#" onclick="return false;">의료도움이 필요한 고객</a></li>
-                                    <li><a href="#" onclick="return false;">기내건강</a></li>
+                                    <li><a href="<%=jsp%>/serviceinfo/baggage_compensation?abc=1&zyx=2">유아여행안내</a></li>
+                                    <li><a href="<%=jsp%>/serviceinfo/pregnant?abc=2&zyx=1">임신고객안내</a></li>
+                                    <li><a href="<%=jsp%>/serviceinfo/disabled_passenger?abc=2&zyx=2">장애인고객안내</a></li>
+                                    <li><a href="<%=jsp%>/serviceinfo/family_service?abc=2&zyx=3">패밀리서비스</a></li>
+                                    <li class="no-compartment"><a href="<%=jsp%>/serviceinfo/with_pets?abc=2&zyx=4">반려동물동반</a></li>
+                                    <li><a href="<%=jsp%>/serviceinfo/medical?abc=2&zyx=5">의료도움이 필요한 고객</a></li>
+                                    <li><a href="<%=jsp%>/serviceinfo/cabin_health?abc=2&zyx=6">기내건강</a></li>
                                     <li><a href="#" onclick="return false;">혼자 여행하는 청소년</a></li>
                                 </ul>
                             </div>
@@ -66,14 +66,14 @@
                             <div class="text-align-center bg-blue5 ">부가서비스</div>
                             <div>
                                 <ul class="clearfix">
-                                    <li><a href="#" onclick="return false;">레그룸좌석</a></li>
-                                    <li><a href="#" onclick="return false;">비즈니스존</a></li>
-                                    <li><a href="#" onclick="return false;">프론트존</a></li>
-                                    <li><a href="#" onclick="return false;">듀오좌석</a></li>
-                                    <li class="no-compartment"><a href="#" onclick="return false;">이코노미</a></li>
-                                    <li><a href="#" onclick="return false;">업그레이드</a></li>
-                                    <li><a href="#" onclick="return false;">기내와이파이</a></li>
-                                    <li><a href="#" onclick="return false;">기내통신판매</a></li>
+                                    <li><a href="<%=jsp%>/serviceinfo/legroom?abc=3&zyx=0">레그룸좌석</a></li>
+                                    <li><a href="<%=jsp%>/serviceinfo/businesszone?abc=3&zyx=1">비즈니스존</a></li>
+                                    <li><a href="<%=jsp%>/serviceinfo/frontzone?abc=3&zyx=2">프론트존</a></li>
+                                    <li><a href="<%=jsp%>/serviceinfo/duo?abc=3&zyx=3">듀오좌석</a></li>
+                                    <li class="no-compartment"><a href="<%=jsp%>/serviceinfo/economysmartium?abc=3&zyx=4">이코노미</a></li>
+                                    <li><a href="<%=jsp%>/serviceinfo/upgradestandby?abc=3&zyx=5">업그레이드</a></li>
+                                    <li><a href="<%=jsp%>/serviceinfo/wifi?abc=3&zyx=6">기내와이파이</a></li>
+                                    <li><a href="<%=jsp%>/serviceinfo/domestic?abc=3&zyx=7">기내통신판매</a></li>
                                 </ul>
                             </div>
                         </div>
