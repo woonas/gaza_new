@@ -35,7 +35,7 @@
                                                 <tr class="odd gradeX">
                                                     <td>${i-9 }</td>
                                                     <td>${lst[i].city  }</td>
-                                                    <td>GAZA AIR만의 특별한 혜택! 지금바로 만나보세요</td>
+                                                    <td>${lst[i].rContent }</td>
                                                 </tr>
                                                 </c:forEach>
                                             </tbody>

@@ -211,7 +211,7 @@
                 <tbody>
                     <tr>
                         <td class="text-align-center">
-                            <img src="../../IMG/information/airplane/img_airplain_A380-800.png" alt="">
+                            <img src="<%=img %>/information/airplane/img_airplain_A380-800.png" alt="">
                             <br>
                             <div>
                                 <div>A380-800</div>
@@ -221,7 +221,7 @@
                             </div>
                         </td>
                         <td class="text-align-center">
-                            <img src="../../IMG/information/airplane/img_airplain_B747-400_B747400COMBI.png" alt="">
+                            <img src="<%=img %>/information/airplane/img_airplain_B747-400_B747400COMBI.png" alt="">
                             <br>
                             <div>
                                 <div>B747-400 / B747-400COMBI</div>
@@ -231,7 +231,7 @@
                             </div>
                         </td>
                         <td class="text-align-center">
-                            <img src="../../IMG/information/airplane/img_airplain_a350.png" alt="">
+                            <img src="<%=img %>/information/airplane/img_airplain_a350.png" alt="">
                             <br>
                             <div>
                                 <div>A350-900</div>
@@ -241,7 +241,7 @@
                             </div>
                         </td>
                         <td class="text-align-center">
-                            <img src="../../IMG/information/airplane/img_airplain_B777.png" alt="">
+                            <img src="<%=img %>/information/airplane/img_airplain_B777.png" alt="">
                             <br>
                             <div>
                                 <div>B777</div>
@@ -253,7 +253,7 @@
                     </tr>
                     <tr>
                         <td class="text-align-center">
-                            <img src="../../IMG/information/airplane/img_airplain_A330-300.png" alt="">
+                            <img src="<%=img %>/information/airplane/img_airplain_A330-300.png" alt="">
                             <br>
                             <div>
                                 <div>A330-300</div>
@@ -263,7 +263,7 @@
                             </div>
                         </td>
                         <td class="text-align-center">
-                            <img src="../../IMG/information/airplane/img_airplain_B767-300.png" alt="">
+                            <img src="<%=img %>/information/airplane/img_airplain_B767-300.png" alt="">
                             <br>
                             <div>
                                 <div>B767-300</div>
@@ -273,7 +273,7 @@
                             </div>
                         </td>
                         <td class="text-align-center">
-                            <img src="../../IMG/information/airplane/img_airplain_A321-100_A321-200.png" alt="">
+                            <img src="<%=img %>/information/airplane/img_airplain_A321-100_A321-200.png" alt="">
                             <br>
                             <div>
                                 <div>A321-neo</div>
@@ -283,7 +283,7 @@
                             </div>
                         </td>
                         <td class="text-align-center">
-                            <img src="../../IMG/information/airplane/img_airplain_A321-100_A321-200.png" alt="">
+                            <img src="<%=img %>/information/airplane/img_airplain_A321-100_A321-200.png" alt="">
                             <br>
                             <div>
                                 <div>A321-100 / A321-200</div>
@@ -295,7 +295,7 @@
                     </tr>
                     <tr>
                         <td class="text-align-center">
-                            <img src="../../IMG/information/airplane/img_airplain_A320-200.png" alt="">
+                            <img src="<%=img %>/information/airplane/img_airplain_A320-200.png" alt="">
                             <br>
                             <div>
                                 <div>A320-200</div>
@@ -328,3 +328,4 @@
         <script src="<%=path %>/Resources/JS/information.js"></script>
     </body>
 </html>
+	
