@@ -20,6 +20,10 @@
 }
 
 #brd_content{ padding: 70px; }
+#brd_content img {
+	max-width: 100%;
+    height: auto;
+}
 
 .brd_bottom{
 	padding-left:50px;

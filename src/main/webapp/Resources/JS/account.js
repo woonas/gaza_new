@@ -74,7 +74,7 @@ const verification = () => {
     // 팝업창 필요항목 입력되었는지 확인 + 인증완료 이벤트처리
     const phone_window = '#phone-verification-window';
     $('#authorizeBtn').click(function(){
-        if(grecaptcha && grecaptcha.getResponse().length === 0 && input_check(phone_window + ' div.active input')) {
+        if(grecaptcha && grecaptcha.getResponse().length === 0 || input_check(phone_window + ' div.active input')) {
             alert('모든 항목을 완료해주세요.')
         } else {
             const _window = $(phone_window);

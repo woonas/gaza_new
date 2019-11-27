@@ -9,7 +9,7 @@
 	<insert id="insertRecord" parameterType="kr.gaza.myapp.account.member.MemberVO">
 		insert into member(memberNum, memberId, memberPwd, memberNameKor, memberNameEng, nation, gender, tel, altTel, 
 		zipcode, addr, detailaddr, email, birthday, agree, directronic, flightCnt, regdate) 
-		values(member_sq.nextVal, #{memberId}, #{memberPwd}, #{memberNameKor}, #{memberNameEng}, #{nation}, #{gender}, #{tel},
+		values(membernum_sq.nextVal, #{memberId}, #{memberPwd}, #{memberNameKor}, #{memberNameEng}, #{nation}, #{gender}, #{tel},
 		 #{altTel}, #{zipcode}, #{addr}, #{detailAddr}, #{email}, #{birthDay}, #{agree}, #{directronic}, 0, sysdate)
 	</insert>
 	<select id="idCheck" parameterType="String" resultType="boolean">

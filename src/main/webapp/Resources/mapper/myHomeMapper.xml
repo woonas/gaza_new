@@ -31,7 +31,10 @@
 		select depart, arrive from product where productnum=#{productNum}
 	</select>
 	<select id="departCity" resultType="kr.gaza.myapp.myhome.MyHomeVO">
-		select city from airport where IATA=#{depart}"
+		select city as departCity from airport where IATA=#{depart}
+	</select>
+	<select id="arriveCity" resultType="kr.gaza.myapp.myhome.MyHomeVO">
+		select city as arriveCity from airport where IATA=#{arrive}
 	</select>
 	<select id="getReview0" resultType="kr.gaza.myapp.board.reviewBoard.ReviewBoardVO" parameterType="String">
 		select * from
