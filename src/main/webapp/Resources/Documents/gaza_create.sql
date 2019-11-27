@@ -158,10 +158,7 @@ CREATE TABLE payment (
 	milesNum NUMBER NOT NULL,
 	paymentType NUMBER NOT NULL,
 	totalPrice NUMBER NOT NULL,
-	payDate DATE NOT NULL,
-	payEmail VARCHAR(50) NOT NULL,
-	payPhone VARCHAR(13) NOT NULL,
-	directronic VARCHAR(10)
+	payDate DATE NOT NULL
 );
 
 CREATE TABLE ordertbl (
