@@ -356,6 +356,7 @@
                 </div>
             </div>
         </section>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <%@ include file="../common/footer.jspf" %>
         <script src="<%=path %>/Resources/JS/information.js"></script>
     </body>
