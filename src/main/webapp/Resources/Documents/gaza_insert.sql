@@ -3,6 +3,16 @@ set define off;
 -----member---------------------------------------------------------------------------
 insert into member values(membernum_sq.nextval, 'test3333', 'qwerqwer1', '홍 길동', 'gildong hong', 'South Korea (대한민국)', 'M', '010-3333-3333', '없음', '13480', '경기 성남시 분당구 대왕판교로 477', '111-11', 'min89_@naver.com', '2019/10/15', 'on/off', 'on/off', 10, sysdate);
 
+-----miles---------------------------------------------------------------------------
+insert into miles values(milesnum_sq.nextval,400,'2019-10-31'); 
+
+-----my miles---------------------------------------------------------------------------
+INSERT INTO mymiles values(mymilesnum_sq.nextval, 1,3841);
+INSERT INTO mymiles values(mymilesnum_sq.nextval, 2,1111);
+INSERT INTO mymiles values(mymilesnum_sq.nextval, 3,3841);
+INSERT INTO mymiles values(mymilesnum_sq.nextval, 4,1111);
+INSERT INTO mymiles values(mymilesnum_sq.nextval, 5,3841);
+
 -----airplane---------------------------------------------------------------------------
 INSERT INTO airplane VALUES('GZ123',270);
 INSERT INTO airplane VALUES('GZ567',270);
