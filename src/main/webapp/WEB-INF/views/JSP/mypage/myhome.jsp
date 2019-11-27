@@ -167,16 +167,21 @@
                 <div class="col-half">
                     <div class="section my-write">
                         <div class="section-title bottom-border">
-                            나의 글
-                            <a href="#"><input type="button" value="전체보기" class="blueBtn"></a>
+                            나의 이용후기
+                            <a href="<%=jsp %>/board/reviewBoard/reviewBoard_list?pageNum=1&reviewType=0">
+                            	<input type="button" value="전체보기" class="blueBtn">
+                            </a>
                         </div>
                         <div>
                             <ul class="list-type2">
-                                <li><a href="">9월 날씨, 인천-다낭 가자에어 탑승 후기</a></li>
-                                <li><a href="">동유럽 여행 :) 가자에어 KE0935, KE0938</a></li>
-                                <li><a href="">방콕 항공권, 가자에어 KE657 후기! 태국 수완나폼 고고</a></li>
-                                <li><a href="">유럽 비행기표예약 & 인천-비엔나 대한항공 KE937 탑승과 근황</a></li>
-                                <li><a href="">라운지, 가자에어 기내식 과일식</a></li>
+                            <c:forEach var="lst" items="${reviewList0 }" end="4">
+                                <li>
+                                	<a href="<%=jsp %>/board/reviewBoard/reviewBoard_view?
+											reviewNum=${lst.reviewNum}&pageNum=1
+											&reviewType=${lst.reviewType}">${lst.subject }
+									</a>
+								</li>
+                            </c:forEach>
                             </ul>
                         </div>
                     </div>
@@ -184,16 +189,21 @@
                 <div class="col-half">
                     <div class="section my-question">
                         <div class="section-title bottom-border">
-                            문의사항
-                            <a href="#"><input type="button" value="전체보기" class="blueBtn"></a>
+                            나의 문의사항
+                            <a href="<%=jsp %>/board/reviewBoard/reviewBoard_list?pageNum=1&reviewType=1">
+                            	<input type="button" value="전체보기" class="blueBtn">
+                            </a>
                         </div>
                         <div>
                             <ul class="list-type2">
-                                <li><a href="">[국내선] 추석연휴 기간 김포-부산(GMP-PUS) 노 ...</a></li>
-                                <li><a href="">제 13호 태풍 '링링'으로 인한 국내선 결항 안내</a></li>
-                                <li><a href="">KB국민카드 서비스 일시중단 안내</a></li>
-                                <li><a href="">2019년 9월 신용카드 할부 서비스 안내</a></li>
-                                <li><a href="">말레이시아 출국세 부과 안내 (2019.09.01~)</a></li>
+                                <c:forEach var="lst" items="${reviewList1 }" end="4">
+                                <li>
+                                	<a href="<%=jsp %>/board/reviewBoard/reviewBoard_view?
+											reviewNum=${lst.reviewNum}&pageNum=1
+											&reviewType=${lst.reviewType}">${lst.subject }
+									</a>
+								</li>
+                            </c:forEach>
                             </ul>
                         </div>
                     </div>

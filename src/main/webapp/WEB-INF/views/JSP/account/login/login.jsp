@@ -117,7 +117,7 @@
                                            <a href="<%=jsp %>/account/search/pwsearch"><span class="col_black">비밀번호 찾기</span></a>
                                        </li>
                                        <li>
-                                           <a href="<%=path %>/Resources/JSP/account/signup/signup1.do"><span class="col_black">회원가입</span></a>
+                                           <a href="<%=jsp %>/account/signup/signup1""><span class="col_black">회원가입</span></a>
                                        </li>
                                    </ul>
                                </div>

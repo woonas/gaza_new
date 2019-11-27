@@ -27,5 +27,19 @@
 	<select id="DepAri" resultType="kr.gaza.myapp.myhome.MyHomeVO">
 		select depart, arrive from product where productnum=#{productNum}
 	</select>
+	<select id="getReview0" resultType="kr.gaza.myapp.board.reviewBoard.ReviewBoardVO" parameterType="String">
+		select * from
+		(select reviewNum, reviewType, subject from reviewBoard where reviewType=0 and writer=#{value} order by reviewNum DESC)
+		<![CDATA[ 
+		where ROWNUM<=5
+		]]> 
+	</select>
+	<select id="getReview1" resultType="kr.gaza.myapp.board.reviewBoard.ReviewBoardVO" parameterType="String">
+		select * from
+		(select reviewNum, reviewType, subject from reviewBoard where reviewType=1 and writer=#{value} order by reviewNum DESC)
+		<![CDATA[ 
+		where ROWNUM<=5
+		]]> 
+	</select>
 	
 </mapper>

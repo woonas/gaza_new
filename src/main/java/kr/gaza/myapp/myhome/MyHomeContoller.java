@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import kr.gaza.myapp.board.reviewBoard.ReviewBoardVO;
+
 @Controller
 public class MyHomeContoller {
 	@Autowired
@@ -22,7 +24,10 @@ public class MyHomeContoller {
 		MyHomeDAOInterface dao = sqlSession.getMapper(MyHomeDAOInterface.class);
 		HttpSession sess = req.getSession();
 		
+		//세션에서 가져온 회원번호, 아이디
 		int memberNum = (int)sess.getAttribute("memberNum");
+		String memberId = (String)sess.getAttribute("memberId");
+		
 		MyHomeVO vo =  dao.memberRecord(memberNum); 
 		MyHomeVO vo2 = dao.memberMiles(memberNum);
 		
@@ -38,21 +43,19 @@ public class MyHomeContoller {
 			int num = dao.flightList(orderNumList.get(i).getOrderNum());
 			int array[] = new int[orderNumList.size()];
 			array[i] = num;
-			System.out.println("array"+i+"번="+array[i]);
 			
 			MyHomeVO flightInfoVO = dao.flightInfo(array[i]);//airplaneName, departTime, arriveTime, productNum을 세팅
 			MyHomeVO flightInfoVO2 = dao.DepAri(flightInfoVO.getProductNum());//productNum3개를 넣어서 depart, arrive위치를 구해옴.
-			System.out.println("도착지"+flightInfoVO2.getArrive());
 			flightInfoVO.setArrive(flightInfoVO2.getArrive());
 			flightInfoVO.setDepart(flightInfoVO2.getDepart());
 			
 			flightI.add(i, flightInfoVO);
 
 		}//orderNumList
-			
-			
-		System.out.println("flightI.size="+flightI.size());
 		
+		//내가 작성한 이용후기, 문의사항 가져오기
+		List<ReviewBoardVO> reviewList0 = dao.getReview0(memberId);
+		List<ReviewBoardVO> reviewList1 = dao.getReview1(memberId);
 		
 		ModelAndView mav = new ModelAndView();
 		if(vo!=null) {
@@ -61,6 +64,9 @@ public class MyHomeContoller {
 			mav.addObject("vo3",vo3);
 			mav.addObject("myNeedMiles",myNeedMiles);
 			mav.addObject("flightI",flightI);
+			mav.addObject("reviewList0", reviewList0);
+			mav.addObject("reviewList1", reviewList1);
+			
 			mav.setViewName("JSP/mypage/myhome");
 		}else {
 			mav.setViewName("redirect:/");

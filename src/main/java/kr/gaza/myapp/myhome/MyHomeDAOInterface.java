@@ -2,6 +2,9 @@ package kr.gaza.myapp.myhome;
 
 import java.util.List;
 
+import kr.gaza.myapp.board.noticeBoard.NoticeBoardVO;
+import kr.gaza.myapp.board.reviewBoard.ReviewBoardVO;
+
 public interface MyHomeDAOInterface {
 	public MyHomeVO memberRecord(int memberNum);
 	
@@ -18,4 +21,8 @@ public interface MyHomeDAOInterface {
 	public MyHomeVO flightInfo(int flightNum);
 	
 	public MyHomeVO DepAri(int productNum);
+	//이용후기 글 가져오기
+	public List<ReviewBoardVO> getReview0(String memberId);
+	//문의사항 글 가져오기
+	public List<ReviewBoardVO> getReview1(String memberId);
 }
