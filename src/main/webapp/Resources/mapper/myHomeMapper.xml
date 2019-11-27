@@ -24,6 +24,9 @@
 	<select id="flightInfo" resultType="kr.gaza.myapp.myhome.MyHomeVO">
 		select airplanename, productnum, departtime, arrivetime from flight where flightnum=#{flightNum}
 	</select>
+	<select id="getOrderedNum" resultType="int">
+		select orderedFlightNum from orderedFlight where orderNum=#{orderNum}
+	</select>
 	<select id="DepAri" resultType="kr.gaza.myapp.myhome.MyHomeVO">
 		select depart, arrive from product where productnum=#{productNum}
 	</select>

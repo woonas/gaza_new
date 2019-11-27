@@ -204,7 +204,7 @@
 											${lst.subject }
 										</a>
 									</td>
-	                                <td>10.24</td>
+	                                <td>${lst.regdate}</td>
 	                            </tr>
 	                        </c:forEach>
                         </tbody>

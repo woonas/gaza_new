@@ -54,7 +54,7 @@
 								</c:if>
 								<c:if test="${memberName!=null }">
                                     <li><a href="<%=jsp %>/account/change/account_info">회원정보</a></li>
-                                    <li><a href="<%=path %>/Resources/HTML/reserveStatus.html">예약 현황</a></li>
+                                    <li><a href="<%=jsp %>/mypage/reservation_list">예약 현황</a></li>
                                     <li><a href="<%=jsp %>/account/login/logout">로그아웃</a></li>
                                     <li><a href="<%=jsp %>/account/change/account_delete">회원탈퇴</a></li>
 								</c:if>

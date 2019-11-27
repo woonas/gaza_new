@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>예약 상세 페이지</title>
-    <link rel="stylesheet" href="../../CSS/my_page.css"type="text/css" />
+    <link rel="stylesheet" href="<%=css %>/my_page.css"type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/9c923ac74a.js" crossorigin="anonymous"></script>
     <script>window.onbeforeunload = () => window.scrollTo(0, 0)</script>
@@ -39,7 +39,7 @@
                     </div>
                     <div class="col-two-fourth flight-detail">
                         <span><i class="far fa-clock"></i> 1시간 10분</span>
-                        <img src = "../../IMG/icon/flight-table.svg" alt = "">
+                        <img src = "<%=img %>/icon/flight-table.svg" alt = "">
                         <span>직항</span>
                     </div>
                     <div class="col-fourth">
@@ -79,7 +79,7 @@
                         </div>
                         <div class="col-two-fifth">
                             <div class="flight-image">
-                                <img src = "../../IMG/icon/flight-table.svg" alt = "">
+                                <img src = "<%=img %>/icon/flight-table.svg" alt = "">
                             </div>
                         </div>
                         <div class="col-fourth">
@@ -92,7 +92,6 @@
                         <div>항공권 운임</div>
                         <div>세금 및 제반요금</div>
                         <div>유류할증료</div>
-                        <div>구간별 개인할인</div>
                         <div>승객</div>
                         <div>합계</div>
                     </div>
@@ -100,7 +99,6 @@
                         <div>120,000</div>
                         <div>4,000</div>
                         <div>5,500</div>
-                        <div>-</div>
                         <div>성인 1</div>
                         <div>129,500</div>
                     </div>
@@ -269,7 +267,7 @@
         <div id="regulation-1">
             <p><span class="font-blue4">01</span>서울/김포<span>→</span>제주</p>
             <input type="checkbox" class="hidden" id="fold-1" checked>
-            <label for="fold-1"><img src = "../../IMG/icon/underArrow.png" alt = ""></label>
+            <label for="fold-1"><img src = "<%=img %>/icon/underArrow.png" alt = ""></label>
             <div>
                 <h4>· 운임종류</h4>
                 <div>정상운임 (Y)</div>
@@ -357,7 +355,7 @@
                 <div id="tab-1-container" class="tab-content-container">
 					<div id="tab-1-product-1" class="row clearfix food-wrapper">
 						<div class="col-half img-wrapper">
-							<img src="../../IMG/food/BRML.png">
+							<img src="<%=img %>/food/BRML.png">
 						</div>
 						<div class="col-half food-content">
 							<div class="row food-title">
@@ -377,7 +375,7 @@
 					</div>
 					<div id="tab-1-product-2" class="row clearfix food-wrapper">
 						<div class="col-half img-wrapper">
-							<img src="../../IMG/food/QMML.png">
+							<img src="<%=img %>/food/QMML.png">
 						</div>
 						<div class="col-half food-content">
 							<div class="row clearfix food-title">
@@ -397,7 +395,7 @@
 					</div>
 					<div id="tab-1-product-3" class="row clearfix food-wrapper">
 						<div class="col-half img-wrapper">
-							<img src="../../IMG/food/QSML.png">
+							<img src="<%=img %>/food/QSML.png">
 						</div>
 						<div class="col-half food-content">
 							<div class="row clearfix food-title">
@@ -463,7 +461,7 @@
 	</section>
  	<%@ include file="../common/footer.jspf" %>
 
-	<script src="../../JS/mypage.js"></script>
+	<script src="<%=js %>/mypage.js"></script>
 	<script>
 		tabEvent('.tab-menu1');
 	</script>
