@@ -21,6 +21,12 @@
         <script>window.onbeforeunload = () => window.scrollTo(0, 0)</script>
         <!-- 다음/카카오 주소검색 -->
         <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+        <style>
+            input[type=checkbox].checkbox3:checked + label:after {
+                width: 0.75em;
+                height: 0.5em;
+            }
+        </style>
     </head>
     <body id="personalInfo" onload="onChangeCallback()">
     <%@ include file="../../common/nav.jspf" %>
@@ -84,7 +90,7 @@
                         <div class="form-group">
                             <label class="col-fifth control-label not-required">성별</label>
                             <div class="col-xs-4">
-                                <input type="text" class="form-control" name="userGender" disabled value="${vo.gender }">
+                                <input type="text" class="form-control" name="userGender" disabled value="${gen }">
                             </div>
                         </div>
                        
