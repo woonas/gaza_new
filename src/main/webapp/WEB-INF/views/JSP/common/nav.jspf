@@ -34,7 +34,7 @@
 							</ul>
 							<ul>
 								<li><a href="<%=jsp%>/eventNpackage/best_package">베스트상품</a></li>
-								<li><a href="<%=jsp%>/eventNpackage/recommend_package">추천상품</a></li>
+								<li><a href="<%=jsp%>/eventNpackage/recommend_package?tabType=0">추천상품</a></li>
 								<li><a href="<%=jsp%>/eventNpackage/event_list">제휴이벤트</a></li>
 							</ul>
 							<ul>

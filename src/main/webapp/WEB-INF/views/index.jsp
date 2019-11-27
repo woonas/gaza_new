@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
@@ -107,7 +108,8 @@
                     <ul id="bestBanner">
                     	<c:forEach var="i" begin="0" end="19" step="5">
 	                        <li>
-	                            <a href="<%=jsp%>/eventNpackage/best_package">
+	                        <fmt:formatNumber var="tabType" value="${i/5+1}" pattern="0"/>
+		                        <a href="<%=jsp%>/eventNpackage/recommend_package?tabType=${tabType}">
 	                                <div class="imgFrame">
 	                                    <img src='<%=img%>${recommandList[i].cityImg }'/>
 	                                </div>

@@ -67,7 +67,7 @@
 }
 /*글쓰기 버튼*/
 #writeBtnWrap{
-	text-align : left;
+	text-align : right;
 }
 #writeBtn{
 	width : 220px;

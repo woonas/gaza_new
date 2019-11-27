@@ -55,6 +55,13 @@
     
 	<script>
         tabEvent('.tab-menu1');
+        const addressTxt = location.href;
+        const tabType = addressTxt.charAt(addressTxt.indexOf('tabType')+8);
+        document.querySelector('.col-fourth.on').classList.remove('on');
+        document.getElementById('tab-'+tabType).classList.add('on');
+        
+        document.querySelector('div[class$=-container]:not(.hidden)').classList.add('hidden');
+        document.getElementById('tab-'+tabType+'-container').classList.remove('hidden');
     </script>
 </body>
 </html>

@@ -16,8 +16,8 @@
             
             <div class="tab-menu1">
                 <ul class="clearfix">
-                    <li class="col-half on" id='tab-1'><a href="#none">국내선</a></li>
-                    <li class="col-half" id='tab-2'><a href="#none">국제선</a></li>
+                    <li class="col-half on" id='tab-1'><a href="javascript:">국내선</a></li>
+                    <li class="col-half" id='tab-2'><a href="javascript:">국제선</a></li>
                 </ul>
             </div>
 
@@ -28,7 +28,7 @@
                             <p class="banner-title">국내선 일반운임</p>
                             <p>운임표 금액은 성인 기준의 편도 운임이며 사전 고지 없이 변동될 수 있습니다.
                                할인운임 및 초특가운임은 예매단계에서 확인하실 수 있습니다.</p>
-                            <a href="../booking/booking1.html"><button class="whiteBtn">국내선 일반운임</button></a>
+                            <a href="<%=resources%>/Documents/fare.pdf"><button class="whiteBtn">국내선 일반운임</button></a>
                         </div>
                     </div>
                 </div>

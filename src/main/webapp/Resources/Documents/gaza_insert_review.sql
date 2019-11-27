@@ -575,7 +575,7 @@ to_clob('</div>
 <iframe id="ssp-adcontent_tgtLREC" src="https://ssl.pstatic.net/tveta/libs/ssp/res/r.html" frameborder="no" scrolling="no" name="" style="width: 100%; height: 410px; visibility: inherit; display: block; border: 0px; vertical-align: bottom;"></iframe>
 </div>
 </div>
-</div>'),'qwerqwer', 8569, sysdate, '192.168.0.19');
+</div>'),'test3333', 8569, sysdate, '192.168.0.19');
 
 
 insert into reviewboard values(reviewboardnum_sq.nextval, 0, '울란바토르 가자에어 이용 후기 입니다~!', to_clob('<div class="se-viewer se-theme-default" lang="ko-KR">

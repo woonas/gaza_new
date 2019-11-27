@@ -209,7 +209,7 @@
 }
 .section-title + div,
 .section-title + p { margin-bottom: 10px; }
-.section-title + p { font-size: 130%; }
+.section-title + p { font-size: 100%; }
 
 .table-tab { height: 30px; }
 .table-tab li {
