@@ -51,7 +51,7 @@
                             <div class="text-align-center bg-blue5 ">고객안내</div>
                             <div>
                                 <ul class="clearfix">
-                                    <li><a href="<%=jsp%>/serviceinfo/baggage_compensation?abc=1&zyx=2">유아여행안내</a></li>
+                                    <li><a href="<%=jsp%>/serviceinfo/infant?abc=2&zyx=0">유아여행안내</a></li>
                                     <li><a href="<%=jsp%>/serviceinfo/pregnant?abc=2&zyx=1">임신고객안내</a></li>
                                     <li><a href="<%=jsp%>/serviceinfo/disabled_passenger?abc=2&zyx=2">장애인고객안내</a></li>
                                     <li><a href="<%=jsp%>/serviceinfo/family_service?abc=2&zyx=3">패밀리서비스</a></li>
