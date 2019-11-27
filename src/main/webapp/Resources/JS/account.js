@@ -161,15 +161,6 @@ const eventHandler = (_window, step2) => {
     }, 4500);
 };
 
-const agreement_check = () => {
-    if (agree_personalTransferToAbroad.checked && agree_personalCollection.checked && agree_hompageUse.checked)
-        return true;
-    else {
-        alert("필수 입력 항목에 대하여 모두 동의해주시기 바랍니다.");
-        return false;
-    }
-};
-
 (() => {
     /* signup1 */
     if(location.pathname.indexOf('signup1') !== -1)
@@ -189,13 +180,22 @@ const agreement_check = () => {
         const nextBtn = document.getElementById("nextBtn");
         const signup2Frm = document.getElementById("signup2Frm");
         nextBtn.addEventListener('click', function(){
-        	const agree1 = document.getElementById("agree_personalCollectionOption")
-        	const agree2 = document.getElementById("agree_personalProvide")
-        	if(agree1.checked) document.querySelector("input[name=agree1]").value="on";
-        	else document.querySelector("input[name=agree1]").value="off";
-        	if(agree2.checked) document.querySelector("input[name=agree2]").value="on";
-        	else document.querySelector("input[name=agree2]").value="off";
-        	signup2Frm.submit();
+
+            const agree_hompageUse = document.getElementById('agree_homepageUse');
+            const agree_personalCollection = document.getElementById('agree_personalCollection');
+            const agree_personalTransferToAbroad = document.getElementById('agree_personalTransferToAbroad');
+            if (agree_personalTransferToAbroad.checked && agree_personalCollection.checked && agree_hompageUse.checked) {
+                const agree1 = document.getElementById("agree_personalCollectionOption");
+                const agree2 = document.getElementById("agree_personalProvide");
+                if (agree1.checked) document.querySelector("input[name=agree1]").value = "on";
+                else document.querySelector("input[name=agree1]").value = "off";
+                if (agree2.checked) document.querySelector("input[name=agree2]").value = "on";
+                else document.querySelector("input[name=agree2]").value = "off";
+                signup2Frm.submit();
+            } else {
+                alert("필수 입력 항목에 대하여 모두 동의해주시기 바랍니다.");
+                return false;
+            }
         });
     }
 
