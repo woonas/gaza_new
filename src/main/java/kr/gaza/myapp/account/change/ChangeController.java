@@ -21,6 +21,7 @@ public class ChangeController {
 	//회원정보 페이지 이동.
 	@RequestMapping(value="/JSP/account/change/account_info")
 	public ModelAndView accountView(HttpServletRequest req) {
+		
 		MemberInterface dao = sqlSession.getMapper(MemberInterface.class);
 		HttpSession ses = req.getSession();
 		MemberVO vo = new MemberVO();

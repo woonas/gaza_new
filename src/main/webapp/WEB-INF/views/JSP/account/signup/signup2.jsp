@@ -383,7 +383,7 @@
                 </div>
                 
                 <div class="flex">
-                    <a href="signup1"><button class="whiteBtn left">&lt; 이전</button></a>
+                    <input  class="whiteBtn left" type="button" value="이전" onclick="javascript:history.back();"/>
                     <input type="hidden" name="agree1"/>
                     <input type="hidden" name="agree2"/>
                     <input type="button" class="right blueBtn"  value="다음 &gt;" id="nextBtn"/>

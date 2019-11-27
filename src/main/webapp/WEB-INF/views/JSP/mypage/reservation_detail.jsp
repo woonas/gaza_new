@@ -460,7 +460,11 @@
 		</div>
 	</section>
  	<%@ include file="../common/footer.jspf" %>
-
+	
+	<c:set var="x" value="<%=request.getContextPath() %>"/>
+	<script>
+		var x = "<%=request.getContextPath() %>";
+	</script>
 	<script src="<%=js %>/mypage.js"></script>
 	<script>
 		tabEvent('.tab-menu1');
