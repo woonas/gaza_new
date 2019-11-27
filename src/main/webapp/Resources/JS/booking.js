@@ -280,11 +280,11 @@ function booking4View() {
     for (let i = 0; i < priceList.length; i++) {
         while (priceList[i].indexOf(',') !== -1)
             priceList[i] = priceList[i].replace(',', '');
-        document.querySelector('.price-'+(i+1)+'-1').innerText = numberWithCommas(priceList[i] * 0.7);
-        document.querySelector('.price-'+(i+1)+'-2').innerText = numberWithCommas(priceList[i] * 0.1);
-        document.querySelector('.price-'+(i+1)+'-3').innerText = numberWithCommas(priceList[i] * 0.2);
+        document.querySelector('.price-'+(i+1)+'-1').innerText = Math.round(numberWithCommas(priceList[i] * 0.7));
+        document.querySelector('.price-'+(i+1)+'-2').innerText = Math.round(numberWithCommas(priceList[i] * 0.1));
+        document.querySelector('.price-'+(i+1)+'-3').innerText = Math.round(numberWithCommas(priceList[i] * 0.2));
         document.querySelector('.price-'+(i+1)+'-4').innerText = sessionStorage.getItem('numOfPassengers');
-        document.querySelector('.price-'+(i+1)+'-5').innerText = numberWithCommas(calcPriceList[i]);
+        document.querySelector('.price-'+(i+1)+'-5').innerText = Math.round(numberWithCommas(calcPriceList[i]));
         while(calcPriceList[i].indexOf(',') !== -1)
             calcPriceList[i] = calcPriceList[i].replace(',', '');
         lastPrice += parseInt(calcPriceList[i]);
