@@ -1,13 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <title>결제완료</title>
-    <link rel="stylesheet" href="../../../CSS/booking.css">
-    <link rel="stylesheet" href="<%=request.getContextPath() %>/Resources/CSS/navNfooter.css" type="text/css"/>
+    <link rel="stylesheet" href="<%=css%>/booking.css">
     <script src="https://kit.fontawesome.com/9c923ac74a.js" crossorigin="anonymous"></script>
     <script>window.onbeforeunload = () => window.scrollTo(0, 0)</script>
 </head>
@@ -76,12 +74,11 @@
         </div>
         
         <div class="button-wrapper">
-            <a href = "../index.html"><input type = "button" value="홈으로" class="blueBtn"></a>
+            <a href = "<%=path%>/"><input type = "button" value="홈으로" class="blueBtn"></a>
             <a href = "#"><input type = "button" value="예약현황" class="whiteBtn"></a>
         </div>
     </section>
-    <script src="../../../JS/common.js"></script>
-    <script src="../../../JS/payment.js"></script>
     <%@ include file="../../common/footer.jspf" %>
+    <script src="<%=js%>/payment.js"></script>
 </body>
 </html>

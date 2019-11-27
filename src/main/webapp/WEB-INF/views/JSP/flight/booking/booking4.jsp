@@ -215,9 +215,14 @@
 <%--        --%>
         <div class="flex">
             <a href="javascript:history.back()"><button class="whiteBtn left">&lt; 이전</button></a>
-            <a href="<%=jsp%>/flight/payment/payment" onclick="return toPayment();"><button class="right blueBtn">결제 &gt;</button></a>
+            <a href="javascript:" onclick="return toPayment();"><button class="right blueBtn">결제 &gt;</button></a>
         </div>
     </section>
+    <form action="<%=jsp%>/flight/payment/payment" method="post" id="booking4frm">
+        <input type="hidden" name="airportFrom">
+        <input type="hidden" name="airportTo">
+        <input type="hidden" name="flightNum">
+    </form>
     <%@ include file="../../common/footer.jspf" %>
     <script src="<%=js%>/booking.js"></script>
 </body>

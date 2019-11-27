@@ -290,14 +290,31 @@ function booking4View() {
         lastPrice += parseInt(calcPriceList[i]);
     }
     document.querySelector('.last-price').innerText = numberWithCommas(lastPrice) + ' 원';
+
+    const airportFromTxt = document.querySelector('input[name=airportFrom]');
+    const airportToTxt = document.querySelector('input[name=airportTo]');
+    const flightNumTxt = document.querySelector('input[name=flightNum]');
+    const flightArr = JSON.parse(sessionStorage.getItem('flightArr'));
+    for (let i =0; i<flightArr.length; i++ ) {
+        if (i !== 0) {
+            airportFromTxt.value += "#@!";
+            airportToTxt.value += "#@!";
+            flightNumTxt.value += "#@!";
+        }
+        airportFromTxt.value += flightArr[i][0];
+        airportToTxt.value += flightArr[i][1];
+        flightNumTxt.value += flightArr[i][2];
+    }
 }
 
 function toPayment() {
     if(document.getElementById('agree_1').checked && document.getElementById('agree_2').checked &&
         document.getElementById('agree_3').checked)
-        return true;
-    alert('모두 항목에 동의하셔야 예약이 가능합니다.');
-    return false;
+        document.getElementById('booking4frm').submit();
+    else {
+        alert('모두 항목에 동의하셔야 예약이 가능합니다.');
+        return false;
+    }
 }
 
 (() => {

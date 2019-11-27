@@ -1,11 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <title>결제</title>
-    <link rel="stylesheet" href="<%=css%>>/booking.css">
+    <link rel="stylesheet" href="<%=css%>/booking.css">
     <script src="https://kit.fontawesome.com/9c923ac74a.js" crossorigin="anonymous"></script>
     <script>window.onbeforeunload = () => window.scrollTo(0, 0)</script>
 </head>
@@ -21,89 +23,59 @@
                     <div class="col-fourth">구분</div>
                     <div class="col-fourth">금액 <span class="currency">(KRW)</span></div>
                 </div>
-                <div class="row clearfix">
-                    <div class="col-two-fourth trip">
-                        <div class="col-tenth">
-                            <i class="fas fa-plane-departure"></i>
-                        </div>
-                        <div class="col-fourth">
-                            <div class="airport-name">서울/김포</div>
-                            <div class="flight-date">2019.09.14(토)</div>
-                            <div class="flight-time">06:05</div>
-                        </div>
-                        <div class="col-two-fifth">
-                            <div class="flight-image">
-                                <img src = "../../../IMG/icon/flight-table.svg" alt = "">
+                <c:forEach var="i" begin="1" end="${fn:length(flightList)}" step="1">
+                    <div class="row clearfix" id="row-1">
+                        <div class="col-two-fourth trip">
+                            <div class="col-tenth">
+                                <i class="fas fa-plane-departure"></i>
+                            </div>
+                            <div class="col-fourth">
+                                <c:set var="length" value="${fn:length(airportFroms[i-1])}"/>
+                                <c:set var="airportFrom" value="${fn:substring(airportFroms[i-1], 0, length-6)}" />
+                                <div class="airport-name">${airportFrom}</div>
+                                <c:set var="departTime" value="${flightList[i-1].departTime}"/>
+                                <fmt:parseDate var="flightDate1" value="${departTime}" pattern="yyyy-MM-dd HH:mm"/>
+                                <div class="flight-date"><fmt:formatDate value="${flightDate1}" pattern="yyyy.MM.dd (E)"/></div>
+                                <div class="flight-time"><fmt:formatDate value="${flightDate1}" pattern="HH:mm"/></div>
+                            </div>
+                            <div class="col-two-fifth">
+                                <div class="flight-image">
+                                    <img src = "<%=img%>/icon/flight-table.svg" alt = "">
+                                </div>
+                            </div>
+                            <div class="col-fourth">
+                                <c:set var="length" value="${fn:length(airportTos[i-1])}"/>
+                                <c:set var="airportTo" value="${fn:substring(airportTos[i-1], 0, length-6)}" />
+                                <div class="airport-name">${airportTo}</div>
+                                <c:set var="arriveTime" value="${flightList[i-1].arriveTime}"/>
+                                <fmt:parseDate var="flightDate2" value="${arriveTime}" pattern="yyyy-MM-dd HH:mm"/>
+                                <div class="flight-date"><fmt:formatDate value="${flightDate2}" pattern="yyyy.MM.dd (E)"/></div>
+                                <div class="flight-time"><fmt:formatDate value="${flightDate2}" pattern="HH:mm"/></div>
                             </div>
                         </div>
-                        <div class="col-fourth">
-                            <div class="airport-name">제주</div>
-                            <div class="flight-date">2019.09.14(토)</div>
-                            <div class="flight-time">07:15</div>
+                        <div class="col-fourth detailed-price">
+                            <div>항공권 운임</div>
+                            <div>세금 및 제반요금</div>
+                            <div>유류할증료</div>
+                            <div>승객</div>
+                            <div>합계</div>
+                        </div>
+                        <div class="col-fourth detailed-price">
+                            <div class="price-${i}-1">3,000</div>
+                            <div class="price-${i}-2">4,000</div>
+                            <div class="price-${i}-3">5,500</div>
+                            <div class="price-${i}-4">${sessionScope.numOfPassengers}</div>
+                            <div class="price-${i}-5">129,500</div>
                         </div>
                     </div>
-                    <div class="col-fourth detailed-price">
-                        <div>항공권 운임</div>
-                        <div>세금 및 제반요금</div>
-                        <div>유류할증료</div>
-                        <div>구간별 개인할인</div>
-                        <div>승객</div>
-                        <div>합계</div>
-                    </div>
-                    <div class="col-fourth detailed-price">
-                        <div>120,000</div>
-                        <div>4,000</div>
-                        <div>5,500</div>
-                        <div>-</div>
-                        <div>성인 1</div>
-                        <div>129,500</div>
-                    </div>
-                </div>
-                <div class="row clearfix">
-                    <div class="col-two-fourth trip">
-                        <div class="col-tenth" style="text-align: left; margin-left: -20px; line-height: 222px">
-                            <i class="fas fa-plane-departure"></i>
-                        </div>
-                        <div class="col-fourth">
-                            <div class="airport-name">서울/김포</div>
-                            <div class="flight-date">2019.09.14(토)</div>
-                            <div class="flight-time">06:05</div>
-                        </div>
-                        <div class="col-two-fifth">
-                            <div class="flight-image">
-                                <img src = "../../../IMG/icon/flight-table.svg" alt = "">
-                            </div>
-                        </div>
-                        <div class="col-fourth">
-                            <div class="airport-name">제주</div>
-                            <div class="flight-date">2019.09.14(토)</div>
-                            <div class="flight-time">07:15</div>
-                        </div>
-                    </div>
-                    <div class="col-fourth detailed-price">
-                        <div>항공권 운임</div>
-                        <div>세금 및 제반요금</div>
-                        <div>유류할증료</div>
-                        <div>구간별 개인할인</div>
-                        <div>승객</div>
-                        <div>합계</div>
-                    </div>
-                    <div class="col-fourth detailed-price">
-                        <div>120,000</div>
-                        <div>4,000</div>
-                        <div>5,500</div>
-                        <div>-</div>
-                        <div>성인 1</div>
-                        <div>129,500</div>
-                    </div>
-                </div>
+                </c:forEach>
             </div>
             
             <div class="total-price">
                 <div class="row clearfix">
                     <div class="col-fourth">
                         결제상품금액
-                        <span>256,000 원</span>
+                        <span class="price-all-1"></span>
                     </div>
                     <div class="col-fourth">
                         총 할인금액
@@ -115,7 +87,7 @@
                     </div>
                     <div class="col-fourth">
                         총 결제금액
-                        <span class="font-blue4">256,000 원</span>
+                        <span class="font-blue4 price-all-2">256,000 원</span>
                     </div>
                 </div>
             </div>
@@ -167,25 +139,25 @@
                 
                 <div class="payment-section">
                     <p class="section-title">결제 정보 입력</p>
-                    <div id="payment-method-credit">
+                    <form id="payment-method-credit" method="post" action="<%=jsp%>/flight/payment/payment-complete">
                         <div class="row clearfix">
                             <div class="col-fourth payment-row-title">
                                     카드사명
                             </div>
                             <div class="col-three-fourth">
-                                <select>
-                                    <option value = "">카드회사를 선택해주세요.</option>
-                                    <option value = "">비씨카드</option>
-                                    <option value = "">삼성카드</option>
-                                    <option value = "">우리카드</option>
-                                    <option value = "">신한카드</option>
-                                    <option value = "">하나카드</option>
-                                    <option value = "">롯데카드</option>
-                                    <option value = "">현대카드</option>
-                                    <option value = "">KB국민카드</option>
-                                    <option value = "">농협은행</option>
-                                    <option value = "">한국씨티은행</option>
-                                    <option value = "">기업은행</option>
+                                <select name="company">
+                                    <option value="">카드회사를 선택해주세요.</option>
+                                    <option value="비씨카드">비씨카드</option>
+                                    <option value="삼성카드">삼성카드</option>
+                                    <option value="우리카드">우리카드</option>
+                                    <option value="신한카드">신한카드</option>
+                                    <option value="하나카드">하나카드</option>
+                                    <option value="롯데카드">롯데카드</option>
+                                    <option value="현대카드">현대카드</option>
+                                    <option value="KB국민카드">KB국민카드</option>
+                                    <option value="농협은행">농협은행</option>
+                                    <option value="한국씨티은행">한국씨티은행</option>
+                                    <option value="기업은행">기업은행</option>
                                 </select>
                             </div>
                         </div>
@@ -194,7 +166,7 @@
                                     카드번호
                             </div>
                             <div class="col-three-fourth">
-                                <input type = "number" placeholder="0000 0000 0000 0000">
+                                <input type="number" placeholder="0000 0000 0000 0000" name="number">
                             </div>
                         </div>
                         <div class="row clearfix">
@@ -202,7 +174,7 @@
                                     CVC
                             </div>
                             <div class="col-three-fourth">
-                                <input type = "number" placeholder="000">
+                                <input type="number" placeholder="000">
                             </div>
                         </div>
                         <div class="row clearfix">
@@ -210,7 +182,7 @@
                                     카드주명
                             </div>
                             <div class="col-three-fourth">
-                                <input type = "text" placeholder="이름을 입력하세요.">
+                                <input type = "text" placeholder="이름을 입력하세요." name="name">
                             </div>
                         </div>
                         <div class="row clearfix">
@@ -218,11 +190,11 @@
                                     만료일
                             </div>
                             <div class="col-three-fourth">
-                                <input type = "number" placeholder="YYYY"> / <input type = "number" placeholder="MM">
+                                <input type = "number" placeholder="YYYY" name="year"> / <input type = "number" placeholder="MM" name="month">
                             </div>
                         </div>
-                    </div>
-                    <div class="hidden" id="payment-method-transfer">
+                    </form>
+                    <form class="hidden" id="payment-method-transfer" method="post" action="/JSP/flight/payment/payment-complete">
                         <div class="row clearfix">
                             <div class="col-fourth payment-row-title">
                                     은행명
@@ -268,7 +240,7 @@
                                 <input type = "password" placeholder="비밀번호를 입력하세요.">
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
                 
                  <div class="payment-section" id="payment-method-mileage">
@@ -279,7 +251,7 @@
                         </div>
                         <div class="col-three-fourth">
                             <input type = "number" placeholder="000">
-                            <span>(마일리지 : 20,30 원)</span>
+                            <span>(마일리지 : 20,303 원)</span>
                         </div>
                      </div>
                      <div class="row clearfix">
@@ -312,7 +284,7 @@
                             <div>총 마일리지 사용</div>
                         </div>
                         <div class="col-half">
-                            <div>354,487 원</div>
+                            <div class="price-all-3">354,487 원</div>
                             <div>- 0 원</div>
                             <div>- 0 원</div>
                             <div>- 0 원</div>
@@ -320,7 +292,7 @@
                     </div>
                     <div class="row total">
                         <div>총 결제예정금액</div>
-                        <div><span class="font-blue4" id="total-pay">354,487</span> 원</div>
+                        <div><span class="font-blue4 price-all-4" id="total-pay">354,487</span> 원</div>
                     </div>
                     <div class="row">
                         <div>결제동의</div>
@@ -332,13 +304,18 @@
                             <label for="agree">동의합니다</label>
                         </div>
                     </div>
-                    <a href = "payment-complete.html"><input type = "button" class="blueBtn" value="결제하기" id="btn-pay"></a>
+                    <a href="javascript:"><input type="button" class="blueBtn" value="결제하기" id="btn-pay"></a>
                 </div>
             </div>
         </div>
     </section>
-    <script src="../../../JS/common.js"></script>
-    <script src="../../../JS/payment.js"></script>
+    <form action="<%=jsp %>/flight/booking/booking4" method="post" id="paymentFrm">
+        <input type="hidden" name="airportFrom">
+        <input type="hidden" name="airportTo">
+        <input type="hidden" name="flightNum">
+    </form>
+    
     <%@ include file="../../common/footer.jspf" %>
+    <script src="<%=js%>/payment.js"></script>
 </body>
 </html>

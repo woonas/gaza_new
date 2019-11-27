@@ -1009,8 +1009,8 @@ div[id^=regulation]>input[type=checkbox]:checked + label {
 
 /* 결제정보입력 */
 
-div[id^="payment-method-"]>.row { margin-bottom: 20px; }
-div[id^="payment-method-"]>ul { margin: 60px 30px; }
+form[id^="payment-method-"]>.row { margin-bottom: 20px; }
+form[id^="payment-method-"]>ul { margin: 60px 30px; }
 
 .payment-row-title { text-align: center; }
 
