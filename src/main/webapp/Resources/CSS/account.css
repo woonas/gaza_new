@@ -1132,8 +1132,8 @@ hr { margin-top: 40px; }
 .edit-form-wrapper #edit:checked + label { display: none; }
 .edit-form-wrapper #edit ~ a>label { display: none; color: #555; }
 .edit-form-wrapper #edit:checked ~ a>label { display: inline-block; }
-.edit-form-wrapper #edit ~ a>button[type=submit] { display: none; }
-.edit-form-wrapper #edit:checked ~ a>button[type=submit] { display: inline-block; }
+.edit-form-wrapper #edit ~ button { display: none; }
+.edit-form-wrapper #edit:checked ~ button { display: inline-block; }
 .edit-form-wrapper input[disabled] {
     background-color: #fff !important;
     border: 0;

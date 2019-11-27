@@ -180,7 +180,6 @@ const eventHandler = (_window, step2) => {
         const nextBtn = document.getElementById("nextBtn");
         const signup2Frm = document.getElementById("signup2Frm");
         nextBtn.addEventListener('click', function(){
-
             const agree_hompageUse = document.getElementById('agree_homepageUse');
             const agree_personalCollection = document.getElementById('agree_personalCollection');
             const agree_personalTransferToAbroad = document.getElementById('agree_personalTransferToAbroad');
