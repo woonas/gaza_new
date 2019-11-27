@@ -37,10 +37,13 @@ public class MyHomeContoller {
 		
 		List<MyHomeVO> orderNumList = dao.orderNumList(memberNum); 
 		List<MyHomeVO> flightI = new ArrayList<>();
+		List<Integer> orderedFlightNumList = new ArrayList<>();
 		
 		for(int i=0;i<orderNumList.size();i++) {//3 orderNumList안에 orderNum을 3개 세팅
 			
 			int num = dao.flightList(orderNumList.get(i).getOrderNum());
+			orderedFlightNumList.add(dao.getOrderedNum(orderNumList.get(i).getOrderNum()));
+			
 			int array[] = new int[orderNumList.size()];
 			array[i] = num;
 			
@@ -66,7 +69,7 @@ public class MyHomeContoller {
 			mav.addObject("flightI",flightI);
 			mav.addObject("reviewList0", reviewList0);
 			mav.addObject("reviewList1", reviewList1);
-			
+			mav.addObject("orderedFlightNumList", orderedFlightNumList);
 			mav.setViewName("JSP/mypage/myhome");
 		}else {
 			mav.setViewName("redirect:/");

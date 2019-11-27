@@ -150,8 +150,9 @@
                                             <div>${flightI[i-1].airplaneName }</div>
                                         </td>
                                         <td>
-                                            <div><a href="reserveStatus.html"><input type="button" class="blueBtn" value="상세보기"
-                                                                                     id="detail1"></a></div>
+                                            <div><a href="<%=jsp %>/mypage/reservation_detail?orderedFlightNum=${orderedFlightNumList[i-1]}">
+                                            	<input type="button" class="blueBtn" value="상세보기" id="detail1"></a>
+                                            </div>
                                         </td>
                                     </tr>
                                    </c:forEach> 

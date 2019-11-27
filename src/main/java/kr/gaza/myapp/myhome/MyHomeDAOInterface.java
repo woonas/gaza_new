@@ -18,6 +18,8 @@ public interface MyHomeDAOInterface {
 	
 	public int flightList(int orderNum);
 	
+	public int getOrderedNum(int orderNum);
+	
 	public MyHomeVO flightInfo(int flightNum);
 	
 	public MyHomeVO DepAri(int productNum);

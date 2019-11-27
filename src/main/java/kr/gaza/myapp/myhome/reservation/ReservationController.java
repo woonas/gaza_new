@@ -16,7 +16,7 @@ public class ReservationController {
 	@Autowired
 	SqlSession sqlSession;
 	//예약현황 페이지 이동.
-	@RequestMapping(value="/JSP/account/mypage/reservation_list")
+	@RequestMapping(value="/JSP/mypage/reservation_list")
 	public ModelAndView reservationListView(HttpServletRequest req) {
 		ReservationInterface dao = sqlSession.getMapper(ReservationInterface.class);
 		HttpSession sess = req.getSession();
@@ -26,8 +26,17 @@ public class ReservationController {
 		
 		
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("JSP/account/mypage/reservation_list");
+		mav.setViewName("JSP/mypage/reservation_list");
 		return mav;
 	}
-	
+	//예약 상세 페이지 이동.
+	@RequestMapping(value="/JSP/mypage/reservation_detail")
+	public ModelAndView reservationDetailView() {
+		
+		ModelAndView mav = new ModelAndView();
+		
+		mav.setViewName("JSP/mypage/reservation_detail");
+		
+		return mav;
+	}
 }
