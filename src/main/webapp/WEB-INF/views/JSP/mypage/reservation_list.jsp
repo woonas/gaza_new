@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %> 
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -37,8 +40,8 @@
 	                                <col style="width: 100px;" />
 	                                <col style="width: 200px" />
 	                                <col style="width: 350px" />
-	                                <col style="width: 250px" />
-	                                <col style="width: 150px" />
+	                                <col style="width: 200px" />
+	                                <col style="width: 200px" />
 	                                <col style="width: 110px" />
 	                            </colgroup>
 	                            <thead>
@@ -52,29 +55,36 @@
 	                                </tr>
 	                            </thead>
 	                            <tbody>
-	                            <c:forEach var="vo" items="${lst}">
-	                                <tr>
-	                                    <td>
-	                                        <div>${vo.flightNum}</div>
-	                                    </td>
-	                                    <td>
-	                                        <div>2019/01/01 (일)</div>
-	                                    </td>
-	                                    <td>
-	                                        <div>${vo.depart } → ${vo.arrive }</div>
-	                                    </td>
-	                                    <td>
-	                                        <div>${vo.departTime } → ${vo.arriveTime }</div>
-	                                    </td>
-	                                    <td>
-	                                        <div>${vo.airplaneName }</div>
-	                                    </td>
-	                                    <td>
-	                                        <div><a href="reservation_detail.html"><input type="button" class="blueBtn" value="상세보기"
-	                                                                                      id="detail1"></a></div>
-	                                    </td>
-	                                </tr>
-	                            </c:forEach>    
+	                             <c:forEach var="i" begin="1" end="${fn:length(flightI)}" step="1">
+                                <fmt:parseDate value="${flightI[i-1].departTime}" pattern="yyyy-MM-dd HH:mm" var="depart"/>
+                                <fmt:formatDate var="date1" pattern="yyyy-MM-dd HH:mm" value="${depart }"/>
+                                <fmt:parseDate value="${flightI[i-1].arriveTime}" pattern="yyyy-MM-dd HH:mm" var="arrive"/>
+                                 <fmt:formatDate var="arriveTime" pattern="yyyy-MM-dd HH:mm" value="${arrive }"/>  
+                                    <tr>
+                                        <td>
+                                            <div>${i }</div>
+                                        </td>
+                                        <td>
+                                            <div>${date1 }</div>
+                                        </td>
+                                        
+                                        <td>
+                                            <div>${flightI[i-1].departCity } → ${flightI[i-1].arriveCity }</div>
+                                        </td>
+                                        
+                                        <td>
+                                            <div>${arriveTime }</div>
+                                        </td>
+                                        <td>
+                                            <div>${flightI[i-1].airplaneName }</div>
+                                        </td>
+                                        <td>
+                                            <div><a href="<%=jsp %>/mypage/reservation_detail?orderedFlightNum=${orderedFlightNumList[i-1]}">
+                                            	<input type="button" class="blueBtn" value="상세보기" id="detail1"></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                   </c:forEach>    
 	                            </tbody>
 	                        </table>
 	                    </div>
