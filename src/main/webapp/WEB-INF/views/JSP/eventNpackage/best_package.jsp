@@ -42,7 +42,7 @@
                 <p>0${i }</p>
                 <p>${v.city }</p>
                 <p>GAZA AIR만의<br/>특별한 혜택!<br/>지금바로 만나보세요</p>
-                <a href="<%=request.getContextPath()%>/Resources/JSP/flight/booking/booking1?city=${v.city}&iata=${v.iata}"><button class="btn-booking blueBtn">예약하기</button></a>
+                <a href="<%=jsp%>/flight/booking/booking1?city=${v.city}&iata=${v.iata}"><button class="btn-booking blueBtn">예약하기</button></a>
             </div>
            </div>
            <c:set var="i" value="${i+1 }"/>

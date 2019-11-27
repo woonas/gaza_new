@@ -42,7 +42,7 @@
                                 <p>0${i -((j-1)*5) }</p>
                                 <p>${vo.city}</p>
                                 <p>${vo.rContent}</p>
-                                <a href="<%=request.getContextPath()%>/Resources/JSP/flight/booking/booking1?city=${vo.city}&iata=${vo.iata}"><button class="btn-booking blueBtn">예약하기</button></a>
+                                <a href="<%=jsp%>/flight/booking/booking1?city=${vo.city}&iata=${vo.iata}"><button class="btn-booking blueBtn">예약하기</button></a>
                             </div>
                         </div>
                     </c:if>
