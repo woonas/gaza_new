@@ -16,16 +16,12 @@
                                 <div class="panel-body">
                                     <form method="post" action="noticeAddOk">
 										<div class="row2 clearfix">
-                                            <div class="col-tenth">글타입:</div>
-                                            <div class="col-nine-tenth"><input type="text" name="noticeType"></div>
-                                        </div>
-										<div class="row2 clearfix">
                                             <div class="col-tenth">제목:</div>
                                             <div class="col-nine-tenth"><input type="text" name="subject"></div>
                                         </div>
 										<div class="row2 clearfix">
                                             <div class="col-tenth">공지내용: </div>
-                                            <div class="col-nine-tenth"><textarea rows="25" cols="87" name="content"></textarea></div>
+                                            <div class="col-nine-tenth"><textarea rows="25" cols="72" name="content"></textarea></div>
                                         </div>
 										<div class="submit-wrapper"><input type="submit" name="noticeAdd" value="공지사항 등록"><br/></div>
 									</form>

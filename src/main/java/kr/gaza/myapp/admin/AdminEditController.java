@@ -363,6 +363,7 @@ public class AdminEditController {
 	public ModelAndView AdminNoticeAddOk(NoticeBoardVO vo, HttpServletRequest req) {
 		
 		AdminEditInterface dao = sqlSession.getMapper(AdminEditInterface.class);
+		vo.setNoticeType(1);
 		int cnt = dao.insertNotice(vo);
 			
 		ModelAndView mav = new ModelAndView();
