@@ -2,7 +2,6 @@ package kr.gaza.myapp.myhome;
 
 import java.util.List;
 
-import kr.gaza.myapp.board.noticeBoard.NoticeBoardVO;
 import kr.gaza.myapp.board.reviewBoard.ReviewBoardVO;
 
 public interface MyHomeDAOInterface {
@@ -29,4 +28,6 @@ public interface MyHomeDAOInterface {
 	public List<ReviewBoardVO> getReview1(String memberId);
 	
 	public MyHomeVO departCity(String depart); 
+	
+	public MyHomeVO arriveCity(String arrive); 
 }

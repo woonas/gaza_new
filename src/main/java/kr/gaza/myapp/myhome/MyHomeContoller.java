@@ -49,8 +49,13 @@ public class MyHomeContoller {
 			
 			MyHomeVO flightInfoVO = dao.flightInfo(array[i]);//airplaneName, departTime, arriveTime, productNum을 세팅
 			MyHomeVO flightInfoVO2 = dao.DepAri(flightInfoVO.getProductNum());//productNum3개를 넣어서 depart, arrive위치를 구해옴.
+			MyHomeVO flightInfoVO3 = dao.departCity(flightInfoVO2.getDepart());
+			MyHomeVO flightInfoVO4 = dao.arriveCity(flightInfoVO2.getArrive());
 			flightInfoVO.setArrive(flightInfoVO2.getArrive());
 			flightInfoVO.setDepart(flightInfoVO2.getDepart());
+			flightInfoVO.setDepartCity(flightInfoVO3.getDepartCity());
+			flightInfoVO.setArriveCity(flightInfoVO4.getArriveCity());
+			
 			
 			flightI.add(i, flightInfoVO);
 
@@ -78,4 +83,12 @@ public class MyHomeContoller {
 		
 		return mav;
 	}
+	@RequestMapping("/JSP/mypage/mypage_GradeInfo")
+	public String gradeInfo() {
+		return "JSP/mypage/mypage_GradeInfo";
+	}
+
+	
+	
+	
 }

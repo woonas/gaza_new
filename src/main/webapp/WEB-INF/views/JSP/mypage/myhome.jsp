@@ -58,8 +58,8 @@
                         </div>
                         <div><span id="username" class="font-brown">${vo.memberNameKor}</span> 님의</div>
                         <div>회원등급은 <span id="usergrade" class="font-blue4">${vo3.memberGrade }등급</span>입니다.</div>
-                        <div><a href="../mypage_GradeInfo.html">
-                        <input type="button" class="blueBtn" value="등급혜택보기" id="grade-benefit"></a></div>
+                        <div><a href="<%=jsp%>/mypage/mypage_GradeInfo">
+                    	<input type="button" class="blueBtn" value="등급혜택보기" id="grade-benefit"></a></div>
                     </div>
                 </div>
                 <div class="col-two-fifth">
@@ -140,7 +140,7 @@
                                         </td>
                                         
                                         <td>
-                                            <div>${flightI[i-1].depart } → ${flightI[i-1].arrive }</div>
+                                            <div>${flightI[i-1].departCity } → ${flightI[i-1].arriveCity }</div>
                                         </td>
                                         
                                         <td>

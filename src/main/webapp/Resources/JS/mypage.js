@@ -141,4 +141,7 @@ function change(targetId){
 
          birth_option_generator();
      }
+     else if (location.pathname.indexOf('Grade') !== -1) {
+         tabEvent('.tab-menu1');
+     }
 })();
