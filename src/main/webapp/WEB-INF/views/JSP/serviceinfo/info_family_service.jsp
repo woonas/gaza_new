@@ -65,7 +65,6 @@
                			 </ul>
                     </div>
                 </div>
-      			<p class="section-title">신청방법</p>
             </div>
 	</section>
         <%@ include file="../common/footer.jspf" %>

@@ -350,8 +350,8 @@
                     </div>
                     <div class="customer-center">
                         <p>찾는 질문이 없다면?</p>
-                        <p>고객의 말씀을 남겨주세요.</p>
-                        <input type="button" class="whiteBtn" value="고객의 말씀 바로가기">
+                        <p>문의사항을 남겨주세요.</p>
+                        <input type="button" class="whiteBtn" value="문의사항 바로가기" onclick="location.href = '<%=jsp%>/board/reviewBoard/reviewBoard_list?pageNum=1&reviewType=1'">
                     </div>
                 </div>
             </div>

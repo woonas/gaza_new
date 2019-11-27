@@ -32,7 +32,6 @@
                         <p>항공권 결제 시 전자항공권 여정안내서를 개인 이메일, 팩스 등으로 발급하여 드립니다. <br>
                            출입국 신고 및 세관 통과 시 지참하셔야 하므로 전 여정에 소지하여 주시기 바랍니다.<br>
                            발급 받으신 후, 탑승 수속 시 제출하시면 빠르고 간편하게 탑승권을 받으실 수 있습니다.</p>
-                        <a href="../booking/booking1.html"><button class="whiteBtn">전자항공권여정안내서 이용안내</button></a>
                     </div>
                 </div> 
             </div>
@@ -105,7 +104,7 @@
                         <div class="col-fourth table-row-title">
                             마일리지 공제로 <br>
                             좌석승급 하기 <br>
-                            <a href="../booking/booking1.html"><button class="whiteBtn">나의 마일리지</button></a>
+                            <a href="<%=jsp%>/mypage/myhome"><button class="whiteBtn">나의 마일리지</button></a>
                         </div>
                         <div class="col-three-fourth">
                             <ul class="list-type2">
@@ -246,7 +245,7 @@
                     <div>
                         <p class="banner-title">쉽고 편리한 온라인 예약을 이용해보세요!</p> 
                         <p>PC는 물론, 모바일로도 간편하게 예약 가능!</p> 
-                        <a href="../booking/booking1.html"><button class="whiteBtn">항공권 예약</button></a>
+                        <a href="<%=jsp%>/flight/booking/booking1"><button class="whiteBtn">항공권 예약</button></a>
                     </div>
                 </div> 
             </div>

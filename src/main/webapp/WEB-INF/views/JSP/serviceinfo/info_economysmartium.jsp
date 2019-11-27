@@ -203,8 +203,6 @@
                     </tr>                          
                 </tbody>
             </table>
-            <p class="section-title">A350-900 이코노미 스마티움 좌석 배치도 안내</p>
-            <p class="section-title">이코노미 스마티움 서비스 소개</p>
 
             <ul class="list-type2 last-note bg-gray5">
                 <li class="list-inside-title">유의사항</li>
