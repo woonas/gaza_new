@@ -22,6 +22,27 @@ const calendarEvent = () => {
         document.querySelectorAll(".lightpick").forEach(lightpick => lightpick.classList.add('centeredXY') );
     });
 };
+function periodInit(months) {
+	const date1 = document.getElementById('flightDate-1');
+	const date2 = document.getElementById('flightDate-2');
+	
+	if (months === "custom") {
+		date1.value = date2.value = "";
+		date1.removeAttribute('disabled');
+		date1.removeAttribute('disabled');
+	} else {
+		const now = new Date();
+		date2.value = `${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}`;
+		const tempDate = new Date(now.getFullYear(), now.getMonth()-months, now.getDate());
+		date1.value = `${tempDate.getFullYear()}-${tempDate.getMonth()+1}-${tempDate.getDate()}`;
+		date1.setAttribute('disabled' , 'disabled');
+		date2.setAttribute('disabled' , 'disabled');
+		document.getElementById('startDate').innerHTML = date1.value
+		document.getElementById('endDate').innerHTML = date2.value
+
+		
+	}
+};
 
 
 /**********************************************************************/

@@ -7,9 +7,25 @@
     
         <meta charset="UTF-8">
         <title>구매 내역</title>
-        <link rel="stylesheet" href="../../CSS/my_page.css">
-        <link rel="stylesheet" href="<%=request.getContextPath() %>/Resources/CSS/navNfooter.css" type="text/css"/>
+        <link rel="stylesheet" href="<%=css %>/my_page.css">
+        <link rel="stylesheet" href="<%=css %>/navNfooter.css" type="text/css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script>window.onbeforeunload = () => window.scrollTo(0, 0)</script>
+        <script>
+	        $(function(){
+	    		$("#btn-search1").click(function(){
+	    			var startDate = document.getElementById("flightDate-1").value;
+	    			$.ajax({
+	    				url:"/JSP/mypage/search_list",
+	    				data: "startDate="+startDate+"&memberNum=${memberNum}",
+	    				success:function(result){
+	    					$("#no-data").html(result);
+	    				}
+	    			});
+	    		});
+	    });
+
+        </script>
     </head>
     <body>
     <%@ include file="../common/nav.jspf" %>
@@ -60,60 +76,55 @@
                         </div>
                     </div>
                 </div>
-                <div id="result">
-                    <div class="reserve-table">
-                        <div class="section-title">
-                            <span class="font-brown">2019.09.05</span>부터
-                            <span class="font-brown">2019.10.05</span>까지 조회 결과
-                        </div>
-                        <div>
-                            <div class="table-form3 mileage-table-detail">
-                                <div class="row clearfix table-row-title">
-                                    <div class="col-sixth">구매일</div>
-                                    <div class="col-third">상품</div>
-                                    <div class="col-sixth">결제금액</div>
-                                    <div class="col-sixth">결제상태</div>
-                                    <div class="col-sixth">비고</div>
-                                </div>
-                                <div class="row clearfix text-align-center">
-                                    <div class="col-line">
-                                        <br>조회된 데이터가 없습니다. <br><br>
-                                    </div>
-                                </div>
-                                <div class="row clearfix">
-                                    <div class="col-sixth">2019-09-09</div>
-                                    <div class="col-third">상품</div>
-                                    <div class="col-sixth">239,400</div>
-                                    <div class="col-sixth">
-                                        <div>결제완료</div>
-                                    </div>
-                                    <div class="col-sixth">
-                                        <a href="purchase_detail.html"><input type="button" value="상세보기" class="blueBtn"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <c:if test="${list.size() != 0 }">
+                <div class="section-title purchase-title">
+                    <span class="font-brown" id="startDate"></span>부터
+                    <span class="font-brown" id="endDate"></span>까지 조회 결과
                 </div>
-            </div>
-            <div class="no-record">
-                <p>온라인에서 확인 가능한 예약내역이 없습니다.</p>
-                예약 관련 구매/환불 영수증 확인을 원하실 경우 구매내역 메뉴을 이용해주세요. <br>
-                아시아나항공 온라인 이외의 경로에서 예약한 내역을 확인하고 싶으실 경우 <span class="font-brown">예약센터 1588-8000</span> 또는 각 구매처로 연락 주시기
-                바랍니다.
-            </div>
+                <table>
+                	<colgroup>
+                		<col style="width:210px"/>
+                		<col style="width:320px"/>
+                		<col style="width:210px"/>
+                		<col style="width:210px"/>
+                		<col style="width:210px"/>
+                	</colgroup>
+                	<thead>
+                		<tr>
+                			<th>구매일</th>
+                			<th>상품</th>
+                			<th>결제금액</th>
+                			<th>결제상태</th>
+                			<th>비고</th>
+                		<tr>
+                	<thead>   
+	                	<tbody id="no-data">
+	                		<tr>
+	                			<td colspan="5">조회된 데이터가 없습니다.<td>
+	                		</tr>
+	                	</tbody>
+                </table>
+                </c:if>
+                 <c:if test="${list.size() == 0 }">
+		            <div class="no-record">
+		                <p>온라인에서 확인 가능한 구매내역이 없습니다.</p>
+					                예약 관련 구매/환불 영수증 확인을 원하실 경우 구매내역 메뉴을 이용해주세요. <br>
+					                아시아나항공 온라인 이외의 경로에서 예약한 내역을 확인하고 싶으실 경우 <span class="font-brown">예약센터 1588-8000</span> 또는 각 구매처로 연락 주시기
+					                바랍니다.
+		            </div>
+            	</c:if>
+            	</div>
         </section>
-    
         <!-- Moment Js -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
     
         <!-- Lightpick CSS -->
-        <link rel="stylesheet" href="../../../Vendor/javascript-datepicker-lightpick/css/lightpick.css">
+        <link rel="stylesheet" href="<%=vendor %>/javascript-datepicker-lightpick/css/lightpick.css">
         <!-- Lightpick JS -->
-        <script src="../../../Vendor/javascript-datepicker-lightpick/js/lightpick.js"></script>
+        <script src="<%=vendor %>/javascript-datepicker-lightpick/js/lightpick.js"></script>
 
-        <script src="../../JS/common.js"></script>
-        <script src="../../JS/mypage.js"></script>
+        <script src="<%=js %>/common.js"></script>
+        <script src="<%=js %>/mypage.js"></script>
         <%@ include file="../common/footer.jspf" %>
     </body>
 </html>

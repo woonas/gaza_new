@@ -25,14 +25,9 @@ public class ReservationController {
 		MyHomeDAOInterface dao = sqlSession.getMapper(MyHomeDAOInterface.class);
 		HttpSession sess = req.getSession();
 		int memberNum = (int)sess.getAttribute("memberNum");
-		System.out.println(memberNum);
 		MyHomeVO vo =  dao.memberRecord(memberNum); 
 		MyHomeVO vo2 = dao.memberMiles(memberNum);
-		
-		//MyHomeVO vo3 = dao.memberGrade(vo2.getMyMileage());
-		//MyHomeVO vo4 = dao.memberNeedMileage(vo2.getMyMileage());
-		//int myNeedMiles = (vo4.getNeedMileage() - vo2.getMyMileage());
-		
+	
 		List<MyHomeVO> orderNumList = dao.orderNumList(memberNum); 
 		List<MyHomeVO> flightI = new ArrayList<>();
 		List<Integer> orderedFlightNumList = new ArrayList<>();
@@ -53,8 +48,7 @@ public class ReservationController {
 			flightInfoVO.setDepart(flightInfoVO2.getDepart());
 			flightInfoVO.setDepartCity(flightInfoVO3.getDepartCity());
 			flightInfoVO.setArriveCity(flightInfoVO4.getArriveCity());
-			System.out.println(flightInfoVO3.getDepartCity());
-			System.out.println(flightInfoVO4.getArriveCity());
+		
 			
 			flightI.add(i, flightInfoVO);
 
@@ -63,13 +57,7 @@ public class ReservationController {
 		
 		ModelAndView mav = new ModelAndView();
 		if(vo!=null) {
-			//mav.addObject("vo",vo);
-			//mav.addObject("vo2",vo2);
-			//mav.addObject("vo3",vo3);
-			//mav.addObject("myNeedMiles",myNeedMiles);
 			mav.addObject("flightI",flightI);
-			//mav.addObject("reviewList0", reviewList0);
-			//mav.addObject("reviewList1", reviewList1);
 			mav.addObject("orderedFlightNumList", orderedFlightNumList);
 			mav.setViewName("JSP/mypage/reservation_list");
 		}else {
