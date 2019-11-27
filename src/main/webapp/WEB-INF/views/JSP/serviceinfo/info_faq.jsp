@@ -25,8 +25,8 @@
                                     <li><a href="<%=jsp%>/serviceinfo/checkIn?abc=0&zyx=1">체크인안내</a></li>
                                     <li><a href="<%=jsp%>/serviceinfo/fare?abc=0&zyx=2">운임안내</a></li>
                                     <li><a href="#" onclick="return false;">탑승수속 절차</a></li>
-                                    <li class="no-compartment"><a href="#" onclick="return false;">출입국 신고서</a></li>
-                                    <li><a href="#" onclick="return false;">탑승수속</a></li>
+                                    <li><a href="#" onclick="return false;">출입국 신고서</a></li>
+                                    <li class="no-compartment"><a href="#" onclick="return false;">탑승수속</a></li>
                                     <li><a href="#" onclick="return false;">연결 탑승수속</a></li>
                                     <li><a href="#" onclick="return false;">출입국 규정조회</a></li>
                                 </ul>
@@ -39,8 +39,8 @@
                                     <li><a href="<%=jsp%>/serviceinfo/baggage_guide?abc=1&zyx=0">수하물이용</a></li>
                                     <li><a href="<%=jsp%>/serviceinfo/baggage_free?abc=1&zyx=1">위탁수하물</a></li>
                                     <li><a href="<%=jsp%>/serviceinfo/baggage_compensation?abc=1&zyx=2">수하물보상</a></li>
-                                    <li><a href="#" onclick="return false;">국제선 무료 위탁 수화물</a></li>
-                                    <li class="no-compartment"><a href="#" onclick="return false;">국내선 무료 위탁 수화물</a></li>
+                                    <li class="no-compartment"><a href="#" onclick="return false;">국제선 무료 위탁 수화물</a></li>
+                                    <li><a href="#" onclick="return false;">국내선 무료 위탁 수화물</a></li>
                                     <li><a href="#" onclick="return false;">특수 수화물 위탁</a></li>
                                     <li><a href="#" onclick="return false;">휴대 가능 수하물</a></li>
                                     <li><a href="#" onclick="return false;">수하물 계산기</a></li>
@@ -70,8 +70,8 @@
                                     <li><a href="<%=jsp%>/serviceinfo/businesszone?abc=3&zyx=1">비즈니스존</a></li>
                                     <li><a href="<%=jsp%>/serviceinfo/frontzone?abc=3&zyx=2">프론트존</a></li>
                                     <li><a href="<%=jsp%>/serviceinfo/duo?abc=3&zyx=3">듀오좌석</a></li>
-                                    <li class="no-compartment"><a href="<%=jsp%>/serviceinfo/economysmartium?abc=3&zyx=4">이코노미</a></li>
-                                    <li><a href="<%=jsp%>/serviceinfo/upgradestandby?abc=3&zyx=5">업그레이드</a></li>
+                                    <li><a href="<%=jsp%>/serviceinfo/economysmartium?abc=3&zyx=4">이코노미</a></li>
+                                    <li class="no-compartment"><a href="<%=jsp%>/serviceinfo/upgradestandby?abc=3&zyx=5">업그레이드</a></li>
                                     <li><a href="<%=jsp%>/serviceinfo/wifi?abc=3&zyx=6">기내와이파이</a></li>
                                     <li><a href="<%=jsp%>/serviceinfo/domestic?abc=3&zyx=7">기내통신판매</a></li>
                                 </ul>
@@ -84,8 +84,8 @@
                                     <li><a href="#" onclick="return false;">마일리지 적립몰</a></li>
                                     <li><a href="#" onclick="return false;">마일리지 적립몰 이용안내</a></li>
                                     <li><a href="#" onclick="return false;">누락마일리지 적립</a></li>
-                                    <li><a href="#" onclick="return false;">기타마일리지 제휴 항공사</a></li>
-                                    <li class="no-compartment"><a href="#" onclick="return false;">마일리지 양도</a></li>
+                                    <li class="no-compartment"><a href="#" onclick="return false;">마일리지 제휴 항공사</a></li>
+                                    <li><a href="#" onclick="return false;">마일리지 양도</a></li>
                                     <li><a href="#" onclick="return false;">마일리지 제휴 신용카드</a></li>
                                     <li><a href="#" onclick="return false;">마일리지 제휴 호텔</a></li>
                                     <li><a href="#" onclick="return false;">마일리지 제휴 렌터카</a></li>
@@ -114,10 +114,10 @@
                                     <li><a href="#" onclick="return false;">PC결제 안내</a></li>
                                     <li><a href="#" onclick="return false;">모바일 결제 안내</a></li>
                                     <li><a href="#" onclick="return false;">신용카드 할부 결제</a></li>
-                                    <li><a href="#" onclick="return false;">예약 부도 위약금</a></li>
-                                    <li class="no-compartment"><a href="#" onclick="return false;">마일리지 항공권 유효기간</a></li>
+                                    <li class="no-compartment"><a href="#" onclick="return false;">예약 부도 위약금</a></li>
+                                    <li><a href="#" onclick="return false;">마일리지 항공권 유효기간</a></li>
                                     <li><a href="#" onclick="return false;">국내선 항공권 유효기간</a></li>
-                                    <li><a href="#" onclick="return false;">온라인 할인쿠폰 사용 안내</a></li>
+                                    <li class="no-compartment"><a href="#" onclick="return false;">온라인 할인쿠폰 사용 안내</a></li>
                                     <li><a href="#" onclick="return false;">유류할증료 안내</a></li>
                                 </ul>
                             </div>
@@ -129,8 +129,8 @@
                                     <li><a href="#" onclick="return false;">온라인 체크인하기</a></li>
                                     <li><a href="#" onclick="return false;">오토체크인</a></li>
                                     <li><a href="#" onclick="return false;">공항 키오스크 셀프 체크인</a></li>
-                                    <li><a href="#" onclick="return false;">셀프 백드랍</a></li>
-                                    <li class="no-compartment"><a href="#" onclick="return false;">공항 카운터 체크인</a></li>
+                                    <li class="no-compartment"><a href="#" onclick="return false;">셀프 백드랍</a></li>
+                                    <li><a href="#" onclick="return false;">공항 카운터 체크인</a></li>
                                     <li><a href="#" onclick="return false;">온라인 체크인 이용 가능시간</a></li>
                                     <li><a href="#" onclick="return false;">이용 가능 공항</a></li>
                                 </ul>
@@ -356,7 +356,7 @@
                 </div>
             </div>
         </section>
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        
         <%@ include file="../common/footer.jspf" %>
         <script src="<%=path %>/Resources/JS/information.js"></script>
     </body>
