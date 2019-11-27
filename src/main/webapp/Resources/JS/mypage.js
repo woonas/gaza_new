@@ -35,7 +35,7 @@ function drawSeatImg() {
     for(j=1;j<3;j++){
         seatList += "<div class='busiseat-row'>";
         for(i=0;i<alphabet.length;i++){
-            seatList += `<span><img src='../../IMG/mypage_Img/seat_default.png' id='${j}${alphabet[i]}' onclick=\"change(this.id)\"/></span>`;
+            seatList += '<span><img src=\"'+x+'/Resources/IMG/mypage_Img/seat_default.png\" id=\"'+j+alphabet[i]+'\" onclick=\"change(this.id)\"/></span>';
         }
         seatList += "</div>";
     }
@@ -45,7 +45,7 @@ function drawSeatImg() {
     for(j=3; j<16; j++) {
         seatList += "<div class='seat-row'>";
         for(i=0; i<alphabet.length;i++){
-            seatList += `<span><img src='../../IMG/mypage_Img/seat_default.png' id='${j}${alphabet[i]}' onclick=\"change(this.id)\"/></span>`;
+            seatList += '<span><img src=\"'+x+'/Resources/IMG/mypage_Img/seat_default.png\" id=\"${j}${alphabet[i]}\" onclick=\"change(this.id)\"/></span>';
 
         }
         seatList += "</div>";
@@ -56,7 +56,7 @@ function drawSeatImg() {
     for(j=16; j<27; j++) {
         seatList += "<div class='seat-row'>";
         for(i=0; i<alphabet.length;i++){
-            seatList += `<span><img src='../../IMG/mypage_Img/seat_default.png' id='${j}${alphabet[i]}' onclick=\"change(this.id)\"/></span>`;
+            seatList += '<span><img src=\"'+x+'/Resources/IMG/mypage_Img/seat_default.png\" id=\"${j}${alphabet[i]}\" onclick=\"change(this.id)\"/></span>';
         }
         seatList += "</div>";
     }
@@ -67,10 +67,10 @@ function change(targetId){
     var imgSrc = document.getElementById(targetId).src;
     var selectedSeat = document.querySelector('img[src$="seat_red.png"]');
     if (imgSrc.indexOf('red') !== -1)
-        document.getElementById(targetId).src = "../../IMG/mypage_Img/seat_default.png";
+        document.getElementById(targetId).src = x+"/Resources/IMG/mypage_Img/seat_default.png";
     else if (imgSrc.indexOf('default') !== -1) {
-        if (selectedSeat) selectedSeat.src = "../../IMG/mypage_Img/seat_default.png";
-        document.getElementById(targetId).src = "../../IMG/mypage_Img/seat_red.png";
+        if (selectedSeat) selectedSeat.src = x+"/Resources/IMG/mypage_Img/seat_default.png";
+        document.getElementById(targetId).src = x+"/Resources/IMG/mypage_Img/seat_red.png";
     }
 }
 /***********************************************************/
