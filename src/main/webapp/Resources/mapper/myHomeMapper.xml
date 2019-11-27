@@ -27,6 +27,9 @@
 	<select id="DepAri" resultType="kr.gaza.myapp.myhome.MyHomeVO">
 		select depart, arrive from product where productnum=#{productNum}
 	</select>
+	<select id="departCity" resultType="kr.gaza.myapp.myhome.MyHomeVO">
+		select city from airport where IATA=#{depart}"
+	</select>
 	<select id="getReview0" resultType="kr.gaza.myapp.board.reviewBoard.ReviewBoardVO" parameterType="String">
 		select * from
 		(select reviewNum, reviewType, subject from reviewBoard where reviewType=0 and writer=#{value} order by reviewNum DESC)
@@ -41,5 +44,6 @@
 		where ROWNUM<=5
 		]]> 
 	</select>
+	
 	
 </mapper>

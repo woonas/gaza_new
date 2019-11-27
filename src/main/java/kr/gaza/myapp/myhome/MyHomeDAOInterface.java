@@ -25,4 +25,6 @@ public interface MyHomeDAOInterface {
 	public List<ReviewBoardVO> getReview0(String memberId);
 	//문의사항 글 가져오기
 	public List<ReviewBoardVO> getReview1(String memberId);
+	
+	public MyHomeVO departCity(String depart); 
 }
