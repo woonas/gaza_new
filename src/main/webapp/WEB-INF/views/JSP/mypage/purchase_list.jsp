@@ -16,7 +16,7 @@
 	    		$("#btn-search1").click(function(){
 	    			var startDate = document.getElementById("flightDate-1").value;
 	    			$.ajax({
-	    				url:"/JSP/mypage/search_list",
+	    				url:"<%=jsp%>/mypage/search_list",
 	    				data: "startDate="+startDate+"&memberNum=${memberNum}",
 	    				success:function(result){
 	    					$("#no-data").html(result);

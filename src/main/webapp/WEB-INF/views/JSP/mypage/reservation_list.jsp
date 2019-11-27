@@ -22,9 +22,9 @@
                 <li>탑승일이 지난 예약기록은 ‘항공권 구매내역’에서 확인하실 수 있습니다. <a href="<%=jsp %>/mypage/purchase_list" class="font-brown">구매내역 페이지로 이동</a></li>
                 <li class="font-red">타인의 항공권을 예약/발권하신 경우 ‘예약정보로 찾기’를 통해 예약조회 서비스를 이용하실 수 있습니다.</li>
             </ul>
-
+			<c:set var="length" value="${fn:length(flightI) }"/>
             <div id="result">  
-            	<c:if test="${lst.size() == 0}">
+            	<c:if test="${length == 0}">
             		<div class="no-record">
 		                <p>온라인에서 확인 가능한 예약내역이 없습니다.</p>
 				                예약 관련 구매/환불 영수증 확인을 원하실 경우 구매내역 메뉴을 이용해주세요. <br>
@@ -32,7 +32,7 @@
 				                바랍니다.
             		</div>
             	</c:if>
-            	<c:if test="${lst.size() != 0}">
+            	<c:if test="${length != 0}">
 	                <div class="reserve-table">
 	                    <div>
 	                        <table>
@@ -55,7 +55,7 @@
 	                                </tr>
 	                            </thead>
 	                            <tbody>
-	                             <c:forEach var="i" begin="1" end="${fn:length(flightI)}" step="1">
+	                             <c:forEach var="i" begin="1" end="${length}" step="1">
                                 <fmt:parseDate value="${flightI[i-1].departTime}" pattern="yyyy-MM-dd HH:mm" var="depart"/>
                                 <fmt:formatDate var="date1" pattern="yyyy-MM-dd HH:mm" value="${depart }"/>
                                 <fmt:parseDate value="${flightI[i-1].arriveTime}" pattern="yyyy-MM-dd HH:mm" var="arrive"/>
