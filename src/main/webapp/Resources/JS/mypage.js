@@ -83,12 +83,12 @@ function change(targetId){
 
 (() => {
 	 if(location.pathname.indexOf('myhome') !== -1) {
-         const my_mileage = 10000;
+		 const mileage_percent = my_mileage/(my_mileage+need_mileage);
          const add_num = Math.round(my_mileage/70);
          //메인 상단부 마일리지 원형 그래프
          setTimeout(() => {
              $('.circle').circleProgress({
-                 value: 0.8,
+                 value: mileage_percent,
                  size: 300,
                  thickness: 15,
                  fill: { color: '#36f' },
@@ -98,7 +98,10 @@ function change(targetId){
              }).on('circle-animation-end', function () {
                  $(this).find('strong').text(my_mileage);
              });
-         }, 1000)
+         }, 1000);
+         
+         document.querySelector('#mileagebar>div>div:first-of-type').style.width = (mileage_percent*100) + '%';
+         document.querySelector('#mileagebar>div>div:last-of-type').style.marginLeft = (mileage_percent*100-3) + '%';
      }
 
      else if(location.pathname.indexOf('mileage') !== -1) {

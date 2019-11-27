@@ -36,7 +36,7 @@
                     </div>
                     <div>
                         <div><a href="" class="font-gray3">소멸 예정 마일리지</a></div>
-                        <div id="mileage">${vo2.myMileage }</div>
+                        <div id="mileage">0</div>
                     </div>
                 </div>
                 <div id="boarding">
@@ -101,7 +101,7 @@
             <div class="row clearfix">
                 <div class="col-line">
                     <div class="section reserve-table">
-                        <div class="section-title bottom-border">
+                        <div class="section-title">
                             최근 예약
                             <a href="#"><input type="button" value="전체내역보기" class="blueBtn"></a>
                         </div>
@@ -210,11 +210,11 @@
                 </div>
             </div>
         </section>
-        <div style="height: 150px; background-color: #fff; clear:both;"></div>
          <%@ include file="../common/footer.jspf" %>
         <script src="https://rawgit.com/kottenator/jquery-circle-progress/1.2.1/dist/circle-progress.js"></script>
         <script type="text/javascript">
-        	//let my_mileage = ${myMiles};
+        	let my_mileage = ${vo2.myMileage };
+        	let need_mileage = ${myNeedMiles};
         </script>
         <script src="<%=request.getContextPath() %>/Resources/JS/mypage.js"></script>
        

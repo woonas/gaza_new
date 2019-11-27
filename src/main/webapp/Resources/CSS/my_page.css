@@ -75,7 +75,7 @@
 /* 섹션 디자인 */
 
 .section {
-    min-height: 200px;
+    min-height: 222px;
     background: #fff no-repeat 96% 88%;
     padding: 25px 20px;
 }
@@ -119,13 +119,14 @@ section.content>.row>div>.section {
 .section-title + div { margin-top: 20px; }
 
 /* 섹션별로 배경넣기 */
-.my-write { background-image: url("../IMG/icon/write.png"); }
+.my-write { background-image: url("../IMG/icon/write.png"); min-height: 300px; }
 .interest-list { background-image: url("../IMG/icon/favorite.png"); }
 .my-mileage { background-image: url("../IMG/icon/mileage.png"); }
 .my-grade { background-image: url("../IMG/icon/grade.png"); }
 .my-question {
     background-image: url("../IMG/icon/question.png");
     background-size: 52px;
+    min-height: 300px;
 }
 
 .my-mileage,
