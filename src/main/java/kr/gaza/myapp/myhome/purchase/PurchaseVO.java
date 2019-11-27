@@ -15,10 +15,17 @@ public class PurchaseVO {
 	private String payDate;
 	private String totalPrice;
 	private int orderNum;
+	private int memberNum;
 	
 	
 	
 	
+	public int getMemberNum() {
+		return memberNum;
+	}
+	public void setMemberNum(int memberNum) {
+		this.memberNum = memberNum;
+	}
 	public String getPayDate() {
 		return payDate;
 	}
