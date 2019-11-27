@@ -94,7 +94,7 @@ public class BookingController {
             bookingVO.getSeatLeftList().add(bookingDAO.getSeatLeft(flightList));
         }
 
-        // journeydate 포맷다시 바꾸기
+        // journeydate �룷留룸떎�떆 諛붽씀湲�
         for (JourneyVO journeyVO : bookingVO.getJourneyList())
             journeyVO.getFlightDate().replace("-","/");
 
@@ -198,7 +198,7 @@ public class BookingController {
             }
             List<List<FlightVO>> flightVOList = vo.getFlightList();
             priceList.add(new ArrayList<>());
-            //가격비교
+            //媛�寃⑸퉬援�
             temp = productList.get(i).getPrice() * productList.get(i).getProductSale();
             for (int j = 0; j < flightVOList.size(); j++) {
                 for (int k = 0; k < flightVOList.get(j).size(); k++) {

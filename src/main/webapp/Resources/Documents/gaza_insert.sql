@@ -1,7 +1,7 @@
 set define off;
 
 -----member---------------------------------------------------------------------------
-insert into member values(membernum_sq.nextval, 'test3333', 'qwerqwer1', '홍 길동', 'gildong hong', 'South Korea (대한민국)', 'M', '010-3333-3333', '없음', '13480', '경기 성남시 분당구 대왕판교로 477', '111-11', 'test@naver.com', '2019/10/15', 'on/off', 'on/off', 10, sysdate);
+insert into member values(membernum_sq.nextval, 'test3333', 'qwerqwer1', '홍 길동', 'gildong hong', 'South Korea (대한민국)', 'M', '010-3333-3333', '없음', '13480', '경기 성남시 분당구 대왕판교로 477', '111-11', 'min89_@naver.com', '2019/10/15', 'on/off', 'on/off', 10, sysdate);
 
 -----airplane---------------------------------------------------------------------------
 INSERT INTO airplane VALUES('GZ123',270);

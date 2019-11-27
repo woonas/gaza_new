@@ -1,6 +1,8 @@
 DROP TABLE seatReserve 
 purge;
 
+drop SEQUENCE seatReservenum_sq;
+
 DROP TABLE seat 
 purge;
 
@@ -92,8 +94,6 @@ drop SEQUENCE paymentnum_sq;
 drop SEQUENCE adminnum_sq;
 
 drop SEQUENCE flightnum_sq;
-
-drop SEQUENCE seatReservenum_sq;
 
 drop SEQUENCE seatTypenum_sq;
 
