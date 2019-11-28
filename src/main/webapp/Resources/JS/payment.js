@@ -55,45 +55,45 @@ function numberWithCommas(x) {
     btnPay.addEventListener('click', () => {
         const selectedMethod = document.querySelector('input[name=payment-method]:checked');
         const targetForm = document.getElementById('payment-method-' + selectedMethod.id);
-        const inputTxts = document.querySelectorAll('#'+targetForm.id+" input:not([type:hidden]" );
+        const inputTxts = document.querySelectorAll('#'+targetForm.id+" input" );
         // const selectBox = document.querySelector('#'+targetForm.id+" select");
         let isfilled = true;
         for (let i = 0; i < inputTxts.length; i++) {
             if (inputTxts[i].value === "") isfilled = false;
         }
         if (isfilled) {
-            const flightArr = JSON.parse(sessionStorage.getItem('flightArr'));
-            const passengerArr = JSON.parse(sessionStorage.getItem('passengerArr'));
-            const passengers = sessionStorage.getItem('numOfPassengers');
-            const totalPrice = JSON.parse(sessionStorage.getItem('prices'));
-
-            const airportFromHidden = document.querySelector('input[name=airportFrom]');
-            const airportToHidden = document.querySelector('input[name=airportTo]');
-            const flightNumHidden = document.querySelector('input[name=flightNum]');
-            const pNameHidden = document.querySelector('input[name=pName]');
-            const pBirthHidden = document.querySelector('input[name=pBirth]');
-            const price= document.querySelector('input[name=totalPrice]');
-            document.querySelector('input[name=passengers');
-
-            for (let i = 0; i < flightArr.length; i++) {
-                airportFromHidden.value += flightArr[i][0];
-                airportToHidden.value += flightArr[i][1];
-                flightNumHidden.value += flightArr[i][2];
-                if (i != 0) {
-                    airportFromHidden.value += '!@#';
-                    airportToHidden.value += '!@#';
-                    flightNumHidden.value += '!@#';
-                }
-            }
-
-            for (let i = 0; i < passengerArr.length; i++) {
-                pNameHidden.value += passengerArr[i][0];
-                pBirthHidden.value += passengerArr[i][1];
-            }
-
-            for (let i = 0; i < totalPrice.length; i++) {
-                price.value += totalPrice[i];
-            }
+//            const flightArr = JSON.parse(sessionStorage.getItem('flightArr'));
+//            const passengerArr = JSON.parse(sessionStorage.getItem('passengerArr'));
+//            const passengers = sessionStorage.getItem('numOfPassengers');
+//            const totalPrice = JSON.parse(sessionStorage.getItem('prices'));
+//
+//            const airportFromHidden = document.querySelector('input[name=airportFrom]');
+//            const airportToHidden = document.querySelector('input[name=airportTo]');
+//            const flightNumHidden = document.querySelector('input[name=flightNum]');
+//            const pNameHidden = document.querySelector('input[name=pName]');
+//            const pBirthHidden = document.querySelector('input[name=pBirth]');
+//            const price= document.querySelector('input[name=totalPrice]');
+//            document.querySelector('input[name=passengers');
+//
+//            for (let i = 0; i < flightArr.length; i++) {
+//                airportFromHidden.value += flightArr[i][0];
+//                airportToHidden.value += flightArr[i][1];
+//                flightNumHidden.value += flightArr[i][2];
+//                if (i != 0) {
+//                    airportFromHidden.value += '!@#';
+//                    airportToHidden.value += '!@#';
+//                    flightNumHidden.value += '!@#';
+//                }
+//            }
+//
+//            for (let i = 0; i < passengerArr.length; i++) {
+//                pNameHidden.value += passengerArr[i][0];
+//                pBirthHidden.value += passengerArr[i][1];
+//            }
+//
+//            for (let i = 0; i < totalPrice.length; i++) {
+//                price.value += totalPrice[i];
+//            }
 
             targetForm.submit();
         }

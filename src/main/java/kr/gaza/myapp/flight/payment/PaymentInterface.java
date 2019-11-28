@@ -18,14 +18,4 @@ public interface PaymentInterface {
 	int passengerInsert(PassengerVO vo);
 
 	int paymentInsert(PaymentVO vo);
-
-	int
 }
-
-
-    private int payNum;
-    private String orderNum;
-    private String memberNum;
-    private int milesNum;
-    private int totalPrice;
-    private String payDate;

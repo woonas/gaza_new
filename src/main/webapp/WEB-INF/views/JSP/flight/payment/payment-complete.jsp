@@ -23,10 +23,10 @@
                     <div class="col-fourth font-blue4">최종 결제금액</div>
                 </div>
                 <div class="row clearfix">
-                    <div class="col-fourth">130,000 원</div>
+                    <div class="col-fourth">402,900 원</div>
                     <div class="col-fourth">0 원</div>
                     <div class="col-fourth">0 원</div>
-                    <div class="col-fourth font-blue4">130,000 원</div>
+                    <div class="col-fourth font-blue4">402,900 원</div>
                 </div>
             </div>
         </div>
@@ -49,13 +49,13 @@
                 <div class="row clearfix">
                     <div class="col-fifth">결제정보</div>
                     <div class="col-four-fifth">
-                        국민카드 / 4173-8901-7483
+                        삼성카드 / 1234-1234-1234-1234
                     </div>
                 </div>
                 <div class="row clearfix">
                     <div class="col-fifth">결제금액</div>
                     <div class="col-four-fifth font-blue4">
-                        130,000 원
+                        402,900 원
                     </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@
                 <div class="row clearfix">
                     <div class="col-fifth">적립포인트</div>
                     <div class="col-four-fifth font-blue4">
-                        0P
+                        402P
                     </div>
                 </div>
             </div>
