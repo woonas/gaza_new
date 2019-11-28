@@ -169,10 +169,10 @@ CREATE TABLE orderedFlight (
 	orderedFlightNum NUMBER NOT NULL,
 	orderNum NUMBER,
 	foodNum NUMBER,
+	PassengerNum NUMBER,
 	seatReserveNum NUMBER,
 	flightNum NUMBER NOT NULL
 );
-
 
 CREATE TABLE noticeBoard (
 	noticeNum NUMBER NOT NULL,

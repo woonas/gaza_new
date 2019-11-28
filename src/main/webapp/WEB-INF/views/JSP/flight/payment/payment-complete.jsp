@@ -75,7 +75,7 @@
         
         <div class="button-wrapper">
             <a href = "<%=path%>/"><input type = "button" value="홈으로" class="blueBtn"></a>
-            <a href = "#"><input type = "button" value="예약현황" class="whiteBtn"></a>
+            <a href = "<%=jsp%>/mypage/reservation_list"><input type = "button" value="예약현황" class="whiteBtn"></a>
         </div>
     </section>
     <%@ include file="../../common/footer.jspf" %>

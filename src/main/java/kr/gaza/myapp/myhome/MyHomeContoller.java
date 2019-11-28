@@ -49,6 +49,7 @@ public class MyHomeContoller {
 			
 			MyHomeVO flightInfoVO = dao.flightInfo(array[i]);//airplaneName, departTime, arriveTime, productNum을 세팅
 			MyHomeVO flightInfoVO2 = dao.DepAri(flightInfoVO.getProductNum());//productNum3개를 넣어서 depart, arrive위치를 구해옴.
+			
 			MyHomeVO flightInfoVO3 = dao.departCity(flightInfoVO2.getDepart());
 			MyHomeVO flightInfoVO4 = dao.arriveCity(flightInfoVO2.getArrive());
 			flightInfoVO.setArrive(flightInfoVO2.getArrive());
