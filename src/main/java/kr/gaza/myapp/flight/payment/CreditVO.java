@@ -5,6 +5,8 @@ public class CreditVO {
     private int payNum;
     private String company;
     private String creditNo;
+    private String year;
+    private String month;
     private String expireDate;
     private String creditName;
 
@@ -39,13 +41,30 @@ public class CreditVO {
     public void setCreditNo(String creditNo) {
         this.creditNo = creditNo;
     }
+    
+    public String getYear() {
+		return year;
+	}
 
-    public String getExpireDate() {
+	public void setYear(String year) {
+		this.year = year;
+	}
+
+	public String getMonth() {
+		return month;
+	}
+
+	public void setMonth(String month) {
+		this.month = month;
+		setExpireDate();
+	}
+
+	public String getExpireDate() {
         return expireDate;
     }
 
-    public void setExpireDate(String expireDate) {
-        this.expireDate = expireDate;
+    public void setExpireDate() {
+        expireDate = year+"/"+month;
     }
 
     public String getCreditName() {

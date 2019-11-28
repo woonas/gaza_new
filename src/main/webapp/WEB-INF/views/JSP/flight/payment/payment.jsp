@@ -166,7 +166,7 @@
                                     카드번호
                             </div>
                             <div class="col-three-fourth">
-                                <input type="number" placeholder="0000 0000 0000 0000" name="number">
+                                <input type="number" placeholder="0000 0000 0000 0000" name="creditNo">
                             </div>
                         </div>
                         <div class="row clearfix">
@@ -182,7 +182,7 @@
                                     카드주명
                             </div>
                             <div class="col-three-fourth">
-                                <input type = "text" placeholder="이름을 입력하세요." name="name">
+                                <input type = "text" placeholder="이름을 입력하세요." name="creditName">
                             </div>
                         </div>
                         <div class="row clearfix">
