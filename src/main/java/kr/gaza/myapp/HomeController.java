@@ -3,12 +3,16 @@ package kr.gaza.myapp;
 import java.util.List;
 import java.util.Locale;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import kr.gaza.myapp.board.noticeBoard.NoticeBoardVO;
@@ -46,5 +50,34 @@ public class HomeController {
 		mav.addObject("reviewList", reviewList);
 		return mav;
 	}
+	@RequestMapping(value = "/JSP/simpleBooking")
+	public ModelAndView simpleBooking(
+			@RequestParam("airportFrom-1") String airportFrom,
+			@RequestParam("airportTo-1") String airportTo,
+			@RequestParam("fromDate") String fromDate,
+			@RequestParam("toDate") String toDate,
+			@RequestParam("trip-type") String flight_type,
+			@RequestParam("num-of-passengers") String numOfPassengers,
+			@RequestParam("class-type") String seatType,
+			HttpServletRequest req
+			) {	
+		
+		String flightDate = fromDate+"&"+toDate;
+		
+		HttpSession sess = req.getSession();
+		
+		sess.setAttribute("flight-type", flight_type);
+		sess.setAttribute("airportFrom", airportFrom);
+		sess.setAttribute("airportTo", airportTo);
+		sess.setAttribute("flightDate", flightDate);
+		sess.setAttribute("numOfPassengers", numOfPassengers);
+		sess.setAttribute("seatType", seatType);
+		
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("JSP/flight/booking/booking2");
+		
+		return mav;
+	}
+	
 }
 

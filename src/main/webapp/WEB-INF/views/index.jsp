@@ -34,7 +34,7 @@
                 <div class="dotsWrap"><div class="playState"></div></div>
             </div>
             <!-- 심플예약폼 -->
-            <form method="get" action="<%=jsp%>/flight/booking/booking1">
+            <form method="get" action="<%=jsp%>/simpleBooking">
                 <div class="reserve_wrap">
                     <div class="reserveBox">
                         <div>
