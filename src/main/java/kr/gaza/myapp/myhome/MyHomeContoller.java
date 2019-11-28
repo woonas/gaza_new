@@ -88,7 +88,12 @@ public class MyHomeContoller {
 	public String gradeInfo() {
 		return "JSP/mypage/mypage_GradeInfo";
 	}
-
+	@RequestMapping(value="/JSP/mypage/interested_route", method=RequestMethod.GET)
+	public String myRoute(HttpServletRequest req) {
+		
+		
+		return "JSP/mypage/interested_route";
+	}
 	
 	
 	
