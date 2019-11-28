@@ -45,7 +45,7 @@ public class BookingController {
         request.setCharacterEncoding("UTF-8");
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("JSP/flight/booking/booking2");
-
+        
         BookingVO bookingVO = new BookingVO();
         bookingVO.setJourneyType(request.getParameter("flight-type"));
         String[] airportFrom = request.getParameter("airportFrom").split("&");
