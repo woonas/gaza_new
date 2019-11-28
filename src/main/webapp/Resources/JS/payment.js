@@ -55,7 +55,7 @@ function numberWithCommas(x) {
     btnPay.addEventListener('click', () => {
         const selectedMethod = document.querySelector('input[name=payment-method]:checked');
         const targetForm = document.getElementById('payment-method-' + selectedMethod.id);
-        const inputTxts = document.querySelectorAll('#'+targetForm.id+" input" );
+        const inputTxts = document.querySelectorAll('#'+targetForm.id+" input:not([type:hidden]" );
         // const selectBox = document.querySelector('#'+targetForm.id+" select");
         let isfilled = true;
         for (let i = 0; i < inputTxts.length; i++) {
