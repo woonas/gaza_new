@@ -21,8 +21,8 @@ insert into miles values(milesnum_sq.nextval,2800,'2019-07-07');
 
 -----my miles---------------------------------------------------------------------------
 INSERT INTO mymiles values(mymilesnum_sq.nextval, 1,1235);
-INSERT INTO mymiles values(mymilesnum_sq.nextval, 2,1236);
-INSERT INTO mymiles values(mymilesnum_sq.nextval, 3,1237);
+INSERT INTO mymiles values(mymilesnum_sq.nextval, 2,1235);
+INSERT INTO mymiles values(mymilesnum_sq.nextval, 3,1235);
 INSERT INTO mymiles values(mymilesnum_sq.nextval, 4,1238);
 INSERT INTO mymiles values(mymilesnum_sq.nextval, 5,1239);
 INSERT INTO mymiles values(mymilesnum_sq.nextval, 6,1240);
@@ -61,6 +61,7 @@ INSERT INTO airplane VALUES('GZ712',270);
 -----airport---------------------------------------------------------------------------
 INSERT INTO airport VALUES(airportnum_sq.nextval,'NGO','나고야','동아시아','34.858618','136.811189','/new_product_img/saipan.jpg');
 INSERT INTO airport VALUES(airportnum_sq.nextval,'GMP','서울/김포','동아시아','37.558797','126.802898','/new_product_img/saipan.jpg');
+INSERT INTO airport VALUES(airportnum_sq.nextval,'ICN','서울/인천','동아시아','37.558797','126.802898','/new_product_img/saipan.jpg');
 INSERT INTO airport VALUES(airportnum_sq.nextval,'WJU','원주','동아시아','37.459224','127.977151','/new_product_img/saipan.jpg');
 INSERT INTO airport VALUES(airportnum_sq.nextval,'CJJ','청주','동아시아','36.72196','127.495889','/new_product_img/saipan.jpg');
 INSERT INTO airport VALUES(airportnum_sq.nextval,'TAE','대구','동아시아','35.899478','128.638397','/new_product_img/daegu.jpg');
@@ -220,12 +221,6 @@ INSERT INTO product VALUES(productnum_sq.nextval,'ICN','LAS',1054000,519,0.85,sy
 INSERT INTO product VALUES(productnum_sq.nextval,'ICN','JFK',525300,124,0.87,sysdate);
 INSERT INTO product VALUES(productnum_sq.nextval,'ICN','HNL',358000,215,0.98,sysdate);
 INSERT INTO product VALUES(productnum_sq.nextval,'ICN','LAX',57500,59,0.98,sysdate);
-select * from product;
-update product set arrive = 'JFK' where productnum=1;
-
-update product set arrive = 'JFK' where productnum = 1;
-commit;
-
 
 -----recommandProduct-----------------------------------------------------------------
 INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,11,sysdate,'나 홀로 떠나는 제주여행,<br/>어디를 가도 시원하고<br/>높은 하늘과 선선한 바람을 느끼자');
@@ -312,26 +307,16 @@ INSERT INTO payment VALUES(paymentnum_sq.nextval,9,1235,9,0,350000,sysdate);
 INSERT INTO payment VALUES(paymentnum_sq.nextval,10,1235,10,0,750000,sysdate);
 
 ----orderedFlight---------------------------------------------------------------------------
-INSERT INTO orderedFlight VALUES(orderedFlightnum_sq.nextval,1,1,1,1,1897);
-INSERT INTO orderedFlight VALUES(orderedFlightnum_sq.nextval,1,1,1,1,9999);
-INSERT INTO orderedFlight VALUES(orderedFlightnum_sq.nextval,2,2,2,2,8888);
-INSERT INTO orderedFlight VALUES(orderedFlightnum_sq.nextval,2,2,2,2,7777);
-INSERT INTO orderedFlight VALUES(orderedFlightnum_sq.nextval,3,3,3,3,5555);
-INSERT INTO orderedFlight VALUES(orderedFlightnum_sq.nextval,3,3,3,3,3333);
-INSERT INTO orderedFlight VALUES(orderedFlightnum_sq.nextval,4,4,4,4,2222);
-INSERT INTO orderedFlight VALUES(orderedFlightnum_sq.nextval,4,4,4,4,1234);
-INSERT INTO orderedFlight VALUES(orderedFlightnum_sq.nextval,5,5,5,5,5678);
-INSERT INTO orderedFlight VALUES(orderedFlightnum_sq.nextval,5,5,5,5,9876);
-INSERT INTO orderedFlight VALUES(orderedFlightnum_sq.nextval,6,6,6,6,6543);
-INSERT INTO orderedFlight VALUES(orderedFlightnum_sq.nextval,6,6,6,6,5321);
-INSERT INTO orderedFlight VALUES(orderedFlightnum_sq.nextval,7,7,7,7,1667);
-INSERT INTO orderedFlight VALUES(orderedFlightnum_sq.nextval,7,7,7,7,9987);
-INSERT INTO orderedFlight VALUES(orderedFlightnum_sq.nextval,8,8,8,8,1998);
-INSERT INTO orderedFlight VALUES(orderedFlightnum_sq.nextval,8,8,8,8,2020);
-INSERT INTO orderedFlight VALUES(orderedFlightnum_sq.nextval,9,9,9,9,3030);
-INSERT INTO orderedFlight VALUES(orderedFlightnum_sq.nextval,9,9,9,9,7077);
-INSERT INTO orderedFlight VALUES(orderedFlightnum_sq.nextval,10,10,10,10,8128);
-INSERT INTO orderedFlight VALUES(orderedFlightnum_sq.nextval,10,10,10,10,7567);
+INSERT INTO orderedFlight VALUES(orderedFlightnum_sq.nextval,1,1,1,1,1401);
+INSERT INTO orderedFlight VALUES(orderedFlightnum_sq.nextval,2,1,1,1,1402);
+INSERT INTO orderedFlight VALUES(orderedFlightnum_sq.nextval,3,2,2,2,1403);
+INSERT INTO orderedFlight VALUES(orderedFlightnum_sq.nextval,4,2,2,2,1404);
+INSERT INTO orderedFlight VALUES(orderedFlightnum_sq.nextval,5,3,3,3,1405);
+INSERT INTO orderedFlight VALUES(orderedFlightnum_sq.nextval,6,3,3,3,1406);
+INSERT INTO orderedFlight VALUES(orderedFlightnum_sq.nextval,7,4,4,4,1407);
+INSERT INTO orderedFlight VALUES(orderedFlightnum_sq.nextval,8,4,4,4,1408);
+INSERT INTO orderedFlight VALUES(orderedFlightnum_sq.nextval,9,5,5,5,1409);
+INSERT INTO orderedFlight VALUES(orderedFlightnum_sq.nextval,10,5,5,5,1410);
 
 ----account---------------------------------------------------------------------------
 INSERT INTO account VALUES(accountnum_sq.nextval,1,'국민은행','15648135431351','홍길동');
@@ -691,3 +676,11 @@ insert into noticeboard values(noticeboardnum_sq.nextval, 1, '니하오, 난 아
 
 -----------------admin-------------------
 insert into ADMIN values(adminnum_sq.nextval, 'master1234', 'q1w2e3r4!', '김동한', '010-3333-3333', 'kimdonghan@naver.com', sysdate);
+
+------grade---------------------------------------------------------------------------
+select * from grade;
+insert into grade values('실버',0);
+insert into grade values('골드',5000);
+insert into grade values('루비',8000);
+insert into grade values('플레티넘',10000);
+insert into grade values('다이아몬드',30000);
