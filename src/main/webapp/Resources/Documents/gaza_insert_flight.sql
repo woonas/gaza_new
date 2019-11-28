@@ -1399,3 +1399,15 @@ insert into flight values (flightnum_sq.nextval,'GZ129',10,'2019-12-28 18:20','2
 insert into flight values (flightnum_sq.nextval,'GZ916',10,'2019-12-28 19:05','2019-12-28 23:30',0.907);
 insert into flight values (flightnum_sq.nextval,'GZ712',10,'2019-12-28 20:55','2019-12-28 23:40',0.902);
 insert into flight values (flightnum_sq.nextval,'GZ123',10,'2019-12-28 20:45','2019-12-28 23:20',0.825);
+
+insert into flight values (flightnum_sq.nextval,'GZ815',10,'2018-08-13 14:40','2018-09-01 22:20',0.83);
+insert into flight values (flightnum_sq.nextval,'GZ005',10,'2017-10-21 15:30','2017-12-01 22:20',0.77);
+insert into flight values (flightnum_sq.nextval,'GZ007',10,'2019-09-02 16:30','2019-12-01 22:20',0.8);
+insert into flight values (flightnum_sq.nextval,'GZ009',10,'2018-11-27 16:20','2018-12-01 22:20',0.78);
+insert into flight values (flightnum_sq.nextval,'GZ010',10,'2017-07-22 17:20','2017-12-01 22:20',0.8);
+insert into flight values (flightnum_sq.nextval,'GZ017',10,'2018-12-01 17:10','2019-12-01 22:20',0.83);
+insert into flight values (flightnum_sq.nextval,'GZ013',10,'2019-11-12 17:15','2019-12-01 22:20',0.89);
+insert into flight values (flightnum_sq.nextval,'GZ129',10,'2017-11-01 18:20','2017-12-01 22:20',0.85);
+insert into flight values (flightnum_sq.nextval,'GZ916',10,'2018-12-03 19:05','2018-12-30 22:20',0.79);
+insert into flight values (flightnum_sq.nextval,'GZ712',10,'2019-10-28 20:55','2019-12-01 22:20',0.89);
+insert into flight values (flightnum_sq.nextval,'GZ123',10,'2017-11-29 20:45','2017-12-15 22:20',0.77);
