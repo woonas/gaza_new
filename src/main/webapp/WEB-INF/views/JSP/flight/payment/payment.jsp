@@ -193,6 +193,12 @@
                                 <input type = "number" placeholder="YYYY" name="year"> / <input type = "number" placeholder="MM" name="month">
                             </div>
                         </div>
+                        <input type="hidden" name="airportFrom">
+                        <input type="hidden" name="airportTo">
+                        <input type="hidden" name="flightNum">
+                        <input type="hidden" name="pName">
+                        <input type="hidden" name="pBirth">
+                        <input type="hidden" name="totalPrice">
                     </form>
                     <form class="hidden" id="payment-method-transfer" method="post" action="/JSP/flight/payment/payment-complete">
                         <div class="row clearfix">

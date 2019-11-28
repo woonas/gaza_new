@@ -61,7 +61,39 @@ function numberWithCommas(x) {
         for (let i = 0; i < inputTxts.length; i++) {
             if (inputTxts[i].value === "") isfilled = false;
         }
-        if (isfilled) targetForm.submit();
+        if (isfilled) {
+            const flightArr = JSON.parse(sessionStorage.getItem('flightArr'));
+            const passengerArr = JSON.parse(sessionStorage.getItem('passengerArr'));
+            const totalPrice = JSON.parse(sessionStorage.getItem('prices'));
+
+            const airportFromHidden = document.querySelector('input[name=airportFrom]');
+            const airportToHidden = document.querySelector('input[name=airportTo]');
+            const flightNumHidden = document.querySelector('input[name=flightNum]');
+            const pNameHidden = document.querySelector('input[name=pName]');
+            const pBirthHidden = document.querySelector('input[name=pBirth]');
+            const price= document.querySelector('input[name=totalPrice]');
+            for (let i = 0; i < flightArr.length; i++) {
+                airportFromHidden.value += flightArr[i][0];
+                airportToHidden.value += flightArr[i][1];
+                flightNumHidden.value += flightArr[i][2];
+                if (i != 0) {
+                    airportFromHidden.value += '!@#';
+                    airportToHidden.value += '!@#';
+                    flightNumHidden.value += '!@#';
+                }
+            }
+
+            for (let i = 0; i < passengerArr.length; i++) {
+                pNameHidden.value += passengerArr[i][0];
+                pBirthHidden.value += passengerArr[i][1];
+            }
+
+            for (let i = 0; i < totalPrice.length; i++) {
+                price.value += totalPrice[i];
+            }
+
+            targetForm.submit();
+        }
         else {
             alert('모든 항목을 입력해주십시오.');
             return false;
