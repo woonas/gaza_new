@@ -86,7 +86,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-fifth">
+                <div class="col-fifth" onclick="location.href='interested_route'">
                     <div class="section interest-list">
                         <div class="section-title bottom-border">
                             관심노선
