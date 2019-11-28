@@ -16,7 +16,7 @@
     <section class="content">
         <h3>결제</h3>
         <div class="bag">
-            <p class="bag-head">결제 대기중인 상품(1)</p>
+            <p class="bag-head">결제 대기중인 상품(${fn:length(flightList)})</p>
             <div class="bag-content table-form3">
                 <div class="row clearfix table-row-title">
                     <div class="col-two-fourth">여정</div>

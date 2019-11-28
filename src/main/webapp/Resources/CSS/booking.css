@@ -887,6 +887,7 @@ div[id^=regulation]>input[type=checkbox]:checked + label {
     padding: 50px 0 40px;
     margin-top: 30px;
 }
+#payment-method-mileage>.row { margin-bottom: 20px; }
 
 .bag-head {
     color: #333;

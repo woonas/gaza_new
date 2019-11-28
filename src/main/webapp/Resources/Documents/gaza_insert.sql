@@ -223,6 +223,10 @@ INSERT INTO product VALUES(productnum_sq.nextval,'ICN','LAX',57500,59,0.98,sysda
 select * from product;
 update product set arrive = 'JFK' where productnum=1;
 
+update product set arrive = 'JFK' where productnum = 1;
+commit;
+
+
 -----recommandProduct-----------------------------------------------------------------
 INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,11,sysdate,'나 홀로 떠나는 제주여행,<br/>어디를 가도 시원하고<br/>높은 하늘과 선선한 바람을 느끼자');
 INSERT INTO recommandProduct VALUES(recommandproductnum_sq.nextval,12,sysdate,'일출시티 포항!<br/>다같이 방문해 포항~!');
