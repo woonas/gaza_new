@@ -476,10 +476,10 @@
                             성별
                         </div>
                         <div class="gender-wrapper">
-                            <input type="radio" class="radio3" name="gender-1" id="male-2" checked>
-                            <label for="male-1">남성</label>
-                            <input type="radio" class="radio3" name="gender-1" id="female-2">
-                            <label for="female-1">여성</label>
+                            <input type="radio" class="radio3" name="gender-2" id="male-2" checked>
+                            <label for="male-2">남성</label>
+                            <input type="radio" class="radio3" name="gender-2" id="female-2">
+                            <label for="female-2">여성</label>
                         </div>
                     </div>
                 </div>
@@ -646,10 +646,10 @@
                             성별
                         </div>
                         <div class="gender-wrapper">
-                            <input type="radio" class="radio3" name="gender-1" id="male-3">
-                            <label for="male-1">남성</label>
-                            <input type="radio" class="radio3" name="gender-1" id="female-3" checked>
-                            <label for="female-1">여성</label>
+                            <input type="radio" class="radio3" name="gender-3" id="male-3">
+                            <label for="male-3">남성</label>
+                            <input type="radio" class="radio3" name="gender-3" id="female-3" checked>
+                            <label for="female-3">여성</label>
                         </div>
                     </div>
                 </div>
@@ -816,9 +816,9 @@
                             성별
                         </div>
                         <div class="gender-wrapper">
-                            <input type="radio" class="radio3" name="gender-1" id="male-4" checked>
+                            <input type="radio" class="radio3" name="gender-4" id="male-4" checked>
                             <label for="male-4">남성</label>
-                            <input type="radio" class="radio3" name="gender-1" id="female-4">
+                            <input type="radio" class="radio3" name="gender-4" id="female-4">
                             <label for="female-4">여성</label>
                         </div>
                     </div>
