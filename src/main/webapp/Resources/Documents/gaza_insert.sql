@@ -295,16 +295,16 @@ INSERT INTO ordertbl VALUES(ordertblnum_sq.nextval);
 INSERT INTO ordertbl VALUES(ordertblnum_sq.nextval);
 
 ----payment---------------------------------------------------------------------------
-INSERT INTO payment VALUES(paymentnum_sq.nextval,1,1235,1,0,1500000,sysdate);
-INSERT INTO payment VALUES(paymentnum_sq.nextval,2,1235,2,0,2500000,sysdate);
-INSERT INTO payment VALUES(paymentnum_sq.nextval,3,1235,3,1,350000,sysdate);
-INSERT INTO payment VALUES(paymentnum_sq.nextval,4,1235,4,1,750000,sysdate);
-INSERT INTO payment VALUES(paymentnum_sq.nextval,5,1235,5,0,350000,sysdate);
-INSERT INTO payment VALUES(paymentnum_sq.nextval,6,1235,6,0,750000,sysdate);
-INSERT INTO payment VALUES(paymentnum_sq.nextval,7,1235,7,1,350000,sysdate);
-INSERT INTO payment VALUES(paymentnum_sq.nextval,8,1235,8,1,750000,sysdate);
-INSERT INTO payment VALUES(paymentnum_sq.nextval,9,1235,9,0,350000,sysdate);
-INSERT INTO payment VALUES(paymentnum_sq.nextval,10,1235,10,0,750000,sysdate);
+INSERT INTO payment VALUES(paymentnum_sq.nextval,1,1235,1,0,1500000,sysdate-32);
+INSERT INTO payment VALUES(paymentnum_sq.nextval,2,1235,2,0,2500000,sysdate-48);
+INSERT INTO payment VALUES(paymentnum_sq.nextval,3,1235,3,1,350000,sysdate-52);
+INSERT INTO payment VALUES(paymentnum_sq.nextval,4,1235,4,1,750000,sysdate-32);
+INSERT INTO payment VALUES(paymentnum_sq.nextval,5,1235,5,0,350000,sysdate-10);
+INSERT INTO payment VALUES(paymentnum_sq.nextval,6,1235,6,0,750000,sysdate-7);
+INSERT INTO payment VALUES(paymentnum_sq.nextval,7,1235,7,1,350000,sysdate-11);
+INSERT INTO payment VALUES(paymentnum_sq.nextval,8,1235,8,1,750000,sysdate-62);
+INSERT INTO payment VALUES(paymentnum_sq.nextval,9,1235,9,0,350000,sysdate-8);
+INSERT INTO payment VALUES(paymentnum_sq.nextval,10,1235,10,0,750000,sysdate-65);
 
 ----orderedFlight---------------------------------------------------------------------------
 INSERT INTO orderedFlight VALUES(orderedFlightnum_sq.nextval,1,1,1,1,1401);
