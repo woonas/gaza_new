@@ -162,7 +162,6 @@ function edit() {
 
      else if(location.pathname.indexOf('reservation_detail') !== -1){
          drawSeatImg();
-         hintWindow('membership-hint');
 
          hintWindow('selectFood', true, true, true);
          hintWindow('selectSeat', true, true, true);
