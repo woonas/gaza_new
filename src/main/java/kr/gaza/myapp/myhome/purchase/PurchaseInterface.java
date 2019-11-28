@@ -1,8 +1,10 @@
 package kr.gaza.myapp.myhome.purchase;
 
+import org.apache.ibatis.annotations.Param;
+
 import java.util.List;
 
 public interface PurchaseInterface {
-	//flightRecord 가져오기.
-	public List<PurchaseVO> purchaseRecord(int memberNum,String startDate);
+	//flightRecord
+	List<PurchaseVO> purchaseRecord(@Param("memberNum") int memberNum, @Param("startDate") String startDate, @Param("endDate") String endDate);
 }

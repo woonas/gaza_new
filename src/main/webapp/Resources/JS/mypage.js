@@ -22,6 +22,7 @@ const calendarEvent = () => {
         document.querySelectorAll(".lightpick").forEach(lightpick => lightpick.classList.add('centeredXY') );
     });
 };
+
 function periodInit(months) {
 	const date1 = document.getElementById('flightDate-1');
 	const date2 = document.getElementById('flightDate-2');
@@ -29,21 +30,22 @@ function periodInit(months) {
 	if (months === "custom") {
 		date1.value = date2.value = "";
 		date1.removeAttribute('disabled');
-		date1.removeAttribute('disabled');
+		date2.removeAttribute('disabled');
 	} else {
 		const now = new Date();
 		date2.value = `${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}`;
 		const tempDate = new Date(now.getFullYear(), now.getMonth()-months, now.getDate());
-		date1.value = `${tempDate.getFullYear()}-${tempDate.getMonth()+1}-${tempDate.getDate()}`;
+		date1.value = `${tempDate.getFullYear()}-`; `${tempDate.getMonth()+1}-${tempDate.getDate()}`;
+		if (tempDate.getMonth() < 9) date1.value += `0${tempDate.getMonth()+1}-`;
+		else date1.value += `${tempDate.getMonth()+1}-`;
+		if (tempDate.getDate() < 10) date1.value += `0${tempDate.getDate()}`;
+        else date1.value += `${tempDate.getDate()}`;
 		date1.setAttribute('disabled' , 'disabled');
 		date2.setAttribute('disabled' , 'disabled');
-		document.getElementById('startDate').innerHTML = date1.value
-		document.getElementById('endDate').innerHTML = date2.value
-
-		
+		// document.getElementById('startDate').innerHTML = date1.value;
+		// document.getElementById('endDate').innerHTML = date2.value;
 	}
-};
-
+}
 
 /**********************************************************************/
 
@@ -98,10 +100,6 @@ function change(targetId){
 
 
 
-
-
-
-
 (() => {
 	 if(location.pathname.indexOf('myhome') !== -1) {
 		 const mileage_percent = my_mileage/(my_mileage+need_mileage);
@@ -139,14 +137,15 @@ function change(targetId){
 
      else if(location.pathname.indexOf('purchase_list') !== -1) {
          calendarEvent();
+         periodInit(document.querySelector('input[name=period]:checked').id.split('-')[2]);
+         const periodRadios = document.querySelectorAll('input[name=period]');
+         periodRadios.forEach(periodRadio => periodRadio.addEventListener('change', () => periodInit(document.querySelector('input[name=period]:checked').id.split('-')[2])));
      }
 
      else if(location.pathname.indexOf('interested_route') !== -1) {
          openPicker('.open-airport-picker', true);
      }
 
-
-     //Todo 나중에 함수하고 다시 체크
      else if(location.pathname.indexOf('reservation_detail') !== -1){
          drawSeatImg();
          hintWindow('membership-hint');

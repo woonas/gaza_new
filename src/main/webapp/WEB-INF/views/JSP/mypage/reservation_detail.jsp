@@ -456,7 +456,7 @@
 		<input type="hidden" value="Y">
 		<div class="button-wrapper">
 			<input type="button" value="결제하기" class="blueBtn reservePayment">
-			<input type="button" value="취소" class="whiteBtn reserveCancle">
+			<input type="button" value="취소" class="whiteBtn reserveCancel">
 		</div>
 	</section>
  	<%@ include file="../common/footer.jspf" %>

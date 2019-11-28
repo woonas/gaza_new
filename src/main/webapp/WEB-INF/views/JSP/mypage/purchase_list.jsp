@@ -1,30 +1,29 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+
 <!DOCTYPE html>
 <html>
     <head>
-    
         <meta charset="UTF-8">
         <title>구매 내역</title>
         <link rel="stylesheet" href="<%=css %>/my_page.css">
-        <link rel="stylesheet" href="<%=css %>/navNfooter.css" type="text/css"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script>window.onbeforeunload = () => window.scrollTo(0, 0)</script>
         <script>
 	        $(function(){
 	    		$("#btn-search1").click(function(){
 	    			var startDate = document.getElementById("flightDate-1").value;
+	    			var endDate = document.getElementById("flightDate-2").value;
 	    			$.ajax({
 	    				url:"<%=jsp%>/mypage/search_list",
-	    				data: "startDate="+startDate+"&memberNum=${memberNum}",
+	    				data: "startDate="+startDate+"&endDate="+endDate,
 	    				success:function(result){
 	    					$("#no-data").html(result);
 	    				}
 	    			});
 	    		});
-	    });
-
+	        });
         </script>
     </head>
     <body>
@@ -70,13 +69,14 @@
                             <br>
                             <input type="button" class="blueBtn" value="조회하기" id="btn-search1">
                             <div>
-                                <input type="text" id="flightDate-1" readonly> 부터 ~
+                                <input type="text" id="flightDate-1" readonly> 부터
                                 <input type="text" id="flightDate-2" readonly> 까지
                             </div>
                         </div>
                     </div>
                 </div>
-                <c:if test="${list.size() != 0 }">
+                <c:set var="length" value="${fn:length(list) }"/>
+                <c:if test="${length != 0 }">
                 <div class="section-title purchase-title">
                     <span class="font-brown" id="startDate"></span>부터
                     <span class="font-brown" id="endDate"></span>까지 조회 결과
@@ -98,23 +98,24 @@
                 			<th>비고</th>
                 		<tr>
                 	<thead>   
-	                	<tbody id="no-data">
-	                		<tr>
-	                			<td colspan="5">조회된 데이터가 없습니다.<td>
-	                		</tr>
-	                	</tbody>
+                    <tbody id="no-data">
+                        <tr>
+                            <td colspan="5">조회된 데이터가 없습니다.<td>
+                        </tr>
+                    </tbody>
                 </table>
                 </c:if>
-                 <c:if test="${list.size() == 0 }">
+                 <c:if test="${length == 0 }">
 		            <div class="no-record">
 		                <p>온라인에서 확인 가능한 구매내역이 없습니다.</p>
 					                예약 관련 구매/환불 영수증 확인을 원하실 경우 구매내역 메뉴을 이용해주세요. <br>
-					                아시아나항공 온라인 이외의 경로에서 예약한 내역을 확인하고 싶으실 경우 <span class="font-brown">예약센터 1588-8000</span> 또는 각 구매처로 연락 주시기
+					                가자에어 온라인 이외의 경로에서 예약한 내역을 확인하고 싶으실 경우 <span class="font-brown">예약센터 1588-8000</span> 또는 각 구매처로 연락 주시기
 					                바랍니다.
 		            </div>
             	</c:if>
             	</div>
         </section>
+        
         <!-- Moment Js -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
     
@@ -122,9 +123,8 @@
         <link rel="stylesheet" href="<%=vendor %>/javascript-datepicker-lightpick/css/lightpick.css">
         <!-- Lightpick JS -->
         <script src="<%=vendor %>/javascript-datepicker-lightpick/js/lightpick.js"></script>
-
-        <script src="<%=js %>/common.js"></script>
-        <script src="<%=js %>/mypage.js"></script>
+        
         <%@ include file="../common/footer.jspf" %>
+        <script src="<%=js %>/mypage.js"></script>
     </body>
 </html>

@@ -5,7 +5,6 @@
 	<script>
 		alert("글이 삭제되었습니다. \n리스트 페이지로 이동합니다.");
 		location.href="<%=request.getContextPath()%>/Resources/JSP/reviewBoard/list.do?pageNum=${vo.pageNum}";
-		
 	</script>
 </c:if>
 <!-- 삭제 실패 -->
