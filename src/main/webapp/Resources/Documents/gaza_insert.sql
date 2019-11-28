@@ -678,7 +678,6 @@ insert into noticeboard values(noticeboardnum_sq.nextval, 1, '니하오, 난 아
 insert into ADMIN values(adminnum_sq.nextval, 'master1234', 'q1w2e3r4!', '김동한', '010-3333-3333', 'kimdonghan@naver.com', sysdate);
 
 ------grade---------------------------------------------------------------------------
-select * from grade;
 insert into grade values('실버',0);
 insert into grade values('골드',5000);
 insert into grade values('루비',8000);
