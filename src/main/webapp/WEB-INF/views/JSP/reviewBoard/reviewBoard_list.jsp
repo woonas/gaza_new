@@ -6,9 +6,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>이용후기</title>
-	<link rel="stylesheet" href="../../../CSS/navNfooter.css" type="text/css"/>
-	<link rel="stylesheet" href="../../../CSS/layout.css" type="text/css"/>
-	<link rel="stylesheet" href="../../../CSS/notice.css" type="text/css"/>
+	<link rel="stylesheet" href="<%=css %>/layout.css" type="text/css"/>
+	<link rel="stylesheet" href="<%=css %>/CSS/notice.css" type="text/css"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<style>
 		.tabBtn{width:50%;}

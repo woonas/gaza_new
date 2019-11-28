@@ -54,11 +54,15 @@ function periodInit(months) {
 function drawSeatImg() {
     var seatList = "";
     var alphabet = ["A","B","C","D","E","F","G","H","J","K"];
-
+    var four = 0;
     for(j=1;j<3;j++){
         seatList += "<div class='busiseat-row'>";
         for(i=0;i<alphabet.length;i++){
-            seatList += '<span><img src=\"'+x+'/Resources/IMG/mypage_Img/seat_default.png\" id=\"'+j+alphabet[i]+'\" onclick=\"change(this.id)\"/></span>';
+            if(four%4 != 0)
+            	seatList += '<span><img src=\"'+x+'/Resources/IMG/mypage_Img/seat_default.png\" id=\"'+j+alphabet[i]+'\" onclick=\"change(this.id)\"/></span>';
+            else 
+            	seatList += '<span><img src=\"'+x+'/Resources/IMG/mypage_Img/seat_gray.png\" id=\"'+j+alphabet[i]+'\" onclick=\"change(this.id)\"/></span>';
+            four++;
         }
         seatList += "</div>";
     }
@@ -68,8 +72,11 @@ function drawSeatImg() {
     for(j=3; j<16; j++) {
         seatList += "<div class='seat-row'>";
         for(i=0; i<alphabet.length;i++){
-            seatList += '<span><img src=\"'+x+'/Resources/IMG/mypage_Img/seat_default.png\" id=\"${j}${alphabet[i]}\" onclick=\"change(this.id)\"/></span>';
-
+        	if(four%7 != 0 && four%9 != 0)
+            	seatList += '<span><img src=\"'+x+'/Resources/IMG/mypage_Img/seat_default.png\" id=\"'+j+alphabet[i]+'\" onclick=\"change(this.id)\"/></span>';
+            else 
+            	seatList += '<span><img src=\"'+x+'/Resources/IMG/mypage_Img/seat_gray.png\" id=\"'+j+alphabet[i]+'\" onclick=\"change(this.id)\"/></span>';
+            four++;
         }
         seatList += "</div>";
     }
@@ -79,7 +86,11 @@ function drawSeatImg() {
     for(j=16; j<27; j++) {
         seatList += "<div class='seat-row'>";
         for(i=0; i<alphabet.length;i++){
-            seatList += '<span><img src=\"'+x+'/Resources/IMG/mypage_Img/seat_default.png\" id=\"${j}${alphabet[i]}\" onclick=\"change(this.id)\"/></span>';
+        	if(four%4 != 0 && four%9 != 0)
+            	seatList += '<span><img src=\"'+x+'/Resources/IMG/mypage_Img/seat_default.png\" id=\"'+j+alphabet[i]+'\" onclick=\"change(this.id)\"/></span>';
+            else 
+            	seatList += '<span><img src=\"'+x+'/Resources/IMG/mypage_Img/seat_gray.png\" id=\"'+j+alphabet[i]+'\" onclick=\"change(this.id)\"/></span>';
+            four++;
         }
         seatList += "</div>";
     }

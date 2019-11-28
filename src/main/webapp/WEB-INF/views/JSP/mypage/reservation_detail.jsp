@@ -9,6 +9,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/9c923ac74a.js" crossorigin="anonymous"></script>
     <script>window.onbeforeunload = () => window.scrollTo(0, 0)</script>
+    <script>
+    	$(function(){
+    		//버튼 클릭하면 닫기.
+    		$('.closeBtn').on("click", function(){
+    			$(".pop-up-window-type1").css("display", "none");
+    			$(".overlay").css("display", "none");
+    		});
+    	});
+    </script>
 </head>
 <body>
 <%@ include file="../common/nav.jspf" %>
@@ -54,7 +63,7 @@
                     수수료없음
                 </div>
                 <div class="col-eighth">
-                    <input type="button" value="환불" class="blueBtn" id="refundBtn" />
+                    <input type="button" value="환불" class="blueBtn closeBtn" id="refundBtn" />
                 </div>
             </div>
         </div>
@@ -67,7 +76,7 @@
                     <div class="col-fourth">구분</div>
                     <div class="col-fourth">금액 <span class="currency">(KRW)</span></div>
                 </div>
-                <div class="row clearfix">
+                <div class="row clearfix" style="border: none">
                     <div class="col-two-fourth trip">
                         <div class="col-tenth">
                             <i class="fas fa-plane-departure"></i>
@@ -117,7 +126,7 @@
                     <div class="col-xs-12">
                         <input type="checkbox" class="hidden" id="edit">
                         <label for="edit" class="whiteBtn btn">탑승객정보 수정</label>
-                        <a href="../../mypage"><button type="submit" class="btn blueBtn">수정</button></a>
+                        <a href="../../mypage"><button type="submit" class="btn blueBtn closeBtn">수정</button></a>
                         <a href="../../mypage"><label for = "edit" class = "whiteBtn btn">취소</label></a>
                     </div>
                 </div>
@@ -331,7 +340,7 @@
 					<div id="frontEco-seat" class="seatDiv"></div>
 					<div id="back-seat" class="seatDiv"></div>
 				</div>
-                <input type="button" class="blueBtn" value="선택하기" id="changeSeat">
+                <input type="button" class="blueBtn closeBtn closeBtn" aria-hidden="true" value="선택하기" id="changeSeat">
             </div>
         </div>
         
@@ -360,7 +369,7 @@
 						<div class="col-half food-content">
 							<div class="row food-title">
                                 시그니처불고기라이스
-                                <button class="blueBtn foodSelect">선택하기</button>
+                                <button class="blueBtn closeBtn foodSelect">선택하기</button>
                             </div>
 							<div class="row food-word">한국을 대표하는 맛있는 불고기 요리를 따뜻한 밥과 함께 드립니다.</div>
 							<div class="row clearfix food-detail">
@@ -380,7 +389,7 @@
 						<div class="col-half food-content">
 							<div class="row clearfix food-title">
                                 bbq 치킨강정 (순한맛)
-                                <button class="blueBtn foodSelect">선택하기</button>
+                                <button class="blueBtn closeBtn foodSelect">선택하기</button>
                             </div>
 							<div class="row clearfix food-word">부드러운 살코기와 BBQ만의 특제 강정소스가 곁들여져 남녀노소 누구나 맛있게 드실 수 있습니다. *치킨무 제공</div>
 							<div class="row clearfix food-detail">
@@ -400,7 +409,7 @@
 						<div class="col-half food-content">
 							<div class="row clearfix food-title">
                                 bbq 치킨강정 (매운맛)
-                                <button class="blueBtn foodSelect">선택하기</button>
+                                <button class="blueBtn closeBtn foodSelect">선택하기</button>
                             </div>
 							<div class="row clearfix food-word">하늘 위에서 더 맛있는, BBQ만의 매콤달콤한 특제강정소스로 버무러진 치킨강정 간편식 또는 맥주 안주로도 인기만점 입니다. *치킨무 제공</div>
 							<div class="row clearfix food-detail">
@@ -414,9 +423,219 @@
 						</div>
 					</div>
 				</div>
-                <div id="tab-2-container" class="tab-content-container"></div>
-                <div id="tab-3-container" class="tab-content-container"></div>
-                <div id="tab-4-container" class="tab-content-container"></div>
+				<div id="tab-2-container" class="tab-content-container hidden">
+					<div id="tab-2-product-1" class="row clearfix food-wrapper">
+						<div class="col-half img-wrapper">
+							<img src="<%=img %>/food/FTML.png">
+						</div>
+						<div class="col-half food-content">
+							<div class="row clearfix food-title">
+								유부초밥 & 스프링롤
+								<button class="blueBtn closeBtn foodSelect">선택하기</button>	
+							</div>
+								
+							<div class="row clearfix food-word">새콤달콤 유부초밥에 베트남 스타일인
+								스프링롤을 곁들여서 드립니다.</div>
+							<div class="row clearfix food-detail">
+								<div class="col-fourth">가격</div>
+								<div class="col-three-fourth">￦10,000 / ￥1,000 / ＄10 / 元60</div>
+								<div class="col-fourth">제공 노선</div>
+								<div class="col-three-fourth">인천, 김포, 제주 출발 국제선</div>
+								<div class="col-fourth">주재료</div>
+								<div class="col-three-fourth">쌀,유부(대두,밀),계란,맛살,단무지,햄,로메인상추,라이스페이퍼,돼지고기,토마토,대두,밀,닭고기,쇠고기,무우,닭고기</div>
+							</div>
+						</div>
+					</div>
+					<div id="tab-2-product-2" class="row clearfix food-wrapper">
+						<div class="col-half img-wrapper">
+							<img src="<%=img %>/food/CDML.png">
+						</div>
+						<div class="col-half food-content">
+							<div class="row clearfix food-title">콜드델리카시
+								<button class="blueBtn closeBtn foodSelect">선택하기</button>
+							</div>
+							<div class="row clearfix food-word">이스타항공의 대표적인 일품요리로 많은
+								사랑을 받고 있는 메뉴입니다. 샐러드를 곁들인 절인연어, 양배추 쌈요리, 오렌지 아몬드치킨, 과일샐러드, 삼색피망과
+								단호박구이, 계란말이로 구성되어 있습니다.</div>
+							<div class="row clearfix food-detail">
+								<div class="col-fourth">가격</div>
+								<div class="col-three-fourth">￦12,000 / ￥1,200 / ＄12 / 元75</div>
+								<div class="col-fourth">제공 노선</div>
+								<div class="col-three-fourth">인천, 김포, 제주 출발 국제선</div>
+								<div class="col-fourth">주재료</div>
+								<div class="col-three-fourth">계란,닭고기,돼지고기,우유,대두,토마토,포도,맛살(게),쌀,양배추,아몬드,연어(생선),캐이퍼,블랙올리브,양파,단호박,피망,훈제닭가슴살(닭고기),양상추,라디치오,로메인상추,오렌지,방울토마토,호두</div>
+							</div>
+						</div>
+					</div>
+					<div id="tab-2-product-3" class="row clearfix food-wrapper">
+						<div class="col-half img-wrapper">
+							<img src="<%=img %>/food/KRML.png">
+						</div>
+						<div class="col-half food-content">
+							<div class="row clearfix food-title">김치볶음밥
+								<button class="blueBtn closeBtn foodSelect">선택하기</button>
+							</div>
+							<div class="row clearfix food-word">한국인이 사랑하는 대표 음식 김치볶음밥을
+								기내에서 드실수 있습니다.</div>
+							<div class="row clearfix food-detail">
+								<div class="col-fourth">가격</div>
+								<div class="col-three-fourth">￦14,000 / ￥1,400 / ＄14 / 元85</div>
+								<div class="col-fourth">제공 노선</div>
+								<div class="col-three-fourth">인천, 김포, 부산 출발 국제선 (2시간 이상
+									비행편)</div>
+								<div class="col-fourth">주재료</div>
+								<div class="col-three-fourth">볶음밥(쌀,김치,계란,우유,대두,밀),토마토,돼지고기,닭고기,쇠고기,조개류,계란,우유,대두,밀,무우</div>
+							</div>
+						</div>
+					</div>
+				</div>
+                <!-- salad -->
+				<div id="tab-3-container" class="tab-content-container hidden">
+					<div id="tab-3-product-1" class="row clearfix food-wrapper">
+						<div class="col-half img-wrapper">
+							<img src="<%=img %>/food/WSML.png">
+						</div>
+						<div class="col-half food-content">
+							<div class="row clearfix food-title">웰빙 샐러드
+								<button class="blueBtn closeBtn foodSelect">선택하기</button>
+							</div>
+							<div class="row clearfix food-word">신선한 야채 모듬에 닭가슴살과 구운
+								단호박으로 토핑하여 상큼한 키위소스와 함께 건강과 맛을 한꺼번에 챙길수 있는 실속만점 샐러드입니다.</div>
+							<div class="row clearfix food-detail">
+								<div class="col-fourth">가격</div>
+								<div class="col-three-fourth">￦10,000 / ￥1,000 / ＄10 / 元60</div>
+								<div class="col-fourth">제공 노선</div>
+								<div class="col-three-fourth">인천, 김포, 부산, 제주 출발 국제선</div>
+								<div class="col-fourth">주재료</div>
+								<div class="col-three-fourth">훈제닭가슴살(닭고기),양상추,라디치오,로메인상추,토마토,오렌지,단호박,방울토마토,호두,대두</div>
+							</div>
+						</div>
+					</div>
+					<div id="tab-3-product-2" class="row clearfix food-wrapper">
+						<div class="col-half img-wrapper">
+							<img src="<%=img %>/food/BTML.png">
+						</div>
+						<div class="col-half food-content">
+							<div class="row clearfix food-title">소고기타다끼 샐러드
+								<button class="blueBtn closeBtn foodSelect">선택하기</button>
+							</div>
+							<div class="row clearfix food-word">신선한 야채에 구운 소고기타다끼를
+								토핑하여, 발사믹 소스로 풍미를 더한 샐러드입니다.</div>
+							<div class="row clearfix food-detail">
+								<div class="col-fourth">가격</div>
+								<div class="col-three-fourth">￦12,000 / ￥1,200 / ＄12 / 元75</div>
+								<div class="col-fourth">제공 노선</div>
+								<div class="col-three-fourth">인천, 김포, 제주 출발 국제선</div>
+								<div class="col-fourth">주재료</div>
+								<div class="col-three-fourth">쇠고기,피망,양상추,토마토,라디치오,로메인상추,대두</div>
+							</div>
+						</div>
+					</div>
+					<div id="tab-3-product-3" class="row clearfix food-wrapper">
+						<div class="col-half img-wrapper">
+							<img src="<%=img %>/food/CSML.png">
+						</div>
+						<div class="col-half food-content">
+							<div class="row clearfix food-title">스모크치킨 샐러드
+							<button class="blueBtn closeBtn foodSelect">선택하기</button>
+							</div>
+							<div class="row clearfix food-word">신선한 야채에 훈제 닭가슴살로 토핑하여
+								맛과 향이 뛰어난 발사믹 소스를 넣어 모닝롤과 함께 드시면 최고의 브런치 메뉴입니다.</div>
+							<div class="row clearfix food-detail">
+								<div class="col-fourth">가격</div>
+								<div class="col-three-fourth">￦12,000 / ￥1,200 / ＄12 / 元75</div>
+								<div class="col-fourth">제공 노선</div>
+								<div class="col-three-fourth">인천, 김포, 제주 출발 국제선</div>
+								<div class="col-fourth">주재료</div>
+								<div class="col-three-fourth">닭고기,양상추,페타치즈,단호박,피망,라디치오,로메인상추,빵(소프트롤),버터,대두</div>
+							</div>
+						</div>
+					</div>
+				</div>
+                <!-- refreshment -->
+				<div id="tab-4-container" class="tab-content-container hidden">
+					<div id="tab-4-product-1" class="row product-wrapper">
+						<div class="col-half img-wrapper">
+							<img src="<%=img %>/food/PSML.png">
+						</div>
+						<div class="col-half food-content">
+							<div class="row clearfix food-title">단호박 샌드위치
+								<button class="blueBtn closeBtn foodSelect">선택하기</button>
+							</div>
+							<div class="row clearfix food-word">곡물식빵에 블루베리쨈과 햄을 넣고 부드럽고
+								달콤한 단호박샐러드를 듬뿍 발라 넣은 샌드위치 입니다. 특히, 어린이와 여성고객들이 선호하는 메뉴입니다.</div>
+							<div class="row clearfix food-detail">
+								<div class="col-fourth">가격</div>
+								<div class="col-three-fourth">￦10,000 / ￥1,000 / ＄10 / 元60</div>
+								<div class="col-fourth">제공 노선</div>
+								<div class="col-three-fourth">인천, 김포, 부산, 제주 출발 국제선</div>
+								<div class="col-fourth">주재료</div>
+								<div class="col-three-fourth">호밀식빵,치즈스프레드(버터치즈,마요네즈),단호박,돼지고기,블루베리,오이피클,로메인상추,아몬드,닭고기,쇠고기</div>
+							</div>
+						</div>
+					</div>
+					<div id="tab-4-product-2" class="row product-wrapper">
+						<div class="col-half img-wrapper">
+							<img src="<%=img %>/food/VTML.png">
+						</div>
+						<div class="col-half food-content">
+							<div class="row clearfix food-title">야채볶음 샌드위치
+								<button class="blueBtn closeBtn foodSelect">선택하기</button>
+							</div>
+							<div class="row clearfix food-word">곡물식빵에 신선한 상추와 토마토에 구운
+								야채로 속을 꽉 채운 샌드위치로 고객님의 건강을 생각하여 이스타에서 야심차게 준비하였습니다.</div>
+							<div class="row clearfix food-detail">
+								<div class="col-fourth">가격</div>
+								<div class="col-three-fourth">￦10,000 / ￥1,000 / ＄10 / 元60</div>
+								<div class="col-fourth">제공 노선</div>
+								<div class="col-three-fourth">인천, 김포, 부산, 제주 출발 국제선</div>
+								<div class="col-fourth">주재료</div>
+								<div class="col-three-fourth">곡물식빵,치즈스프레드(버터치즈,마요네즈),양상추,로메인상추,토마토,단호박,피망,가지,양파,파마산치즈,닭고기</div>
+							</div>
+						</div>
+					</div>
+					<div id="tab-4-product-3" class="row product-wrapper">
+						<div class="col-half img-wrapper">
+							<img src="<%=img %>/food/SCML.png">
+						</div>
+						<div class="col-half food-content">
+							<div class="row clearfix food-title">새우샐러드치아바타
+								<button class="blueBtn closeBtn foodSelect">선택하기</button>
+							</div>
+							<div class="row clearfix food-word">치아바타 브레드 속내를 마요네즈로 버무린
+								통새우살에 삶은계란, 야채로 듬뿍 채운 샌드위치입니다. 고소함과 부드러운 맛을 함께 느끼실 수 있습니다.</div>
+							<div class="row clearfix food-detail">
+								<div class="col-fourth">가격</div>
+								<div class="col-three-fourth">￦10,000 / ￥1,000 / ＄10 / 元60</div>
+								<div class="col-fourth">제공 노선</div>
+								<div class="col-three-fourth">인천, 김포, 제주 출발 국제선</div>
+								<div class="col-fourth">주재료</div>
+								<div class="col-three-fourth">치아바타빵,치즈스프레드(버터치즈,마요네즈),양상추,로메인상추,새우,파마산치즈</div>
+							</div>
+						</div>
+					</div>
+					<div id="tab-4-product-4" class="row product-wrapper">
+						<div class="col-half img-wrapper">
+							<img src="<%=img %>/food/HCML.png">
+						</div>
+						<div class="col-half food-content">
+							<div class="row clearfix food-title">햄치즈 베이글
+								<button class="blueBtn closeBtn foodSelect">선택하기</button>
+							</div>
+							<div class="row clearfix food-word">햄과 치즈를 올려 따뜻하게 구운 베이글에
+								고객님의 기호에 맞게 버터나 딸기잼을 발라서 드시면 맛있습니다.</div>
+							<div class="row clearfix food-detail">
+								<div class="col-fourth">가격</div>
+								<div class="col-three-fourth">￦10,000 / ￥1,000 / ＄10 / 元60</div>
+								<div class="col-fourth">제공 노선</div>
+								<div class="col-three-fourth">인천, 김포, 부산, 제주 출발 국제선</div>
+								<div class="col-fourth">주재료</div>
+								<div class="col-three-fourth">빵,블루베리,닭고기,돼지고기,쇠고기,치즈,계란,오이,우유,버터</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
             </div>
         </div>
         
@@ -442,7 +661,7 @@
                     <label for="first" class="lastRadio">퍼스트</label>
                 </div>
             </div>
-            <input type="button" value="변경하기" class="blueBtn" id="changeClass">
+            <input type="button" value="변경하기" class="blueBtn closeBtn" id="changeClass">
             <ul class="list-type2 last-note">
                 <li class="list-inside-title">좌석등급 변경 시 유의사항</li>
                 <li>탑승 항공편에 따라 좌석 타입 및 편의 시설, 이용 가능한 서비스에 차이가 있을 수 있습니다.</li>
@@ -455,8 +674,7 @@
         
 		<input type="hidden" value="Y">
 		<div class="button-wrapper">
-			<input type="button" value="결제하기" class="blueBtn reservePayment">
-			<input type="button" value="취소" class="whiteBtn reserveCancel">
+			<input type="button" value="뒤로" class="whiteBtn reserveCancel" onclick="javascript:history.back()">
 		</div>
 	</section>
  	<%@ include file="../common/footer.jspf" %>
