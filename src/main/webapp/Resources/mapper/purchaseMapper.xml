@@ -13,4 +13,23 @@
 		where
 		      membernum=${memberNum} and paydate &gt; to_date('${startDate}', 'YYYY-MM-DD') and PAYDATE &lt; to_date('${endDate}', 'YYYY-MM-DD')
 	</select>
+	
+	<select id="flightList" resultType="int">
+		select flightnum from orderedflight where ordernum=#{orderNum}
+	</select>
+	<select id="productNum" resultType="int">
+		select productnum from flight where flightnum=#{flightNum} order by departtime desc
+	</select>
+	<select id="depAriList" resultType="kr.gaza.myapp.myhome.purchase.PurchaseVO">
+		select depart, arrive from product where productnum=#{productNum}
+	</select>
+	<select id="DepAri" resultType="kr.gaza.myapp.myhome.MyHomeVO">
+		select depart, arrive from product where productnum=#{productNum}
+	</select>
+	<select id="departCity" resultType="kr.gaza.myapp.myhome.MyHomeVO">
+		select city as departCity from airport where IATA=#{depart}
+	</select>
+	<select id="arriveCity" resultType="kr.gaza.myapp.myhome.MyHomeVO">
+		select city as arriveCity from airport where IATA=#{arrive}
+	</select>
 </mapper>
