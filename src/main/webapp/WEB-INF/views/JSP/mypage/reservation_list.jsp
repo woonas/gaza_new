@@ -55,6 +55,30 @@
 	                                </tr>
 	                            </thead>
 	                            <tbody>
+                                <tr>
+                                        <td>
+                                            <div>1</div>
+                                        </td>
+                                        <td>
+                                            <div>2019.12.25  05:10</div>
+                                        </td>
+                                        
+                                        <td>
+                                            <div>서울/인천 → 울란바타르</div>
+                                        </td>
+                                        
+                                        <td>
+                                            <div>2019.12.25  13:50</div>
+                                        </td>
+                                        <td>
+                                            <div>GZ107</div>
+                                        </td>
+                                        <td>
+                                            <div><a href="<%=jsp %>/mypage/reservation_detail?orderedFlightNum=99999">
+                                            	<input type="button" class="blueBtn" value="상세보기" id="detail0"></a>
+                                            </div>
+                                        </td>
+                                    </tr>
 	                             <c:forEach var="i" begin="1" end="${length}" step="1">
                                 <fmt:parseDate value="${flightI[i-1].departTime}" pattern="yyyy-MM-dd HH:mm" var="depart"/>
                                 <fmt:formatDate var="date1" pattern="yyyy-MM-dd HH:mm" value="${depart }"/>
@@ -62,7 +86,7 @@
                                  <fmt:formatDate var="arriveTime" pattern="yyyy-MM-dd HH:mm" value="${arrive }"/>  
                                     <tr>
                                         <td>
-                                            <div>${i }</div>
+                                            <div>${i+1 }</div>
                                         </td>
                                         <td>
                                             <div>${date1 }</div>
