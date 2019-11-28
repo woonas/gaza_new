@@ -55,7 +55,7 @@
                 <div class="row clearfix">
                     <div class="col-fifth">결제금액</div>
                     <div class="col-four-fifth font-blue4">
-                        402,900 원
+                        1,007,200 원
                     </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@
                 <div class="row clearfix">
                     <div class="col-fifth">적립포인트</div>
                     <div class="col-four-fifth font-blue4">
-                        402P
+                        1,007P
                     </div>
                 </div>
             </div>
