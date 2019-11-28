@@ -126,8 +126,18 @@
                     <div class="col-xs-12">
                         <input type="checkbox" class="hidden" id="edit">
                         <label for="edit" class="whiteBtn btn">탑승객정보 수정</label>
-                        <a href="../../mypage"><button type="submit" class="btn blueBtn closeBtn">수정</button></a>
-                        <a href="../../mypage"><label for = "edit" class = "whiteBtn btn">취소</label></a>
+                        <a href="javascript:" onclick="edit()"><button type="submit" class="btn blueBtn" id="editBtn">수정</button></a>
+                        <a href="javascript:"><label for = "edit" class = "whiteBtn btn">취소</label></a>
+                        <script>
+                            document.getElementById('edit').addEventListener('change', () => {
+                                const inputs = document.querySelectorAll('.table-form input');
+                                inputs.forEach(input => input.removeAttribute('disabled'));
+                            });
+                            document.getElementById('editBtn').addEventListener('click', () => {
+                                const inputs = document.querySelectorAll('.table-form input');
+                                inputs.forEach(input => input.setAttribute('disabled', 'disabled'));
+                            });
+                        </script>
                     </div>
                 </div>
                 <p class="reservation-section-title">
@@ -139,13 +149,13 @@
                             성
                         </div>
                         <div class="two-in-row">
-                            <input type="text" placeholder="한글 성 입력 (예:홍)" value="111" disabled>
+                            <input type="text" placeholder="한글 성 입력 (예:홍)" value="김" disabled>
                         </div>
                         <div class="table-row-title">
                             이름
                         </div>
                         <div class="two-in-row">
-                            <input type="text" placeholder="한글 이름 입력 (예:길동)" disabled>
+                            <input type="text" placeholder="한글 이름 입력 (예:길동)" value="구용" disabled>
                         </div>
                     </div>
         
@@ -154,16 +164,139 @@
                             생년월일
                         </div>
                         <div>
-                            <select id="year" name="year" title="생년월일&nbsp;연도" style="width: 200px" disabled>
+                            <select title="생년월일&nbsp;연도" style="width: 200px" disabled>
                                 <option value="">년</option>
+                                <option value="2019">2019년</option>
+                                <option value="2018">2018년</option>
+                                <option value="2017">2017년</option>
+                                <option value="2016">2016년</option>
+                                <option value="2015">2015년</option>
+                                <option value="2014">2014년</option>
+                                <option value="2013">2013년</option>
+                                <option value="2012">2012년</option>
+                                <option value="2011">2011년</option>
+                                <option value="2010">2010년</option>
+                                <option value="2009">2009년</option>
+                                <option value="2008">2008년</option>
+                                <option value="2007">2007년</option>
+                                <option value="2006">2006년</option>
+                                <option value="2005">2005년</option>
+                                <option value="2004">2004년</option>
+                                <option value="2003">2003년</option>
+                                <option value="2002">2002년</option>
+                                <option value="2001">2001년</option>
+                                <option value="2000" selected>2000년</option>
+                                <option value="1999">1999년</option>
+                                <option value="1998">1998년</option>
+                                <option value="1997">1997년</option>
+                                <option value="1996">1996년</option>
+                                <option value="1995">1995년</option>
+                                <option value="1994">1994년</option>
+                                <option value="1993">1993년</option>
+                                <option value="1992">1992년</option>
+                                <option value="1991">1991년</option>
+                                <option value="1990">1990년</option>
+                                <option value="1989">1989년</option>
+                                <option value="1988">1988년</option>
+                                <option value="1987">1987년</option>
+                                <option value="1986">1986년</option>
+                                <option value="1985">1985년</option>
+                                <option value="1984">1984년</option>
+                                <option value="1983">1983년</option>
+                                <option value="1982">1982년</option>
+                                <option value="1981">1981년</option>
+                                <option value="1980">1980년</option>
+                                <option value="1979">1979년</option>
+                                <option value="1978">1978년</option>
+                                <option value="1977">1977년</option>
+                                <option value="1976">1976년</option>
+                                <option value="1975">1975년</option>
+                                <option value="1974">1974년</option>
+                                <option value="1973">1973년</option>
+                                <option value="1972">1972년</option>
+                                <option value="1971">1971년</option>
+                                <option value="1970">1970년</option>
+                                <option value="1969">1969년</option>
+                                <option value="1968">1968년</option>
+                                <option value="1967">1967년</option>
+                                <option value="1966">1966년</option>
+                                <option value="1965">1965년</option>
+                                <option value="1964">1964년</option>
+                                <option value="1963">1963년</option>
+                                <option value="1962">1962년</option>
+                                <option value="1961">1961년</option>
+                                <option value="1960">1960년</option>
+                                <option value="1959">1959년</option>
+                                <option value="1958">1958년</option>
+                                <option value="1957">1957년</option>
+                                <option value="1956">1956년</option>
+                                <option value="1955">1955년</option>
+                                <option value="1954">1954년</option>
+                                <option value="1953">1953년</option>
+                                <option value="1952">1952년</option>
+                                <option value="1951">1951년</option>
+                                <option value="1950">1950년</option>
+                                <option value="1949">1949년</option>
+                                <option value="1948">1948년</option>
+                                <option value="1947">1947년</option>
+                                <option value="1946">1946년</option>
+                                <option value="1945">1945년</option>
+                                <option value="1944">1944년</option>
+                                <option value="1943">1943년</option>
+                                <option value="1942">1942년</option>
+                                <option value="1941">1941년</option>
+                                <option value="1940">1940년</option>
                             </select>
         
-                            <select id="month" name="month" title="생년월일월" style="width: 200px" disabled>
+                            <select title="생년월일월" style="width: 200px" disabled>
                                 <option value="">월</option>
+                                <option value="01" selected>1월</option>
+                                <option value="02">2월</option>
+                                <option value="03">3월</option>
+                                <option value="04">4월</option>
+                                <option value="05">5월</option>
+                                <option value="06">6월</option>
+                                <option value="07">7월</option>
+                                <option value="08">8월</option>
+                                <option value="09">9월</option>
+                                <option value="10">10월</option>
+                                <option value="11">11월</option>
+                                <option value="12">12월</option>
                             </select>
         
-                            <select id="day" name="day" title="생년월일일" style="width: 200px" disabled>
+                            <select title="생년월일일" style="width: 200px" disabled>
                                 <option value="">일</option>
+                                <option value="01" selected>1일</option>
+                                <option value="02">2일</option>
+                                <option value="03">3일</option>
+                                <option value="04">4일</option>
+                                <option value="05">5일</option>
+                                <option value="06">6일</option>
+                                <option value="07">7일</option>
+                                <option value="08">8일</option>
+                                <option value="09">9일</option>
+                                <option value="10">10일</option>
+                                <option value="11">11일</option>
+                                <option value="12">12일</option>
+                                <option value="13">13일</option>
+                                <option value="14">14일</option>
+                                <option value="15">15일</option>
+                                <option value="16">16일</option>
+                                <option value="17">17일</option>
+                                <option value="18">18일</option>
+                                <option value="19">19일</option>
+                                <option value="20">20일</option>
+                                <option value="21">21일</option>
+                                <option value="22">22일</option>
+                                <option value="23">23일</option>
+                                <option value="24">24일</option>
+                                <option value="25">25일</option>
+                                <option value="26">26일</option>
+                                <option value="27">27일</option>
+                                <option value="28">28일</option>
+                                <option value="29">29일</option>
+                                <option value="30">30일</option>
+                                <option value="31">31일</option>
                             </select>
                         </div>
                     </div>
@@ -173,66 +306,524 @@
                             성별
                         </div>
                         <div class="gender-wrapper">
-                            <input type="radio" class="radio3" name="gender" id="male">
-                            <label for="male">남성</label>
-                            <input type="radio" class="radio3" name="gender" id="female">
-                            <label for="female">여성</label>
+                            <input type="radio" class="radio3" name="gender-1" id="male-1" checked>
+                            <label for="male-1">남성</label>
+                            <input type="radio" class="radio3" name="gender-1" id="female-1">
+                            <label for="female-1">여성</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-form">
+                    <div class="row clearfix">
+                        <div class="table-row-title">
+                            성
+                        </div>
+                        <div class="two-in-row">
+                            <input type="text" placeholder="한글 성 입력 (예:홍)" value="김" disabled>
+                        </div>
+                        <div class="table-row-title">
+                            이름
+                        </div>
+                        <div class="two-in-row">
+                            <input type="text" placeholder="한글 이름 입력 (예:길동)" value="동한" disabled>
                         </div>
                     </div>
         
                     <div class="row clearfix">
                         <div class="table-row-title">
-                            회원번호 <span id="membership-hint"><i class="fas fa-exclamation"></i></span>
+                            생년월일
                         </div>
                         <div>
-                            <select id="selAirline1" name="selAirline" title="항공사" style="width: 296px; margin-top: -4px" disabled>
-                                <option value="GZ" selected="selected">가자에어 - Gaza Club</option>
+                            <select title="생년월일&nbsp;연도" style="width: 200px" disabled>
+                                <option value="">년</option>
+                                <option value="2019">2019년</option>
+                                <option value="2018">2018년</option>
+                                <option value="2017">2017년</option>
+                                <option value="2016">2016년</option>
+                                <option value="2015">2015년</option>
+                                <option value="2014">2014년</option>
+                                <option value="2013">2013년</option>
+                                <option value="2012">2012년</option>
+                                <option value="2011">2011년</option>
+                                <option value="2010">2010년</option>
+                                <option value="2009">2009년</option>
+                                <option value="2008">2008년</option>
+                                <option value="2007">2007년</option>
+                                <option value="2006">2006년</option>
+                                <option value="2005">2005년</option>
+                                <option value="2004">2004년</option>
+                                <option value="2003">2003년</option>
+                                <option value="2002">2002년</option>
+                                <option value="2001">2001년</option>
+                                <option value="2000">2000년</option>
+                                <option value="1999">1999년</option>
+                                <option value="1998">1998년</option>
+                                <option value="1997">1997년</option>
+                                <option value="1996">1996년</option>
+                                <option value="1995">1995년</option>
+                                <option value="1994">1994년</option>
+                                <option value="1993">1993년</option>
+                                <option value="1992">1992년</option>
+                                <option value="1991">1991년</option>
+                                <option value="1990">1990년</option>
+                                <option value="1989">1989년</option>
+                                <option value="1988">1988년</option>
+                                <option value="1987">1987년</option>
+                                <option value="1986">1986년</option>
+                                <option value="1985">1985년</option>
+                                <option value="1984">1984년</option>
+                                <option value="1983">1983년</option>
+                                <option value="1982">1982년</option>
+                                <option value="1981">1981년</option>
+                                <option value="1980" selected>1980년</option>
+                                <option value="1979">1979년</option>
+                                <option value="1978">1978년</option>
+                                <option value="1977">1977년</option>
+                                <option value="1976">1976년</option>
+                                <option value="1975">1975년</option>
+                                <option value="1974">1974년</option>
+                                <option value="1973">1973년</option>
+                                <option value="1972">1972년</option>
+                                <option value="1971">1971년</option>
+                                <option value="1970">1970년</option>
+                                <option value="1969">1969년</option>
+                                <option value="1968">1968년</option>
+                                <option value="1967">1967년</option>
+                                <option value="1966">1966년</option>
+                                <option value="1965">1965년</option>
+                                <option value="1964">1964년</option>
+                                <option value="1963">1963년</option>
+                                <option value="1962">1962년</option>
+                                <option value="1961">1961년</option>
+                                <option value="1960">1960년</option>
+                                <option value="1959">1959년</option>
+                                <option value="1958">1958년</option>
+                                <option value="1957">1957년</option>
+                                <option value="1956">1956년</option>
+                                <option value="1955">1955년</option>
+                                <option value="1954">1954년</option>
+                                <option value="1953">1953년</option>
+                                <option value="1952">1952년</option>
+                                <option value="1951">1951년</option>
+                                <option value="1950">1950년</option>
+                                <option value="1949">1949년</option>
+                                <option value="1948">1948년</option>
+                                <option value="1947">1947년</option>
+                                <option value="1946">1946년</option>
+                                <option value="1945">1945년</option>
+                                <option value="1944">1944년</option>
+                                <option value="1943">1943년</option>
+                                <option value="1942">1942년</option>
+                                <option value="1941">1941년</option>
+                                <option value="1940">1940년</option>
                             </select>
-                            <input type="text" placeholder="" style="width: 320px;" disabled>
+        
+                            <select title="생년월일월" style="width: 200px" disabled>
+                                <option value="">월</option>
+                                <option value="01">1월</option>
+                                <option value="02" selected>2월</option>
+                                <option value="03">3월</option>
+                                <option value="04">4월</option>
+                                <option value="05">5월</option>
+                                <option value="06">6월</option>
+                                <option value="07">7월</option>
+                                <option value="08">8월</option>
+                                <option value="09">9월</option>
+                                <option value="10">10월</option>
+                                <option value="11">11월</option>
+                                <option value="12">12월</option>
+                            </select>
+        
+                            <select title="생년월일일" style="width: 200px" disabled>
+                                <option value="">일</option>
+                                <option value="01">1일</option>
+                                <option value="02" selected>2일</option>
+                                <option value="03">3일</option>
+                                <option value="04">4일</option>
+                                <option value="05">5일</option>
+                                <option value="06">6일</option>
+                                <option value="07">7일</option>
+                                <option value="08">8일</option>
+                                <option value="09">9일</option>
+                                <option value="10">10일</option>
+                                <option value="11">11일</option>
+                                <option value="12">12일</option>
+                                <option value="13">13일</option>
+                                <option value="14">14일</option>
+                                <option value="15">15일</option>
+                                <option value="16">16일</option>
+                                <option value="17">17일</option>
+                                <option value="18">18일</option>
+                                <option value="19">19일</option>
+                                <option value="20">20일</option>
+                                <option value="21">21일</option>
+                                <option value="22">22일</option>
+                                <option value="23">23일</option>
+                                <option value="24">24일</option>
+                                <option value="25">25일</option>
+                                <option value="26">26일</option>
+                                <option value="27">27일</option>
+                                <option value="28">28일</option>
+                                <option value="29">29일</option>
+                                <option value="30">30일</option>
+                                <option value="31">31일</option>
+                            </select>
                         </div>
-                    </div>
-                    
-                    <div class='pop-up-window-type1 border' id='membership-hint-window'>
-                        <ul class="list-type2">
-                            <p>
-                                회원번호 (탑승객)
-                                <i class="fas fa-times btn-close"></i>
-                            </p>
-                            <li>가자에어, 스타얼라이언스 회원사에 대한 마일리지 적립이 가능합니다.</li>
-                            <li>마일리지는 탑승 완료 후 적립되며, 항공사마다 적립시기에 차이가 있을 수 있습니다.</li>
-                            <li>가자에어클럽 회원이 아니신 경우, 탑승 전 회원가입을 해주셔야 적립이 가능합니다.</li>
-                        </ul>
                     </div>
                     
                     <div class="row clearfix">
                         <div class="table-row-title">
-                            1번째 여정 할인
+                            성별
                         </div>
-                        <div>
-                            <select id="selPTCCode_Dep_1" name="selPTCCode_Dep" title="신분할인 선택" style="width: 632px;" disabled>
-                                <option value="CB" ptccode="CB" ptcrate="0">개인할인 선택 안함</option>
-                                <option value="PR" ptccode="PR" ptcrate="30">장애인 4~6급(30%)</option>
-                                <option value="PR" ptccode="PR" ptcrate="50">장애인 1~3급(50%)</option>
-                                <option value="PC" ptccode="PC" ptcrate="50">장애인 1~3급 동반 보호자 1인(50%)</option>
-                                <option value="CJ" ptccode="CJ" ptcrate="10">제주도민/재외 제주도민(제주관련 노선만 적용)(10%)</option>
-                                <option value="OB" ptccode="OB" ptcrate="10">경로우대(만65세 이상)(10%)</option>
-                                <option value="ME" ptccode="ME" ptcrate="10">현역군인(휴가증소지의 의무복무사병)(10%)</option>
-                                <option value="NA" ptccode="NA" ptcrate="30">고엽제 후유증 환자(30%)</option>
-                                <option value="NC" ptccode="NC" ptcrate="50">국가유공상이 4급 동반 보호자 1인(50%)</option>
-                                <option value="ND" ptccode="ND" ptcrate="50">5.18민주유공 1~4급 동반보호자 1인(50%)</option>
-                                <option value="NE" ptccode="NE" ptcrate="50">국가유공상이 1~3급 동반 보호자 1인(50%)</option>
-                                <option value="NG" ptccode="NG" ptcrate="50">독립유공자 동반 보호자1인(50%)</option>
-                                <option value="NI" ptccode="NI" ptcrate="30">독립유공자 유족증소지자(30%)</option>
-                                <option value="NI" ptccode="NI" ptcrate="50">독립유공자(50%)</option>
-                                <option value="NP" ptccode="NP" ptcrate="30">국가유공자 / 5.18민주유공자 &amp; 유공자 유족증 소지자 (30%)</option>
-                                <option value="NQ" ptccode="NQ" ptcrate="50">국가유공상이자 &amp; 5.18민주유공부상자(50%)</option>
-                                <option value="PFA" ptccode="PFA" ptcrate="0">기초생활수급자 공항세 할인</option>
-                                <option value="TEA" ptccode="TEA" ptcrate="0">기술기능분야 우수자 공항세 할인</option>
-                                <option value="ZZ" ptccode="ZZ" ptcrate="10">청소년(만13세 이상~만22세 미만)(10%)</option>
-                            </select>
+                        <div class="gender-wrapper">
+                            <input type="radio" class="radio3" name="gender-1" id="male-2" checked>
+                            <label for="male-1">남성</label>
+                            <input type="radio" class="radio3" name="gender-1" id="female-2">
+                            <label for="female-1">여성</label>
                         </div>
                     </div>
                 </div>
+                <div class="table-form">
+                    <div class="row clearfix">
+                        <div class="table-row-title">
+                            성
+                        </div>
+                        <div class="two-in-row">
+                            <input type="text" placeholder="한글 성 입력 (예:홍)" value="최" disabled>
+                        </div>
+                        <div class="table-row-title">
+                            이름
+                        </div>
+                        <div class="two-in-row">
+                            <input type="text" placeholder="한글 이름 입력 (예:길동)" value="민지" disabled>
+                        </div>
+                    </div>
+        
+                    <div class="row clearfix">
+                        <div class="table-row-title">
+                            생년월일
+                        </div>
+                        <div>
+                            <select title="생년월일&nbsp;연도" style="width: 200px" disabled>
+                                <option value="">년</option>
+                                <option value="2019">2019년</option>
+                                <option value="2018">2018년</option>
+                                <option value="2017">2017년</option>
+                                <option value="2016">2016년</option>
+                                <option value="2015">2015년</option>
+                                <option value="2014">2014년</option>
+                                <option value="2013">2013년</option>
+                                <option value="2012">2012년</option>
+                                <option value="2011">2011년</option>
+                                <option value="2010" selected>2010년</option>
+                                <option value="2009">2009년</option>
+                                <option value="2008">2008년</option>
+                                <option value="2007">2007년</option>
+                                <option value="2006">2006년</option>
+                                <option value="2005">2005년</option>
+                                <option value="2004">2004년</option>
+                                <option value="2003">2003년</option>
+                                <option value="2002">2002년</option>
+                                <option value="2001">2001년</option>
+                                <option value="2000">2000년</option>
+                                <option value="1999">1999년</option>
+                                <option value="1998">1998년</option>
+                                <option value="1997">1997년</option>
+                                <option value="1996">1996년</option>
+                                <option value="1995">1995년</option>
+                                <option value="1994">1994년</option>
+                                <option value="1993">1993년</option>
+                                <option value="1992">1992년</option>
+                                <option value="1991">1991년</option>
+                                <option value="1990">1990년</option>
+                                <option value="1989">1989년</option>
+                                <option value="1988">1988년</option>
+                                <option value="1987">1987년</option>
+                                <option value="1986">1986년</option>
+                                <option value="1985">1985년</option>
+                                <option value="1984">1984년</option>
+                                <option value="1983">1983년</option>
+                                <option value="1982">1982년</option>
+                                <option value="1981">1981년</option>
+                                <option value="1980">1980년</option>
+                                <option value="1979">1979년</option>
+                                <option value="1978">1978년</option>
+                                <option value="1977">1977년</option>
+                                <option value="1976">1976년</option>
+                                <option value="1975">1975년</option>
+                                <option value="1974">1974년</option>
+                                <option value="1973">1973년</option>
+                                <option value="1972">1972년</option>
+                                <option value="1971">1971년</option>
+                                <option value="1970">1970년</option>
+                                <option value="1969">1969년</option>
+                                <option value="1968">1968년</option>
+                                <option value="1967">1967년</option>
+                                <option value="1966">1966년</option>
+                                <option value="1965">1965년</option>
+                                <option value="1964">1964년</option>
+                                <option value="1963">1963년</option>
+                                <option value="1962">1962년</option>
+                                <option value="1961">1961년</option>
+                                <option value="1960">1960년</option>
+                                <option value="1959">1959년</option>
+                                <option value="1958">1958년</option>
+                                <option value="1957">1957년</option>
+                                <option value="1956">1956년</option>
+                                <option value="1955">1955년</option>
+                                <option value="1954">1954년</option>
+                                <option value="1953">1953년</option>
+                                <option value="1952">1952년</option>
+                                <option value="1951">1951년</option>
+                                <option value="1950">1950년</option>
+                                <option value="1949">1949년</option>
+                                <option value="1948">1948년</option>
+                                <option value="1947">1947년</option>
+                                <option value="1946">1946년</option>
+                                <option value="1945">1945년</option>
+                                <option value="1944">1944년</option>
+                                <option value="1943">1943년</option>
+                                <option value="1942">1942년</option>
+                                <option value="1941">1941년</option>
+                                <option value="1940">1940년</option>
+                            </select>
+        
+                            <select title="생년월일월" style="width: 200px" disabled>
+                                <option value="">월</option>
+                                <option value="01">1월</option>
+                                <option value="02">2월</option>
+                                <option value="03" selected>3월</option>
+                                <option value="04">4월</option>
+                                <option value="05">5월</option>
+                                <option value="06">6월</option>
+                                <option value="07">7월</option>
+                                <option value="08">8월</option>
+                                <option value="09">9월</option>
+                                <option value="10">10월</option>
+                                <option value="11">11월</option>
+                                <option value="12">12월</option>
+                            </select>
+        
+                            <select title="생년월일일" style="width: 200px" disabled>
+                                <option value="">일</option>
+                                <option value="01">1일</option>
+                                <option value="02">2일</option>
+                                <option value="03" selected>3일</option>
+                                <option value="04">4일</option>
+                                <option value="05">5일</option>
+                                <option value="06">6일</option>
+                                <option value="07">7일</option>
+                                <option value="08">8일</option>
+                                <option value="09">9일</option>
+                                <option value="10">10일</option>
+                                <option value="11">11일</option>
+                                <option value="12">12일</option>
+                                <option value="13">13일</option>
+                                <option value="14">14일</option>
+                                <option value="15">15일</option>
+                                <option value="16">16일</option>
+                                <option value="17">17일</option>
+                                <option value="18">18일</option>
+                                <option value="19">19일</option>
+                                <option value="20">20일</option>
+                                <option value="21">21일</option>
+                                <option value="22">22일</option>
+                                <option value="23">23일</option>
+                                <option value="24">24일</option>
+                                <option value="25">25일</option>
+                                <option value="26">26일</option>
+                                <option value="27">27일</option>
+                                <option value="28">28일</option>
+                                <option value="29">29일</option>
+                                <option value="30">30일</option>
+                                <option value="31">31일</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="row clearfix">
+                        <div class="table-row-title">
+                            성별
+                        </div>
+                        <div class="gender-wrapper">
+                            <input type="radio" class="radio3" name="gender-1" id="male-3">
+                            <label for="male-1">남성</label>
+                            <input type="radio" class="radio3" name="gender-1" id="female-3" checked>
+                            <label for="female-1">여성</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-form">
+                    <div class="row clearfix">
+                        <div class="table-row-title">
+                            성
+                        </div>
+                        <div class="two-in-row">
+                            <input type="text" placeholder="한글 성 입력 (예:홍)" value="정" disabled>
+                        </div>
+                        <div class="table-row-title">
+                            이름
+                        </div>
+                        <div class="two-in-row">
+                            <input type="text" placeholder="한글 이름 입력 (예:길동)" value="운하" disabled>
+                        </div>
+                    </div>
+        
+                    <div class="row clearfix">
+                        <div class="table-row-title">
+                            생년월일
+                        </div>
+                        <div>
+                            <select title="생년월일&nbsp;연도" style="width: 200px" disabled>
+                                <option value="">년</option>
+                                <option value="2019" selected>2019년</option>
+                                <option value="2018">2018년</option>
+                                <option value="2017">2017년</option>
+                                <option value="2016">2016년</option>
+                                <option value="2015">2015년</option>
+                                <option value="2014">2014년</option>
+                                <option value="2013">2013년</option>
+                                <option value="2012">2012년</option>
+                                <option value="2011">2011년</option>
+                                <option value="2010">2010년</option>
+                                <option value="2009">2009년</option>
+                                <option value="2008">2008년</option>
+                                <option value="2007">2007년</option>
+                                <option value="2006">2006년</option>
+                                <option value="2005">2005년</option>
+                                <option value="2004">2004년</option>
+                                <option value="2003">2003년</option>
+                                <option value="2002">2002년</option>
+                                <option value="2001">2001년</option>
+                                <option value="2000">2000년</option>
+                                <option value="1999">1999년</option>
+                                <option value="1998">1998년</option>
+                                <option value="1997">1997년</option>
+                                <option value="1996">1996년</option>
+                                <option value="1995">1995년</option>
+                                <option value="1994">1994년</option>
+                                <option value="1993">1993년</option>
+                                <option value="1992">1992년</option>
+                                <option value="1991">1991년</option>
+                                <option value="1990">1990년</option>
+                                <option value="1989">1989년</option>
+                                <option value="1988">1988년</option>
+                                <option value="1987">1987년</option>
+                                <option value="1986">1986년</option>
+                                <option value="1985">1985년</option>
+                                <option value="1984">1984년</option>
+                                <option value="1983">1983년</option>
+                                <option value="1982">1982년</option>
+                                <option value="1981">1981년</option>
+                                <option value="1980">1980년</option>
+                                <option value="1979">1979년</option>
+                                <option value="1978">1978년</option>
+                                <option value="1977">1977년</option>
+                                <option value="1976">1976년</option>
+                                <option value="1975">1975년</option>
+                                <option value="1974">1974년</option>
+                                <option value="1973">1973년</option>
+                                <option value="1972">1972년</option>
+                                <option value="1971">1971년</option>
+                                <option value="1970">1970년</option>
+                                <option value="1969">1969년</option>
+                                <option value="1968">1968년</option>
+                                <option value="1967">1967년</option>
+                                <option value="1966">1966년</option>
+                                <option value="1965">1965년</option>
+                                <option value="1964">1964년</option>
+                                <option value="1963">1963년</option>
+                                <option value="1962">1962년</option>
+                                <option value="1961">1961년</option>
+                                <option value="1960">1960년</option>
+                                <option value="1959">1959년</option>
+                                <option value="1958">1958년</option>
+                                <option value="1957">1957년</option>
+                                <option value="1956">1956년</option>
+                                <option value="1955">1955년</option>
+                                <option value="1954">1954년</option>
+                                <option value="1953">1953년</option>
+                                <option value="1952">1952년</option>
+                                <option value="1951">1951년</option>
+                                <option value="1950">1950년</option>
+                                <option value="1949">1949년</option>
+                                <option value="1948">1948년</option>
+                                <option value="1947">1947년</option>
+                                <option value="1946">1946년</option>
+                                <option value="1945">1945년</option>
+                                <option value="1944">1944년</option>
+                                <option value="1943">1943년</option>
+                                <option value="1942">1942년</option>
+                                <option value="1941">1941년</option>
+                                <option value="1940">1940년</option>
+                            </select>
+        
+                            <select title="생년월일월" style="width: 200px" disabled>
+                                <option value="">월</option>
+                                <option value="01">1월</option>
+                                <option value="02">2월</option>
+                                <option value="03">3월</option>
+                                <option value="04" selected>4월</option>
+                                <option value="05">5월</option>
+                                <option value="06">6월</option>
+                                <option value="07">7월</option>
+                                <option value="08">8월</option>
+                                <option value="09">9월</option>
+                                <option value="10">10월</option>
+                                <option value="11">11월</option>
+                                <option value="12">12월</option>
+                            </select>
+        
+                            <select title="생년월일일" style="width: 200px" disabled>
+                                <option value="">일</option>
+                                <option value="01">1일</option>
+                                <option value="02">2일</option>
+                                <option value="03">3일</option>
+                                <option value="04" selected>4일</option>
+                                <option value="05">5일</option>
+                                <option value="06">6일</option>
+                                <option value="07">7일</option>
+                                <option value="08">8일</option>
+                                <option value="09">9일</option>
+                                <option value="10">10일</option>
+                                <option value="11">11일</option>
+                                <option value="12">12일</option>
+                                <option value="13">13일</option>
+                                <option value="14">14일</option>
+                                <option value="15">15일</option>
+                                <option value="16">16일</option>
+                                <option value="17">17일</option>
+                                <option value="18">18일</option>
+                                <option value="19">19일</option>
+                                <option value="20">20일</option>
+                                <option value="21">21일</option>
+                                <option value="22">22일</option>
+                                <option value="23">23일</option>
+                                <option value="24">24일</option>
+                                <option value="25">25일</option>
+                                <option value="26">26일</option>
+                                <option value="27">27일</option>
+                                <option value="28">28일</option>
+                                <option value="29">29일</option>
+                                <option value="30">30일</option>
+                                <option value="31">31일</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="row clearfix">
+                        <div class="table-row-title">
+                            성별
+                        </div>
+                        <div class="gender-wrapper">
+                            <input type="radio" class="radio3" name="gender-1" id="male-4" checked>
+                            <label for="male-4">남성</label>
+                            <input type="radio" class="radio3" name="gender-1" id="female-4">
+                            <label for="female-4">여성</label>
+                        </div>
+                    </div>
+                </div>
+                
             </form>
         </div>
         
