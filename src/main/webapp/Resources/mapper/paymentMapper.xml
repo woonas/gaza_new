@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.gaza.myapp.flight.payment.PaymentInterface">
+    <insert id="creditInsert" parameterType="kr.gaza.myapp.flight.payment.CreditVO">
+        insert into CREDIT values (CREDITNUM_SQ.nextval, #{payNum}, #{company}, #{creditNo}, #{expireDate}, #{creditName});
+    </insert>
+
+    <insert id="passengerInsert" parameterType="kr.gaza.myapp.flight.booking.PassengerVO">
+        insert into PASSENGER values (PASSENGERNUM_SQ.nextval, )
+    </insert>
+</mapper>

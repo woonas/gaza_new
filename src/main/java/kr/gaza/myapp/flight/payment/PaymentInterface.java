@@ -13,8 +13,7 @@ public interface PaymentInterface {
 //
 //    public void paymentSelect(EventVO vo);
 	
-	public int creditInsert(CreditVO vo);
+	int creditInsert(CreditVO vo);
 	
-	public int passengerInsert(PassengerVO vo);
-	
+	int passengerInsert(PassengerVO vo);
 }

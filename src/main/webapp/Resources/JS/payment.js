@@ -64,6 +64,7 @@ function numberWithCommas(x) {
         if (isfilled) {
             const flightArr = JSON.parse(sessionStorage.getItem('flightArr'));
             const passengerArr = JSON.parse(sessionStorage.getItem('passengerArr'));
+            const passengers = sessionStorage.getItem('numOfPassengers');
             const totalPrice = JSON.parse(sessionStorage.getItem('prices'));
 
             const airportFromHidden = document.querySelector('input[name=airportFrom]');
@@ -72,6 +73,8 @@ function numberWithCommas(x) {
             const pNameHidden = document.querySelector('input[name=pName]');
             const pBirthHidden = document.querySelector('input[name=pBirth]');
             const price= document.querySelector('input[name=totalPrice]');
+            document.querySelector('input[name=passengers');
+
             for (let i = 0; i < flightArr.length; i++) {
                 airportFromHidden.value += flightArr[i][0];
                 airportToHidden.value += flightArr[i][1];

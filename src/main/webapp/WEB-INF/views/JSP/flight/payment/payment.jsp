@@ -199,6 +199,7 @@
                         <input type="hidden" name="pName">
                         <input type="hidden" name="pBirth">
                         <input type="hidden" name="totalPrice">
+                        <input type="hidden" name="passengers">
                     </form>
                     <form class="hidden" id="payment-method-transfer" method="post" action="/JSP/flight/payment/payment-complete">
                         <div class="row clearfix">
